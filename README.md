@@ -11,10 +11,13 @@ This application will be built in conjunction with and with the support of the W
 This application will have three main components: an iOS application, a web-based admin dashboard, and a server. The fourth component, an Android application, is planned as a future addition. The core server will be written using Flask, an open-source microframework for Python, and store data using a PostgreSQL database. The iOS application will make use of Swift and interact with the server back end through queries that will provide JSON data. 
 
 ##Schedule
-Stage I: Application design and scoping (1 week)
-Stage II: Implementation of the iOS application using test JSON data; implementation of the server backend (6 weeks)
-Stage III: Connection of the server to the iOS application; development of the web admin dashboard for CRUD operations of tour routes (3 weeks)
-Stage IV: Testing and deployment (length TBD)
+	Stage I: Application design and scoping (1 week)
+
+	Stage II: Implementation of the iOS application using test JSON data; implementation of the server backend (6 weeks)
+
+	Stage III: Connection of the server to the iOS application; development of the web admin dashboard for CRUD operations of tour routes (3 weeks)
+
+	Stage IV: Testing and deployment (length TBD)
 
 ###Contact Information
 Contact: Team lead: John Behnke ’17 (behnkj@rpi.edu)
