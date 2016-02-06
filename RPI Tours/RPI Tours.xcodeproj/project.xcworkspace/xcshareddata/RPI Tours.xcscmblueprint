@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9067EB3EC984EFA7A2A6594E05078BB6E4133739",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B816595D873F4DBE8B2C49F36D2752D16C5EE3D6" : 0,
+    "9067EB3EC984EFA7A2A6594E05078BB6E4133739" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C44427D-516C-4B62-9074-3CDA00F76029",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B816595D873F4DBE8B2C49F36D2752D16C5EE3D6" : "..",
+    "9067EB3EC984EFA7A2A6594E05078BB6E4133739" : "RPI_Tours_iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RPI Tours",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RPI Tours\/RPI Tours.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wtg\/RPI_Tours_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9067EB3EC984EFA7A2A6594E05078BB6E4133739"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JohnBehnke\/RPI-Code.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B816595D873F4DBE8B2C49F36D2752D16C5EE3D6"
+    }
+  ]
+}
