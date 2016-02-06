@@ -408,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +494,7 @@
 				5299A2351C66AF7E0072F8D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5299A2361C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				5299A2381C66AF7E0072F8D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5299A2391C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +512,7 @@
 				5299A23B1C66AF7E0072F8D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
