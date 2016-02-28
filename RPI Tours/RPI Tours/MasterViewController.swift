@@ -11,17 +11,19 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
+    var detailViewController: DetailViewController? = nil //(John) used for send information to the DetailVC
+    var managedObjectContext: NSManagedObjectContext? = nil //(John)This is basically for CoreData. Think of it as a scratchpad for saving things
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem() //(John)Adds an edit button programmatically
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:") //(John) creates the add button with the action of "insertNewObject", which is a function
+        self.navigationItem.rightBarButtonItem = addButton //(John)Add it to the scene
+        
+        //(John)This is for split views for iPads. We aren't going to need this!
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -29,7 +31,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed //(John) Just for the iPad swag
         super.viewWillAppear(animated)
     }
 
@@ -39,13 +41,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
+        let context = self.fetchedResultsController.managedObjectContext //request the save instance
+        let entity = self.fetchedResultsController.fetchRequest.entity! //request the specific entity
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) //make a new managed object
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
+        newManagedObject.setValue(NSDate(), forKey: "timeStamp") //set the "timestamp" attribute to the current date
              
         // Save the context.
         do {
@@ -61,13 +63,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
+        if segue.identifier == "showDetail" { //(John) If wr are about to go into the detail segue
+            if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
+            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) //uses index paths (having a row and a section component) so that it can be used as a data source for table views with multiple sections.
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController //Create the detailVC
+                controller.detailItem = object //Set the detailVC detail item to the object
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+                controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
             }
         }
     }
@@ -75,7 +77,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.fetchedResultsController.sections?.count ?? 0
+        return self.fetchedResultsController.sections?.count ?? 0 //Try to get the count and unwrapit, or use 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
