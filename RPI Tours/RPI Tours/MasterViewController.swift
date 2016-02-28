@@ -122,7 +122,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var fetchedResultsController: NSFetchedResultsController {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
-        }
+        } //
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
