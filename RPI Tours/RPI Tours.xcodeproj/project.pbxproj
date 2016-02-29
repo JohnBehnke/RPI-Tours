@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30209399D35A4E6370E6A40C /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDE8BBA3E5E84A9C113D78 /* Pods_RPI_Tours.framework */; };
+		52745F201C83B727005FA626 /* GoogleSDKAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52745F1F1C83B727005FA626 /* GoogleSDKAPIKeys.swift */; };
 		5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */; };
 		5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */; };
 		5299A20F1C66AF7E0072F8D3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20E1C66AF7E0072F8D3 /* MasterViewController.swift */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A38144F0706C2AFDB192E20 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
+		26C6CAB81AE6C74A14C39DB5 /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
+		27DDE8BBA3E5E84A9C113D78 /* Pods_RPI_Tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_Tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52745F1F1C83B727005FA626 /* GoogleSDKAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleSDKAPIKeys.swift; path = ../../../../../../../Desktop/GoogleSDKAPIKeys.swift; sourceTree = "<group>"; };
 		5299A2061C66AF7E0072F8D3 /* RPI Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPI Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5299A20C1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RPI_Tours.xcdatamodel; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30209399D35A4E6370E6A40C /* Pods_RPI_Tours.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ACE2783FC819C6E9E778A16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A38144F0706C2AFDB192E20 /* Pods-RPI Tours.debug.xcconfig */,
+				26C6CAB81AE6C74A14C39DB5 /* Pods-RPI Tours.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5299A1FD1C66AF7E0072F8D3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,8 @@
 				5299A2221C66AF7E0072F8D3 /* RPI ToursTests */,
 				5299A22D1C66AF7E0072F8D3 /* RPI ToursUITests */,
 				5299A2071C66AF7E0072F8D3 /* Products */,
+				0ACE2783FC819C6E9E778A16 /* Pods */,
+				B56967C4585F952A878F7009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +123,7 @@
 				5299A20E1C66AF7E0072F8D3 /* MasterViewController.swift */,
 				5299A2101C66AF7E0072F8D3 /* DetailViewController.swift */,
 				5299A2121C66AF7E0072F8D3 /* Main.storyboard */,
+				52745F1F1C83B727005FA626 /* GoogleSDKAPIKeys.swift */,
 				5299A2151C66AF7E0072F8D3 /* Assets.xcassets */,
 				5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
@@ -131,6 +150,14 @@
 			path = "RPI ToursUITests";
 			sourceTree = "<group>";
 		};
+		B56967C4585F952A878F7009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27DDE8BBA3E5E84A9C113D78 /* Pods_RPI_Tours.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2331C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI Tours" */;
 			buildPhases = (
+				CF2FDD73C272FCB1A63011FE /* Check Pods Manifest.lock */,
 				5299A2021C66AF7E0072F8D3 /* Sources */,
 				5299A2031C66AF7E0072F8D3 /* Frameworks */,
 				5299A2041C66AF7E0072F8D3 /* Resources */,
+				A7FD3D04ADE6D4F21559D2A9 /* Embed Pods Frameworks */,
+				5F29FE2465D9A4D904360991 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +287,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F29FE2465D9A4D904360991 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7FD3D04ADE6D4F21559D2A9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF2FDD73C272FCB1A63011FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5299A2021C66AF7E0072F8D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,6 +343,7 @@
 				5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */,
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* MasterViewController.swift in Sources */,
+				52745F201C83B727005FA626 /* GoogleSDKAPIKeys.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +484,7 @@
 		};
 		5299A2341C66AF7E0072F8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A38144F0706C2AFDB192E20 /* Pods-RPI Tours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
@@ -417,6 +497,7 @@
 		};
 		5299A2351C66AF7E0072F8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26C6CAB81AE6C74A14C39DB5 /* Pods-RPI Tours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
