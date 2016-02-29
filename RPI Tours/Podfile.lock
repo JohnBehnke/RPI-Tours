@@ -1,10 +1,30 @@
 PODS:
   - GoogleMaps (1.12.2)
+  - ReachabilitySwift (2.3.3)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - GoogleMaps
+  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  ReachabilitySwift:
+    :git: https://github.com/ashleymills/Reachability.swift
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  ReachabilitySwift:
+    :commit: cf126c0584a209143c75bf1d0f23fd904891e26e
+    :git: https://github.com/ashleymills/Reachability.swift
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   GoogleMaps: cc76edaa94a4284e80ecd7089ed319d1cca5f37e
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

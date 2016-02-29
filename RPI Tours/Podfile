@@ -8,6 +8,10 @@ target 'RPI Tours' do
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'GoogleMaps'
 
+pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
+
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+
 end
 
 target 'RPI ToursTests' do
