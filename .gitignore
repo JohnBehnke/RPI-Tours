@@ -7,6 +7,9 @@ build/
 DerivedData/
 Pods/
 
+GoogleSDKAPIKeys.swift
+
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
