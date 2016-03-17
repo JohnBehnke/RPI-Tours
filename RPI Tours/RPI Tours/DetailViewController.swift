@@ -10,7 +10,7 @@ import UIKit
 
 import CoreLocation
 
-class DetailViewController: UIViewController{
+class DetailViewController: UITableViewController{
     
    
     
