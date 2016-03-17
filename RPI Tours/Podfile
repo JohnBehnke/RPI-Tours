@@ -6,7 +6,7 @@ use_frameworks!
 target 'RPI Tours' do
 
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'GoogleMaps'
+pod 'Mapbox-iOS-SDK'
 
 pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
 

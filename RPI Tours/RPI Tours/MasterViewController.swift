@@ -14,15 +14,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil //(John) used for send information to the DetailVC
     var managedObjectContext: NSManagedObjectContext? = nil //(John)This is basically for CoreData. Think of it as a scratchpad for saving things
 
-
+    
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem() //(John)Adds an edit button programmatically
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem() //(John)Adds an edit button programmatically
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:") //(John) creates the add button with the action of "insertNewObject", which is a function
         self.navigationItem.rightBarButtonItem = addButton //(John)Add it to the scene
-        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         //(John)This is for split views for iPads. We aren't going to need this!
         if let split = self.splitViewController {
             let controllers = split.viewControllers

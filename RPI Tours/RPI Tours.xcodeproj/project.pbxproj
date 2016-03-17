@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30209399D35A4E6370E6A40C /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDE8BBA3E5E84A9C113D78 /* Pods_RPI_Tours.framework */; };
+		5209313E1C9A7AF700045E34 /* MapboxDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209313D1C9A7AF700045E34 /* MapboxDirections.swift */; };
 		5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */; };
 		5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */; };
 		5299A20F1C66AF7E0072F8D3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20E1C66AF7E0072F8D3 /* MasterViewController.swift */; };
@@ -17,7 +18,8 @@
 		5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */; };
 		5299A2241C66AF7E0072F8D3 /* RPI_ToursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2231C66AF7E0072F8D3 /* RPI_ToursTests.swift */; };
 		5299A22F1C66AF7E0072F8D3 /* RPI_ToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */; };
-		529FD1E01C83C67B00FC8C59 /* GoogleSDKAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FD1DF1C83C67B00FC8C59 /* GoogleSDKAPIKeys.swift */; };
+		52B0AC081C9A2CDE00D0661C /* GoogleSDKAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0AC071C9A2CDE00D0661C /* GoogleSDKAPIKeys.swift */; };
+		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		0A38144F0706C2AFDB192E20 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		26C6CAB81AE6C74A14C39DB5 /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
 		27DDE8BBA3E5E84A9C113D78 /* Pods_RPI_Tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_Tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5209313D1C9A7AF700045E34 /* MapboxDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxDirections.swift; sourceTree = "<group>"; };
 		5299A2061C66AF7E0072F8D3 /* RPI Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPI Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5299A20C1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RPI_Tours.xcdatamodel; sourceTree = "<group>"; };
@@ -56,7 +59,8 @@
 		5299A22A1C66AF7E0072F8D3 /* RPI ToursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPI ToursUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPI_ToursUITests.swift; sourceTree = "<group>"; };
 		5299A2301C66AF7E0072F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		529FD1DF1C83C67B00FC8C59 /* GoogleSDKAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleSDKAPIKeys.swift; path = ../../../../../../Temporary/GoogleSDKAPIKeys.swift; sourceTree = "<group>"; };
+		52B0AC071C9A2CDE00D0661C /* GoogleSDKAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleSDKAPIKeys.swift; path = ../../../../Documents/Temporary/GoogleSDKAPIKeys.swift; sourceTree = "<group>"; };
+		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +126,13 @@
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
 				5299A20E1C66AF7E0072F8D3 /* MasterViewController.swift */,
 				5299A2101C66AF7E0072F8D3 /* DetailViewController.swift */,
+				52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */,
 				5299A2121C66AF7E0072F8D3 /* Main.storyboard */,
-				529FD1DF1C83C67B00FC8C59 /* GoogleSDKAPIKeys.swift */,
+				52B0AC071C9A2CDE00D0661C /* GoogleSDKAPIKeys.swift */,
 				5299A2151C66AF7E0072F8D3 /* Assets.xcassets */,
 				5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
+				5209313D1C9A7AF700045E34 /* MapboxDirections.swift */,
 				5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */,
 			);
 			path = "RPI Tours";
@@ -229,6 +235,7 @@
 				TargetAttributes = {
 					5299A2051C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JRS59Q3JZW;
 					};
 					5299A21E1C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -340,10 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				529FD1E01C83C67B00FC8C59 /* GoogleSDKAPIKeys.swift in Sources */,
+				52B0AC081C9A2CDE00D0661C /* GoogleSDKAPIKeys.swift in Sources */,
 				5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */,
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* MasterViewController.swift in Sources */,
+				5209313E1C9A7AF700045E34 /* MapboxDirections.swift in Sources */,
+				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,11 +496,15 @@
 			baseConfigurationReference = 0A38144F0706C2AFDB192E20 /* Pods-RPI Tours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -500,11 +513,15 @@
 			baseConfigurationReference = 26C6CAB81AE6C74A14C39DB5 /* Pods-RPI Tours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

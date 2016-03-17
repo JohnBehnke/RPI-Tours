@@ -1,10 +1,10 @@
 PODS:
-  - GoogleMaps (1.12.2)
+  - Mapbox-iOS-SDK (3.1.2)
   - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - GoogleMaps
+  - Mapbox-iOS-SDK
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -23,7 +23,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  GoogleMaps: cc76edaa94a4284e80ecd7089ed319d1cca5f37e
+  Mapbox-iOS-SDK: 0a910c2cce1aa8cff5b9ec2a990e7a32332a776a
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
