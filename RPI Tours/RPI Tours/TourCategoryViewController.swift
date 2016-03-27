@@ -11,7 +11,7 @@ import CoreData
 
 class TourCategoryViewController: UITableViewController, NSFetchedResultsControllerDelegate,UIPopoverPresentationControllerDelegate {
 
-    var detailViewController: DetailViewController? = nil //(John) used for send information to the DetailVC
+    var detailViewController: ToursByCategoryViewController? = nil //(John) used for send information to the DetailVC
     var managedObjectContext: NSManagedObjectContext? = nil //(John)This is basically for CoreData. Think of it as a scratchpad for saving things
 
     
@@ -24,7 +24,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         //(John)This is for split views for iPads. We aren't going to need this!
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ToursByCategoryViewController
         }
     }
 
@@ -92,7 +92,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("catCell", forIndexPath: indexPath)
         //self.configureCell(cell, atIndexPath: indexPath)
         cell.textLabel?.text = tempTourCats[indexPath.row]
         return cell

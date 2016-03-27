@@ -7,7 +7,7 @@ build/
 DerivedData/
 Pods/
 
-GoogleSDKAPIKeys.swift
+mapBoxAPIKeys.swift
 
 
 ## Various settings
