@@ -24,7 +24,6 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         
-        
         if CLLocationManager.locationServicesEnabled() {
             
             
