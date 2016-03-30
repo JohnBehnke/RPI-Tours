@@ -12,9 +12,24 @@ import CoreLocation
 
 class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
 
-    @IBOutlet  var mapView: MGLMapView!
+    
     var directions: MBDirections?
     let locationManager = CLLocationManager()
+    
+    @IBOutlet  var mapView: MGLMapView!
+    
+    @IBOutlet var topNagivationItem: UINavigationItem!
+    
+    
+    @IBOutlet var tourDescriptionTextBox: UILabel!
+    
+    
+    @IBOutlet var startTourButton: UIButton!
+    
+    
+    @IBOutlet var tourStatsLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         
         
