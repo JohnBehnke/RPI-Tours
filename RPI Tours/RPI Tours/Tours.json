@@ -1,0 +1,82 @@
+{
+	"tour":
+  {	"name": "Example Tour",
+		"waypoints": [
+			[42.73064179,	-73.67553949],
+			[42.72912865,	-73.67406964],
+			[42.72825898,	-73.67426062],
+			[42.72876217,	-73.67665529],
+      [42.72824558,	-73.67840463],
+      [42.72886313,	-73.68382645],
+      [42.7293383,	-73.68253845],
+      [42.73084199,	-73.68153101],
+      [42.73078266,	-73.67884934],
+      [42.730117,	-73.67765],
+      [42.72995146,	-73.6766113],
+      [42.73064179,	-73.67553949]
+		],
+		"landmarks": [
+			{
+				"name": "RPI Admissions",
+				"description": "This is the admissions building.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.73064179,	-73.67553949]
+			}, {
+        "name": "Barton Residence Hall",
+				"description": "Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72912865,	-73.67406964]
+			}, {
+        "name": "Commons Dining Hall",
+				"description": "Situated at the center of the first-year residence halls, the Commons offers several dining stations. These include the popular Asian Pacifica, a savory grill program, pasta prepared to order, a deli and Theme Cuisine.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72825898,	-73.67426062]
+			}, {
+        "name": "Mueller Center",
+				"description": "The Mueller Center is the hub of personal fitness and wellness on the Rensselaer Campus.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72876217,	-73.67665529]
+      }, {
+        "name": "Biotech",
+				"description": "The Center for Biotechnology and Interdisciplinary Studies (CBIS) at Rensselaer Polytechnic Institute interweaves life sciences, physical sciences, and engineering into the fields of biotechnology and medicine, opening exciting new pathways to innovation and discovery.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72824558,	-73.67840463]
+      }, {
+        "name": "EMPAC",
+				"description": "The Curtis R. Priem Experimental Media and Performing Arts Center at Rensselaer Polytechnic Institute is where the arts, sciences, and technology interact with and influence each other by using the same facilities and technologies, and by breathing the same air.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72886313,	-73.68382645]
+      }, {
+        "name": "Folsom Library",
+				"description": "The mission of the Rensselaer Libraries is to support Rensselaer’s educational and research endeavors.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.7293383,	-73.68253845]
+      }, {
+        "name": "Sage Laboratory",
+				"description": "Russell Sage Laboratory houses a writing center, multimedia computer labs, and video production and sound editing equipment.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.73084199,	-73.68153101]
+      }, {
+        "name": "87 Gym",
+				"description": "The ’87 Gymnasium (gift of the class of 1887) has a swimming pool, two small gymnasia, an indoor track, and racquetball and squash courts.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.73078266,	-73.67884934]
+      }, {
+        "name": "Quad",
+				"description": "This is a description of this place.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.730117,	-73.67765]
+      }, {
+        "name": "Student Union",
+				"description": "This is a description of this place.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.72995146,	-73.6766113]
+      }, {
+        "name": "RPI Admissions",
+				"description": "This is a description of this place.",
+				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+				"coordinate": [42.73064179,	-73.67553949]
+      }
+		]
+  }
+}
