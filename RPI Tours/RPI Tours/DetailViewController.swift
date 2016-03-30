@@ -12,11 +12,11 @@ import CoreLocation
 
 class ToursByCategoryViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
+    
     var tempTours: [String] = ["Freshman Living", "Sophomore Living", "Dining Options", "Academic Buildings"]
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
-   
     
     @IBOutlet weak var attributionTextView: UITextView!
     
