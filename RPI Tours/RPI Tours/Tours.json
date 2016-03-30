@@ -63,17 +63,17 @@
 				"coordinate": [42.73078266,	-73.67884934]
       }, {
         "name": "Quad",
-				"description": "This is a description of this place.",
+				"description": "The Quadrangle, or The Quad for short, was one of the first residence halls on campus and recently renovated in the 1980s.",
 				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
 				"coordinate": [42.730117,	-73.67765]
       }, {
         "name": "Student Union",
-				"description": "This is a description of this place.",
+				"description": "Rensselaer Union has been driving campus engagement and student activities at Rensselaer Polytechnic Institute (RPI) since 1890.",
 				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
 				"coordinate": [42.72995146,	-73.6766113]
       }, {
         "name": "RPI Admissions",
-				"description": "This is a description of this place.",
+				"description": "This is the admissions building.",
 				"photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
 				"coordinate": [42.73064179,	-73.67553949]
       }
