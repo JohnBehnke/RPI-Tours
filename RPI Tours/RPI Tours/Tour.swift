@@ -9,5 +9,8 @@
 import UIKit
 
 class Tour: NSObject {
-
+    var name: string
+    var desc: string
+    var distance: Int
+    var duration: Int
 }

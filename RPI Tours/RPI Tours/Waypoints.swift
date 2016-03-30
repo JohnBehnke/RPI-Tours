@@ -9,5 +9,6 @@
 import UIKit
 
 class Waypoints: NSObject {
-
+    var lat: double
+    var long: double
 }

@@ -9,5 +9,10 @@
 import UIKit
 
 class Landmarks: NSObject {
+    var name: string
+    var desc: string
+    var lat: double
+    var long: double
+    var building_type: string
 
 }

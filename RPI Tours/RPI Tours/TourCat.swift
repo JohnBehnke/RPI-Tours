@@ -8,6 +8,7 @@
 
 import UIKit
 
-class TourCat: NSObject {
-
+class TourCat {
+    var name: string
+    var desc: string
 }

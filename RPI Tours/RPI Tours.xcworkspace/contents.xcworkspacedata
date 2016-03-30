@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:RPI Tours/JSON_PARSER.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RPI Tours/TourCat.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RPI Tours/Tour.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RPI Tours/Landmarks.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RPI Tours/Waypoints.swift">
+   </FileRef>
+   <FileRef
       location = "group:RPI Tours.xcodeproj">
    </FileRef>
    <FileRef
