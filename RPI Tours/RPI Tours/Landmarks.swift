@@ -32,10 +32,10 @@ class Landmark: NSObject {
     func getDesc() -> String {
         return desc
     }
-    func getLat() -> Int{
+    func getLat() -> Double{
         return lat
     }
-    func getLong() -> Int {
+    func getLong() -> Double {
         return long
     }
     

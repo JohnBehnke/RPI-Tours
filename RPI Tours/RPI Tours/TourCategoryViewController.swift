@@ -26,6 +26,11 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ToursByCategoryViewController
         }
+        
+        var x = jsonParser()
+        
+        print(x.getTours()[0].getLandmarks()[0].getName())
+        
     }
 
     override func viewWillAppear(animated: Bool) {

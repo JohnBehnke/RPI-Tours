@@ -19,20 +19,20 @@ class TourCat {
         
     }
     
-    override init() {
+     init() {
         self.name = ""
         self.desc = ""
-        self.tours = nil
+        self.tours = []
     }
     
     //GETTERS
-    func getName() {
+    func getName() -> String{
         return name
     }
-    func getDesc() {
+    func getDesc() ->String {
         return desc
     }
-    func getTours() {
+    func getTours() -> [Tour] {
         return tours
     }
     
