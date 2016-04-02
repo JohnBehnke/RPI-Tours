@@ -189,7 +189,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="cAA-8f-vjo">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="oDo-ip-Gwc" kind="show" id="gqQ-WK-0eq"/>
+                                <segue destination="oDo-ip-Gwc" kind="show" id="8dd-HZ-jDH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -202,7 +202,7 @@
         <!--Settings-->
         <scene sceneID="PQT-4a-J2V">
             <objects>
-                <tableViewController id="oDo-ip-Gwc" customClass="SettingsViewController" sceneMemberID="viewController">
+                <tableViewController id="oDo-ip-Gwc" customClass="SettingsViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kMD-i1-OeA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,7 +310,7 @@
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <state key="normal" title="View Licenses &amp; Application Information"/>
                                                     <connections>
-                                                        <segue destination="LGe-p5-qOA" kind="show" id="R4i-TQ-fDn"/>
+                                                        <segue destination="LGe-p5-qOA" kind="show" id="gsl-lH-cTC"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -348,7 +348,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="bFB-Fs-1EX"/>
                     <connections>
-                        <outlet property="accuracySlider" destination="mb7-nz-eOy" id="gj5-C1-LaX"/>
+                        <outlet property="accuracySlider" destination="lY7-HC-MT8" id="OjJ-ng-Bqv"/>
                         <outlet property="measurementTypeSelector" destination="tBk-Mm-X2m" id="rnY-KP-LYw"/>
                     </connections>
                 </tableViewController>
@@ -604,9 +604,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="106.5" y="305" width="187" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

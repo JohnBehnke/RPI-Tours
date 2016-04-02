@@ -10,6 +10,7 @@ import UIKit
 import Mapbox
 import CoreLocation
 
+
 class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var mapView: MGLMapView!
@@ -29,51 +30,66 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-
+            
             //BASED GPS TRACKING STUFFFFFFFFFFF
-//            let mb = CLLocationCoordinate2D(latitude: 42.72948208, longitude: -73.67905909)
-//            let wh = CLLocationCoordinate2D(latitude: 42.728988, longitude: -73.674112)
-//            
-//            var request = MBDirectionsRequest(sourceCoordinate: mb, waypointCoordinates: [CLLocationCoordinate2D(latitude: 42.73064179, longitude: -73.67553949)], destinationCoordinate: wh)
-//            request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
-//            directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
-//            
-//            var test:[CLLocationCoordinate2D] = []
-//            var done = true
-//            directions!.calculateDirectionsWithCompletionHandler { (response, error) in
-//                if let route = response?.routes.first {
-//                    print("Route summary:")
-//                    print("Distance: \(route.distance) meters (\(route.steps.count) route steps) in \(route.expectedTravelTime / 60) minutes")
-//                    for step in route.steps {
-//                        //let point = MGLPointAnnotation()
-//                        test.append(step.maneuverLocation!)
-//                        //self.mapView.addAnnotation(point)
-//                        print("\(step.instructions) \(step.distance) meters")
-//                    }
-//                    let line = MGLPolyline(coordinates: &test, count: UInt(test.count))
-//                    
-//                    line.title = "Crema to Council Crest"
-//                    self.mapView.addAnnotation(line)
-//                    done = false
-//                } else {
-//                    print("Error calculating directions: \(error)")
-//                    done = false
-//                }
-//            }
-           
-           
+            //            let mb = CLLocationCoordinate2D(latitude: 42.72948208, longitude: -73.67905909)
+            //            let wh = CLLocationCoordinate2D(latitude: 42.728988, longitude: -73.674112)
+            //
+            //            var request = MBDirectionsRequest(sourceCoordinate: mb, waypointCoordinates: [CLLocationCoordinate2D(latitude: 42.73064179, longitude: -73.67553949)], destinationCoordinate: wh)
+            //            request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
+            //            directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
+            //
+            //            var test:[CLLocationCoordinate2D] = []
+            //            var done = true
+            //            directions!.calculateDirectionsWithCompletionHandler { (response, error) in
+            //                if let route = response?.routes.first {
+            //                    print("Route summary:")
+            //                    print("Distance: \(route.distance) meters (\(route.steps.count) route steps) in \(route.expectedTravelTime / 60) minutes")
+            //                    for step in route.steps {
+            //                        //let point = MGLPointAnnotation()
+            //                        test.append(step.maneuverLocation!)
+            //                        //self.mapView.addAnnotation(point)
+            //                        print("\(step.instructions) \(step.distance) meters")
+            //                    }
+            //                    let line = MGLPolyline(coordinates: &test, count: UInt(test.count))
+            //
+            //                    line.title = "Crema to Council Crest"
+            //                    self.mapView.addAnnotation(line)
+            //                    done = false
+            //                } else {
+            //                    print("Error calculating directions: \(error)")
+            //                    done = false
+            //                }
+            //            }
+            
+            let campusBuildings = buildCSV()
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            super.viewDidLoad()
+            //        placesClient =
+            // Do any additional setup after loading the view, typically from a nib.
+            
+            
+            for item in campusBuildings {
+                let point = MGLPointAnnotation()
+                point.coordinate = CLLocationCoordinate2D(latitude: item.buildingLat, longitude: item.buildingLong)
+                point.title = item.buildingName
+                
+                mapView.addAnnotation(point)
+            }
         }
-        
-        
-        
-        
-        super.viewDidLoad()
-//        placesClient =
-        // Do any additional setup after loading the view, typically from a nib.
-        func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-            // Always try to show a callout when an annotation is tapped.
-            return true
-        }
+    }
+    
+    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        // Always try to show a callout when an annotation is tapped.
+        return true
     }
     
     override func didReceiveMemoryWarning() {

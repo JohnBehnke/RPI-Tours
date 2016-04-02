@@ -1,20 +1,27 @@
 PODS:
+  - CSwiftV (0.0.3)
   - Mapbox-iOS-SDK (3.1.2)
   - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
   - Mapbox-iOS-SDK
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
+  CSwiftV:
+    :git: https://github.com/Daniel1of1/CSwiftV.git
   ReachabilitySwift:
     :git: https://github.com/ashleymills/Reachability.swift
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  CSwiftV:
+    :commit: a1774b9dbae7b4d9fa288998362625cae9e12352
+    :git: https://github.com/Daniel1of1/CSwiftV.git
   ReachabilitySwift:
     :commit: cf126c0584a209143c75bf1d0f23fd904891e26e
     :git: https://github.com/ashleymills/Reachability.swift
@@ -23,6 +30,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  CSwiftV: 93e3d4e1501f2a9b1eac3ae51d53a5edf41beb5b
   Mapbox-iOS-SDK: 0a910c2cce1aa8cff5b9ec2a990e7a32332a776a
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a

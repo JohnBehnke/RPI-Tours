@@ -22,7 +22,10 @@
 		5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */; };
 		5299A2241C66AF7E0072F8D3 /* RPI_ToursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2231C66AF7E0072F8D3 /* RPI_ToursTests.swift */; };
 		5299A22F1C66AF7E0072F8D3 /* RPI_ToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */; };
+		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
+		52BDD95A1CAF577400EEEE7A /* CampusBuildingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDD9591CAF577400EEEE7A /* CampusBuildingList.swift */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
+		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,10 @@
 		5299A22A1C66AF7E0072F8D3 /* RPI ToursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPI ToursUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPI_ToursUITests.swift; sourceTree = "<group>"; };
 		5299A2301C66AF7E0072F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
+		52BDD9591CAF577400EEEE7A /* CampusBuildingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusBuildingList.swift; sourceTree = "<group>"; };
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
+		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +176,14 @@
 		52B9BDEB1C9B31FF007C551A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */,
+				52BDD9571CAF526600EEEE7A /* Tours.json */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
 				529901341C9B8A6200387C4A /* mapBoxAPIKeys.swift */,
 				5209313D1C9A7AF700045E34 /* MapboxDirections.swift */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
 				5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */,
+				52BDD9591CAF577400EEEE7A /* CampusBuildingList.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -308,6 +317,8 @@
 				5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */,
 				5299A2161C66AF7E0072F8D3 /* Assets.xcassets in Resources */,
 				5299A2141C66AF7E0072F8D3 /* Main.storyboard in Resources */,
+				52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */,
+				52BDD9581CAF526600EEEE7A /* Tours.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +399,7 @@
 				5209313E1C9A7AF700045E34 /* MapboxDirections.swift in Sources */,
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				524C8F041CA76A35005290A2 /* TourDetailViewController.swift in Sources */,
+				52BDD95A1CAF577400EEEE7A /* CampusBuildingList.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* DetailViewController.swift in Sources */,
 				529901351C9B8A6200387C4A /* mapBoxAPIKeys.swift in Sources */,
 			);

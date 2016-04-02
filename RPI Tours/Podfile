@@ -12,6 +12,7 @@ pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.sw
 
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
+pod 'CSwiftV', :git => 'https://github.com/Daniel1of1/CSwiftV.git'
 end
 
 target 'RPI ToursTests' do
