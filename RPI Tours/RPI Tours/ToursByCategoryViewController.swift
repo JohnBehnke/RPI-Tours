@@ -12,8 +12,7 @@ import CoreLocation
 
 class ToursByCategoryViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
-    
-    var tempTours: [String] = ["Freshman Living", "Sophomore Living", "Dining Options", "Academic Buildings"]
+    var tempTours: [Tour] = []
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
@@ -21,26 +20,26 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
     @IBOutlet weak var attributionTextView: UITextView!
     
     
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-    
-    
-   
-    
-    
-    
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("timeStamp")!.description
-            }
-        }
-    }
+    //    var detailItem: AnyObject? {
+    //        didSet {
+    //            // Update the view.
+    //            self.configureView()
+    //        }
+    //    }
+    //
+    //
+    //
+    //
+    //
+    //
+    //    func configureView() {
+    //        // Update the user interface for the detail item.
+    //        if let detail = self.detailItem {
+    //            if let label = self.detailDescriptionLabel {
+    //                label.text = detail.valueForKey("timeStamp")!.description
+    //            }
+    //        }
+    //    }
     
     override func viewDidLoad() {
         
@@ -51,7 +50,7 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        //self.configureView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,15 +68,15 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tourCell", forIndexPath: indexPath)
         //self.configureCell(cell, atIndexPath: indexPath)
-        cell.textLabel?.text = tempTours[indexPath.row]
+        cell.textLabel?.text = tempTours[indexPath.row].getName()
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
-            self.performSegueWithIdentifier("tourDetail", sender: self)
+        self.performSegueWithIdentifier("tourDetail", sender: self)
         
-           }
+    }
     
     
     
@@ -89,18 +88,14 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
     {
         if segue.identifier == "tourDetail"
         {
-            let vc = segue.destinationViewController 
-            
-            let controller = vc.popoverPresentationController
-            
-            if controller != nil
-            {
-                controller?.delegate = self
+            if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
+                //let object = self.fetchedResultsController.objectAtIndexPath(indexPath) //uses index paths (having a row and a section component) so that it can be used as a data source for table views with multiple sections.
+                let controller = (segue.destinationViewController as! TourDetailViewController) //as! TourDetailViewController //Create the detailVC
+                controller.actualTour = tempTours[indexPath.row]
             }
         }
+        
     }
-
-    
     
 }
 

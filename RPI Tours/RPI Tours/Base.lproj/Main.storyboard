@@ -476,6 +476,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsZooming" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">

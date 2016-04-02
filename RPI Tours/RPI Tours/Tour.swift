@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Tour: NSObject {
     
@@ -42,9 +43,15 @@ class Tour: NSObject {
     func getDuration() -> Int {
         return duration
     }
-    func getWaypoints() -> [Waypoint]{
-        return waypoints
+    func getWaypoints() -> [CLLocationCoordinate2D]{
+        var retArray:[CLLocationCoordinate2D] = []
+        for point in waypoints{
+            retArray.append(CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong()))
+        }
+        return retArray
     }
+    
+    
     func getLandmarks()  -> [Landmark]{
         return landmarks
     }

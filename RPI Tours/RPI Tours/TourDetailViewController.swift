@@ -11,8 +11,8 @@ import Mapbox
 import CoreLocation
 
 class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
-
     
+    var actualTour:Tour = Tour()
     var directions: MBDirections?
     let locationManager = CLLocationManager()
     
@@ -32,37 +32,37 @@ class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
     
     override func viewDidLoad() {
         
+        var workingWapoints:[CLLocationCoordinate2D] = actualTour.getWaypoints()
+//        let mb = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[0].getLat(), longitude: actualTour.getWaypoints()[0].getLong())
+//        let wh = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLat(), longitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLong())
         
-        let mb = CLLocationCoordinate2D(latitude: 42.72948208, longitude: -73.67905909)
-                    let wh = CLLocationCoordinate2D(latitude: 42.728988, longitude: -73.674112)
+        var request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
+        request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
+        directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
         
-                    var request = MBDirectionsRequest(sourceCoordinate: mb, waypointCoordinates: [CLLocationCoordinate2D(latitude: 42.73064179, longitude: -73.67553949)], destinationCoordinate: wh)
-                    request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
-                    directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
+        var test:[CLLocationCoordinate2D] = []
+        var done = true
+        directions!.calculateDirectionsWithCompletionHandler { (response, error) in
+            if let route = response?.routes.first {
+                print("Route summary:")
+                print("Distance: \(route.distance) meters (\(route.steps.count) route steps) in \(route.expectedTravelTime / 60) minutes")
+                for step in route.steps {
+                    //let point = MGLPointAnnotation()
+                    test.append(step.maneuverLocation!)
+                    //self.mapView.addAnnotation(point)
+                    print("\(step.instructions) \(step.distance) meters")
+                }
+                let line = MGLPolyline(coordinates: &test, count: UInt(test.count))
+                
+                line.title = "Crema to Council Crest"
+                self.mapView.addAnnotation(line)
+                done = false
+            } else {
+                print("Error calculating directions: \(error)")
+                done = false
+            }
+        }
         
-                    var test:[CLLocationCoordinate2D] = []
-                    var done = true
-                    directions!.calculateDirectionsWithCompletionHandler { (response, error) in
-                        if let route = response?.routes.first {
-                            print("Route summary:")
-                            print("Distance: \(route.distance) meters (\(route.steps.count) route steps) in \(route.expectedTravelTime / 60) minutes")
-                            for step in route.steps {
-                                //let point = MGLPointAnnotation()
-                                test.append(step.maneuverLocation!)
-                                //self.mapView.addAnnotation(point)
-                                print("\(step.instructions) \(step.distance) meters")
-                            }
-                            let line = MGLPolyline(coordinates: &test, count: UInt(test.count))
-        
-                            line.title = "Crema to Council Crest"
-                            self.mapView.addAnnotation(line)
-                            done = false
-                        } else {
-                            print("Error calculating directions: \(error)")
-                            done = false
-                        }
-                    }
-
         super.viewDidLoad()
         func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
             // Always try to show a callout when an annotation is tapped.
@@ -71,7 +71,7 @@ class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -99,15 +99,15 @@ class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
             return UIColor.redColor()
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

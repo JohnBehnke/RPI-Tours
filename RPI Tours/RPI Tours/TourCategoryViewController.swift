@@ -15,7 +15,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     var managedObjectContext: NSManagedObjectContext? = nil //(John)This is basically for CoreData. Think of it as a scratchpad for saving things
 
     
-    var tempTourCats: [String] = ["General Tours","Athletics Tour","Tour by Major", "Alumni Tours"]
+    var tourCategories: [TourCat] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,9 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ToursByCategoryViewController
         }
         
-        var x = jsonParser()
+        tourCategories.append( jsonParser())
         
-        print(x.getTours()[0].getLandmarks()[0].getName())
+        
         
     }
 
@@ -69,15 +69,15 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
 
     //this is gonna have to be used soon (John)
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showDetail" { //(John) If wr are about to go into the detail segue
-//            if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
-//            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) //uses index paths (having a row and a section component) so that it can be used as a data source for table views with multiple sections.
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController //Create the detailVC
-//                controller.detailItem = object //Set the detailVC detail item to the object
-//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
-//                controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
-//            }
-//        }
+        if segue.identifier == "showDetail" { //(John) If wr are about to go into the detail segue
+            if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
+            //let object = self.fetchedResultsController.objectAtIndexPath(indexPath) //uses index paths (having a row and a section component) so that it can be used as a data source for table views with multiple sections.
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! ToursByCategoryViewController //Create the detailVC
+                controller.tempTours = tourCategories[indexPath.row].getTours()//Set the detailVC detail item to the object
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+                controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
+            }
+        }
         
     } 
 
@@ -91,7 +91,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        let sectionInfo = self.fetchedResultsController.sections![section]
 //        return sectionInfo.numberOfObjects
-        return self.tempTourCats.count
+        return self.tourCategories.count
     }
     
     
@@ -99,7 +99,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("catCell", forIndexPath: indexPath)
         //self.configureCell(cell, atIndexPath: indexPath)
-        cell.textLabel?.text = tempTourCats[indexPath.row]
+        cell.textLabel?.text = tourCategories[indexPath.row].getName()
         return cell
     }
 
