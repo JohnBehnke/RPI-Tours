@@ -32,11 +32,22 @@ class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
     
     override func viewDidLoad() {
         
-        var workingWapoints:[CLLocationCoordinate2D] = actualTour.getWaypoints()
-//        let mb = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[0].getLat(), longitude: actualTour.getWaypoints()[0].getLong())
-//        let wh = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLat(), longitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLong())
         
-        var request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
+        
+        for item in actualTour.getLandmarks() {
+            let point = MGLPointAnnotation()
+            point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
+            point.title = item.getName()
+            print("werop")
+            mapView.addAnnotation(point)
+        }
+
+        
+        var workingWapoints:[CLLocationCoordinate2D] = actualTour.getWaypoints()
+        //        let mb = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[0].getLat(), longitude: actualTour.getWaypoints()[0].getLong())
+        //        let wh = CLLocationCoordinate2D(latitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLat(), longitude: actualTour.getWaypoints()[actualTour.getWaypoints().count - 1].getLong())
+        
+        let request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
         request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
         directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
         
@@ -62,14 +73,19 @@ class TourDetailViewController: UIViewController , CLLocationManagerDelegate  {
                 done = false
             }
         }
-        
         super.viewDidLoad()
-        func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-            // Always try to show a callout when an annotation is tapped.
-            
-            return true
-        }
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        // Always try to show a callout when an annotation is tapped.
+        
+        return true
     }
     
     override func didReceiveMemoryWarning() {
