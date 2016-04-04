@@ -1,38 +1,29 @@
 //
-//  SettingsViewController.swift
+//  DirectionsViewController.swift
 //  RPI Tours
 //
-//  Created by John Behnke on 3/30/16.
+//  Created by John Behnke on 4/4/16.
 //  Copyright © 2016 RPI Web Tech. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class DirectionsViewController: UITableViewController {
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var measurementSystem:String?
+    
+    var directions:[MBRouteStep] = []
 
-    @IBOutlet var measurementTypeSelector: UISegmentedControl!
-    
-    @IBAction func triggeredSave(sender: AnyObject) {
-        
-        
-        
-        
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
-        
-        
-        
-        
-        
-        
-        
-    }
-    
-    @IBOutlet var accuracySlider: UISlider!
-    
     override func viewDidLoad() {
+        
+        
+        measurementSystem = defaults.objectForKey("system") as? String
+        if measurementSystem == nil {
+            measurementSystem = "Feet"
+        }
+
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -49,25 +40,42 @@ class SettingsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+   
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return directions.count
+    }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        
+        var distanceMeasurment:Float?
+        
+        if self.measurementSystem == "Feet"{
+            distanceMeasurment = self.metersToFeet(Float(directions[indexPath.row].distance))
+        }
+            
+        else{
+            distanceMeasurment = Float(directions[indexPath.row].distance)
+        }
 
-        // Configure the cell...
+        
+        
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("directionCell", forIndexPath: indexPath)
+
+        cell.textLabel?.text = "\(directions[indexPath.row].instructions)  \(distanceMeasurment!) \(measurementSystem!)"
 
         return cell
     }
-    */
+    
+    
+    func metersToFeet(input:Float) -> Float{
+        
+        return input * 3.28084
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

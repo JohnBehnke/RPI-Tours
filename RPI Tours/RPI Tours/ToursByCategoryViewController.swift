@@ -10,14 +10,11 @@ import UIKit
 
 import CoreLocation
 
-class ToursByCategoryViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class ToursByCategoryViewController: UITableViewController{
     
     var tempTours: [Tour] = []
-    
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-    
-    
-    @IBOutlet weak var attributionTextView: UITextView!
+    var tourCatName:String = ""
+   
     
     
     //    var detailItem: AnyObject? {
@@ -45,7 +42,7 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
         
         
         
-        
+        self.navigationItem.title = self.tourCatName
         
         super.viewDidLoad()
         
@@ -90,8 +87,8 @@ class ToursByCategoryViewController: UITableViewController, UIPopoverPresentatio
         {
             if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
                 //let object = self.fetchedResultsController.objectAtIndexPath(indexPath) //uses index paths (having a row and a section component) so that it can be used as a data source for table views with multiple sections.
-                let controller = (segue.destinationViewController as! TourDetailViewController) //as! TourDetailViewController //Create the detailVC
-                controller.actualTour = tempTours[indexPath.row]
+                let controller = (segue.destinationViewController as! SelectedTourViewController) //as! TourDetailViewController //Create the detailVC
+                controller.selectedTour = tempTours[indexPath.row]
             }
         }
         

@@ -39,10 +39,10 @@ func jsonParser() -> TourCat {
                 }
                 
             }
-            tour_list.append(Tour(name: tour_name, desc: "" /*this should be description*/, distance: 0 /*distance*/, duration: 0 /*duration*/, waypoints: way_list, landmarks: land_list))
+            tour_list.append(Tour(name: tour_name, desc: "Hey! This is an example tour brought to you by the RPI Tours SD&D team!" /*this should be description*/, distance: 0 /*distance*/, duration: 0 /*duration*/, waypoints: way_list, landmarks: land_list))
         }catch {
             print("Error with Json: )")
         }
     }
-    return TourCat(name: "Example" /*this should be the category name*/, desc: "" /*this should be the description*/, tours: tour_list)
+    return TourCat(name: "Example Tour Category" /*this should be the category name*/, desc: "Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!" /*this should be the description*/, tours: tour_list)
 }

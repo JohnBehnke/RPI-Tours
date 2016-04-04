@@ -10,7 +10,15 @@ import UIKit
 
 class TourCategoryDetailViewController: UIViewController {
 
+    //@IBOutlet var catDesc: UITextView!
+    var label:UILabel?
+    
     override func viewDidLoad() {
+        label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label!.center = CGPointMake(160, 284)
+        label!.textAlignment = NSTextAlignment.Center
+        label!.text = "I'am a test label"
+        self.view.addSubview(label!)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -21,6 +29,10 @@ class TourCategoryDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setText(input:String)  {
+        
+        self.label!.text = input
+    }
 
     /*
     // MARK: - Navigation
