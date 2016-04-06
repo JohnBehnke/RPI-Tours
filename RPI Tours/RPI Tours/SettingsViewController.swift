@@ -26,8 +26,14 @@ class SettingsViewController: UITableViewController {
         defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
         
         
-        let alert = UIAlertView(title: "System", message: "Settings Saved!.", delegate: nil, cancelButtonTitle: "OK")
-        alert.show()
+        
+        let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            //self.performSegueWithIdentifier("cancelTour", sender: self)
+        })
+        alert.addAction(OKAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     

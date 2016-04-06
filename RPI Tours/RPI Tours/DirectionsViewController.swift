@@ -52,18 +52,19 @@ class DirectionsViewController: UITableViewController {
 
     // MARK: - Table View Functions
 
-   
+    //Return the number of directions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return directions.count
     }
 
-    
+    //Set up the cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         var distanceMeasurment:Float?
         
+        
+        //Switch measurement systems if necessary
         if self.measurementSystem == "Feet"{
             distanceMeasurment = metersToFeet(Float(directions[indexPath.row].distance))
         }

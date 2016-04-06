@@ -85,7 +85,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         
         presentViewController(vc, animated: true, completion:nil)
     }
-
+    
     
     //Returns the count of how many tour categories exist
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,11 +105,19 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if isConnectedToNetwork() == false {
             //Change this to avoid deprecation. This is only temporary
-            let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
-            alert.show()}
+            let alert = UIAlertController(title: "Warning!", message: "Check your internet Connection", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                (_)in
+                //self.performSegueWithIdentifier("cancelTour", sender: self)
+            })
+            
+            alert.addAction(OKAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
         else{
             self.performSegueWithIdentifier("showDetail", sender: self)
         }
+        
     }
     
     //MARK: Popover Functions

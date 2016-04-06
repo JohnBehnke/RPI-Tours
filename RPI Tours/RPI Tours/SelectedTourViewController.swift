@@ -34,10 +34,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var calculatedTour:[MBRouteStep] = []
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
     let locationManager = CLLocationManager()
-    
-    
-    
-    
+        
     
     //MARK: System Functions
     override func viewDidLoad() {
