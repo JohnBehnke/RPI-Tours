@@ -12,32 +12,33 @@ import CoreData
 
 class TourCategoryViewController: UITableViewController, NSFetchedResultsControllerDelegate,UIPopoverPresentationControllerDelegate {
     
-    var detailViewController: ToursByCategoryViewController? = nil //(John) used for send information to the DetailVC
-    var managedObjectContext: NSManagedObjectContext? = nil //(John)This is basically for CoreData. Think of it as a scratchpad for saving things
     
-    
+    //MARK: Globals
+    var detailViewController: ToursByCategoryViewController? = nil //used for send information to the DetailVC
     
     var tourCategories: [TourCat] = []
     
+    
+    //MARK: System Functions
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        //(John)This is for split views for iPads. We aren't going to need this!
+        //This is for split views for iPads. We aren't going to need this!
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ToursByCategoryViewController
         }
         
-        
-        tourCategories.append( jsonParser())
+        //Call the JSON parser and append the parsed tour categories to the tourCategories Array
+        self.tourCategories.append( jsonParser())
         
         
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed //(John) Just for the iPad swag
+        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed //Just for the iPad swag
         super.viewWillAppear(animated)
     }
     
@@ -45,8 +46,6 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     
     // MARK: - Segues
@@ -68,16 +67,18 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         
     }
     
+    //MARK: Table View Functions
+    
+    //This function deals with displaying a TourCatDetail View Controller when the user taps on the "i"
+    //No Return
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
-        //let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
         
         let vc = TourCategoryDetailViewController()
         vc.viewDidLoad()
         vc.setText(self.tourCategories[indexPath.row].getDesc())
         vc.modalPresentationStyle = UIModalPresentationStyle.Popover
         let popover: UIPopoverPresentationController = vc.popoverPresentationController!
-        
         popover.sourceView = tableView.cellForRowAtIndexPath(indexPath)?.contentView
         popover.sourceRect = (tableView.cellForRowAtIndexPath(indexPath)?.bounds)!
         popover.delegate = self
@@ -86,13 +87,13 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     }
 
     
-    
+    //Returns the count of how many tour categories exist
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.tourCategories.count
     }
     
-    
+    //Configures a cell to be displayed
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("catCell", forIndexPath: indexPath)
         
@@ -100,7 +101,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         return cell
     }
     
-    
+    //Deals with a user tapping a cell. Either starts a segue to the next VC, or fails b/c no internet
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if isConnectedToNetwork() == false {
             //Change this to avoid deprecation. This is only temporary
@@ -111,6 +112,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         }
     }
     
+    //MARK: Popover Functions
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None

@@ -9,9 +9,11 @@
 import UIKit
 
 class TourCategoryDetailViewController: UIViewController {
-
+    
+    //MARK: Globals
     var label:UILabel?
     
+    //MARK: System Functions
     override func viewDidLoad() {
         label = UILabel(frame: CGRectMake(0, 0, 200, 21))
         label!.center = CGPointMake(160, 284)
@@ -27,7 +29,9 @@ class TourCategoryDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    //MARK: Helper Function
     
+    //Set the text label
     func setText(input:String)  {
         
         self.label!.text = input

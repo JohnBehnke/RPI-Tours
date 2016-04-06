@@ -12,15 +12,18 @@ import CoreLocation
 
 class ToursByCategoryViewController: UITableViewController{
     
+    //MARK: IBAction
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
+    
+    //MARK: Global Variables
     var tempTours: [Tour] = []
     var tourCatName:String = ""
-   
     
     
+    //MARK: System Functions
     override func viewDidLoad() {
         
-        
-        
+        //Set the title of the window to the tour category name
         self.navigationItem.title = self.tourCatName
         
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class ToursByCategoryViewController: UITableViewController{
     }
     
     
+    //MARK: Table View Functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return tempTours.count
@@ -51,12 +55,8 @@ class ToursByCategoryViewController: UITableViewController{
         
     }
     
+    //MARK: Segues
     
-    
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.None
-        
-    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "tourDetail"
@@ -68,6 +68,7 @@ class ToursByCategoryViewController: UITableViewController{
         }
         
     }
+    
     
 }
 

@@ -12,33 +12,34 @@ import CoreLocation
 
 class SelectedTourViewController: UITableViewController , CLLocationManagerDelegate {
     
-    let defaults = NSUserDefaults.standardUserDefaults()
-    
-    var selectedTour:Tour = Tour()
-    var directions: MBDirections?
-    
-    var measurementSystem:String?
-    
-    var calculatedTour:[MBRouteStep] = []
-    var calculatedTourPoints:[CLLocationCoordinate2D] = []
-    let locationManager = CLLocationManager()
-    
+    //MARK: IBOUTLETS
     @IBOutlet var tourLengthLabel: UILabel!
     
     @IBOutlet var mapView: MGLMapView!
     
-    
     @IBOutlet var tourDescriptionLabel: UILabel!
     
     @IBOutlet var tourTimeLabel: UILabel!
-    
+
+    //MARK: IBAction
     @IBAction func pressedStartTour(sender: AnyObject) {
         self.performSegueWithIdentifier("showDirections", sender: self)
-
+        
     }
     
+    //MARK: Global
+    var selectedTour:Tour = Tour()
+    var directions: MBDirections?
+    var measurementSystem:String?
+    var calculatedTour:[MBRouteStep] = []
+    var calculatedTourPoints:[CLLocationCoordinate2D] = []
+    let locationManager = CLLocationManager()
     
     
+    
+    
+    
+    //MARK: System Functions
     override func viewDidLoad() {
         
         
@@ -52,6 +53,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             mapView.addAnnotation(point)
         }
         
+        let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
         if measurementSystem == nil {
             measurementSystem = "Feet"
@@ -67,9 +69,13 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     
-    
-        
+    //MARK: Helper Functions
     
     func calculateDirections() {
         var workingWapoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
@@ -116,20 +122,15 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    // MARK: - Table view data source
-    
+    // MARK: Table View Functions
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 4
     }
     
     
-    
+    //MARK: Mapbox Helper Functions
     
     func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
@@ -164,6 +165,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
     }
     
+    
+    //MARK: Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDirections" {
             

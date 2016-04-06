@@ -13,8 +13,14 @@ import CoreLocation
 
 class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     
+    
+    //MARK: IBOutlets
     @IBOutlet var mapView: MGLMapView!
+    
+    //MARK: Global Variables
     var directions: MBDirections?
+    
+    //MARK: System Function
     override func viewDidLoad() {
         
         let locationManager = CLLocationManager()
@@ -44,15 +50,19 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Mapbox Helper Functions
+    
     func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         return true
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     
 }

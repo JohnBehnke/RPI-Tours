@@ -10,8 +10,14 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
-    @IBOutlet var measurementTypeSelector: UISegmentedControl!
     
+    //MARK: IBOutlets
+    
+    @IBOutlet var measurementTypeSelector: UISegmentedControl!
+    @IBOutlet var accuracySlider: UISlider!
+    
+    
+    //MARK: IBActions
     @IBAction func triggeredSave(sender: AnyObject) {
         
         
@@ -19,10 +25,13 @@ class SettingsViewController: UITableViewController {
         
         defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
         
+        
+        let alert = UIAlertView(title: "System", message: "Settings Saved!.", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
     }
     
-    @IBOutlet var accuracySlider: UISlider!
     
+    //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         

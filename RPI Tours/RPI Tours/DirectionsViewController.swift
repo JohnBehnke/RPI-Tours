@@ -12,11 +12,26 @@ import UIKit
 //View Controller for the Directions Table View
 class DirectionsViewController: UITableViewController {
     
-    
+    //MARK: Global Variables
     var measurementSystem:String?
     
     var directions:[MBRouteStep] = []
 
+    @IBAction func cancelTour(sender: AnyObject) {
+        
+        
+        
+        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            self.performSegueWithIdentifier("cancelTour", sender: self)
+        })
+        
+        alert.addAction(OKAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: System Functions
     override func viewDidLoad() {
         
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -35,7 +50,7 @@ class DirectionsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Functions
 
    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +79,6 @@ class DirectionsViewController: UITableViewController {
 
         return cell
     }
-    
     
     
 

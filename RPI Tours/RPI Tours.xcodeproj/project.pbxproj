@@ -204,13 +204,13 @@
 		52B9BDEA1C9B31E7007C551A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */,
+				524C8F011CA76236005290A2 /* TourCategoryDetailViewController.swift */,
+				5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */,
+				528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */,
+				52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */,
 				5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */,
 				5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */,
-				5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */,
-				5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */,
-				52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */,
-				524C8F011CA76236005290A2 /* TourCategoryDetailViewController.swift */,
-				528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
