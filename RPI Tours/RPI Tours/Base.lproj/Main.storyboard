@@ -356,10 +356,10 @@
                                 <exclude reference="Gqm-V1-WeO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="V6g-gw-jb8"/>
                                 <exclude reference="LjR-gH-9x4"/>
                                 <exclude reference="XKv-0D-nBk"/>
                                 <exclude reference="rMK-io-y2M"/>
-                                <exclude reference="V6g-gw-jb8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -367,10 +367,10 @@
                                 <include reference="Gqm-V1-WeO"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="V6g-gw-jb8"/>
                                 <include reference="LjR-gH-9x4"/>
                                 <include reference="XKv-0D-nBk"/>
                                 <include reference="rMK-io-y2M"/>
-                                <include reference="V6g-gw-jb8"/>
                             </mask>
                         </variation>
                     </view>
@@ -735,6 +735,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9UD-36-pV3"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>

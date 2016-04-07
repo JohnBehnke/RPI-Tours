@@ -20,6 +20,7 @@ struct building {
     
 }
 
+//Our JSON Parser
 func jsonParser() -> TourCat {
     var tour_list:[Tour] = []
     let tours_file = NSBundle.mainBundle().pathForResource("Tours", ofType: "json")
@@ -57,7 +58,7 @@ func jsonParser() -> TourCat {
     return TourCat(name: "Example Tour Category" /*this should be the category name*/, desc: "Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!" /*this should be the description*/, tours: tour_list)
 }
 
-
+//Determine if we are connected to a network
 func isConnectedToNetwork() -> Bool {
     
     var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
@@ -82,7 +83,7 @@ func isConnectedToNetwork() -> Bool {
 }
 
 
-
+//Build a CSV for our Map screen
 func buildCSV() -> [building] {
     
     
@@ -102,6 +103,8 @@ func buildCSV() -> [building] {
     return actualBuildings
 }
 
+
+//Convert Meters to Feet
 func metersToFeet(input:Float) -> Float{
     
     return input * 3.28084
