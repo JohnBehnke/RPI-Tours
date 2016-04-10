@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class Tour: NSObject {
+class Tour {
     
     //INITIALIZERS
     init(name: String, desc: String, distance: Int, duration: Int, waypoints: [Waypoint], landmarks: [Landmark]) {
@@ -21,7 +21,7 @@ class Tour: NSObject {
         self.landmarks = landmarks
     }
     
-    override init() {
+     init() {
         self.name = ""
         self.desc = ""
         self.distance = 0
