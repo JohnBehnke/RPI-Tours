@@ -16,7 +16,6 @@
 		52762DA41CAF6E040051F338 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA01CAF6E040051F338 /* Tour.swift */; };
 		52762DA51CAF6E040051F338 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA11CAF6E040051F338 /* Landmarks.swift */; };
 		52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA21CAF6E040051F338 /* Waypoints.swift */; };
-		527F0F6D1CB0827900B3ECDB /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F0F6C1CB0827900B3ECDB /* mapBoxAPIKeys.swift */; };
 		528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */; };
 		528AE37D1CAC5A1300D8C65E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */; };
 		5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */; };
@@ -31,6 +30,7 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
+		86A927411CBB116200F973AA /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A927401CBB116200F973AA /* mapBoxAPIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		52762DA01CAF6E040051F338 /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		52762DA11CAF6E040051F338 /* Landmarks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 		52762DA21CAF6E040051F338 /* Waypoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoints.swift; sourceTree = "<group>"; };
-		527F0F6C1CB0827900B3ECDB /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../../../../Temporary/mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryFunctions.swift; sourceTree = "<group>"; };
 		528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5299A2061C66AF7E0072F8D3 /* RPI Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPI Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +82,7 @@
 		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
+		86A927401CBB116200F973AA /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 			children = (
 				528704B21CB5667600650187 /* Data Files */,
 				528704B11CB5665D00650187 /* System Files */,
-				527F0F6C1CB0827900B3ECDB /* mapBoxAPIKeys.swift */,
+				86A927401CBB116200F973AA /* mapBoxAPIKeys.swift */,
 				5209313D1C9A7AF700045E34 /* MapboxDirections.swift */,
 				528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */,
 			);
@@ -430,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A927411CBB116200F973AA /* mapBoxAPIKeys.swift in Sources */,
 				5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */,
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */,
@@ -440,7 +441,6 @@
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
 				52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */,
-				527F0F6D1CB0827900B3ECDB /* mapBoxAPIKeys.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
 				52762DA31CAF6E040051F338 /* TourCat.swift in Sources */,
 				5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */,
