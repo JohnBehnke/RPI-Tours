@@ -21,41 +21,74 @@ struct building {
 }
 
 //Our JSON Parser
-func jsonParser() -> TourCat {
-    var tour_list:[Tour] = []
+func jsonParser() -> [TourCat] {
+    var cat_list:[TourCat] = []
     let tours_file = NSBundle.mainBundle().pathForResource("Tours", ofType: "json")
     let jsonData = NSData(contentsOfFile: tours_file!)
     if jsonData != nil{
         //if let tours : [AnyObject] = jsonData["tours"] as? Array{
         do{
-            var way_list: [Waypoint] = []
-            var tour_name: String = ""
-            var land_list:[Landmark] = []
+            
+            
+            
+            
             let json = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: .MutableContainers)
-            if let sub_tour_name = json["tour"]!!["name"] as? String {
-                tour_name = sub_tour_name
-            }
-            if let waypoints:[[Float]] = json["tour"]!!["waypoints"] as? Array {
-                for waypointt in waypoints {
-                    way_list.append(Waypoint(lat: Double(waypointt[0]), long: Double(waypointt[1])))
-                }
-            }
-            if let landmarks:[Dictionary<String,AnyObject>] = json["tour"]!!["landmarks"] as? Array {
-                for landmark in landmarks {
-                    let name = landmark["name"] as? String
-                    let description = landmark["description"] as? String
-                    let lat = (landmark["coordinate"] as? Array)![0] as Double
-                    let long = (landmark["coordinate"] as? Array)![1] as Double
-                    land_list.append(Landmark(name: name!, desc: description!, lat: lat, long: long))
+            
+            if let cats:[AnyObject] = json["categories"] as? Array {
+
+                for cat in cats {
+                    var cat_name: String = ""
+                    var cat_desc = ""
+                    var tour_list:[Tour] = []
+                    if let sub_cat_name = cat["name"] as? String {
+                        cat_name = sub_cat_name
+                    }
+                    if let sub_cat_desc = cat["desc"] as? String {
+                        cat_desc = sub_cat_desc
+                    }
+                    
+                    if let tours:[AnyObject] = cat["tours"] as? Array {
+                        for tour in tours {
+                            var land_list:[Landmark] = []
+                            var way_list: [Waypoint] = []
+                            var tour_name: String = ""
+                            var tour_desc: String = ""
+                            if let sub_tour_name = tour["name"] as? String {
+                                tour_name = sub_tour_name
+                            }
+                            if let sub_tour_desc = tour["desc"] as? String {
+                                tour_desc = sub_tour_desc
+                            }
+                            if let waypoints:[[Float]] = tour["waypoints"] as? Array {
+                                for waypointt in waypoints {
+                                    way_list.append(Waypoint(lat: Double(waypointt[0]), long: Double(waypointt[1])))
+                                }
+                            }
+                            if let landmarks:[Dictionary<String,AnyObject>] = tour["landmarks"] as? Array {
+                                for landmark in landmarks {
+                                    let name = landmark["name"] as? String
+                                    let description = landmark["description"] as? String
+                                    let lat = (landmark["coordinate"] as? Array)![0] as Double
+                                    let long = (landmark["coordinate"] as? Array)![1] as Double
+                                    land_list.append(Landmark(name: name!, desc: description!, lat: lat, long: long))
+                                }
+                                
+                            }
+                            tour_list.append(Tour(name: tour_name, desc: tour_desc, distance: 0 /*distance*/, duration: 0 /*duration*/, waypoints: way_list, landmarks: land_list))
+                        }
+                    }
+                    cat_list.append(TourCat(name: cat_name, desc: cat_desc, tours: tour_list) )
                 }
                 
             }
-            tour_list.append(Tour(name: tour_name, desc: "Hey! This is an example tour brought to you by the RPI Tours SD&D team!" /*this should be description*/, distance: 0 /*distance*/, duration: 0 /*duration*/, waypoints: way_list, landmarks: land_list))
+            
+            
+            
         }catch {
             print("Error with Json: )")
         }
     }
-    return TourCat(name: "Example Tour Category" /*this should be the category name*/, desc: "Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!" /*this should be the description*/, tours: tour_list)
+    return cat_list
 }
 
 //Determine if we are connected to a network
