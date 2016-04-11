@@ -7,32 +7,41 @@
 //
 
 import UIKit
-
+import Mapbox
 
 //View Controller for the Directions Table View
-class DirectionsViewController: UITableViewController {
+class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Global Variables
     var measurementSystem:String?
+    var tourLine: MGLPolyline = MGLPolyline()
     
+    @IBOutlet var tableView: UITableView!
     var directions:[MBRouteStep] = []
 
-    @IBAction func cancelTour(sender: AnyObject) {
-        
-        
-        
-        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-            (_)in
-            self.performSegueWithIdentifier("cancelTour", sender: self)
-        })
-        
-        alert.addAction(OKAction)
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
+    //@IBOutlet var tableView: UITableView!
+    @IBOutlet var mapView: MGLMapView!
+    //MARK: IBActions
+//    @IBAction func cancelTour(sender: AnyObject) {
+//        
+//        
+//        
+//        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
+//        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+//            (_)in
+//            self.performSegueWithIdentifier("cancelTour", sender: self)
+//        })
+//        
+//        alert.addAction(OKAction)
+//        self.presentViewController(alert, animated: true, completion: nil)
+//    }
     
     //MARK: System Functions
     override func viewDidLoad() {
+        
+        self.mapView.addAnnotation(self.tourLine)
+        tableView.delegate = self
+        tableView.dataSource = self
         
         let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
@@ -53,12 +62,12 @@ class DirectionsViewController: UITableViewController {
     // MARK: - Table View Functions
 
     //Return the number of directions
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return directions.count
     }
 
     //Set up the cells
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         var distanceMeasurment:Float?
@@ -74,13 +83,11 @@ class DirectionsViewController: UITableViewController {
         }
 
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("directionCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("directionsCell", forIndexPath: indexPath)
 
         cell.textLabel?.text = "\(directions[indexPath.row].instructions)  \(distanceMeasurment!) \(measurementSystem!)"
 
         return cell
     }
     
-    
-
 }

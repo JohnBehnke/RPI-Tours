@@ -34,6 +34,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var calculatedTour:[MBRouteStep] = []
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
     let locationManager = CLLocationManager()
+    var tourLine: MGLPolyline = MGLPolyline()
         
     
     //MARK: System Functions
@@ -75,7 +76,11 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     //MARK: Helper Functions
     
     func calculateDirections() {
+        
+        //Get the waypoints for the tour
         var workingWapoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
+        
+        //Make a request for directions
         let request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
         
         request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
@@ -104,12 +109,12 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                     //self.mapView.addAnnotation(point)
                     //print("\(step.instructions) \(step.distance) meters")
                 }
-                let line = MGLPolyline(coordinates: &self.calculatedTourPoints, count: UInt(self.calculatedTour.count))
+                self.tourLine = MGLPolyline(coordinates: &self.calculatedTourPoints, count: UInt(self.calculatedTour.count))
                 
-                self.mapView.addAnnotation(line)
+                self.mapView.addAnnotation(self.tourLine)
                 
                 
-                
+            //This needs to go to an actual kill error
             } else {
                 print("Error calculating directions: \(error)")
                 
@@ -123,7 +128,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     // MARK: Table View Functions
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 4 //Number of sections in the UI
     }
     
     
@@ -170,6 +175,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             let controller = segue.destinationViewController  as! DirectionsViewController //Create the detailVC
             
            controller.directions = self.calculatedTour
+           controller.tourLine = self.tourLine
             
         }
     }
