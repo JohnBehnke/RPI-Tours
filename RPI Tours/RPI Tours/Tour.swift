@@ -21,7 +21,7 @@ class Tour: NSObject {
         self.landmarks = landmarks
     }
     
-    override init() {
+     override init() {
         self.name = ""
         self.desc = ""
         self.distance = 0

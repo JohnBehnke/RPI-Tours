@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -438,7 +439,7 @@
             </objects>
             <point key="canvasLocation" x="708" y="102"/>
         </scene>
-        <!--Selected Tour View Controller-->
+        <!--Delegate-->
         <scene sceneID="2w0-2x-knO">
             <objects>
                 <tableViewController id="cW2-ce-wMm" customClass="SelectedTourViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
@@ -518,7 +519,11 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
                                                             <real key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="cW2-ce-wMm" id="jLy-GP-Xdb"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -675,66 +680,166 @@
                         <outlet property="tourDescriptionLabel" destination="RMf-nv-VzR" id="LDn-CZ-ynP"/>
                         <outlet property="tourLengthLabel" destination="Mch-Xe-2IT" id="P7c-w7-0k7"/>
                         <outlet property="tourTimeLabel" destination="Amp-93-fc7" id="Qqp-gz-cGx"/>
-                        <segue destination="DZx-GS-aHU" kind="show" identifier="showDirections" id="N5C-q4-J26"/>
+                        <segue destination="Ekk-p9-bON" kind="show" identifier="showDirections" id="qeN-rZ-z1j"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9s-ev-DMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018.5" y="824.25"/>
         </scene>
-        <!--Directions-->
-        <scene sceneID="dR6-Ot-Hnp">
+        <!--Delegate-->
+        <scene sceneID="29x-9i-sD7">
             <objects>
-                <tableViewController id="DZx-GS-aHU" customClass="DirectionsViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Bo-br-OeO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="Ekk-p9-bON" customClass="DirectionsViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bA5-sV-k1D"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHd-ll-JCR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Wr-Jj-nhB">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-AI-PL7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="347" id="FCR-RU-YHQ"/>
+                                    <constraint firstAttribute="width" secondItem="vGb-AI-PL7" secondAttribute="height" multiplier="400:347" id="aDW-jD-Rim">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="134.87031700288185"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="400" id="uW1-Vc-m0m"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="directionsCell" textLabel="LPs-4U-ZuO" style="IBUITableViewCellStyleDefault" id="erw-eO-5Rh">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erw-eO-5Rh" id="Jpv-Ky-vb7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LPs-4U-ZuO">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FCR-RU-YHQ"/>
+                                        <exclude reference="aDW-jD-Rim"/>
+                                        <exclude reference="uW1-Vc-m0m"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FCR-RU-YHQ"/>
+                                        <include reference="aDW-jD-Rim"/>
+                                        <include reference="uW1-Vc-m0m"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ekk-p9-bON" id="UjX-dK-aSH"/>
+                                    <outlet property="delegate" destination="Ekk-p9-bON" id="eGN-ka-ilT"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd2-PP-3Qs" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="NhQ-ZZ-LdZ"/>
+                                    <constraint firstAttribute="height" constant="345" id="kYG-NK-wMK">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="459"/>
+                                    </constraint>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/johnbehnke/cilvo4zky001d9km8hijdyifw"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="latitude">
+                                        <real key="value" value="42.727424999999997"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="longitude">
+                                        <real key="value" value="-73.678630999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NhQ-ZZ-LdZ"/>
+                                        <exclude reference="kYG-NK-wMK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="NhQ-ZZ-LdZ"/>
+                                        <include reference="kYG-NK-wMK"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="Ekk-p9-bON" id="Pgm-V0-wVK"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="directionCell" textLabel="mV5-Cw-tEq" style="IBUITableViewCellStyleDefault" id="07l-PD-MSN">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="07l-PD-MSN" id="ah6-Gh-PBx">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mV5-Cw-tEq">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DZx-GS-aHU" id="ceb-a4-X8e"/>
-                            <outlet property="delegate" destination="DZx-GS-aHU" id="x8k-zn-KQP"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Directions" id="HoG-5j-5sS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="NGs-C5-F7b">
-                            <connections>
-                                <action selector="cancelTour:" destination="DZx-GS-aHU" id="4OI-QS-QZD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gd2-PP-3Qs" secondAttribute="trailing" constant="-20" id="48D-DQ-lhJ"/>
+                            <constraint firstItem="vGb-AI-PL7" firstAttribute="bottom" secondItem="uHd-ll-JCR" secondAttribute="top" id="4bs-69-Pcw"/>
+                            <constraint firstItem="gd2-PP-3Qs" firstAttribute="leading" secondItem="5Wr-Jj-nhB" secondAttribute="leading" id="BFo-M9-YDe"/>
+                            <constraint firstItem="vGb-AI-PL7" firstAttribute="top" secondItem="gd2-PP-3Qs" secondAttribute="bottom" id="DVS-0z-1uH">
+                                <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                            </constraint>
+                            <constraint firstItem="gd2-PP-3Qs" firstAttribute="top" secondItem="bA5-sV-k1D" secondAttribute="bottom" id="Ofy-ZJ-QJb"/>
+                            <constraint firstItem="gd2-PP-3Qs" firstAttribute="trailing" secondItem="vGb-AI-PL7" secondAttribute="trailing" id="Ork-T0-4cL"/>
+                            <constraint firstItem="gd2-PP-3Qs" firstAttribute="leading" secondItem="vGb-AI-PL7" secondAttribute="leading" id="wiQ-la-W6p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vGb-AI-PL7"/>
+                                <exclude reference="gd2-PP-3Qs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="48D-DQ-lhJ"/>
+                                <exclude reference="BFo-M9-YDe"/>
+                                <exclude reference="Ofy-ZJ-QJb"/>
+                                <exclude reference="Ork-T0-4cL"/>
+                                <exclude reference="wiQ-la-W6p"/>
+                                <exclude reference="4bs-69-Pcw"/>
+                                <exclude reference="DVS-0z-1uH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vGb-AI-PL7"/>
+                                <include reference="gd2-PP-3Qs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="48D-DQ-lhJ"/>
+                                <include reference="BFo-M9-YDe"/>
+                                <include reference="Ofy-ZJ-QJb"/>
+                                <include reference="Ork-T0-4cL"/>
+                                <include reference="wiQ-la-W6p"/>
+                                <include reference="4bs-69-Pcw"/>
+                                <include reference="DVS-0z-1uH"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <connections>
-                        <segue destination="oml-H7-bDE" kind="unwind" identifier="cancelTour" unwindAction="unwindToMenu:" id="9mE-on-eR8"/>
+                        <outlet property="mapView" destination="gd2-PP-3Qs" id="w0x-8e-uKV"/>
+                        <outlet property="tableView" destination="vGb-AI-PL7" id="FeX-xC-AXh"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYh-xq-4iZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="oml-H7-bDE" userLabel="Exit" sceneMemberID="exit"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIy-Qm-9S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891.5" y="294"/>
+            <point key="canvasLocation" x="1771.5" y="567.75"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="9UD-36-pV3"/>
     </inferredMetricsTieBreakers>
 </document>

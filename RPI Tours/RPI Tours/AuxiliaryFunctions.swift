@@ -11,8 +11,6 @@ import SystemConfiguration
 import CSwiftV
 
 
-
-
 struct building {
     var buildingLat:Double
     var buildingLong:Double
@@ -59,6 +57,7 @@ func jsonParser() -> TourCat {
 }
 
 //Determine if we are connected to a network
+//Return a bool with status
 func isConnectedToNetwork() -> Bool {
     
     var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
@@ -84,6 +83,7 @@ func isConnectedToNetwork() -> Bool {
 
 
 //Build a CSV for our Map screen
+//Returns an array of building structs
 func buildCSV() -> [building] {
     
     
