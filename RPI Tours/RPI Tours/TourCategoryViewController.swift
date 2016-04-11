@@ -32,7 +32,7 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         }
         
         //Call the JSON parser and append the parsed tour categories to the tourCategories Array
-        self.tourCategories.append( jsonParser())
+        self.tourCategories = jsonParser()
         
         
     }

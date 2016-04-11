@@ -21,7 +21,11 @@ class Tour {
         self.landmarks = landmarks
     }
     
+<<<<<<< HEAD
+     override init() {
+=======
      init() {
+>>>>>>> 64b9d31a8bbf47d74ddabe47970b4e814104cad3
         self.name = ""
         self.desc = ""
         self.distance = 0

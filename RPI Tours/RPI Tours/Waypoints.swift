@@ -8,14 +8,14 @@
 
 import UIKit
 
-class Waypoint: NSObject {
+class Waypoint {
     //INITIALIZERS
     init(lat: Double, long: Double) {
         self.lat = lat
         self.long = long
     }
     
-    override init() {
+     init() {
         self.lat = 0.0
         self.long = 0.0
     }
