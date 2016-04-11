@@ -23,7 +23,7 @@ class RPI_ToursTests: XCTestCase {
     
     func testjsonParser(){
         let test = jsonParser()
-        XCTAssertTrue(test.getTours().count == 1)
+        XCTAssertTrue(test.count == 1)
     }
     
 //    func testExample() {
