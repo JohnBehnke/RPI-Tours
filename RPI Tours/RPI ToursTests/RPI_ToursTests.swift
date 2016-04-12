@@ -21,9 +21,24 @@ class RPI_ToursTests: XCTestCase {
         super.tearDown()
     }
     
-    func testjsonParser(){
+    func testTourCatjsonParser(){
         let test = jsonParser()
-        XCTAssertTrue(test.count == 1)
+        XCTAssertTrue(test.count == 2)
+    }
+    
+    func testToursjsonParser(){
+        let TourCattest = jsonParser()
+        
+        let TourCat1 = TourCattest[0].getTours()
+        XCTAssertTrue(TourCat1.count == 2)
+        
+        let TourCat2 = TourCattest[1].getTours()
+        XCTAssertTrue(TourCat2.count == 2)
+    }
+    
+    func testCSV(){
+        let test = buildCSV()
+        XCTAssertTrue(test.count == 86)
     }
     
 //    func testExample() {
@@ -31,11 +46,12 @@ class RPI_ToursTests: XCTestCase {
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    }
 //    
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measureBlock {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
-    
+    func testPerformanceExample() {
+//        self.measureBlock {let testjP = jsonParser()}
+//        self.measureBlock {let testbcsv = buildCSV()}
+//        self.measureBlock {let testconnect = isConnectedToNetwork()}
+//        self.measureBlock {let testconversion = metersToFeet(8888)}
+    }
 }
+
+
