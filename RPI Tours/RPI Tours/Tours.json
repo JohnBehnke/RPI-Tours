@@ -1,12 +1,12 @@
 {
     "categories": [
-                   
+
                    {
                    "name":"Example Category",
                    "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
-                   
+
                    "tours": [
-                             
+
                              {
                              "name":"Example Tour for SD&D",
                              "desc": "Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
@@ -23,7 +23,7 @@
                                            42.72825898,
                                            -73.67426062
                                            ],
-                                          
+
                                           [
                                            42.729069,
                                            -73.677017
@@ -222,7 +222,7 @@
                                            42.72825898,
                                            -73.67426062
                                            ],
-                                          
+
                                           [
                                            42.729069,
                                            -73.677017
@@ -405,17 +405,17 @@
                                           }
                                           ]
                              }
-                             
-                             
+
+
                              ]
                    },
                    {
-                   
+
                    "name":"Example Category2",
                    "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
-                   
+
                    "tours": [
-                             
+
                              {
                              "name":"Example Tour for SD&D",
                              "desc": "Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
@@ -432,7 +432,7 @@
                                            42.72825898,
                                            -73.67426062
                                            ],
-                                          
+
                                           [
                                            42.729069,
                                            -73.677017
@@ -631,7 +631,7 @@
                                            42.72825898,
                                            -73.67426062
                                            ],
-                                          
+
                                           [
                                            42.729069,
                                            -73.677017
@@ -813,11 +813,239 @@
                                                         ]
                                           }
                                           ]
+                             },
+                             {
+                             "name":"Resa's Route",
+                             "desc": "Hey! This will surely put tour guides out of business!",
+                             "waypoints":[
+                                          [
+                                           Admissions 42.73064179,
+                                           -73.67553949
+                                           ],
+                                          [
+                                           Nason 42.72761152,
+                                           -73.67349029
+                                           ],
+                                          [
+                                           Sharp 42.72702598,
+                                           -73.67464042
+                                           ],
+                                          [
+                                           Commons 42.72825898,
+                                           -73.67426062
+                                           ],
+                                          [
+                                           Mueller Center 42.72876217,
+                                           -73.67665529
+                                           ],
+                                          [
+                                           Pub Safe 42.72930203,
+                                           -73.67700934
+                                           ],
+                                          [
+                                           Biotech 42.72824558,
+                                           -73.67840463
+                                           ],
+                                          [
+                                           JROWL 42.728774,
+                                           -73.680338
+                                           ],
+                                          [
+                                           EMPAC 42.72886313,
+                                           -73.68382645
+                                           ],
+                                          [
+                                           Library 42.7293383,
+                                           -73.68253845
+                                           ],
+                                          [
+                                           VCC 42.72922799,
+                                           -73.6817826
+                                           ],
+                                          [
+                                           Amos Eaton 42.730165,
+                                           	-73.68254542
+                                           ],
+                                          [
+                                           Lally 42.73008028,
+                                           	-73.68189633
+                                           ],
+                                          [
+                                           Carnegie 42.73045701,
+                                           	-73.68319398
+                                           ],
+                                          [
+                                           Pitts 42.73122104,
+                                           	-73.6832723
+                                           ],
+                                          [
+                                           Walker 42.73084831,
+                                           	-73.68251216
+                                           ],
+                                          [
+                                           Sage Laboratory 42.73084199,
+                                           -73.68153101
+                                           ],
+                                          [
+                                           Troy Building 42.73101145,
+                                           	-73.68046725
+                                           ],
+                                          [
+                                           Greene Building 42.7300248,
+                                           	-73.68118501
+                                           ],
+                                          [
+                                           JEC 42.728774,
+                                            -73.680338
+                                           ],
+                                          [
+                                           DCC 42.72948208,
+                                           	-73.67905909
+                                           ],
+                                          [
+                                            Union 42.72995146,
+                                            -73.6766113
+                                           ]
+                                          ],
+                             "landmarks":[
+                                          {
+                                          "name":"Lally",
+                                          "description":"This is the Lally Building.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73008028,
+                                              -73.68189633
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Carnegie",
+                                          "description":"This is the Carnegie Building.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73045701,
+                                              -73.68319398
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Pittsburgh",
+                                          "description":"This is the Pittsburgh Building.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73122104,
+                                              -73.6832723
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Walker",
+                                          "description":"This is the Walker Building..",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73084831,
+                                              -73.68251216
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Sage Lab",
+                                          "description":"Russell Sage Laboratory houses a writing center, multimedia computer labs, and video production and sound editing equipment.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73084199,
+                                            -73.68153101
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Troy Building",
+                                          "description":"This is the Troy Building.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73101145,
+                                              -73.68046725
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Greene",
+                                          "description":"This is the Greene Building",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.7300248,
+                                              -73.68118501
+                                                        ]
+                                          },
+                                          {
+                                          "name":"JEC",
+                                          "description":"This is the J. Erik Jonsson Engineering Center",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.728774,
+                                             -73.680338
+                                                        ]
+                                          },
+                                          {
+                                          "name":"DCC",
+                                          "description":"This is the Darrin Communications Center",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.72948208,
+                                              -73.67905909
+                                                        ]
+                                          },
+                                          {
+                                          "name":"Student Union",
+                                          "description":"Rensselaer Union has been driving campus engagement and student activities at Rensselaer Polytechnic Institute (RPI) since 1890.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.72995146,
+                                            -73.6766113
+                                                        ]
+                                          },
+                                          {
+                                          "name":"RPI Admissions",
+                                          "description":"This is the admissions building.",
+                                          "photos":[
+                                                    "https://example.com/photo1.jpg",
+                                                    "https://example.com/photo2.jpg"
+                                                    ],
+                                          "coordinate":[
+                                            42.73064179,
+                                            -73.67553949
+                                                        ]
+                                          }
+                                          ]
                              }
-                             
-                             
+
+
                              ]
                    }
-                   
+
                    ]
 }
