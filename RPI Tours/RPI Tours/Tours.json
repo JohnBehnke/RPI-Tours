@@ -1,12 +1,12 @@
 {
   "categories":[
     {
-      "name":"Example Category 1",
-      "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
+      "name":"General Tours",
+      "desc":"This section consists of four general tours that go around campus!",
       "tours":[
         {
-          "name":"Example Tour 1",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Freshman Residence Halls",
+          "desc":"Hey! This is a tour of the freshman residence halls!",
           "waypoints":[
             [
               42.73064179,
@@ -205,8 +205,8 @@
           ]
         },
         {
-          "name":"Example Tour 2",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Dining Halls",
+          "desc":"Hey! This is a tour of the dining halls!",
           "waypoints":[
             [
               42.73064179,
@@ -405,8 +405,8 @@
           ]
         },
         {
-          "name":"Example Tour 3",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Administrative Offices",
+          "desc":"Hey! This is a tour of the administrative offices!",
           "waypoints":[
             [
               42.73064179,
@@ -605,8 +605,8 @@
           ]
         },
         {
-          "name":"Example Tour 4",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Freshman Hill",
+          "desc":"Hey! This is a tour of freshman hill!",
           "waypoints":[
             [
               42.73064179,
@@ -807,12 +807,12 @@
       ]
     },
     {
-      "name":"Example Category 2",
-      "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
+      "name":"Athletic Tours",
+      "desc":"This section consists of four athletic tours that go around campus!",
       "tours":[
         {
-          "name":"Example Tour 1",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Mueller Center",
+          "desc":"Hey! This is a tour of the Mueller Center!",
           "waypoints":[
             [
               42.73064179,
@@ -1011,8 +1011,8 @@
           ]
         },
         {
-          "name":"Example Tour 2",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"'87 Gym",
+          "desc":"Hey! This is a tour of the '87 Gym!",
           "waypoints":[
             [
               42.73064179,
@@ -1211,8 +1211,8 @@
           ]
         },
         {
-          "name":"Example Tour 3",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"ECAV",
+          "desc":"Hey! This is a tour of ECAV!",
           "waypoints":[
             [
               42.73064179,
@@ -1411,8 +1411,8 @@
           ]
         },
         {
-          "name":"Example Tour 4",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Additional Sports Facilities",
+          "desc":"Hey! This is a tour of the additional sports facilities!",
           "waypoints":[
             [
               42.73064179,
@@ -1613,12 +1613,12 @@
       ]
     },
     {
-      "name":"Example Category 3",
-      "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
+      "name":"Academic Tours",
+      "desc":"This section consists of four academic tours that go around campus!",
       "tours":[
         {
-          "name":"Example Tour 1",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"Lally Tour",
+          "desc":"Hey! This is a tour of Lally!",
           "waypoints":[
             [
               42.73064179,
@@ -1817,8 +1817,8 @@
           ]
         },
         {
-          "name":"Example Tour 2",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"JEC Tour",
+          "desc":"Hey! This is a tour of JEC!",
           "waypoints":[
             [
               42.73064179,
@@ -2017,8 +2017,8 @@
           ]
         },
         {
-          "name":"Example Tour 3",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"JROW Tour",
+          "desc":"Hey! This is a tour of JROW!",
           "waypoints":[
             [
               42.73064179,
@@ -2217,8 +2217,8 @@
           ]
         },
         {
-          "name":"Example Tour 4",
-          "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
+          "name":"DCC Tour",
+          "desc":"Hey! This is a tour of DCC!",
           "waypoints":[
             [
               42.73064179,
@@ -2419,11 +2419,11 @@
       ]
     },
     {
-      "name":"Example Category 4",
-      "desc":"Hey, this is a demo tour category for SD&D. It has a single tour that goes around campus!",
+      "name":"Miscellaneous Tours",
+      "desc":"This section consists of four miscellaneous tours that go around campus!",
       "tours":[
         {
-          "name":"Example Tour 1",
+          "name":"EMPAC Tour",
           "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
           "waypoints":[
             [
@@ -2623,7 +2623,7 @@
           ]
         },
         {
-          "name":"Example Tour 2",
+          "name":"Winslow Tour",
           "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
           "waypoints":[
             [
@@ -2823,7 +2823,7 @@
           ]
         },
         {
-          "name":"Example Tour 3",
+          "name":"Walker Tour",
           "desc":"Hey! This is an example tour brought to you by the RPI Tours SD&D team!",
           "waypoints":[
             [
