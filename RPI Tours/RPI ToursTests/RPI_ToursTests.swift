@@ -21,36 +21,58 @@ class RPI_ToursTests: XCTestCase {
         super.tearDown()
     }
     
+    //check to see if there is a correct number of tour categories
     func testTourCatjsonParser(){
         let test = jsonParser()
-        XCTAssertTrue(test.count == 2)
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tour categories
+        XCTAssertTrue(test.count == 4)
     }
     
+    //check to see if there is a correct number of tours in each of the categories
     func testToursjsonParser(){
         let TourCattest = jsonParser()
         
         let TourCat1 = TourCattest[0].getTours()
-        XCTAssertTrue(TourCat1.count == 2)
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat1.count == 4)
         
         let TourCat2 = TourCattest[1].getTours()
-        XCTAssertTrue(TourCat2.count == 3)
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat2.count == 4)
+        
+        let TourCat3 = TourCattest[2].getTours()
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat3.count == 4)
+        
+        let TourCat4 = TourCattest[3].getTours()
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat4.count == 4)
     }
     
+    //test to see if the csv is built correctly
     func testCSV(){
         let test = buildCSV()
         XCTAssertTrue(test.count == 86)
+    }
+    
+    //test to ensure network connectivity
+    func testNetwork(){
+        let test = isConnectedToNetwork()
+        XCTAssertTrue(test)
     }
     
 //    func testExample() {
 //        // This is an example of a functional test case.
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    }
-//    
+
+    
+    //test to see the speed at which different tasks are preformed. uncomment one at a time to test each item
     func testPerformanceExample() {
-//        self.measureBlock {let testjP = jsonParser()}
-//        self.measureBlock {let testbcsv = buildCSV()}
-//        self.measureBlock {let testconnect = isConnectedToNetwork()}
-//        self.measureBlock {let testconversion = metersToFeet(8888)}
+//        self.measureBlock {let testjP = jsonParser()} //parsing json file
+//        self.measureBlock {let testbcsv = buildCSV()} //building csv
+//        self.measureBlock {let testconnect = isConnectedToNetwork()} //connecting to internet
+//        self.measureBlock {let testconversion = metersToFeet(8888)} //unit conversion
     }
 }
 
