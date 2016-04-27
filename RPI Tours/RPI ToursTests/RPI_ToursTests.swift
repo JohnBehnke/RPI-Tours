@@ -25,7 +25,7 @@ class RPI_ToursTests: XCTestCase {
     func testTourCatjsonParser(){
         let test = jsonParser()
         //the number on the right of the double equal sign is a hardcoded value set to the expected number of tour categories
-        XCTAssertTrue(test.count == 2)
+        XCTAssertTrue(test.count == 4)
     }
     
     //check to see if there is a correct number of tours in each of the categories
@@ -34,11 +34,19 @@ class RPI_ToursTests: XCTestCase {
         
         let TourCat1 = TourCattest[0].getTours()
         //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
-        XCTAssertTrue(TourCat1.count == 2)
+        XCTAssertTrue(TourCat1.count == 4)
         
         let TourCat2 = TourCattest[1].getTours()
         //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
-        XCTAssertTrue(TourCat2.count == 2)
+        XCTAssertTrue(TourCat2.count == 4)
+        
+        let TourCat3 = TourCattest[2].getTours()
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat3.count == 4)
+        
+        let TourCat4 = TourCattest[3].getTours()
+        //the number on the right of the double equal sign is a hardcoded value set to the expected number of tours within the category
+        XCTAssertTrue(TourCat4.count == 4)
     }
     
     //test to see if the csv is built correctly
