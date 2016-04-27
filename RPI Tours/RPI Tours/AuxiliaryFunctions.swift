@@ -10,7 +10,7 @@ import Foundation
 import SystemConfiguration
 import CSwiftV
 
-
+//Strct to hold building info for the map view
 struct building {
     var buildingLat:Double
     var buildingLong:Double
@@ -119,20 +119,23 @@ func isConnectedToNetwork() -> Bool {
 //Returns an array of building structs
 func buildCSV() -> [building] {
     
-    
+    //Get the wapoints csv file
     let location = NSBundle.mainBundle().pathForResource("Waypoints", ofType: "csv")
+    
+    
     let stringToParse = try? String(contentsOfFile:location!, encoding: NSUTF8StringEncoding)
     
-    
+    //Call CSwiftv to parse it
     let csv = CSwiftV(String: stringToParse!)
     
     var actualBuildings:[building] = []
     
+    //Add the building structs to the array
     for line in csv.rows {
         
         actualBuildings.append(building(buildingLat: Double(line[0])! , buildingLong:  Double(line[1])!, buildingName: line[2]))
     }
-    
+    //return it
     return actualBuildings
 }
 
@@ -141,5 +144,11 @@ func buildCSV() -> [building] {
 func metersToFeet(input:Float) -> Float{
     
     return input * 3.28084
+}
+//Convert seoncds into seconds, hours, adn minutes
+func secondsToHoursMinutesSeconds (seconds : Double) -> (Double, Double, Double) {
+    let (hr,  minf) = modf (seconds / 3600)
+    let (min, secf) = modf (60 * minf)
+    return (hr, min, 60 * secf)
 }
 

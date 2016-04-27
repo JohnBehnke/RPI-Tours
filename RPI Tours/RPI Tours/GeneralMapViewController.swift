@@ -39,7 +39,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
             super.viewDidLoad()
             
             
-            
+            //Put points on the map for the buildings on campus
             for item in campusBuildings {
                 let point = MGLPointAnnotation()
                 point.coordinate = CLLocationCoordinate2D(latitude: item.buildingLat, longitude: item.buildingLong)

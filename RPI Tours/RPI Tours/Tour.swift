@@ -19,6 +19,8 @@ class Tour {
         self.duration = duration
         self.waypoints = waypoints
         self.landmarks = landmarks
+        self.hasTaken = false
+
     }
     
      init() {
@@ -28,6 +30,7 @@ class Tour {
         self.duration = 0
         self.waypoints = []
         self.landmarks = []
+        self.hasTaken = false
     }
     
     //GETTERS
@@ -43,6 +46,7 @@ class Tour {
     func getDuration() -> Int {
         return duration
     }
+    //Returns waypoints in the form of CLLocationCoordinate2D for easier working with MapBox
     func getWaypoints() -> [CLLocationCoordinate2D]{
         var retArray:[CLLocationCoordinate2D] = []
         for point in waypoints{
@@ -76,6 +80,10 @@ class Tour {
         self.landmarks = landmarks
     }
     
+    func setHasTaken(input:Bool) {
+        self.hasTaken = input
+    }
+    
     //VARIABLES
     private var name: String
     private var desc: String
@@ -83,4 +91,5 @@ class Tour {
     private var duration: Int
     private var waypoints: [Waypoint]
     private var landmarks: [Landmark]
+    private var  hasTaken: Bool
 }

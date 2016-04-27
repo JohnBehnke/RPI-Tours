@@ -8,38 +8,71 @@
 
 import UIKit
 import Mapbox
-
+import CoreLocation
 //View Controller for the Directions Table View
-class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MGLMapViewDelegate {
     
     //MARK: Global Variables
     var measurementSystem:String?
     var tourLine: MGLPolyline = MGLPolyline()
+    let locationManager = CLLocationManager()
+    let tourLandmarks:[Landmark] = []
+    
     
     @IBOutlet var tableView: UITableView!
     var directions:[MBRouteStep] = []
 
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
+    @IBAction func cancelTour(sender: AnyObject) {
+        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    (_)in
+                    self.performSegueWithIdentifier("cancelTour", sender: self)
+                })
+        
+                alert.addAction(OKAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+    }
     //MARK: IBActions
 //    @IBAction func cancelTour(sender: AnyObject) {
 //        
 //        
 //        
-//        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
-//        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-//            (_)in
-//            self.performSegueWithIdentifier("cancelTour", sender: self)
-//        })
-//        
-//        alert.addAction(OKAction)
-//        self.presentViewController(alert, animated: true, completion: nil)
+//
 //    }
     
     //MARK: System Functions
     override func viewDidLoad() {
+         super.viewDidLoad()
+        
+        //self.navigationItem.rightBarButtonItem = UserTracking
+        
+        self.mapView.showsUserLocation = true
+        
+        self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
+        
+        self.mapView.rotateEnabled = false
+        self.mapView.delegate = self
+        self.mapView.setCenterCoordinate((self.locationManager.location?.coordinate)!,zoomLevel: 17,  animated: false)
+        
+        self.mapView.setUserTrackingMode(MGLUserTrackingMode.FollowWithHeading, animated: true)
+        
+        
+        
+        for landmark in self.tourLandmarks{
+            
+            let point = MGLPointAnnotation()
+            point.coordinate = CLLocationCoordinate2D(latitude: landmark.getLat(), longitude: landmark.getLong())
+            point.title = landmark.getName()
+            
+            mapView.addAnnotation(point)
+            
+        }
+        
         
         self.mapView.addAnnotation(self.tourLine)
+       
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -48,11 +81,31 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         if measurementSystem == nil {
             measurementSystem = "Feet"
         }
-
-        super.viewDidLoad()
-
+        
+      
+        
         
     }
+    
+    func mapView(mapView: MGLMapView, didUpdateUserLocation userLocation: MGLUserLocation?) {
+        //self.mapView.setCenterCoordinate((userLocation?.coordinate)!,zoomLevel: 17,  animated: false)
+        self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
+        
+        let nextStep: MBRouteStep = directions[0]
+        
+        let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation?.latitude)!, longitude: (nextStep.maneuverLocation?.longitude)!)
+        //print(self.locationManager.location?.distanceFromLocation(stepLocation))
+        if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 5.0) {
+            directions.removeFirst()
+            self.tableView.reloadData()
+        }
+    }
+    
+    func mapView(mapView: MGLMapView, didChangeUserTrackingMode mode: MGLUserTrackingMode, animated: Bool) {
+        self.mapView.userTrackingMode  = mode
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,9 +138,26 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
 
         let cell = tableView.dequeueReusableCellWithIdentifier("directionsCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = "\(directions[indexPath.row].instructions)  \(distanceMeasurment!) \(measurementSystem!)"
+        cell.textLabel?.text = "\(directions[indexPath.row].instructions!)"
+        cell.detailTextLabel?.text = "\(distanceMeasurment!) \(measurementSystem!)"
 
+       
         return cell
+    }
+    
+    
+    func mapView(mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+        // Give our polyline a unique color by checking for its `title` property
+        if annotation is MGLPolyline {
+            
+            
+            return UIColor(red: 59/255, green:178/255, blue:208/255, alpha:1)
+            
+        }
+        else
+        {
+            return UIColor.redColor()
+        }
     }
     
 }

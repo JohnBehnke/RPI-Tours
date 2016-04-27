@@ -13,6 +13,7 @@ import CoreLocation
 class ToursByCategoryViewController: UITableViewController{
     
     //MARK: IBAction
+    //Rewind point for going back to this VC
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
     
     //MARK: Global Variables
@@ -37,17 +38,21 @@ class ToursByCategoryViewController: UITableViewController{
     
     
     //MARK: Table View Functions
+    
+    //Return the number of cells in a table
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return tempTours.count
     }
-    
+    //Configure the cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tourCell", forIndexPath: indexPath)
         
         cell.textLabel?.text = tempTours[indexPath.row].getName()
         return cell
     }
+    
+    //Perform segue if user taps on a cell
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
@@ -59,8 +64,21 @@ class ToursByCategoryViewController: UITableViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if segue.identifier == "tourDetail"
+        if isConnectedToNetwork() == false {
+            //Change this to avoid deprecation. This is only temporary
+            let alert = UIAlertController(title: "Warning!", message: "Check your internet Connection", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                (_)in
+                //self.performSegueWithIdentifier("cancelTour", sender: self)
+            })
+            
+            alert.addAction(OKAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+
+        else if segue.identifier == "tourDetail"
         {
+            //Set the proper details for the next VC
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = (segue.destinationViewController as! SelectedTourViewController)
                 controller.selectedTour = tempTours[indexPath.row]

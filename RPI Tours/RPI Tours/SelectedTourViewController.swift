@@ -14,17 +14,19 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     //MARK: IBOUTLETS
     @IBOutlet var tourLengthLabel: UILabel!
-    
     @IBOutlet var mapView: MGLMapView!
-    
     @IBOutlet var tourDescriptionLabel: UILabel!
-    
+    @IBOutlet var stepperControl: UIStepper!
+    @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var tourTimeLabel: UILabel!
 
     //MARK: IBAction
     @IBAction func pressedStartTour(sender: AnyObject) {
         self.performSegueWithIdentifier("showDirections", sender: self)
         
+    }
+    @IBAction func stepActivate(sender: AnyObject) {
+        ratingLabel.text = String(self.stepperControl.value)
     }
     
     //MARK: Global
@@ -40,9 +42,12 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     //MARK: System Functions
     override func viewDidLoad() {
         
-        
+        super.viewDidLoad()
+
+        //Set the desctiption label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
         
+        //For
         for item in selectedTour.getLandmarks() {
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
@@ -60,7 +65,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         calculateDirections()
         
-        super.viewDidLoad()
+        
         
         
         
@@ -99,9 +104,11 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 else{
                     distanceMeasurment = Float(route.distance)
                 }
-                self.tourLengthLabel.text = "Distance: \(distanceMeasurment!) \(self.measurementSystem!) (\(route.steps.count) route steps)"
+                self.tourLengthLabel.text = "Distance: \(round(distanceMeasurment!)) \(self.measurementSystem!) (\(route.steps.count) route steps)"
                 
-                self.tourTimeLabel .text = "\(route.expectedTravelTime / 60) minutes"
+                var times  = secondsToHoursMinutesSeconds(route.expectedTravelTime as Double)
+                
+                self.tourTimeLabel .text = "\(times.0) hours, \(times.1) miniutes"
                 for step in route.steps {
                     //let point = MGLPointAnnotation()
                     self.calculatedTour.append(step)
@@ -128,7 +135,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     // MARK: Table View Functions
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4 //Number of sections in the UI
+        return 5
+        //Number of sections in the UI
     }
     
     

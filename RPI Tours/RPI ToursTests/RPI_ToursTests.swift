@@ -33,7 +33,7 @@ class RPI_ToursTests: XCTestCase {
         XCTAssertTrue(TourCat1.count == 2)
         
         let TourCat2 = TourCattest[1].getTours()
-        XCTAssertTrue(TourCat2.count == 2)
+        XCTAssertTrue(TourCat2.count == 3)
     }
     
     func testCSV(){

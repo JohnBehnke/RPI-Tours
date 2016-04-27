@@ -16,7 +16,9 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     //MARK: Globals
     var detailViewController: ToursByCategoryViewController? = nil //used for send information to the DetailVC
     
+    //Array to hold tour categories objects
     var tourCategories: [TourCat] = []
+    
     
     
     //MARK: System Functions
@@ -73,10 +75,15 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     //No Return
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         
+        //This adds the popup for when the user selects the accessory detail for a tour cat desc
         
+        //Make a Detail VC
         let vc = TourCategoryDetailViewController()
+        //Load it
         vc.viewDidLoad()
+        //Set the text to the desc
         vc.setText(self.tourCategories[indexPath.row].getDesc())
+        //Present it
         vc.modalPresentationStyle = UIModalPresentationStyle.Popover
         let popover: UIPopoverPresentationController = vc.popoverPresentationController!
         popover.sourceView = tableView.cellForRowAtIndexPath(indexPath)?.contentView
@@ -115,13 +122,14 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
+            //If we have internet, go to the next VC
             self.performSegueWithIdentifier("showDetail", sender: self)
         }
         
     }
     
     //MARK: Popover Functions
-    
+    //Small helper function
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None
         

@@ -18,7 +18,7 @@ class TourCat {
         self.tours = tours
         
     }
-    
+    //empty Init
      init() {
         self.name = ""
         self.desc = ""
@@ -47,7 +47,7 @@ class TourCat {
         self.tours = tours
     }
     
-    //VARIABLES
+    //Priavte VARIABLES
     private var name: String
     private var desc: String
     private var tours: [Tour]

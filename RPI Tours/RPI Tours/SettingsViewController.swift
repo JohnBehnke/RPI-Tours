@@ -18,20 +18,23 @@ class SettingsViewController: UITableViewController {
     
     
     //MARK: IBActions
+    //Save any settings
     @IBAction func triggeredSave(sender: AnyObject) {
         
-        
+        //Load the store
         let defaults = NSUserDefaults.standardUserDefaults()
         
+        //Set the setting
         defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
         
         
-        
+        //Prompt the user with an alert
         let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
             (_)in
             //self.performSegueWithIdentifier("cancelTour", sender: self)
         })
+        //Present the alert
         alert.addAction(OKAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -48,7 +51,6 @@ class SettingsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
 }
