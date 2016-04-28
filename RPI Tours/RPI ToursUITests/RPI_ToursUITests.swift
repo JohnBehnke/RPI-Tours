@@ -45,23 +45,23 @@ class RPI_ToursUITests: XCTestCase {
     func testselecttour(){
         let app = XCUIApplication() //launch app
         let tablesQuery = app.tables //display category tables
-        tablesQuery.staticTexts["Example Category"].tap() //select a category
-        tablesQuery.staticTexts["Example Tour for SD&D"].tap() //select a tour
-        app.navigationBars["Master"].buttons["Example Category"].tap() //back to tours list in category
-        app.navigationBars.containingType(.StaticText, identifier:"Example Category").childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap() //back to categories
+        tablesQuery.staticTexts["Miscellaneous Tours"].tap() //select a category
+        tablesQuery.staticTexts["Resa's Route"].tap() //select a tour
+        app.navigationBars["Master"].buttons["Miscellaneous Tours"].tap() //back to tours list in category
+        app.navigationBars.containingType(.StaticText, identifier:"Miscellaneous Tours").childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap() //back to categories
     }
     
     //This test case is to make sure that the "take tour" button takes the user on a tour when tapped
     func testtaketour(){
         let app = XCUIApplication() //launch app
         let tablesQuery = app.tables //display category tables
-        tablesQuery.staticTexts["Example Category"].tap() //select a category
-        tablesQuery.staticTexts["Example Tour2"].tap() //select a tour
+        tablesQuery.staticTexts["Miscellaneous Tours"].tap() //select a category
+        tablesQuery.staticTexts["Resa's Route"].tap() //select a tour
         tablesQuery.buttons["Start Tour"].tap() //start tour
         let masterNavigationBar = app.navigationBars["Master"] //move the map to check for rendering issues
         masterNavigationBar.childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap() //back to tour information page
-        masterNavigationBar.buttons["Example Category"].tap() //back to tours list in category
-        app.navigationBars.containingType(.StaticText, identifier:"Example Category").childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap() //back to categories
+        masterNavigationBar.buttons["Miscellaneous Tours"].tap() //back to tours list in category
+        app.navigationBars.containingType(.StaticText, identifier:"Miscellaneous Tours").childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap() //back to categories
     }
     
     //This test case is to make sure that the landmark pins display correctly
@@ -75,12 +75,10 @@ class RPI_ToursUITests: XCTestCase {
     //This test case is to make sure that the category information displays correctly
     func testcategoryinfo(){
         let app = XCUIApplication() //launch app
-        let tablesQuery = app.tables //display category tables
-        tablesQuery.buttons["More Info, Example Category"].tap() //tap the information button on the tour category
+        let tablesQuery = app.tables //display category
+        tablesQuery.buttons["More Info, General Tours"].tap() //tap the information button on the tour category
         
         let table = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).elementBoundByIndex(0).childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Table).element //create and display information window on top of table
-        table.tap() //exit window
-        tablesQuery.buttons["More Info, Example Category2"].tap() //tap the information button on the other tour category and display on top of table
         table.tap() //exit window
     }
     
