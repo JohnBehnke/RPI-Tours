@@ -16,9 +16,10 @@ class TourCategoryDetailViewController: UIViewController {
     //MARK: System Functions
     override func viewDidLoad() {
         //Manually make the UILabel becuase popovers are weird
-        label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label = UILabel(frame: CGRectMake(0, 0, 200, 200))
         label!.center = CGPointMake(160, 284)
         label!.textAlignment = NSTextAlignment.Center
+        label!.numberOfLines = 10
         
         self.view.addSubview(label!)
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class TourCategoryDetailViewController: UIViewController {
     func setText(input:String)  {
         
         self.label!.text = input
+        self.label?.numberOfLines = 10
+        
     }
 
     

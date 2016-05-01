@@ -16,35 +16,29 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var measurementSystem:String?
     var tourLine: MGLPolyline = MGLPolyline()
     let locationManager = CLLocationManager()
-    let tourLandmarks:[Landmark] = []
+    var tourLandmarks:[Landmark] = []
     
     
     @IBOutlet var tableView: UITableView!
     var directions:[MBRouteStep] = []
-
+    
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
     @IBAction func cancelTour(sender: AnyObject) {
         let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
-                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-                    (_)in
-                    self.performSegueWithIdentifier("cancelTour", sender: self)
-                })
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            self.performSegueWithIdentifier("cancelTour", sender: self)
+        })
         
-                alert.addAction(OKAction)
-                self.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(OKAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-    //MARK: IBActions
-//    @IBAction func cancelTour(sender: AnyObject) {
-//        
-//        
-//        
-//
-//    }
+    
     
     //MARK: System Functions
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
         
         //self.navigationItem.rightBarButtonItem = UserTracking
         
@@ -65,6 +59,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: landmark.getLat(), longitude: landmark.getLong())
             point.title = landmark.getName()
+            point.subtitle = landmark.getDesc()
             
             mapView.addAnnotation(point)
             
@@ -72,7 +67,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         
         
         self.mapView.addAnnotation(self.tourLine)
-       
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -82,7 +77,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             measurementSystem = "Feet"
         }
         
-      
+        
         
         
     }
@@ -91,13 +86,26 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         //self.mapView.setCenterCoordinate((userLocation?.coordinate)!,zoomLevel: 17,  animated: false)
         self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
         
-        let nextStep: MBRouteStep = directions[0]
         
-        let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation?.latitude)!, longitude: (nextStep.maneuverLocation?.longitude)!)
-        //print(self.locationManager.location?.distanceFromLocation(stepLocation))
-        if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 5.0) {
-            directions.removeFirst()
-            self.tableView.reloadData()
+        if directions.count == 0 {
+            let alert = UIAlertController(title: "Tour Done!", message: "You finished the Tour! Congrats!", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                (_)in
+                //self.performSegueWithIdentifier("cancelTour", sender: self)
+            })
+            
+            alert.addAction(OKAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else{
+            let nextStep: MBRouteStep = directions[1]
+            
+            let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation?.latitude)!, longitude: (nextStep.maneuverLocation?.longitude)!)
+            //print(self.locationManager.location?.distanceFromLocation(stepLocation))
+            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 5.0) {
+                directions.removeFirst()
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -106,21 +114,21 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table View Functions
-
+    
     //Return the number of directions
-      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return directions.count
     }
-
+    
     //Set up the cells
-      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         var distanceMeasurment:Float?
@@ -134,14 +142,14 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         else{
             distanceMeasurment = Float(directions[indexPath.row].distance)
         }
-
-
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("directionsCell", forIndexPath: indexPath)
-
+        
         cell.textLabel?.text = "\(directions[indexPath.row].instructions!)"
         cell.detailTextLabel?.text = "\(distanceMeasurment!) \(measurementSystem!)"
-
-       
+        
+        
         return cell
     }
     
@@ -158,6 +166,11 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         {
             return UIColor.redColor()
         }
+    }
+    
+    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        // Always try to show a callout when an annotation is tapped.
+        return true
     }
     
 }

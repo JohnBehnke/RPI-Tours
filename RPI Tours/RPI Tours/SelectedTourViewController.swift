@@ -42,7 +42,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     //MARK: System Functions
     override func viewDidLoad() {
         
-        super.viewDidLoad()
+       
 
         //Set the desctiption label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
@@ -52,6 +52,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
             point.title = item.getName()
+            point.subtitle = item.getDesc()
             
             mapView.addAnnotation(point)
         }
@@ -66,7 +67,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         calculateDirections()
         
         
-        
+         super.viewDidLoad()
         
         
         
@@ -184,6 +185,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             
            controller.directions = self.calculatedTour
            controller.tourLine = self.tourLine
+            controller.tourLandmarks = self.selectedTour.getLandmarks()
             
         }
     }
