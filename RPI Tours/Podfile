@@ -8,9 +8,8 @@ target 'RPI Tours' do
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'Mapbox-iOS-SDK'
 
-pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
+#pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git'
 
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 pod 'CSwiftV', :git => 'https://github.com/Daniel1of1/CSwiftV.git'
 end

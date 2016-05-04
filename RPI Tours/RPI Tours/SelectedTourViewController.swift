@@ -10,6 +10,7 @@ import UIKit
 import Mapbox
 import CoreLocation
 
+
 class SelectedTourViewController: UITableViewController , CLLocationManagerDelegate {
     
     //MARK: IBOUTLETS
@@ -129,6 +130,20 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 
             }
         }
+        
+//        let mapBox = CLLocationCoordinate2D(latitude: 38.9131752, longitude: -77.0324047)
+//        let whiteHouse = CLLocationCoordinate2D(latitude: 38.8977, longitude: -77.0365)
+//        let request = MBDirectionsRequest(sourceCoordinate: mapBox, destinationCoordinate: whiteHouse)
+//        
+//        // Use the older v4 endpoint for now, while v5 is in development.
+//        request.version = .Four
+//        
+//        let directions = MBDirections(request: request, accessToken: MapboxAccessToken)
+//        directions.calculateDirectionsWithCompletionHandler { (response, error) in
+//            if let route = response?.routes.first {
+//                print("Enjoy a trip down \(route.legs.first!.name)!")
+//            }
+//        }
         
     }
     

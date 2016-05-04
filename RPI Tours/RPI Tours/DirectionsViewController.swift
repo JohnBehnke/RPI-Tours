@@ -102,8 +102,10 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             
             let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation?.latitude)!, longitude: (nextStep.maneuverLocation?.longitude)!)
             //print(self.locationManager.location?.distanceFromLocation(stepLocation))
-            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 5.0) {
-                directions.removeFirst()
+            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
+                let index = NSIndexPath(forRow: 0, inSection: 0)
+                self.directions.removeFirst()
+                self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Right)
                 self.tableView.reloadData()
             }
         }
