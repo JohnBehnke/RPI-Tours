@@ -9,7 +9,8 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     
     //MARK: IBOutlets
     
@@ -22,11 +23,10 @@ class SettingsViewController: UITableViewController {
     @IBAction func triggeredSave(sender: AnyObject) {
         
         //Load the store
-        let defaults = NSUserDefaults.standardUserDefaults()
         
         //Set the setting
-        defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
-        
+        self.defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
+        self.defaults.setObject(measurementTypeSelector.selectedSegmentIndex, forKey: "savedIndex")
         
         //Prompt the user with an alert
         let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .Alert)
@@ -42,6 +42,12 @@ class SettingsViewController: UITableViewController {
     
     //MARK: System Functions
     override func viewDidLoad() {
+        
+        if self.defaults.objectForKey("savedIndex") != nil{
+            
+        self.measurementTypeSelector.selectedSegmentIndex = ((self.defaults.objectForKey("savedIndex")) as? Int)!
+        }
+
         super.viewDidLoad()
         
         
