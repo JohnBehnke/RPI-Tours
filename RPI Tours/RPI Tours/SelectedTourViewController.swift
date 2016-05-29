@@ -201,6 +201,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
            controller.directions = self.calculatedTour
            controller.tourLine = self.tourLine
             controller.tourLandmarks = self.selectedTour.getLandmarks()
+            controller.tourTitle = self.selectedTour.getName()
             
         }
     }

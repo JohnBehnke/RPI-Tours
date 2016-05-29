@@ -17,6 +17,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var tourLine: MGLPolyline = MGLPolyline()
     let locationManager = CLLocationManager()
     var tourLandmarks:[Landmark] = []
+    var tourTitle:String = ""
     
     
     @IBOutlet var tableView: UITableView!
@@ -39,6 +40,8 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = self.tourTitle
         
         //self.navigationItem.rightBarButtonItem = UserTracking
         
