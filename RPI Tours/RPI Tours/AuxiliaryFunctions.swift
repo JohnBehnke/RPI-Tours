@@ -9,12 +9,36 @@
 import Foundation
 import SystemConfiguration
 import CSwiftV
+import SwiftyJSON
 
 //Strct to hold building info for the map view
 struct building {
     var buildingLat:Double
     var buildingLong:Double
     var buildingName:String
+    
+}
+
+func jsonParserSJ() -> [TourCat] {
+
+    // Create empty array for tour categories
+    var cat_listSJ:[TourCat] = []
+    // Find the JSON file that contains all of the necessary data
+    let tours_fileSJ = NSBundle.mainBundle().pathForResource("Tours", ofType: "json")
+    // Create JSON object to be used to get data from the JSON file
+    let jsonDataSJ = NSData(contentsOfFile: tours_fileSJ!)
+    
+    
+    
+    if jsonDataSJ != nil {
+        
+        do {
+            
+            let json = JSON(jsonDataSJ)
+            
+        }
+    }
+    
     
 }
 
