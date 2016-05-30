@@ -8,8 +8,9 @@ target 'RPI Tours' do
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'Mapbox-iOS-SDK'
 
-#pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git'
-
+pod 'NBNRequestKit', :git => 'https://github.com/1ec5/RequestKit.git', :branch => 'mapbox-podspec' # temporarily until nerdishbynature/RequestKit#14 is merged
+pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git', :tag => 'v0.5.0'
+ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 pod 'CSwiftV', :git => 'https://github.com/Daniel1of1/CSwiftV.git'
 end

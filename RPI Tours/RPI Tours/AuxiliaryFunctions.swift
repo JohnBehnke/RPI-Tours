@@ -34,12 +34,12 @@ func jsonParserSJ() -> [TourCat] {
         
         do {
             
-            let json = JSON(jsonDataSJ)
+            let json = JSON(jsonDataSJ!)
             
         }
     }
     
-    
+    return cat_listSJ
 }
 
 //Our JSON Parser

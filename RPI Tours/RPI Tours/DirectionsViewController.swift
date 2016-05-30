@@ -9,6 +9,7 @@
 import UIKit
 import Mapbox
 import CoreLocation
+import MapboxDirections
 //View Controller for the Directions Table View
 class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MGLMapViewDelegate {
     
@@ -18,10 +19,10 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     let locationManager = CLLocationManager()
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
-    
+    var directions:[MBRouteStep] = []
     
     @IBOutlet var tableView: UITableView!
-    var directions:[MBRouteStep] = []
+    
     
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
@@ -103,7 +104,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         else{
             let nextStep: MBRouteStep = directions[1]
             
-            let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation?.latitude)!, longitude: (nextStep.maneuverLocation?.longitude)!)
+            let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
             //print(self.locationManager.location?.distanceFromLocation(stepLocation))
             if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
                 let index = NSIndexPath(forRow: 0, inSection: 0)
@@ -151,7 +152,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCellWithIdentifier("directionsCell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = "\(directions[indexPath.row].instructions!)"
+        cell.textLabel?.text = "\(directions[indexPath.row].instructions)"
         cell.detailTextLabel?.text = "\(distanceMeasurment!) \(measurementSystem!)"
         
         

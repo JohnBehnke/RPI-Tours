@@ -9,6 +9,7 @@
 import UIKit
 import Mapbox
 import CoreLocation
+import MapboxDirections
 
 
 class SelectedTourViewController: UITableViewController , CLLocationManagerDelegate {
@@ -90,7 +91,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         //Make a request for directions
         let request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
         
-        request.transportType = MBDirectionsRequest.MBDirectionsTransportType.Walking
+        request.transportType = .Walking
         directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
         directions!.calculateDirectionsWithCompletionHandler { (response, error) in
             if let route = response?.routes.first {
@@ -106,17 +107,19 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 else{
                     distanceMeasurment = Float(route.distance)
                 }
-                self.tourLengthLabel.text = "Distance: \(round(distanceMeasurment!)) \(self.measurementSystem!) (\(route.steps.count) route steps)"
+                self.tourLengthLabel.text = "Distance: \(round(distanceMeasurment!)) \(self.measurementSystem!) (\(route.legs.count) route steps)"
                 
                 var times  = secondsToHoursMinutesSeconds(route.expectedTravelTime as Double)
                 
                 self.tourTimeLabel .text = "\(times.0) hours, \(times.1) miniutes"
-                for step in route.steps {
+                for leg in (route.legs) {
+                    for step in leg.steps{
                     //let point = MGLPointAnnotation()
                     self.calculatedTour.append(step)
-                    self.calculatedTourPoints.append(step.maneuverLocation!)
+                    self.calculatedTourPoints.append(step.maneuverLocation)
                     //self.mapView.addAnnotation(point)
                     //print("\(step.instructions) \(step.distance) meters")
+                }
                 }
                 self.tourLine = MGLPolyline(coordinates: &self.calculatedTourPoints, count: UInt(self.calculatedTour.count))
                 
