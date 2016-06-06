@@ -11,6 +11,7 @@ import Mapbox
 import CoreLocation
 import MapboxDirections
 //View Controller for the Directions Table View
+
 class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MGLMapViewDelegate {
     
     //MARK: Global Variables
@@ -20,6 +21,8 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
     var directions:[MBRouteStep] = []
+    
+    
     
     @IBOutlet var tableView: UITableView!
     
@@ -81,6 +84,9 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             measurementSystem = "Feet"
         }
         
+        for directionManuever in directions {
+            print(directionManuever.maneuverDirection)
+        }
         
         
         
@@ -150,13 +156,43 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("directionsCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("DirectionTableViewCell", forIndexPath: indexPath) as? DirectionTableViewCell
+//        
         
-        cell.textLabel?.text = "\(directions[indexPath.row].instructions)"
-        cell.detailTextLabel?.text = "\(distanceMeasurment!) \(measurementSystem!)"
+        cell?.directionLabel.text = "\(directions[indexPath.row].instructions)"
+        cell?.distanceLabel.text = "\(distanceMeasurment!) \(measurementSystem!)"
+        //Get ready for grossness oh god forgive me for my sins
+        
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.StraightAhead{
+            cell?.directionImage.image = UIImage(named: "straight")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SharpLeft{
+            cell?.directionImage.image = UIImage(named: "hLeft")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SharpRight{
+            cell?.directionImage.image = UIImage(named: "hRight")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SlightLeft{
+            cell?.directionImage.image = UIImage(named: "sLeft")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SlightRight{
+            cell?.directionImage.image = UIImage(named: "sRight")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.Left{
+            cell?.directionImage.image = UIImage(named: "Left")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.Right{
+            cell?.directionImage.image = UIImage(named: "Right")
+        }
+        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.UTurn{
+            cell?.directionImage.image = UIImage(named: "uTurn")
+        }
         
         
-        return cell
+        cell?.directionImage.contentMode = .ScaleToFill
+
+        
+        return cell!
     }
     
     

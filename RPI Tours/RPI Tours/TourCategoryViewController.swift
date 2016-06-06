@@ -19,7 +19,9 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     //Array to hold tour categories objects
     var tourCategories: [TourCat] = []
     
+    @IBOutlet var descLabel: UILabel!
     
+    @IBOutlet var testView: UIView!
     
     //MARK: System Functions
     override func viewDidLoad() {
@@ -78,12 +80,17 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         //This adds the popup for when the user selects the accessory detail for a tour cat desc
         
         //Make a Detail VC
-        let vc = TourCategoryDetailViewController()
+        let vc = UIViewController()
         //Load it
-        vc.viewDidLoad()
+        descLabel.text = tourCategories[indexPath.row].getDesc()
+       
+        
+        vc.view.addSubview(testView)
+        vc.view.sizeThatFits(testView.bounds.size)
+        vc.preferredContentSize = testView.bounds.size
+       
         //Set the text to the desc
-        vc.setText(self.tourCategories[indexPath.row].getDesc())
-        //Present it
+                //Present it
         vc.modalPresentationStyle = UIModalPresentationStyle.Popover
         let popover: UIPopoverPresentationController = vc.popoverPresentationController!
         popover.sourceView = tableView.cellForRowAtIndexPath(indexPath)?.contentView
@@ -105,6 +112,9 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
         let cell = tableView.dequeueReusableCellWithIdentifier("catCell", forIndexPath: indexPath)
         
         cell.textLabel?.text = tourCategories[indexPath.row].getName()
+    let numTours = tourCategories[indexPath.row].getTours().count
+        
+        cell.detailTextLabel?.text = "\(numTours.description) available tours"
         return cell
     }
     
