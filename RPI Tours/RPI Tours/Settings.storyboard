@@ -28,8 +28,8 @@
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tBk-Mm-X2m">
                                                     <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                                     <segments>
-                                                        <segment title="Feet"/>
-                                                        <segment title="Meters"/>
+                                                        <segment title="Imperial"/>
+                                                        <segment title="Metric"/>
                                                     </segments>
                                                 </segmentedControl>
                                             </subviews>

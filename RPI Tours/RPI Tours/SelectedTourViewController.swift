@@ -62,7 +62,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
         if measurementSystem == nil {
-            measurementSystem = "Feet"
+            measurementSystem = "Imperial"
         }
         
         
@@ -97,6 +97,9 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
+        options.routeShapeResolution = .Full
+        options.allowsUTurnAtWaypoint = false
+
         
         _ = directions.calculateDirections(options: options) { (waypoints, routes, error) in
             guard error == nil else {
@@ -111,18 +114,26 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 for legs in route.legs{
                     numSteps += legs.steps.count
                     for step in legs.steps{
-                        print("\(step.instructions)")
                         self.calculatedTour.append(step)
                     }
                 }
                 
-                self.tourLengthLabel.text = "Distance: \(route.distance) \(self.measurementSystem!) (\(numSteps) route steps)"
+                let distanceFormatter = NSLengthFormatter()
+                var distance = ""
+                
+                if self.measurementSystem == "Imperial"{
+                    distance = distanceFormatter.stringFromMeters(route.distance)
+                     self.tourLengthLabel.text = "Distance: \(distance) (\(numSteps) route steps)"
+                }
+                else{
+                self.tourLengthLabel.text = "Distance: \(route.distance) Meters (\(numSteps) route steps)"
+                }
                 
                 let travelTimeFormatter = NSDateComponentsFormatter()
-                travelTimeFormatter.unitsStyle = .Short
+                travelTimeFormatter.unitsStyle = .Abbreviated
                 let formattedTravelTime = travelTimeFormatter.stringFromTimeInterval(route.expectedTravelTime)
                 
-                self.tourTimeLabel.text = formattedTravelTime
+                self.tourTimeLabel.text = "Estimated time: \(formattedTravelTime!)"
                 
                 if route.coordinateCount > 0 {
                     // Convert the route’s coordinates into a polyline.

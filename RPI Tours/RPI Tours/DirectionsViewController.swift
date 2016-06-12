@@ -81,7 +81,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
         if measurementSystem == nil {
-            measurementSystem = "Feet"
+            measurementSystem = "Imperial"
         }
         
 //        for directionManuever in directions {
@@ -148,7 +148,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         
         
         //Switch measurement systems if necessary
-        if self.measurementSystem == "Feet"{
+        if self.measurementSystem == "Imperial"{
             distanceMeasurment = metersToFeet(Float(directions[indexPath.row].distance))
         }
             
@@ -161,7 +161,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
 //        
         
         cell?.directionLabel.text = "\(directions[indexPath.row].instructions)"
-        cell?.distanceLabel.text = "\(distanceMeasurment!) \(measurementSystem!)"
+        cell?.distanceLabel.text = "\(distanceMeasurment!) \(measurementSystem == "Imperial" ? "feet" :  "meters")"
         //Get ready for grossness oh god forgive me for my sins
         
         if directions[indexPath.row].maneuverDirection == ManeuverDirection.StraightAhead{
