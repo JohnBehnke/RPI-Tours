@@ -12,7 +12,7 @@ import CoreLocation
 class Tour {
     
     //INITIALIZERS
-    init(name: String, desc: String, distance: Int, duration: Int, waypoints: [Waypoint], landmarks: [Landmark]) {
+    init(name: String, desc: String, distance: Int, duration: Int, waypoints: [tourWaypoint], landmarks: [Landmark]) {
         self.name = name
         self.desc = desc
         self.distance = distance
@@ -73,7 +73,7 @@ class Tour {
     func setDuration(duration: Int) {
         self.duration = duration
     }
-    func setWaypoints(waypoints: [Waypoint]) {
+    func setWaypoints(waypoints: [tourWaypoint]) {
         self.waypoints = waypoints
     }
     func setLandmarks(landmarks: [Landmark]) {
@@ -89,7 +89,7 @@ class Tour {
     private var desc: String
     private var distance: Int
     private var duration: Int
-    private var waypoints: [Waypoint]
+    private var waypoints: [tourWaypoint]
     private var landmarks: [Landmark]
     private var  hasTaken: Bool
 }

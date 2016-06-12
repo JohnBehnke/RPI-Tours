@@ -51,7 +51,7 @@ func jsonParser() -> [TourCat] {
                     for (_, tourJSON) in catJSON["tours"] {
                         
                         var land_list:[Landmark] = []
-                        var way_list:[Waypoint] = []
+                        var way_list:[tourWaypoint] = []
                         var tour_name: String = ""
                         var tour_desc: String = ""
                         
@@ -64,7 +64,7 @@ func jsonParser() -> [TourCat] {
                         }
                         
                         for (_, wayJSON) in tourJSON["waypoints"] {
-                            way_list.append(Waypoint(lat: Double(wayJSON[0].float!), long: Double(wayJSON[1].float!)))
+                            way_list.append(tourWaypoint(lat: Double(wayJSON[0].float!), long: Double(wayJSON[1].float!)))
                         }
                         
                         for (_, landJSON) in tourJSON["landmarks"] {

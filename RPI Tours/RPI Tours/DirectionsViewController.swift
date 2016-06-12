@@ -20,7 +20,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     let locationManager = CLLocationManager()
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
-    var directions:[MBRouteStep] = []
+    var directions:[RouteStep] = []
     
     
     
@@ -84,10 +84,10 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             measurementSystem = "Feet"
         }
         
-        for directionManuever in directions {
-            print(directionManuever.maneuverDirection)
-        }
-        
+//        for directionManuever in directions {
+//            print(directionManuever.maneuverDirection)
+//        }
+//        
         
         
     }
@@ -108,7 +108,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
-            let nextStep: MBRouteStep = directions[1]
+            let nextStep: RouteStep = directions[1]
             
             let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
             //print(self.locationManager.location?.distanceFromLocation(stepLocation))
@@ -136,7 +136,8 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     
     //Return the number of directions
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return directions.count
+        //return directions.count
+        return 5
     }
     
     //Set up the cells
@@ -163,33 +164,33 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         cell?.distanceLabel.text = "\(distanceMeasurment!) \(measurementSystem!)"
         //Get ready for grossness oh god forgive me for my sins
         
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.StraightAhead{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.StraightAhead{
             cell?.directionImage.image = UIImage(named: "straight")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SharpLeft{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SharpLeft{
             cell?.directionImage.image = UIImage(named: "hLeft")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SharpRight{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SharpRight{
             cell?.directionImage.image = UIImage(named: "hRight")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SlightLeft{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SlightLeft{
             cell?.directionImage.image = UIImage(named: "sLeft")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.SlightRight{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SlightRight{
             cell?.directionImage.image = UIImage(named: "sRight")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.Left{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.Left{
             cell?.directionImage.image = UIImage(named: "Left")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.Right{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.Right{
             cell?.directionImage.image = UIImage(named: "Right")
         }
-        if directions[indexPath.row].maneuverDirection == MBRouteStep.ManeuverDirection.UTurn{
+        if directions[indexPath.row].maneuverDirection == ManeuverDirection.UTurn{
             cell?.directionImage.image = UIImage(named: "uTurn")
         }
         
         
-        cell?.directionImage.contentMode = .ScaleToFill
+        //cell?.directionImage.contentMode = .ScaleToFill
 
         
         return cell!

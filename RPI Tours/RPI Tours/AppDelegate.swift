@@ -32,8 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let controller = masterNavigationController.topViewController as! TourCategoryViewController
         //controller.managedObjectContext = self.managedObjectContext
         
-        
-
+       
         
         return true
     }

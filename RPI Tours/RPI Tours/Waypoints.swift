@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Waypoint {
+class tourWaypoint {
     //INITIALIZERS
     init(lat: Double, long: Double) {
         self.lat = lat

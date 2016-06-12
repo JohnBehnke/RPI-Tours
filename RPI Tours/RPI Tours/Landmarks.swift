@@ -8,7 +8,7 @@
 
 import UIKit
 //Inherit wrom Waypoint becuase OOP
-class Landmark: Waypoint {
+class Landmark: tourWaypoint {
     
     //INITIALIZERS
     init(name: String, desc: String, lat: Double, long: Double) {

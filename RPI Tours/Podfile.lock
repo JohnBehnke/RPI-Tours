@@ -1,18 +1,17 @@
 PODS:
+  - Alamofire (3.4.0)
   - CSwiftV (0.0.3)
   - Mapbox-iOS-SDK (3.1.2)
-  - MapboxDirections.swift (0.4.0):
-    - NBNRequestKit
-    - Polyline (~> 3.0)
-  - NBNRequestKit (0.3.0)
-  - Polyline (3.1.0)
+  - MapboxDirections.swift (0.6.0):
+    - Polyline (~> 3.2)
+  - Polyline (3.2.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
   - Mapbox-iOS-SDK
-  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.5.0`)
-  - NBNRequestKit (from `https://github.com/1ec5/RequestKit.git`, branch `mapbox-podspec`)
+  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.6.0`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -20,10 +19,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/Daniel1of1/CSwiftV.git
   MapboxDirections.swift:
     :git: https://github.com/mapbox/MapboxDirections.swift.git
-    :tag: v0.5.0
-  NBNRequestKit:
-    :branch: mapbox-podspec
-    :git: https://github.com/1ec5/RequestKit.git
+    :tag: v0.6.0
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
@@ -33,22 +29,19 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Daniel1of1/CSwiftV.git
   MapboxDirections.swift:
     :git: https://github.com/mapbox/MapboxDirections.swift.git
-    :tag: v0.5.0
-  NBNRequestKit:
-    :commit: 77220407aa576e70232e4300a01d31870345b275
-    :git: https://github.com/1ec5/RequestKit.git
+    :tag: v0.6.0
   SwiftyJSON:
     :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   CSwiftV: 93e3d4e1501f2a9b1eac3ae51d53a5edf41beb5b
   Mapbox-iOS-SDK: 0a910c2cce1aa8cff5b9ec2a990e7a32332a776a
-  MapboxDirections.swift: baa69039463d0853ec7cca2370ed686f507695bf
-  NBNRequestKit: 300c68172965d586ac6e0cefbe5a4fe415b71dbf
-  Polyline: 653eca28797409fd188a6040e361020c52472a62
+  MapboxDirections.swift: 144cefb4386d419f916ce27928834c28bbaafb4f
+  Polyline: 4579e57a62a5e876944c41884194e24ab7021d89
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 7c23de0578b3e31012183cf93c67dd8981e3ce07
+PODFILE CHECKSUM: 0ea4e23457102503b7ce87c22ed3ffc8d27a9e1a
 
 COCOAPODS: 1.0.0

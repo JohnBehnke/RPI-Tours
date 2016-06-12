@@ -21,7 +21,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     @IBOutlet var stepperControl: UIStepper!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var tourTimeLabel: UILabel!
-
+    
     //MARK: IBAction
     @IBAction func pressedStartTour(sender: AnyObject) {
         self.performSegueWithIdentifier("showDirections", sender: self)
@@ -33,19 +33,19 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     //MARK: Global
     var selectedTour:Tour = Tour()
-    var directions: MBDirections?
+    //var directions: MBDirections?
     var measurementSystem:String?
-    var calculatedTour:[MBRouteStep] = []
+    var calculatedTour:[RouteStep] = []
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
     let locationManager = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
-        
+    
     
     //MARK: System Functions
     override func viewDidLoad() {
         
-       
-
+        
+        
         //Set the desctiption label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
         
@@ -69,7 +69,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         calculateDirections()
         
         
-         super.viewDidLoad()
+        super.viewDidLoad()
         
         
         
@@ -79,74 +79,68 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     //MARK: Helper Functions
     
     func calculateDirections() {
         
         //Get the waypoints for the tour
-        var workingWapoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
+        let workingWapoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
         
-        //Make a request for directions
-        let request = MBDirectionsRequest(sourceCoordinate: workingWapoints.removeFirst() , waypointCoordinates:workingWapoints, destinationCoordinate: workingWapoints.removeLast())
         
-        request.transportType = .Walking
-        directions = MBDirections(request: request, accessToken: mapBoxAPIKey)
-        directions!.calculateDirectionsWithCompletionHandler { (response, error) in
-            if let route = response?.routes.first {
-                
-                
-                
-                var distanceMeasurment:Float?
-                
-                if self.measurementSystem == "Feet"{
-                    distanceMeasurment = metersToFeet(Float(route.distance))
+        let directions = Directions(accessToken: mapBoxAPIKey)
+        
+        var waypoints:[Waypoint] = []
+        for point in workingWapoints{
+            waypoints.append(Waypoint(coordinate: point))
+        }
+        let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
+        options.includesSteps = true
+        
+        _ = directions.calculateDirections(options: options) { (waypoints, routes, error) in
+            guard error == nil else {
+                print("Error calculating directions: \(error!)")
+                return
+            }
+            
+            
+            
+            if let route = routes?.first, _ = route.legs.first {
+                var numSteps = 0
+                for legs in route.legs{
+                    numSteps += legs.steps.count
+                    for step in legs.steps{
+                        print("\(step.instructions)")
+                        self.calculatedTour.append(step)
+                    }
                 }
                 
-                else{
-                    distanceMeasurment = Float(route.distance)
+                self.tourLengthLabel.text = "Distance: \(route.distance) \(self.measurementSystem!) (\(numSteps) route steps)"
+                
+                let travelTimeFormatter = NSDateComponentsFormatter()
+                travelTimeFormatter.unitsStyle = .Short
+                let formattedTravelTime = travelTimeFormatter.stringFromTimeInterval(route.expectedTravelTime)
+                
+                self.tourTimeLabel.text = formattedTravelTime
+                
+                if route.coordinateCount > 0 {
+                    // Convert the route’s coordinates into a polyline.
+                    var routeCoordinates = route.coordinates!
+                    let routeLine = MGLPolyline(coordinates: &routeCoordinates, count: route.coordinateCount)
+                    
+                    // Add the polyline to the map and fit the viewport to the polyline.
+                    self.mapView.addAnnotation(routeLine)
+                    self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
                 }
-                self.tourLengthLabel.text = "Distance: \(round(distanceMeasurment!)) \(self.measurementSystem!) (\(route.legs.count) route steps)"
-                
-                var times  = secondsToHoursMinutesSeconds(route.expectedTravelTime as Double)
-                
-                self.tourTimeLabel .text = "\(times.0) hours, \(times.1) miniutes"
-                for leg in (route.legs) {
-                    for step in leg.steps{
-                    //let point = MGLPointAnnotation()
-                    self.calculatedTour.append(step)
-                    self.calculatedTourPoints.append(step.maneuverLocation)
-                    //self.mapView.addAnnotation(point)
-                    //print("\(step.instructions) \(step.distance) meters")
-                }
-                }
-                self.tourLine = MGLPolyline(coordinates: &self.calculatedTourPoints, count: UInt(self.calculatedTour.count))
-                
-                self.mapView.addAnnotation(self.tourLine)
-                
-                
-            //This needs to go to an actual kill error
-            } else {
-                print("Error calculating directions: \(error)")
-                
                 
             }
         }
         
-//        let mapBox = CLLocationCoordinate2D(latitude: 38.9131752, longitude: -77.0324047)
-//        let whiteHouse = CLLocationCoordinate2D(latitude: 38.8977, longitude: -77.0365)
-//        let request = MBDirectionsRequest(sourceCoordinate: mapBox, destinationCoordinate: whiteHouse)
-//        
-//        // Use the older v4 endpoint for now, while v5 is in development.
-//        request.version = .Four
-//        
-//        let directions = MBDirections(request: request, accessToken: MapboxAccessToken)
-//        directions.calculateDirectionsWithCompletionHandler { (response, error) in
-//            if let route = response?.routes.first {
-//                print("Enjoy a trip down \(route.legs.first!.name)!")
-//            }
-//        }
+        
+        
+        
+        
         
     }
     
@@ -201,8 +195,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             
             let controller = segue.destinationViewController  as! DirectionsViewController //Create the detailVC
             
-           controller.directions = self.calculatedTour
-           controller.tourLine = self.tourLine
+            controller.directions = self.calculatedTour
+            controller.tourLine = self.tourLine
             controller.tourLandmarks = self.selectedTour.getLandmarks()
             controller.tourTitle = self.selectedTour.getName()
             

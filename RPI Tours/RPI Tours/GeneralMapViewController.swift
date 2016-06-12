@@ -18,7 +18,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var mapView: MGLMapView!
     
     //MARK: Global Variables
-    var directions: MBDirections?
+    
     
     //MARK: System Function
     override func viewDidLoad() {

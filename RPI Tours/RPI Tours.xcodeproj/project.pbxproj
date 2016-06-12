@@ -13,6 +13,7 @@
 		524D7B251CFBC8DE009024CC /* Map of Campus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B231CFBC8DE009024CC /* Map of Campus.storyboard */; };
 		524D7B271CFBC906009024CC /* Tour Prep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B261CFBC906009024CC /* Tour Prep.storyboard */; };
 		524D7B2A1CFBC9DD009024CC /* SelectedTourCat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B281CFBC9DD009024CC /* SelectedTourCat.storyboard */; };
+		52615C4E1D0DC80F0040FDA9 /* mapMatchingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */; };
 		5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */; };
 		5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */; };
 		52762DA31CAF6E040051F338 /* TourCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762D9F1CAF6E040051F338 /* TourCat.swift */; };
@@ -67,6 +68,7 @@
 		524D7B241CFBC8DE009024CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Map of Campus.storyboard"; sourceTree = "<group>"; };
 		524D7B261CFBC906009024CC /* Tour Prep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tour Prep.storyboard"; sourceTree = "<group>"; };
 		524D7B291CFBC9DD009024CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectedTourCat.storyboard; sourceTree = "<group>"; };
+		52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapMatchingTest.swift; sourceTree = "<group>"; };
 		5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTourViewController.swift; sourceTree = "<group>"; };
 		5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		52762D9F1CAF6E040051F338 /* TourCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourCat.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
+				52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */,
 				524D7B1F1CFBC385009024CC /* mapBoxAPIKeys.swift */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
@@ -551,6 +554,7 @@
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
 				52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
+				52615C4E1D0DC80F0040FDA9 /* mapMatchingTest.swift in Sources */,
 				52762DA31CAF6E040051F338 /* TourCat.swift in Sources */,
 				524D7B201CFBC385009024CC /* mapBoxAPIKeys.swift in Sources */,
 				520EE71C1D04E84F00520A9B /* DirectionTableViewCell.swift in Sources */,
