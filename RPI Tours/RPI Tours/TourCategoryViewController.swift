@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ReachabilitySwift
 
 
 class TourCategoryViewController: UITableViewController, NSFetchedResultsControllerDelegate,UIPopoverPresentationControllerDelegate {
@@ -120,7 +121,16 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
     
     //Deals with a user tapping a cell. Either starts a segue to the next VC, or fails b/c no internet
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if isConnectedToNetwork() == false {
+        
+        let reachability: Reachability
+        
+        do {
+            reachability = try Reachability.reachabilityForInternetConnection()
+            
+            //If we have internet, go to the next VC
+            self.performSegueWithIdentifier("showDetail", sender: self)
+            
+        } catch {
             //Change this to avoid deprecation. This is only temporary
             let alert = UIAlertController(title: "Warning!", message: "Check your internet Connection", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
@@ -131,10 +141,12 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
             alert.addAction(OKAction)
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        else{
-            //If we have internet, go to the next VC
-            self.performSegueWithIdentifier("showDetail", sender: self)
+        /*if isConnectedToNetwork() == false {
+            
         }
+        else{
+            
+        }*/
         
     }
     

@@ -86,6 +86,7 @@ func jsonParser() -> [TourCat] {
     return cat_list
 }
 
+/*
 //Determine if we are connected to a network
 //Return a bool with status
 func isConnectedToNetwork() -> Bool {
@@ -110,7 +111,7 @@ func isConnectedToNetwork() -> Bool {
     
     
 }
-
+*/
 
 //Build a CSV for our Map screen
 //Returns an array of building structs
@@ -123,7 +124,7 @@ func buildCSV() -> [building] {
     let stringToParse = try? String(contentsOfFile:location!, encoding: NSUTF8StringEncoding)
     
     //Call CSwiftv to parse it
-    let csv = CSwiftV(String: stringToParse!)
+    let csv = CSwiftV(string: stringToParse!)
     
     var actualBuildings:[building] = []
     

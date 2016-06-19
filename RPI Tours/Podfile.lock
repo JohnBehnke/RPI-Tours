@@ -1,10 +1,11 @@
 PODS:
-  - Alamofire (3.4.0)
-  - CSwiftV (0.0.3)
-  - Mapbox-iOS-SDK (3.1.2)
+  - Alamofire (3.4.1)
+  - CSwiftV (0.0.5)
+  - Mapbox-iOS-SDK (3.2.3)
   - MapboxDirections.swift (0.6.0):
     - Polyline (~> 3.2)
   - Polyline (3.2.1)
+  - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
   - Mapbox-iOS-SDK
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.6.0`)
+  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift.git`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -20,28 +22,34 @@ EXTERNAL SOURCES:
   MapboxDirections.swift:
     :git: https://github.com/mapbox/MapboxDirections.swift.git
     :tag: v0.6.0
+  ReachabilitySwift:
+    :git: https://github.com/ashleymills/Reachability.swift.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   CSwiftV:
-    :commit: a1774b9dbae7b4d9fa288998362625cae9e12352
+    :commit: c0d75cea119d63c706973adc1412cd20298a83b5
     :git: https://github.com/Daniel1of1/CSwiftV.git
   MapboxDirections.swift:
     :git: https://github.com/mapbox/MapboxDirections.swift.git
     :tag: v0.6.0
+  ReachabilitySwift:
+    :commit: cbbfc0907e8a67107289be9d1180538c3fbccd93
+    :git: https://github.com/ashleymills/Reachability.swift.git
   SwiftyJSON:
-    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :commit: 73670b94292b8d8496c398a973f56ac67789ba9f
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  CSwiftV: 93e3d4e1501f2a9b1eac3ae51d53a5edf41beb5b
-  Mapbox-iOS-SDK: 0a910c2cce1aa8cff5b9ec2a990e7a32332a776a
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
+  Mapbox-iOS-SDK: 120e8a140e9cd4adae8227340dd89f5cc3850259
   MapboxDirections.swift: 144cefb4386d419f916ce27928834c28bbaafb4f
   Polyline: 4579e57a62a5e876944c41884194e24ab7021d89
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 0ea4e23457102503b7ce87c22ed3ffc8d27a9e1a
+PODFILE CHECKSUM: f1b17f51207d700374aea3246ff1db5a46f633ee
 
 COCOAPODS: 1.0.0
