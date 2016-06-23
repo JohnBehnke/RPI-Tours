@@ -141,12 +141,6 @@ class TourCategoryViewController: UITableViewController, NSFetchedResultsControl
             alert.addAction(OKAction)
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        /*if isConnectedToNetwork() == false {
-            
-        }
-        else{
-            
-        }*/
         
     }
     

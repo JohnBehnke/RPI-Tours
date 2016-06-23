@@ -88,11 +88,6 @@ class ToursByCategoryViewController: UITableViewController{
             alert.addAction(OKAction)
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        /*if /*isConnectedToNetwork()*/  reachability == false {
-            
-        }
-
-        else {}*/
     }
     
     
