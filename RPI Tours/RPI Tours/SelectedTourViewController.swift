@@ -24,7 +24,9 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     //MARK: IBAction
     @IBAction func pressedStartTour(sender: AnyObject) {
-        self.performSegueWithIdentifier("showDirections", sender: self)
+        if(directionsDidLoad) {
+            self.performSegueWithIdentifier("showDirections", sender: self)
+        }
         
     }
     @IBAction func stepActivate(sender: AnyObject) {
@@ -39,6 +41,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
     let locationManager = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
+    var directionsDidLoad = false
     
     
     //MARK: System Functions
@@ -150,7 +153,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
         
         
-        
+        directionsDidLoad = true
         
         
         
