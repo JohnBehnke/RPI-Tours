@@ -32,6 +32,10 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     @IBAction func stepActivate(sender: AnyObject) {
         ratingLabel.text = String(self.stepperControl.value)
     }
+    @IBAction func pressedCenterMap(sender: AnyObject) {
+        // Use mapView.setCenterCoordinate to recenter the map
+        mapView.setCenterCoordinate(mapCenterCoordinate!, animated: true)
+    }
     
     //MARK: Global
     var selectedTour:Tour = Tour()
@@ -42,6 +46,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     let locationManager = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
     var directionsDidLoad = false
+    var mapCenterCoordinate: CLLocationCoordinate2D?
     
     
     //MARK: System Functions
@@ -70,7 +75,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         
         calculateDirections()
-        
         
         super.viewDidLoad()
         
@@ -147,6 +151,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                     self.mapView.addAnnotation(routeLine)
                     self.tourLine = routeLine
                     self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
+                    
                 }
                 
             }
@@ -154,11 +159,11 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         
         directionsDidLoad = true
+        self.mapCenterCoordinate = self.mapView.centerCoordinate
         
         
         
     }
-    
     
     // MARK: Table View Functions
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
