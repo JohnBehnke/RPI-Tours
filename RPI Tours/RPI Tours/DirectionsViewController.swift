@@ -101,7 +101,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             let alert = UIAlertController(title: "Tour Done!", message: "You finished the Tour! Congrats!", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
                 (_)in
-                //self.performSegueWithIdentifier("cancelTour", sender: self)
+                self.performSegueWithIdentifier("cancelTour", sender: self)
             })
             
             alert.addAction(OKAction)
@@ -112,12 +112,13 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             
             let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
             //print(self.locationManager.location?.distanceFromLocation(stepLocation))
-            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
+            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 10) {
                 let index = NSIndexPath(forRow: 0, inSection: 0)
-                self.directions.removeFirst()
-                self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Right)
+                self.directions.removeAtIndex(index.row)
+                //self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Right)
                 self.tableView.reloadData()
             }
+            
         }
     }
     
