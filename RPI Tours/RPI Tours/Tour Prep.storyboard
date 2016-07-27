@@ -152,10 +152,10 @@
                                                     <exclude reference="z3d-sQ-DA4"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="zQW-KN-z2Z"/>
+                                                    <exclude reference="JIt-6a-6Fy"/>
                                                     <exclude reference="aVL-cT-R1M"/>
                                                     <exclude reference="pZi-Ri-Gzd"/>
-                                                    <exclude reference="JIt-6a-6Fy"/>
+                                                    <exclude reference="zQW-KN-z2Z"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -163,10 +163,10 @@
                                                     <include reference="z3d-sQ-DA4"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="zQW-KN-z2Z"/>
+                                                    <include reference="JIt-6a-6Fy"/>
                                                     <include reference="aVL-cT-R1M"/>
                                                     <include reference="pZi-Ri-Gzd"/>
-                                                    <include reference="JIt-6a-6Fy"/>
+                                                    <include reference="zQW-KN-z2Z"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -618,7 +618,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8Uq-t7-3py">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="baZ-Ks-5nu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="baZ-Ks-5nu">
                             <connections>
                                 <action selector="cancelTour:" destination="Ekk-p9-bON" id="9Vb-M9-vpC"/>
                             </connections>
