@@ -18,7 +18,8 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var mapView: MGLMapView!
     
     //MARK: Global Variables
-    
+    var tappedLandmarkName:String = ""
+    //var tappedLandmarkDesc:String = ""
     
     //MARK: System Function
     override func viewDidLoad() {
@@ -62,7 +63,24 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
     
+    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        tappedLandmarkName = annotation.title!!
+        //tappedLandmarkDesc = annotation.subtitle!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
     
+    //MARK: Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showInfo" {
+            let controller = segue.destinationViewController as! InfoViewController
+            
+            controller.landmarkName = self.tappedLandmarkName
+            //controller.landmarkDesc = self.tappedLandmarkDesc
+            
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
+        }
+    }
     
     
 }

@@ -48,6 +48,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var directionsDidLoad = false
     var mapCenterCoordinate: CLLocationCoordinate2D?
     var mapZoom = 0.0
+    var tappedLandmarkName: String = ""
+    var tappedLandmarkDesc: String = ""
     
     
     //MARK: System Functions
@@ -55,7 +57,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         
         
-        //Set the desctiption label for the tour
+        //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
         
         //For
@@ -221,7 +223,11 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         return true
     }
     
-    
+    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        tappedLandmarkName = annotation.title!!
+        tappedLandmarkDesc = annotation.subtitle!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
     
     
     func mapView(mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
@@ -260,6 +266,16 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             controller.tourLandmarks = self.selectedTour.getLandmarks()
             controller.tourTitle = self.selectedTour.getName()
             
+        }
+        
+        if segue.identifier == "showInfo" {
+            let controller = segue.destinationViewController as! InfoViewController
+            
+            controller.landmarkName = self.tappedLandmarkName
+            controller.landmarkDesc = self.tappedLandmarkDesc
+            
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }
     

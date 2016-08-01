@@ -42,11 +42,20 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Vf4-M8-Tck" id="GCj-gm-F7C"/>
+                        <segue destination="NPu-od-W5G" kind="show" identifier="showInfo" id="Xfp-Od-n7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3l-26-8RT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525.5" y="-1048.5"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="eEW-Mg-e4W">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="NPu-od-W5G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zql-4Y-xef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2144" y="-1049"/>
         </scene>
     </scenes>
 </document>

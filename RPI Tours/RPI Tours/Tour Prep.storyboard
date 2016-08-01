@@ -390,11 +390,20 @@
                         <outlet property="tourLengthLabel" destination="Mch-Xe-2IT" id="P7c-w7-0k7"/>
                         <outlet property="tourTimeLabel" destination="Amp-93-fc7" id="Qqp-gz-cGx"/>
                         <segue destination="Ekk-p9-bON" kind="show" identifier="showDirections" id="qeN-rZ-z1j"/>
+                        <segue destination="rtP-0z-1s2" kind="show" identifier="showInfo" id="T0M-T8-nNq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9s-ev-DMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.5" y="824.25"/>
+            <point key="canvasLocation" x="958" y="806"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="gXP-sK-ge3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="rtP-0z-1s2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIx-uy-sEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="1099"/>
         </scene>
         <!--Directions-->
         <scene sceneID="29x-9i-sD7">
@@ -617,10 +626,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8Uq-t7-3py">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="baZ-Ks-5nu">
+                    <navigationItem key="navigationItem" title="Title" id="92g-u3-N8O">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Edm-d6-RJE">
                             <connections>
-                                <action selector="cancelTour:" destination="Ekk-p9-bON" id="9Vb-M9-vpC"/>
+                                <action selector="cancelTour:" destination="Ekk-p9-bON" id="NAb-wc-KzC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -628,6 +637,7 @@
                         <outlet property="mapView" destination="gd2-PP-3Qs" id="w0x-8e-uKV"/>
                         <outlet property="tableView" destination="vGb-AI-PL7" id="FeX-xC-AXh"/>
                         <segue destination="jBc-8V-agE" kind="unwind" identifier="cancelTour" unwindAction="unwindToMenu:" id="Hoj-Cj-Abx"/>
+                        <segue destination="rtP-0z-1s2" kind="show" identifier="showInfo" id="ULE-2S-lwm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIy-Qm-9S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -636,4 +646,7 @@
             <point key="canvasLocation" x="1881" y="435"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ULE-2S-lwm"/>
+    </inferredMetricsTieBreakers>
 </document>
