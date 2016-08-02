@@ -24,11 +24,17 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     //MARK: IBAction
     @IBAction func pressedStartTour(sender: AnyObject) {
-        self.performSegueWithIdentifier("showDirections", sender: self)
+        if(directionsDidLoad) {
+            self.performSegueWithIdentifier("showDirections", sender: self)
+        }
         
     }
     @IBAction func stepActivate(sender: AnyObject) {
         ratingLabel.text = String(self.stepperControl.value)
+    }
+    @IBAction func pressedCenterMap(sender: AnyObject) {
+        // Use mapView.setCenterCoordinate to recenter the map
+        mapView.setCenterCoordinate(mapCenterCoordinate!, zoomLevel: mapZoom, animated: true)
     }
     
     //MARK: Global
@@ -39,6 +45,9 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
     let locationManager = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
+    var directionsDidLoad = false
+    var mapCenterCoordinate: CLLocationCoordinate2D?
+    var mapZoom = 0.0
     
     
     //MARK: System Functions
@@ -68,7 +77,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         calculateDirections()
         
-        
         super.viewDidLoad()
         
         
@@ -86,15 +94,52 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     func calculateDirections() {
         
         //Get the waypoints for the tour
-        let workingWapoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
+        let workingWaypoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
         
         
         let directions = Directions(accessToken: mapBoxAPIKey)
         
         var waypoints:[Waypoint] = []
-        for point in workingWapoints{
-            waypoints.append(Waypoint(coordinate: point))
+        
+        var shortestPoint: CLLocationCoordinate2D = workingWaypoints[0]
+        let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
+        for point in workingWaypoints {
+            let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            let p = CLLocation(latitude: point.latitude, longitude: point.longitude)
+            let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
+            
+            if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+                shortestPoint = point
+            }
         }
+        print(shortestPoint)
+        
+        var shortestPointLocation = 0
+        for point in workingWaypoints {
+            if(point.latitude == shortestPoint.latitude && point.longitude == shortestPoint.longitude){
+                break;
+            }
+            else {
+                shortestPointLocation += 1
+            }
+        }
+        
+        waypoints.append(Waypoint(coordinate: userLocation))
+        
+        //waypoints.append(Waypoint(coordinate: shortestPoint))
+        
+        for i in 0..<(workingWaypoints.count - shortestPointLocation) {
+            waypoints.append(Waypoint(coordinate: workingWaypoints[i + shortestPointLocation]))
+        }
+        
+        for i in 0..<shortestPointLocation {
+            waypoints.append(Waypoint(coordinate: workingWaypoints[i]))
+        }
+
+        
+        //for point in workingWapoints{
+            //waypoints.append(Waypoint(coordinate: point))
+        //}
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
         options.routeShapeResolution = .Full
@@ -142,19 +187,23 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                     
                     // Add the polyline to the map and fit the viewport to the polyline.
                     self.mapView.addAnnotation(routeLine)
+                    self.tourLine = routeLine
                     self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
+                    
                 }
                 
             }
         }
         
         
-        
+        directionsDidLoad = true
+        self.mapCenterCoordinate = self.mapView.centerCoordinate
+        self.mapZoom = self.mapView.zoomLevel - 0.5
+        self.mapView.rotateEnabled = false
         
         
         
     }
-    
     
     // MARK: Table View Functions
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

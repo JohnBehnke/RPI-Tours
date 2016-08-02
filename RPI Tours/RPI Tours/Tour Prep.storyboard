@@ -18,10 +18,10 @@
                             <tableViewSection headerTitle="Tour Description" id="m7M-xs-BpP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="5gM-8K-z5O">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="113"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5gM-8K-z5O" id="TQN-Re-umc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="112.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-nv-VzR">
@@ -66,10 +66,10 @@
                             <tableViewSection headerTitle="Proposed Tour Route" id="QrI-xf-J4K">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="AVe-1I-GwJ">
-                                        <rect key="frame" x="0.0" y="276.5" width="600" height="300"/>
+                                        <rect key="frame" x="0.0" y="278" width="600" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AVe-1I-GwJ" id="4UT-KV-7fg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCg-JJ-kTy" customClass="MGLMapView">
@@ -123,15 +123,63 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hHx-CX-n5G">
+                                        <rect key="frame" x="0.0" y="578" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHx-CX-n5G" id="Bjg-t2-hhS">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3d-sQ-DA4">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="Center Map">
+                                                        <color key="titleColor" red="0.88295459750000005" green="0.13480618599999999" blue="0.10545415430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pressedCenterMap:" destination="cW2-ce-wMm" eventType="touchUpInside" id="U53-yx-Fkz"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="z3d-sQ-DA4" firstAttribute="top" secondItem="Bjg-t2-hhS" secondAttribute="top" id="JIt-6a-6Fy"/>
+                                                <constraint firstItem="z3d-sQ-DA4" firstAttribute="leading" secondItem="Bjg-t2-hhS" secondAttribute="leading" id="aVL-cT-R1M"/>
+                                                <constraint firstAttribute="trailing" secondItem="z3d-sQ-DA4" secondAttribute="trailing" id="pZi-Ri-Gzd"/>
+                                                <constraint firstItem="z3d-sQ-DA4" firstAttribute="centerY" secondItem="Bjg-t2-hhS" secondAttribute="centerY" id="zQW-KN-z2Z"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="z3d-sQ-DA4"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="JIt-6a-6Fy"/>
+                                                    <exclude reference="aVL-cT-R1M"/>
+                                                    <exclude reference="pZi-Ri-Gzd"/>
+                                                    <exclude reference="zQW-KN-z2Z"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="z3d-sQ-DA4"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="JIt-6a-6Fy"/>
+                                                    <include reference="aVL-cT-R1M"/>
+                                                    <include reference="pZi-Ri-Gzd"/>
+                                                    <include reference="zQW-KN-z2Z"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Tour Statistics" id="ua1-Th-T3f">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="917-cs-zob">
-                                        <rect key="frame" x="0.0" y="626.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="673" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="917-cs-zob" id="iQf-S3-Fyf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Xe-2IT">
@@ -166,10 +214,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yH1-zD-bTY">
-                                        <rect key="frame" x="0.0" y="670.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="717" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yH1-zD-bTY" id="TB4-f9-jvg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Amp-93-fc7">
@@ -208,10 +256,10 @@
                             <tableViewSection id="Z9t-Vr-2fY" userLabel="Start Tour">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LA0-if-10b">
-                                        <rect key="frame" x="0.0" y="750.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="797" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LA0-if-10b" id="FoZ-aZ-Clp">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-0u-mlX">
@@ -260,10 +308,10 @@
                             <tableViewSection id="m9R-Ae-oSr" userLabel="Rate Tour">
                                 <cells>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="efC-Bv-yVP">
-                                        <rect key="frame" x="0.0" y="830.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="877" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="efC-Bv-yVP" id="Bgx-D5-Ia7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-by-QSs">
@@ -388,16 +436,16 @@
                                                 <rect key="frame" x="0.0" y="28" width="400" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erw-eO-5Rh" id="Jpv-Ky-vb7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="74.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="74"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-mw-ta0">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-mw-ta0">
                                                             <rect key="frame" x="-12" y="-12" width="126" height="63"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Z82-2m-LIf">
                                                                     <rect key="frame" x="0.0" y="13" width="66" height="37"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Direction" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qY-jh-CLr">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Direction" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qY-jh-CLr">
                                                                             <rect key="frame" x="0.0" y="0.0" width="66" height="20"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -406,7 +454,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="39"/>
                                                                             </variation>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1s-q9-fR1">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1s-q9-fR1">
                                                                             <rect key="frame" x="0.0" y="20" width="57" height="17"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -570,7 +618,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8Uq-t7-3py">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="baZ-Ks-5nu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="baZ-Ks-5nu">
                             <connections>
                                 <action selector="cancelTour:" destination="Ekk-p9-bON" id="9Vb-M9-vpC"/>
                             </connections>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ReachabilitySwift
 import CoreLocation
 
 class ToursByCategoryViewController: UITableViewController{
@@ -64,7 +64,20 @@ class ToursByCategoryViewController: UITableViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if isConnectedToNetwork() == false {
+        let reachability: Reachability
+        do {
+            reachability = try Reachability.reachabilityForInternetConnection()
+            
+            if segue.identifier == "tourDetail"
+            {
+                //Set the proper details for the next VC
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let controller = (segue.destinationViewController as! SelectedTourViewController)
+                    controller.selectedTour = tempTours[indexPath.row]
+                }
+            }
+
+        } catch {
             //Change this to avoid deprecation. This is only temporary
             let alert = UIAlertController(title: "Warning!", message: "Check your internet Connection", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
@@ -75,16 +88,6 @@ class ToursByCategoryViewController: UITableViewController{
             alert.addAction(OKAction)
             self.presentViewController(alert, animated: true, completion: nil)
         }
-
-        else if segue.identifier == "tourDetail"
-        {
-            //Set the proper details for the next VC
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = (segue.destinationViewController as! SelectedTourViewController)
-                controller.selectedTour = tempTours[indexPath.row]
-            }
-        }
-        
     }
     
     
