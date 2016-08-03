@@ -49,7 +49,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var mapCenterCoordinate: CLLocationCoordinate2D?
     var mapZoom = 0.0
     var tappedLandmarkName: String = ""
-    var tappedLandmarkDesc: String = ""
+    var landmarkInformation: [Landmark] = []
     
     
     //MARK: System Functions
@@ -76,6 +76,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             measurementSystem = "Imperial"
         }
         
+        //Call the JSON parser for Landmark Info
+        self.landmarkInformation = jsonParserLand()
         
         calculateDirections()
         
@@ -114,7 +116,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 shortestPoint = point
             }
         }
-        print(shortestPoint)
         
         var shortestPointLocation = 0
         for point in workingWaypoints {
@@ -225,7 +226,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
-        tappedLandmarkDesc = annotation.subtitle!!
         self.performSegueWithIdentifier("showInfo", sender: self)
     }
     
@@ -265,6 +265,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             controller.tourLine = self.tourLine
             controller.tourLandmarks = self.selectedTour.getLandmarks()
             controller.tourTitle = self.selectedTour.getName()
+            controller.landmarkInformation = self.landmarkInformation
             
         }
         
@@ -272,7 +273,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             let controller = segue.destinationViewController as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
-            controller.landmarkDesc = self.tappedLandmarkDesc
+            controller.landmarkInformation = self.landmarkInformation
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button

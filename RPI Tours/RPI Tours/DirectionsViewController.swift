@@ -22,7 +22,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var tourTitle:String = ""
     var directions:[RouteStep] = []
     var tappedLandmarkName: String = ""
-    var tappedLandmarkDesc: String = ""
+    var landmarkInformation: [Landmark] = []
     
     
     
@@ -130,7 +130,6 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
-        tappedLandmarkDesc = annotation.subtitle!!
         self.performSegueWithIdentifier("showInfo", sender: self)
     }
     
@@ -231,7 +230,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             let controller = segue.destinationViewController as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
-            controller.landmarkDesc = self.tappedLandmarkDesc
+            controller.landmarkInformation = self.landmarkInformation
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true

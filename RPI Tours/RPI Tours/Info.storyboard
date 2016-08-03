@@ -42,10 +42,10 @@
                                                     <exclude reference="dof-h0-EXX"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="aMk-qj-2g4"/>
-                                                    <exclude reference="hT1-cZ-9EA"/>
                                                     <exclude reference="3yC-fy-dF2"/>
                                                     <exclude reference="MM1-ZY-VBq"/>
+                                                    <exclude reference="aMk-qj-2g4"/>
+                                                    <exclude reference="hT1-cZ-9EA"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -53,10 +53,10 @@
                                                     <include reference="dof-h0-EXX"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="aMk-qj-2g4"/>
-                                                    <include reference="hT1-cZ-9EA"/>
                                                     <include reference="3yC-fy-dF2"/>
                                                     <include reference="MM1-ZY-VBq"/>
+                                                    <include reference="aMk-qj-2g4"/>
+                                                    <include reference="hT1-cZ-9EA"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -126,8 +126,8 @@
                                                     <exclude reference="hJw-fv-4SP"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="mph-Oq-q32"/>
                                                     <exclude reference="27C-gE-iKY"/>
+                                                    <exclude reference="mph-Oq-q32"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -135,8 +135,8 @@
                                                     <include reference="hJw-fv-4SP"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="mph-Oq-q32"/>
                                                     <include reference="27C-gE-iKY"/>
+                                                    <include reference="mph-Oq-q32"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

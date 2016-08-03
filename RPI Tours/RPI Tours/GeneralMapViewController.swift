@@ -19,7 +19,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: Global Variables
     var tappedLandmarkName:String = ""
-    //var tappedLandmarkDesc:String = ""
+    var landmarkInformation: [Landmark] = []
     
     //MARK: System Function
     override func viewDidLoad() {
@@ -49,6 +49,9 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
                 mapView.addAnnotation(point)
             }
         }
+        
+        //Call the JSON parser for landmark info
+        self.landmarkInformation = jsonParserLand()
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,7 +78,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
             let controller = segue.destinationViewController as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
-            //controller.landmarkDesc = self.tappedLandmarkDesc
+            controller.landmarkInformation = self.landmarkInformation
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button

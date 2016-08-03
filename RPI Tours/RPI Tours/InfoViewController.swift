@@ -18,11 +18,15 @@ class InfoViewController: UITableViewController {
     //MARK: Global Variables
     var landmarkName:String = ""
     var landmarkDesc:String = ""
+    var landmarkInformation: [Landmark] = []
     
     //MARK: System Functions
     override func viewDidLoad() {
         self.navigationItem.title = self.landmarkName
-        self.landmarkDescriptionLabel.text = self.landmarkDesc
+        
+        let chosenLandmark = searchForLandmark()
+        
+        self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
         
         super.viewDidLoad()
     }
@@ -31,5 +35,14 @@ class InfoViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //MARK: TableView functions
+    //MARK: Helper Functions
+    func searchForLandmark() -> Landmark {
+        for landmark in landmarkInformation {
+            if landmark.getName() == self.landmarkName {
+                return landmark
+            }
+        }
+        
+        return Landmark(name: "landmarkName", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
+    }
 }
