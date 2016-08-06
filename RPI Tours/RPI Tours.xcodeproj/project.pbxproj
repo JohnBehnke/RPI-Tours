@@ -37,6 +37,9 @@
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
 		616882F9858DC5836E6BD352 /* Pods_RPI_ToursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819FD269E9F275E660A75F59 /* Pods_RPI_ToursUITests.framework */; };
 		87106EC3B5D9D385D247BA32 /* Pods_RPI_ToursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967445EDEF6CF9190B222128 /* Pods_RPI_ToursTests.framework */; };
+		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
+		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
+		96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */; };
 		C54DED5CC697F6BF2BDF0654 /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B674FCA9BDEC13B6001AE9 /* Pods_RPI_Tours.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +101,9 @@
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
 		819FD269E9F275E660A75F59 /* Pods_RPI_ToursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		967445EDEF6CF9190B222128 /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
 		9CA1E38693F21C40079C3B6B /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		A315500FBCEF4E8E8FC95CD8 /* Pods-RPI ToursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6B674FCA9BDEC13B6001AE9 /* Pods_RPI_Tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_Tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +165,7 @@
 			children = (
 				52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */,
 				52BDD9571CAF526600EEEE7A /* Tours.json */,
+				96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */,
 			);
 			name = "Data Files";
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 		52B9BDEA1C9B31E7007C551A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */,
 				520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */,
 				5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */,
 				5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */,
@@ -242,6 +250,7 @@
 		52B9BDEC1C9B321E007C551A /* Asset Files */ = {
 			isa = PBXGroup;
 			children = (
+				96B70F191D54FB19001BE1B3 /* Info.storyboard */,
 				5299A2121C66AF7E0072F8D3 /* Main.storyboard */,
 				524D7B281CFBC9DD009024CC /* SelectedTourCat.storyboard */,
 				524D7B261CFBC906009024CC /* Tour Prep.storyboard */,
@@ -352,7 +361,7 @@
 				TargetAttributes = {
 					5299A2051C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = JRS59Q3JZW;
+						DevelopmentTeam = TLM72HJ9PE;
 					};
 					5299A21E1C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -397,6 +406,8 @@
 				524D7B271CFBC906009024CC /* Tour Prep.storyboard in Resources */,
 				524D7B251CFBC8DE009024CC /* Map of Campus.storyboard in Resources */,
 				52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */,
+				96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */,
+				96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */,
 				52BDD9581CAF526600EEEE7A /* Tours.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +560,7 @@
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */,
 				528AE37D1CAC5A1300D8C65E /* SettingsViewController.swift in Sources */,
+				96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */,
 				5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */,
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,

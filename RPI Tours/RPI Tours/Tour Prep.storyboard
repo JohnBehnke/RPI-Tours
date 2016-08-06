@@ -431,7 +431,7 @@
                                             <outlet property="delegate" destination="Ekk-p9-bON" id="Pgm-V0-wVK"/>
                                         </connections>
                                     </view>
-                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-AI-PL7">
+                                    <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-AI-PL7">
                                         <rect key="frame" x="0.0" y="736" width="400" height="274"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>

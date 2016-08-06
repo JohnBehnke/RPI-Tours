@@ -65,7 +65,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
             point.title = item.getName()
-            point.subtitle = item.getDesc()
+            //point.subtitle = item.getDesc()
             
             mapView.addAnnotation(point)
         }
@@ -140,9 +140,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
 
         
-        //for point in workingWapoints{
-            //waypoints.append(Waypoint(coordinate: point))
-        //}
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
         options.routeShapeResolution = .Full
@@ -156,8 +153,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             }
             
             
-            
             if let route = routes?.first, _ = route.legs.first {
+                
                 var numSteps = 0
                 for legs in route.legs{
                     numSteps += legs.steps.count
@@ -224,8 +221,21 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         return true
     }
     
+    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .DetailDisclosure)
+    }
+    
+    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        // Hide callout view
+        mapView.deselectAnnotation(annotation, animated: true)
+        
+        tappedLandmarkName = annotation.title!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
+    
     func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
+        mapView.deselectAnnotation(annotation, animated: true)
         self.performSegueWithIdentifier("showInfo", sender: self)
     }
     

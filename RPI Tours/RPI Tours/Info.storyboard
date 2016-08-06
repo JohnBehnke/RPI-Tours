@@ -65,46 +65,21 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Landmark Pictures" id="c9M-d9-YDU">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CTO-de-hNi">
-                                        <rect key="frame" x="0.0" y="378" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="181" id="CTO-de-hNi">
+                                        <rect key="frame" x="0.0" y="378" width="600" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CTO-de-hNi" id="1Jv-au-yi9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FaJ-41-ByK">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mqh-lD-l5j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                                </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="FaJ-41-ByK" firstAttribute="centerY" secondItem="1Jv-au-yi9" secondAttribute="centerY" id="ZtD-yE-0Mh"/>
-                                                <constraint firstItem="FaJ-41-ByK" firstAttribute="leading" secondItem="1Jv-au-yi9" secondAttribute="leadingMargin" constant="19" id="pGr-zA-nRW"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="FaJ-41-ByK"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="ZtD-yE-0Mh"/>
-                                                    <exclude reference="pGr-zA-nRW"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="FaJ-41-ByK"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="ZtD-yE-0Mh"/>
-                                                    <include reference="pGr-zA-nRW"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dQY-kB-JbN">
-                                        <rect key="frame" x="0.0" y="422" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="559" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQY-kB-JbN" id="21L-N2-8SW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
