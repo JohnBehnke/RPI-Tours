@@ -72,48 +72,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mqh-lD-l5j">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dQY-kB-JbN">
-                                        <rect key="frame" x="0.0" y="559" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQY-kB-JbN" id="21L-N2-8SW">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hJw-fv-4SP">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5o-Fb-CS7">
+                                                    <rect key="frame" x="8" y="8" width="584" height="164"/>
+                                                    <connections>
+                                                        <segue destination="Vet-PN-71O" kind="embed" identifier="imageSlider" id="ORT-fs-X03"/>
+                                                    </connections>
+                                                </containerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hJw-fv-4SP" firstAttribute="centerY" secondItem="21L-N2-8SW" secondAttribute="centerY" id="27C-gE-iKY"/>
-                                                <constraint firstItem="hJw-fv-4SP" firstAttribute="leading" secondItem="21L-N2-8SW" secondAttribute="leadingMargin" constant="19" id="mph-Oq-q32"/>
+                                                <constraint firstItem="e5o-Fb-CS7" firstAttribute="bottom" secondItem="1Jv-au-yi9" secondAttribute="bottomMargin" id="6jf-kH-V9j"/>
+                                                <constraint firstItem="e5o-Fb-CS7" firstAttribute="trailing" secondItem="1Jv-au-yi9" secondAttribute="trailingMargin" id="AlJ-xL-WbU"/>
+                                                <constraint firstItem="e5o-Fb-CS7" firstAttribute="top" secondItem="1Jv-au-yi9" secondAttribute="topMargin" id="QPu-2o-5BQ"/>
+                                                <constraint firstItem="e5o-Fb-CS7" firstAttribute="leading" secondItem="1Jv-au-yi9" secondAttribute="leadingMargin" id="ura-Gc-4Jw"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="hJw-fv-4SP"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="27C-gE-iKY"/>
-                                                    <exclude reference="mph-Oq-q32"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="hJw-fv-4SP"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="27C-gE-iKY"/>
-                                                    <include reference="mph-Oq-q32"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -131,6 +102,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZk-Op-2iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="586"/>
+        </scene>
+        <!--Image Slider View Controller-->
+        <scene sceneID="nRq-rh-VEW">
+            <objects>
+                <viewController id="Vet-PN-71O" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWI-tT-i6q">
+                        <rect key="frame" x="0.0" y="0.0" width="584" height="164"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikR-U4-iWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="1123"/>
         </scene>
     </scenes>
 </document>

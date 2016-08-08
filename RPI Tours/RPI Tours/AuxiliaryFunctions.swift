@@ -38,8 +38,19 @@ func jsonParserLand() -> [Landmark] {
                     let land_desc = landJSON["desc"].string
                     let land_lat = (landJSON["coordinate"].array)![0].double
                     let land_long = (landJSON["coordinate"].array)![1].double
+                    let read_land_images = (landJSON["photos"].array)!
                     
-                    land_list.append(Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!))
+                    var string_land_images: [String] = []
+                    
+                    for i in read_land_images {
+                        string_land_images.append(i.string!)
+                    }
+                    
+                    let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!)
+                    
+                    newLandmark.setImages(string_land_images)
+                    
+                    land_list.append(newLandmark)
                 }
             }
         }

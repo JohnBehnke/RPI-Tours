@@ -9,6 +9,7 @@
 import UIKit
 import ReachabilitySwift
 import CoreLocation
+import TNImageSliderViewController
 
 class InfoViewController: UITableViewController {
     
@@ -19,16 +20,35 @@ class InfoViewController: UITableViewController {
     var landmarkName:String = ""
     var landmarkDesc:String = ""
     var landmarkInformation: [Landmark] = []
+    var imageSliderVC: TNImageSliderViewController!
+    
+    //MARK: Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "imageSlider" {
+            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
+        }
+    }
     
     //MARK: System Functions
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationItem.title = self.landmarkName
         
         let chosenLandmark = searchForLandmark()
         
         self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
         
-        super.viewDidLoad()
+        imageSliderVC.images = chosenLandmark.getImages()
+        
+        //set the imageSlider options
+        var options = TNImageSliderViewOptions()
+        options.pageControlHidden = false
+        options.scrollDirection = .Horizontal
+        options.shouldStartFromBeginning = true
+        options.imageContentMode = .ScaleAspectFit
+        options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
+        
+        imageSliderVC.options = options
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +63,9 @@ class InfoViewController: UITableViewController {
             }
         }
         
-        return Landmark(name: "landmarkName", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
+        let blankLandmark = Landmark(name: "landmarkName", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
+        blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
+        
+        return blankLandmark
     }
 }

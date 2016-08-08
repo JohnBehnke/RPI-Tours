@@ -7,6 +7,7 @@ PODS:
   - Polyline (3.2.1)
   - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
+  - TNImageSliderViewController (1.0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.6.0`)
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift.git`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TNImageSliderViewController (from `https://github.com/frederik-jacques/TNImageSliderViewController.git`)
 
 EXTERNAL SOURCES:
   CSwiftV:
@@ -26,6 +28,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/ashleymills/Reachability.swift.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  TNImageSliderViewController:
+    :git: https://github.com/frederik-jacques/TNImageSliderViewController.git
 
 CHECKOUT OPTIONS:
   CSwiftV:
@@ -40,6 +44,9 @@ CHECKOUT OPTIONS:
   SwiftyJSON:
     :commit: 73670b94292b8d8496c398a973f56ac67789ba9f
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  TNImageSliderViewController:
+    :commit: 466f8153d810ab9985f21a99a9d4d4445c8ff1e9
+    :git: https://github.com/frederik-jacques/TNImageSliderViewController.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -49,7 +56,8 @@ SPEC CHECKSUMS:
   Polyline: 4579e57a62a5e876944c41884194e24ab7021d89
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TNImageSliderViewController: 2517ca7b658e2cfd35f12e02c3cacac7056e0010
 
-PODFILE CHECKSUM: f1b17f51207d700374aea3246ff1db5a46f633ee
+PODFILE CHECKSUM: 02545be1d07ab8fd38fec44b2258bd26d2145b01
 
 COCOAPODS: 1.0.0
