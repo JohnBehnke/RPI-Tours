@@ -15,16 +15,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Landmark Description" id="6Ze-PS-rJD">
+                            <tableViewSection id="6Ze-PS-rJD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="277" id="jKd-4g-SDp">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="277"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="jKd-4g-SDp" userLabel="descriptionCell">
+                                        <rect key="frame" x="0.0" y="35" width="600" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKd-4g-SDp" id="Vck-nM-TST">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dof-h0-EXX" userLabel="Landmark Description Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dof-h0-EXX" userLabel="Landmark Description Label">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,20 +60,21 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="descriptionCell" label="descriptionCell"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Landmark Pictures" id="c9M-d9-YDU">
+                            <tableViewSection id="c9M-d9-YDU">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="181" id="CTO-de-hNi">
-                                        <rect key="frame" x="0.0" y="378" width="600" height="181"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="283" id="CTO-de-hNi">
+                                        <rect key="frame" x="0.0" y="134" width="600" height="283"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CTO-de-hNi" id="1Jv-au-yi9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="282"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5o-Fb-CS7">
-                                                    <rect key="frame" x="8" y="8" width="584" height="164"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="266"/>
                                                     <connections>
                                                         <segue destination="Vet-PN-71O" kind="embed" identifier="imageSlider" id="ORT-fs-X03"/>
                                                     </connections>
@@ -96,6 +97,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="descriptionCell" destination="jKd-4g-SDp" id="lIY-Hc-lsc"/>
                         <outlet property="landmarkDescriptionLabel" destination="dof-h0-EXX" id="kaT-VQ-FU1"/>
                     </connections>
                 </tableViewController>
@@ -108,14 +110,14 @@
             <objects>
                 <viewController id="Vet-PN-71O" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWI-tT-i6q">
-                        <rect key="frame" x="0.0" y="0.0" width="584" height="164"/>
+                        <rect key="frame" x="0.0" y="0.0" width="584" height="266"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikR-U4-iWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="1123"/>
+            <point key="canvasLocation" x="463" y="1313"/>
         </scene>
     </scenes>
 </document>

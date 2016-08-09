@@ -15,6 +15,7 @@ class InfoViewController: UITableViewController {
     
     //MARK: IBOutlets
     @IBOutlet var landmarkDescriptionLabel: UILabel!
+    @IBOutlet var descriptionCell: UITableViewCell!
     
     //MARK: Global Variables
     var landmarkName:String = ""
@@ -67,5 +68,24 @@ class InfoViewController: UITableViewController {
         blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
         
         return blankLandmark
+    }
+    
+    //MARK: TableView Functions
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath.section == 0 {
+            return UITableViewAutomaticDimension
+        }
+        
+        return 300
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath.section == 0 {
+            return UITableViewAutomaticDimension
+        }
+        
+        return 300
     }
 }
