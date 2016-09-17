@@ -1,20 +1,47 @@
 #RPI Tours iOS
 
-This application forms the iOS application of the RPI Tours suite of applications. The source code for the server can be found [here](https://github.com/wtg/RPI_Tours_Server).
+RPI Tours makes taking tours of RPI's campus as simple as downloading an app.
 
-##Background
-Currently, all prospective students take identical tours of RPI’s campus. The tour is given by a student tour guide around both academic campus and freshman hill. In some cases, recruited athletes receive special tours of the East Campus Athletic Village, which are conducted either by a team member or a coach. With a campus as large and as multi-disciplined as Rensselaer, seeing everything that the school has to offer in one, generalized tour is not feasible.
+*This application is still under development and is currently in a stable beta state.*
 
-This is where RPI Tours comes in. By using GPS Location and details provided by the Department of Admissions, the RPI Tours application will provide a series of self-guided tours to allow prospective students, parents, and alumni to see different parts of the campus that they, otherwise, would not be able to see in a tour. These tour routes would be dynamic, as RPI Tours would have an administrative web dashboard for admissions officers to add, remove, edit, and toggle the tour routes currently accessible.
+Want to read a more in depth discussion about the why and how behind RPI Tours? Check out [our wiki]()!
+	
+#Building RPI Tours
+1. [Requirements](#Requirements)
+2. [Building](#Building)
 
-##Technical Details
-This application will have three main components: an iOS application, a web-based admin dashboard, and a server. The fourth component, an Android application, is planned as a future addition. The core server will be written using Flask, an open-source microframework for Python, and store data using a PostgreSQL database. The iOS application will make use of Swift and interact with the server back end through queries that will provide JSON data. 
 
-##Spring 2016 RCOS Schedule
-* Stage I: Application design and scoping (1 week)
-* Stage II: Implementation of the iOS application using test JSON data; implementation of the server backend (6 weeks)
-* Stage III: Connection of the server to the iOS application; development of the web admin dashboard for CRUD operations of tour routes (3 weeks)
-* Stage IV: Testing and deployment (length TBD)
+###Requirements
+In order to build and run RPI Tours for iOS, you will need the following
+
+* [Latest version of XCode 8](https://developer.apple.com/xcode/)
+* [Cocoapods](https://cocoapods.org)
+* [Mapbox developer account](https://www.mapbox.com)
+* [User provided file for credentials](#Credentials)
+
+###Credentials
+Since we are using Mapbox as our mapping service, you must have a set of API keys from Mapbox. Mapbox provides you with these upon account creation. They need to live in a file somewhere in the project structure called `mapBoxAPIKeys.swift`.
+
+This file needs to have the contents like this.
+
+    import Foundation
+    let mapBoxAPIKey:String = INSERT_YOUR_API_KEY_HERE";
+The project expects the API key to be assocated with the string value `mapBoxAPIKey`.
+
+###Building
+Building RPI Tours is a pretty simple process. Assuming you have Cocoapods installed (either the [command line version](#Command-Line-Installation) or the [GUI version](#GUI)), you need to install the pods.
+
+#####Command Line Installation
+1. Navigate to `../RPI_Tours_iOS/RPI Tours` 
+2. Run `pod install` to install the dependencies
+
+#####GUI
+*TODO*
+
+*Notice: You need to open the project by launching `RPI Tours.xcworkspace`, not `RPI Tours.xcodeproj`. This ensures that the dependiences are included in the worksapce and XCode can see them*
+
+After installing the necessary dependiences via Cocoapods, all you should have to do is run the project. By default it will probably try to deploy to an iOS Simulator.
+
 
 ##Acknowledgements
 
@@ -23,4 +50,4 @@ The RPI Tours suite of applications is a collaboration between the [Web Technolo
 ##Contact Information
 
 * Team lead: [John Behnke ’17](behnkj@rpi.edu)
-* WebTech Chairman: [Justin Etzine ’18](webtech@union.rpi.edu)
+
