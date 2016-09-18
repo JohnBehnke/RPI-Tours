@@ -35,12 +35,9 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
-		616882F9858DC5836E6BD352 /* Pods_RPI_ToursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819FD269E9F275E660A75F59 /* Pods_RPI_ToursUITests.framework */; };
-		87106EC3B5D9D385D247BA32 /* Pods_RPI_ToursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967445EDEF6CF9190B222128 /* Pods_RPI_ToursTests.framework */; };
 		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
 		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
 		96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */; };
-		C54DED5CC697F6BF2BDF0654 /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B674FCA9BDEC13B6001AE9 /* Pods_RPI_Tours.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F3D616B52EF6488E42F7F27 /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
-		16E50CF4FAFEDD0C896B8B0D /* Pods-RPI ToursUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2614717E85694AB86641C0D0 /* Pods-RPI ToursUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		506C002F6FB95A4089C3E19F /* Pods-RPI ToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.release.xcconfig"; sourceTree = "<group>"; };
 		520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
 		524D7B1F1CFBC385009024CC /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		524D7B211CFBC8C4009024CC /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -99,14 +92,9 @@
 		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
-		819FD269E9F275E660A75F59 /* Pods_RPI_ToursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		967445EDEF6CF9190B222128 /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
-		9CA1E38693F21C40079C3B6B /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
-		A315500FBCEF4E8E8FC95CD8 /* Pods-RPI ToursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B6B674FCA9BDEC13B6001AE9 /* Pods_RPI_Tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_Tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54DED5CC697F6BF2BDF0654 /* Pods_RPI_Tours.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87106EC3B5D9D385D247BA32 /* Pods_RPI_ToursTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616882F9858DC5836E6BD352 /* Pods_RPI_ToursUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +162,6 @@
 				5299A2221C66AF7E0072F8D3 /* RPI ToursTests */,
 				5299A22D1C66AF7E0072F8D3 /* RPI ToursUITests */,
 				5299A2071C66AF7E0072F8D3 /* Products */,
-				D64ED030B9B175B89464DCED /* Pods */,
-				C00D60F7D9A0CB37C5323969 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,29 +245,6 @@
 			name = "Asset Files";
 			sourceTree = "<group>";
 		};
-		C00D60F7D9A0CB37C5323969 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B6B674FCA9BDEC13B6001AE9 /* Pods_RPI_Tours.framework */,
-				967445EDEF6CF9190B222128 /* Pods_RPI_ToursTests.framework */,
-				819FD269E9F275E660A75F59 /* Pods_RPI_ToursUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D64ED030B9B175B89464DCED /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9CA1E38693F21C40079C3B6B /* Pods-RPI Tours.debug.xcconfig */,
-				0F3D616B52EF6488E42F7F27 /* Pods-RPI Tours.release.xcconfig */,
-				A315500FBCEF4E8E8FC95CD8 /* Pods-RPI ToursTests.debug.xcconfig */,
-				506C002F6FB95A4089C3E19F /* Pods-RPI ToursTests.release.xcconfig */,
-				2614717E85694AB86641C0D0 /* Pods-RPI ToursUITests.debug.xcconfig */,
-				16E50CF4FAFEDD0C896B8B0D /* Pods-RPI ToursUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,12 +252,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2331C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI Tours" */;
 			buildPhases = (
-				636A2A8CC6BB62340CF778ED /* 📦 Check Pods Manifest.lock */,
 				5299A2021C66AF7E0072F8D3 /* Sources */,
 				5299A2031C66AF7E0072F8D3 /* Frameworks */,
 				5299A2041C66AF7E0072F8D3 /* Resources */,
-				99077FE6E4F74627252EEA16 /* 📦 Embed Pods Frameworks */,
-				EC1D250D9710FA0C6B2AB072 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,12 +269,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2361C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursTests" */;
 			buildPhases = (
-				E4C3659A1B2534CC4A9B0518 /* 📦 Check Pods Manifest.lock */,
 				5299A21B1C66AF7E0072F8D3 /* Sources */,
 				5299A21C1C66AF7E0072F8D3 /* Frameworks */,
 				5299A21D1C66AF7E0072F8D3 /* Resources */,
-				4F19BA40FAC1D849E32F0D2B /* 📦 Embed Pods Frameworks */,
-				F094108A95866FD73B0AE5BB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,11 +287,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2391C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursUITests" */;
 			buildPhases = (
-				58109BDF26D09B2F58820376 /* 📦 Check Pods Manifest.lock */,
 				5299A2261C66AF7E0072F8D3 /* Sources */,
 				5299A2271C66AF7E0072F8D3 /* Frameworks */,
 				5299A2281C66AF7E0072F8D3 /* Resources */,
-				0AB584D518A3259AB4A1083D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,129 +382,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0AB584D518A3259AB4A1083D /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F19BA40FAC1D849E32F0D2B /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		58109BDF26D09B2F58820376 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		636A2A8CC6BB62340CF778ED /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		99077FE6E4F74627252EEA16 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4C3659A1B2534CC4A9B0518 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EC1D250D9710FA0C6B2AB072 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F094108A95866FD73B0AE5BB /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5299A2021C66AF7E0072F8D3 /* Sources */ = {
@@ -732,7 +561,6 @@
 		};
 		5299A2341C66AF7E0072F8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CA1E38693F21C40079C3B6B /* Pods-RPI Tours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -750,7 +578,6 @@
 		};
 		5299A2351C66AF7E0072F8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F3D616B52EF6488E42F7F27 /* Pods-RPI Tours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -768,7 +595,6 @@
 		};
 		5299A2371C66AF7E0072F8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A315500FBCEF4E8E8FC95CD8 /* Pods-RPI ToursTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "RPI ToursTests/Info.plist";
@@ -782,7 +608,6 @@
 		};
 		5299A2381C66AF7E0072F8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 506C002F6FB95A4089C3E19F /* Pods-RPI ToursTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "RPI ToursTests/Info.plist";
@@ -796,7 +621,6 @@
 		};
 		5299A23A1C66AF7E0072F8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2614717E85694AB86641C0D0 /* Pods-RPI ToursUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "RPI ToursUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -810,7 +634,6 @@
 		};
 		5299A23B1C66AF7E0072F8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16E50CF4FAFEDD0C896B8B0D /* Pods-RPI ToursUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "RPI ToursUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
