@@ -9,7 +9,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'Mapbox-iOS-SDK'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'CSwiftV', :git => 'https://github.com/Daniel1of1/CSwiftV.git'
-pod 'Alamofire', '~> 3.4'
+
 pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git', :tag => 'v0.6.0'
 pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift.git'
 pod 'TNImageSliderViewController', :git=> 'https://github.com/frederik-jacques/TNImageSliderViewController.git'
