@@ -15,6 +15,7 @@ class Landmark: tourWaypoint {
         
         self.name = name
         self.desc = desc
+        self.urls = []
         super.init(lat: lat,long: long)
     }
     
@@ -22,6 +23,7 @@ class Landmark: tourWaypoint {
         
         self.name = ""
         self.desc = ""
+        self.urls = []
         super.init()
     }
     
@@ -31,6 +33,17 @@ class Landmark: tourWaypoint {
     }
     func getDesc() -> String {
         return desc
+    }
+    func getImages() -> [UIImage] {
+        var images: [UIImage] = []
+        
+        for i in urls {
+            let url = NSURL(string: i)
+            let data = NSData(contentsOfURL: url!)
+            images.append(UIImage(data: data!)!)
+        }
+        
+        return images
     }
 
     
@@ -42,12 +55,16 @@ class Landmark: tourWaypoint {
     func setDesc(desc:String) {
         self.desc = desc
     }
+    func setImages(urls:[String]) {
+        self.urls = urls
+    }
 
     
     
     //VARIABLES
     private var name: String
     private var desc: String
+    private var urls: [String]
 
     
 }

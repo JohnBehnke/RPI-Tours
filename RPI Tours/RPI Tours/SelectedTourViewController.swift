@@ -48,6 +48,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var directionsDidLoad = false
     var mapCenterCoordinate: CLLocationCoordinate2D?
     var mapZoom = 0.0
+    var tappedLandmarkName: String = ""
+    var landmarkInformation: [Landmark] = []
     
     
     //MARK: System Functions
@@ -55,7 +57,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         
         
-        //Set the desctiption label for the tour
+        //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
         
         //For
@@ -63,7 +65,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
             point.title = item.getName()
-            point.subtitle = item.getDesc()
+            //point.subtitle = item.getDesc()
             
             mapView.addAnnotation(point)
         }
@@ -74,6 +76,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             measurementSystem = "Imperial"
         }
         
+        //Call the JSON parser for Landmark Info
+        self.landmarkInformation = jsonParserLand()
         
         calculateDirections()
         
@@ -112,7 +116,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 shortestPoint = point
             }
         }
-        print(shortestPoint)
         
         var shortestPointLocation = 0
         for point in workingWaypoints {
@@ -137,9 +140,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
 
         
-        //for point in workingWapoints{
-            //waypoints.append(Waypoint(coordinate: point))
-        //}
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
         options.routeShapeResolution = .Full
@@ -153,8 +153,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             }
             
             
-            
             if let route = routes?.first, _ = route.legs.first {
+                
                 var numSteps = 0
                 for legs in route.legs{
                     numSteps += legs.steps.count
@@ -221,7 +221,23 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         return true
     }
     
+    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .DetailDisclosure)
+    }
     
+    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        // Hide callout view
+        mapView.deselectAnnotation(annotation, animated: true)
+        
+        tappedLandmarkName = annotation.title!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
+    
+    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        tappedLandmarkName = annotation.title!!
+        mapView.deselectAnnotation(annotation, animated: true)
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
     
     
     func mapView(mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
@@ -259,7 +275,18 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             controller.tourLine = self.tourLine
             controller.tourLandmarks = self.selectedTour.getLandmarks()
             controller.tourTitle = self.selectedTour.getName()
+            controller.landmarkInformation = self.landmarkInformation
             
+        }
+        
+        if segue.identifier == "showInfo" {
+            let controller = segue.destinationViewController as! InfoViewController
+            
+            controller.landmarkName = self.tappedLandmarkName
+            controller.landmarkInformation = self.landmarkInformation
+            
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }
     

@@ -19,8 +19,47 @@ struct building {
     
 }
 
-// Our JSON Parser
-func jsonParser() -> [TourCat] {
+// Our Landmark Information JSON Parser
+func jsonParserLand() -> [Landmark] {
+    
+    var land_list:[Landmark] = []
+    
+    let land_file = NSBundle.mainBundle().pathForResource("LandmarkInfo", ofType: "json")
+    
+    let jsonData = try? String(contentsOfFile: land_file!, encoding: NSUTF8StringEncoding)
+    
+    if jsonData != nil {
+        do {
+            if let data = jsonData?.dataUsingEncoding(NSUTF8StringEncoding) {
+                let json = JSON(data: data)
+                
+                for (_, landJSON) in json["landmarks"] {
+                    let land_name = landJSON["name"].string
+                    let land_desc = landJSON["desc"].string
+                    let land_lat = (landJSON["coordinate"].array)![0].double
+                    let land_long = (landJSON["coordinate"].array)![1].double
+                    let read_land_images = (landJSON["photos"].array)!
+                    
+                    var string_land_images: [String] = []
+                    
+                    for i in read_land_images {
+                        string_land_images.append(i.string!)
+                    }
+                    
+                    let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!)
+                    
+                    newLandmark.setImages(string_land_images)
+                    
+                    land_list.append(newLandmark)
+                }
+            }
+        }
+    }
+    return land_list
+}
+
+// Our Tour Category JSON Parser
+func jsonParserCat() -> [TourCat] {
 
     var cat_list:[TourCat] = []
     let tours_file = NSBundle.mainBundle().pathForResource("Tours", ofType: "json")

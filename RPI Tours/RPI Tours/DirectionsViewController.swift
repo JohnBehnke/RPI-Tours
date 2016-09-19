@@ -21,6 +21,8 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
     var directions:[RouteStep] = []
+    var tappedLandmarkName: String = ""
+    var landmarkInformation: [Landmark] = []
     
     
     
@@ -66,7 +68,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: landmark.getLat(), longitude: landmark.getLong())
             point.title = landmark.getName()
-            point.subtitle = landmark.getDesc()
+            //point.subtitle = landmark.getDesc()
             
             mapView.addAnnotation(point)
             
@@ -87,8 +89,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
 //        for directionManuever in directions {
 //            print(directionManuever.maneuverDirection)
 //        }
-//        
-        
+//
         
     }
     
@@ -112,7 +113,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             
             let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
             //print(self.locationManager.location?.distanceFromLocation(stepLocation))
-            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 10) {
+            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
                 let index = NSIndexPath(forRow: 0, inSection: 0)
                 self.directions.removeAtIndex(index.row)
                 //self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Right)
@@ -124,6 +125,12 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     
     func mapView(mapView: MGLMapView, didChangeUserTrackingMode mode: MGLUserTrackingMode, animated: Bool) {
         self.mapView.userTrackingMode  = mode
+    }
+    
+    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        mapView.deselectAnnotation(annotation, animated: true)
+        tappedLandmarkName = annotation.title!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
     }
     
     
@@ -190,11 +197,41 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             cell?.directionImage.image = UIImage(named: "uTurn")
         }
         
+        if directions[indexPath.row].maneuverType == ManeuverType.Arrive {
+            cell?.accessoryType = .DisclosureIndicator
+            cell?.directionImage.image = nil
+        }
+        
         
         //cell?.directionImage.contentMode = .ScaleToFill
 
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if directions[indexPath.row].maneuverType == ManeuverType.Arrive {
+            
+            var shortestPoint: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.tourLandmarks[0].getLat(), longitude: self.tourLandmarks[0].getLong())
+            var name: String = ""
+            let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
+            
+            for point in self.tourLandmarks {
+                
+                let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+                let p = CLLocation(latitude: point.getLat(), longitude: point.getLong())
+                let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
+                
+                if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+                    shortestPoint = CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong())
+                    name = point.getName()
+                }
+            }
+            
+            tappedLandmarkName = name
+            self.performSegueWithIdentifier("showInfo", sender: self)
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     
@@ -215,6 +252,31 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         return true
+    }
+    
+    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .DetailDisclosure)
+    }
+    
+    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        // Hide callout view
+        mapView.deselectAnnotation(annotation, animated: true)
+        
+        tappedLandmarkName = annotation.title!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
+    
+    //MARK: Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showInfo" {
+            let controller = segue.destinationViewController as! InfoViewController
+            
+            controller.landmarkName = self.tappedLandmarkName
+            controller.landmarkInformation = self.landmarkInformation
+            
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
     }
     
 }

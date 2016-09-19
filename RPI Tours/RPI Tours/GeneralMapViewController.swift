@@ -18,7 +18,8 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var mapView: MGLMapView!
     
     //MARK: Global Variables
-    
+    var tappedLandmarkName:String = ""
+    var landmarkInformation: [Landmark] = []
     
     //MARK: System Function
     override func viewDidLoad() {
@@ -48,6 +49,9 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
                 mapView.addAnnotation(point)
             }
         }
+        
+        //Call the JSON parser for landmark info
+        self.landmarkInformation = jsonParserLand()
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,7 +66,37 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
     
+    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+        tappedLandmarkName = annotation.title!!
+        mapView.deselectAnnotation(annotation, animated: true)
+        //tappedLandmarkDesc = annotation.subtitle!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
     
+    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .DetailDisclosure)
+    }
+    
+    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        // Hide callout view
+        mapView.deselectAnnotation(annotation, animated: true)
+        
+        tappedLandmarkName = annotation.title!!
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
+    
+    //MARK: Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showInfo" {
+            let controller = segue.destinationViewController as! InfoViewController
+            
+            controller.landmarkName = self.tappedLandmarkName
+            controller.landmarkInformation = self.landmarkInformation
+            
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
+        }
+    }
     
     
 }
