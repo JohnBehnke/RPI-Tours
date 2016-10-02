@@ -78,6 +78,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="pressedRouteTo:" destination="X4A-HN-yMQ" eventType="touchUpInside" id="Bnn-dO-m0g"/>
+                                                        <segue destination="VuI-XE-PpU" kind="show" identifier="showDirections" id="j34-u1-hc9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -105,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZk-Op-2iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="585.1574212893554"/>
+            <point key="canvasLocation" x="362" y="545"/>
         </scene>
         <!--Image Slider View Controller-->
         <scene sceneID="Aic-3C-y2L">
@@ -125,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="1227" y="440"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Tour Prep-->
         <scene sceneID="DzQ-1K-wuy">
             <objects>
-                <viewControllerPlaceholder id="VuI-XE-PpU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tour Prep" id="VuI-XE-PpU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7C-Du-4cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="793"/>

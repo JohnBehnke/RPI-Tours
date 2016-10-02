@@ -22,6 +22,7 @@ class InfoViewController: UITableViewController {
     var landmarkDesc:String = ""
     var landmarkInformation: [Landmark] = []
     var imageSliderVC: TNImageSliderViewController!
+    var landmark: Landmark = Landmark()
     
     @IBAction func pressedRouteTo(sender: AnyObject) {
         self.performSegueWithIdentifier("showDirections", sender: self)
@@ -32,6 +33,15 @@ class InfoViewController: UITableViewController {
         if segue.identifier == "imageSlider" {
             imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
         }
+        
+        if segue.identifier == "showDirections" {
+            let routeLand = Landmark(name: landmarkName, desc: landmarkDesc, lat: landmark.getLat(), long: landmark.getLong())
+            let routeWaypoint = tourWaypoint(lat: landmark.getLat(), long: landmark.getLong())
+            let routeTour = Tour(name: landmarkName, desc: landmarkDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
+            
+            let controller = (segue.destinationViewController as! SelectedTourViewController)
+            controller.selectedTour = routeTour
+        }
     }
     
     //MARK: System Functions
@@ -40,6 +50,7 @@ class InfoViewController: UITableViewController {
         self.navigationItem.title = self.landmarkName
         
         let chosenLandmark = searchForLandmark()
+        landmark = chosenLandmark
         
         self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
         
