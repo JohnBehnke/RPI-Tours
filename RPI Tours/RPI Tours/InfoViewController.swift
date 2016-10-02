@@ -23,6 +23,10 @@ class InfoViewController: UITableViewController {
     var landmarkInformation: [Landmark] = []
     var imageSliderVC: TNImageSliderViewController!
     
+    @IBAction func pressedRouteTo(sender: AnyObject) {
+        self.performSegueWithIdentifier("showDirections", sender: self)
+    }
+    
     //MARK: Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "imageSlider" {
@@ -73,7 +77,7 @@ class InfoViewController: UITableViewController {
     //MARK: TableView Functions
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             return UITableViewAutomaticDimension
         }
         
@@ -82,7 +86,7 @@ class InfoViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             return UITableViewAutomaticDimension
         }
         
