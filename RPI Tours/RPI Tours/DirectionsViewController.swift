@@ -12,7 +12,7 @@ import CoreLocation
 import MapboxDirections
 //View Controller for the Directions Table View
 
-class DirectionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MGLMapViewDelegate {
+class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
     
     //MARK: Global Variables
     var measurementSystem:String?
@@ -24,10 +24,16 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     var tappedLandmarkName: String = ""
     var landmarkInformation: [Landmark] = []
     
+    @IBOutlet weak var directionsView: UIView!
     
+    @IBOutlet weak var Directions_Label: UILabel!
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var Amount_Label: UILabel!
     
+    @IBOutlet weak var Image_Label: UIImageView!
+    
+    @IBOutlet weak var Button_Label: UIButton!
+    @IBOutlet weak var End_View: UIView!
     
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
@@ -46,6 +52,18 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden =  true
+        
+        //Status bar style and visibility
+        UIApplication.sharedApplication().statusBarHidden = false
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        //Change status bar color
+        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+        if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
+            statusBar.backgroundColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
+            
+        }
         
         self.navigationItem.title = self.tourTitle
         
@@ -62,7 +80,6 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         self.mapView.setUserTrackingMode(MGLUserTrackingMode.FollowWithHeading, animated: true)
         
         
-        
         for landmark in self.tourLandmarks{
             
             let point = MGLPointAnnotation()
@@ -77,8 +94,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         
         self.mapView.addAnnotation(self.tourLine)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+       
         
         let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
@@ -86,10 +102,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             measurementSystem = "Imperial"
         }
         
-//        for directionManuever in directions {
-//            print(directionManuever.maneuverDirection)
-//        }
-//
+        displayInstruction()
         
     }
     
@@ -109,17 +122,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
-            let nextStep: RouteStep = directions[1]
-            
-            let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
-            //print(self.locationManager.location?.distanceFromLocation(stepLocation))
-            if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
-                let index = NSIndexPath(forRow: 0, inSection: 0)
-                self.directions.removeAtIndex(index.row)
-                //self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Right)
-                self.tableView.reloadData()
-            }
-            
+            displayInstruction()
         }
     }
     
@@ -140,74 +143,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table View Functions
     
-    //Return the number of directions
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return directions.count
-        return 5
-    }
-    
-    //Set up the cells
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        
-        var distanceMeasurment:Float?
-        
-        
-        //Switch measurement systems if necessary
-        if self.measurementSystem == "Imperial"{
-            distanceMeasurment = metersToFeet(Float(directions[indexPath.row].distance))
-        }
-            
-        else{
-            distanceMeasurment = Float(directions[indexPath.row].distance)
-        }
-        
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("DirectionTableViewCell", forIndexPath: indexPath) as? DirectionTableViewCell
-//        
-        
-        cell?.directionLabel.text = "\(directions[indexPath.row].instructions)"
-        cell?.distanceLabel.text = "\(distanceMeasurment!) \(measurementSystem == "Imperial" ? "feet" :  "meters")"
-        //Get ready for grossness oh god forgive me for my sins
-        
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.StraightAhead{
-            cell?.directionImage.image = UIImage(named: "straight")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SharpLeft{
-            cell?.directionImage.image = UIImage(named: "hLeft")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SharpRight{
-            cell?.directionImage.image = UIImage(named: "hRight")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SlightLeft{
-            cell?.directionImage.image = UIImage(named: "sLeft")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.SlightRight{
-            cell?.directionImage.image = UIImage(named: "sRight")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.Left{
-            cell?.directionImage.image = UIImage(named: "Left")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.Right{
-            cell?.directionImage.image = UIImage(named: "Right")
-        }
-        if directions[indexPath.row].maneuverDirection == ManeuverDirection.UTurn{
-            cell?.directionImage.image = UIImage(named: "uTurn")
-        }
-        
-        if directions[indexPath.row].maneuverType == ManeuverType.Arrive {
-            cell?.accessoryType = .DisclosureIndicator
-            cell?.directionImage.image = nil
-        }
-        
-        
-        //cell?.directionImage.contentMode = .ScaleToFill
-
-        
-        return cell!
-    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if directions[indexPath.row].maneuverType == ManeuverType.Arrive {
@@ -277,6 +213,49 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true
         }
+    }
+    
+    func displayInstruction(){
+        Directions_Label.text = directions[0].instructions
+        var distanceMeasurment:Float
+        if self.measurementSystem == "Imperial"{
+            distanceMeasurment = metersToFeet(Float(directions[0].distance))
+        }
+            
+        else{
+            distanceMeasurment = Float(directions[0].distance)
+        }
+        
+        Amount_Label.text = "\(distanceMeasurment)"
+        print(directions[0].maneuverDirection)
+        
+        if directions[0].maneuverDirection == ManeuverDirection.StraightAhead{
+            Image_Label.image = UIImage(named: "straight")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.SharpLeft{
+            Image_Label.image = UIImage(named: "hLeft")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.SharpRight{
+            Image_Label.image = UIImage(named: "hRight")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.SlightLeft{
+            Image_Label.image = UIImage(named: "sLeft")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.SlightRight{
+            Image_Label.image = UIImage(named: "sRight")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.Left{
+            Image_Label.image = UIImage(named: "Left")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.Right{
+            Image_Label.image = UIImage(named: "Right")
+        }
+        if directions[0].maneuverDirection == ManeuverDirection.UTurn{
+            Image_Label.image = UIImage(named: "uTurn")
+        }
+        
+        
+        directions.removeFirst()
     }
     
 }
