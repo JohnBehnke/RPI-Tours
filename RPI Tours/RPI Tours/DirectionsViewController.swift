@@ -17,7 +17,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Global Variables
     var measurementSystem:String?
     var tourLine: MGLPolyline = MGLPolyline()
-    let locationManager = CLLocationManager()
+    let locationManager: CLLocationManager! = CLLocationManager()
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
     var directions:[RouteStep] = []

@@ -20,11 +20,11 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: Global Variables
     var tappedLandmarkName:String = ""
     var landmarkInformation: [Landmark] = []
+    let locationManager: CLLocationManager! = CLLocationManager()
     
     //MARK: System Function
     override func viewDidLoad() {
         
-        let locationManager = CLLocationManager()
         // Ask for Authorisation from the User.
         locationManager.requestAlwaysAuthorization()
         
