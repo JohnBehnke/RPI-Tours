@@ -43,7 +43,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var measurementSystem:String?
     var calculatedTour:[RouteStep] = []
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
-    let locationManager = CLLocationManager()
+    let locationManager: CLLocationManager! = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
     var directionsDidLoad = false
     var mapCenterCoordinate: CLLocationCoordinate2D?
@@ -155,7 +155,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             }
             
             
-            if let route = routes?.first, _ = route.legs.first {
+            if let route = routes?.first, let _ = route.legs.first {
                 
                 var numSteps = 0
                 for legs in route.legs{
