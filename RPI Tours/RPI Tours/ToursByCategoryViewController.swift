@@ -14,7 +14,13 @@ class ToursByCategoryViewController: UITableViewController{
     
     //MARK: IBAction
     //Rewind point for going back to this VC
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+        self.navigationController?.navigationBarHidden = false
+        
+        //sets status bar and navigation bar to the same color
+        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+        statusBar.backgroundColor = self.navigationController?.navigationBar.backgroundColor
+    }
     
     //MARK: Global Variables
     var tempTours: [Tour] = []
