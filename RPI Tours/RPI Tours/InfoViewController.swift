@@ -23,6 +23,7 @@ class InfoViewController: UITableViewController {
     var landmarkInformation: [Landmark] = []
     var imageSliderVC: TNImageSliderViewController!
     var landmark: Landmark = Landmark()
+    var cameFromMap: Bool = false
     
     @IBAction func pressedRouteTo(sender: AnyObject) {
         self.performSegueWithIdentifier("showDirections", sender: self)
@@ -35,9 +36,10 @@ class InfoViewController: UITableViewController {
         }
         
         if segue.identifier == "showDirections" {
+            let routeDesc = "Route to " + landmarkName
             let routeLand = Landmark(name: landmarkName, desc: landmarkDesc, lat: landmark.getLat(), long: landmark.getLong())
             let routeWaypoint = tourWaypoint(lat: landmark.getLat(), long: landmark.getLong())
-            let routeTour = Tour(name: landmarkName, desc: landmarkDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
+            let routeTour = Tour(name: landmarkName, desc: routeDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
             
             let controller = (segue.destinationViewController as! SelectedTourViewController)
             controller.selectedTour = routeTour

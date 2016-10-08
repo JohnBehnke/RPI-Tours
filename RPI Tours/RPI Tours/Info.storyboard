@@ -78,7 +78,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="pressedRouteTo:" destination="X4A-HN-yMQ" eventType="touchUpInside" id="Bnn-dO-m0g"/>
-                                                        <segue destination="VuI-XE-PpU" kind="show" identifier="showDirections" id="j34-u1-hc9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -102,11 +101,12 @@
                     <connections>
                         <outlet property="descriptionCell" destination="jKd-4g-SDp" id="lIY-Hc-lsc"/>
                         <outlet property="landmarkDescriptionLabel" destination="Z9C-uM-agf" id="SDx-AU-MA2"/>
+                        <segue destination="VuI-XE-PpU" kind="show" identifier="showDirections" id="T5M-Wy-fQ2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZk-Op-2iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="545"/>
+            <point key="canvasLocation" x="174" y="518"/>
         </scene>
         <!--Image Slider View Controller-->
         <scene sceneID="Aic-3C-y2L">

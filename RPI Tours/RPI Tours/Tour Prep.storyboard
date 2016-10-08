@@ -441,10 +441,10 @@
                                         <color key="sectionIndexBackgroundColor" red="0.84313726425170898" green="0.027450587600469589" blue="0.086274489760398865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DirectionTableViewCell" rowHeight="75" id="erw-eO-5Rh" customClass="DirectionTableViewCell" customModule="RPI_Tours" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="400" height="75"/>
+                                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erw-eO-5Rh" id="Jpv-Ky-vb7">
-                                                    <frame key="frameInset" width="400" height="75"/>
+                                                    <frame key="frameInset" width="375" height="75"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-mw-ta0">
@@ -499,14 +499,14 @@
                                                             </constraints>
                                                             <variation key="default">
                                                                 <mask key="constraints">
-                                                                    <exclude reference="a49-H3-F19"/>
                                                                     <exclude reference="R3w-fG-4nf"/>
+                                                                    <exclude reference="a49-H3-F19"/>
                                                                 </mask>
                                                             </variation>
                                                             <variation key="heightClass=regular-widthClass=compact" alignment="center">
                                                                 <mask key="constraints">
-                                                                    <include reference="a49-H3-F19"/>
                                                                     <include reference="R3w-fG-4nf"/>
+                                                                    <include reference="a49-H3-F19"/>
                                                                 </mask>
                                                             </variation>
                                                         </stackView>
@@ -636,6 +636,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ULE-2S-lwm"/>
+        <segue reference="T0M-T8-nNq"/>
     </inferredMetricsTieBreakers>
 </document>
