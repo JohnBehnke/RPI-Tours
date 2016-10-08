@@ -16,17 +16,36 @@ class InfoViewController: UITableViewController {
     //MARK: IBOutlets
     @IBOutlet var landmarkDescriptionLabel: UILabel!
     @IBOutlet var descriptionCell: UITableViewCell!
+    @IBOutlet var routeButtonCell: UITableViewCell!
     
     //MARK: Global Variables
     var landmarkName:String = ""
     var landmarkDesc:String = ""
     var landmarkInformation: [Landmark] = []
     var imageSliderVC: TNImageSliderViewController!
+    var cameFromMap: Bool = false
+    
+    @IBAction func pressedRouteTo(sender: AnyObject) {
+        self.performSegueWithIdentifier("showDirections", sender: self)
+    }
     
     //MARK: Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "imageSlider" {
             imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
+        }
+        
+        if segue.identifier == "showDirections" {
+            
+            let landmark = searchForLandmark()
+            
+            let routeDesc = "Route to " + landmark.getName()
+            let routeLand = Landmark(name: landmarkName, desc: landmarkDesc, lat: landmark.getLat(), long: landmark.getLong())
+            let routeWaypoint = tourWaypoint(lat: landmark.getLat(), long: landmark.getLong())
+            let routeTour = Tour(name: landmarkName, desc: routeDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
+            
+            let controller = (segue.destinationViewController as! SelectedTourViewController)
+            controller.selectedTour = routeTour
         }
     }
     
@@ -50,6 +69,10 @@ class InfoViewController: UITableViewController {
         options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
         
         imageSliderVC.options = options
+        
+        if !cameFromMap || chosenLandmark.getName() == "No Info" {
+            routeButtonCell.hidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +87,7 @@ class InfoViewController: UITableViewController {
             }
         }
         
-        let blankLandmark = Landmark(name: "landmarkName", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
+        let blankLandmark = Landmark(name: "No Info", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
         blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
         
         return blankLandmark
@@ -73,7 +96,7 @@ class InfoViewController: UITableViewController {
     //MARK: TableView Functions
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             return UITableViewAutomaticDimension
         }
         
@@ -82,7 +105,7 @@ class InfoViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             return UITableViewAutomaticDimension
         }
         

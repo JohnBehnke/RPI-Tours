@@ -1,7 +1,7 @@
 {
   "landmarks":[
     {
-      "name":"Barton Residence Hall",
+      "name":"Barton Hall",
       "desc":"Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall.",
       "photos":[
          "https://c2.staticflickr.com/4/3113/2582931348_b1ccd2fe21.jpg",
@@ -13,6 +13,18 @@
       ]
     },
     {
+      "name":"Barton Residence Hall",
+      "desc":"Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall.",
+      "photos":[
+         "https://c2.staticflickr.com/4/3113/2582931348_b1ccd2fe21.jpg",
+         "https://i.imgur.com/pdCVjDT.jpg"
+      ],
+      "coordinate":[
+          42.72898,
+          -73.67414
+      ]
+    },
+    {
       "name":"Commons Dining Hall",
       "desc":"Situated at the center of the first year residence halls, the Commons offers serveral dining stations. These include the popular Asian Pacifica, a savory grill program, pasta prepared to order, a deli, and Theme Cuisine.",
       "photos":[
@@ -21,7 +33,7 @@
       ],
       "coordinate":[
          42.72898,
-         -73.67731
+         -73.67455
       ]
     }
   ]

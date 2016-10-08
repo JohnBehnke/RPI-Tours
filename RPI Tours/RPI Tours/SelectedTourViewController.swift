@@ -43,7 +43,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var measurementSystem:String?
     var calculatedTour:[RouteStep] = []
     var calculatedTourPoints:[CLLocationCoordinate2D] = []
-    let locationManager = CLLocationManager()
+    let locationManager: CLLocationManager! = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
     var directionsDidLoad = false
     var mapCenterCoordinate: CLLocationCoordinate2D?
@@ -106,15 +106,21 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         var waypoints:[Waypoint] = []
         
         var shortestPoint: CLLocationCoordinate2D = workingWaypoints[0]
-        let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
-        for point in workingWaypoints {
-            let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            let p = CLLocation(latitude: point.latitude, longitude: point.longitude)
-            let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
+        
+        if(self.locationManager.location != nil) {
+            let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
             
-            if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
-                shortestPoint = point
+            for point in workingWaypoints {
+                let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+                let p = CLLocation(latitude: point.latitude, longitude: point.longitude)
+                let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
+                
+                if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+                    shortestPoint = point
+                }
             }
+            
+            waypoints.append(Waypoint(coordinate: userLocation))
         }
         
         var shortestPointLocation = 0
@@ -126,10 +132,6 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 shortestPointLocation += 1
             }
         }
-        
-        waypoints.append(Waypoint(coordinate: userLocation))
-        
-        //waypoints.append(Waypoint(coordinate: shortestPoint))
         
         for i in 0..<(workingWaypoints.count - shortestPointLocation) {
             waypoints.append(Waypoint(coordinate: workingWaypoints[i + shortestPointLocation]))
@@ -153,7 +155,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             }
             
             
-            if let route = routes?.first, _ = route.legs.first {
+            if let route = routes?.first, let _ = route.legs.first {
                 
                 var numSteps = 0
                 for legs in route.legs{
@@ -284,6 +286,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
+            controller.cameFromMap = false
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button

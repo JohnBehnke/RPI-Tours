@@ -17,7 +17,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Global Variables
     var measurementSystem:String?
     var tourLine: MGLPolyline = MGLPolyline()
-    let locationManager = CLLocationManager()
+    let locationManager: CLLocationManager! = CLLocationManager()
     var tourLandmarks:[Landmark] = []
     var tourTitle:String = ""
     var directions:[RouteStep] = []
@@ -273,6 +273,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
+            controller.cameFromMap = false
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true
