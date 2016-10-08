@@ -92,6 +92,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
+            controller.cameFromMap = true
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button

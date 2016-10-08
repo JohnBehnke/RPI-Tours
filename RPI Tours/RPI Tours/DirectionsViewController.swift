@@ -273,6 +273,7 @@ class DirectionsViewController: UIViewController, UITableViewDataSource, UITable
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
+            controller.cameFromMap = false
             
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true

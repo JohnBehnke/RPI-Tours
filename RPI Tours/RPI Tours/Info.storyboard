@@ -101,6 +101,7 @@
                     <connections>
                         <outlet property="descriptionCell" destination="jKd-4g-SDp" id="lIY-Hc-lsc"/>
                         <outlet property="landmarkDescriptionLabel" destination="Z9C-uM-agf" id="SDx-AU-MA2"/>
+                        <outlet property="routeButtonCell" destination="U1m-Oi-67b" id="16T-6S-Qhu"/>
                         <segue destination="VuI-XE-PpU" kind="show" identifier="showDirections" id="T5M-Wy-fQ2"/>
                     </connections>
                 </tableViewController>

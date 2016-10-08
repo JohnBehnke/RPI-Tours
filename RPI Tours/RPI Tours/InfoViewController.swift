@@ -16,13 +16,13 @@ class InfoViewController: UITableViewController {
     //MARK: IBOutlets
     @IBOutlet var landmarkDescriptionLabel: UILabel!
     @IBOutlet var descriptionCell: UITableViewCell!
+    @IBOutlet var routeButtonCell: UITableViewCell!
     
     //MARK: Global Variables
     var landmarkName:String = ""
     var landmarkDesc:String = ""
     var landmarkInformation: [Landmark] = []
     var imageSliderVC: TNImageSliderViewController!
-    var landmark: Landmark = Landmark()
     var cameFromMap: Bool = false
     
     @IBAction func pressedRouteTo(sender: AnyObject) {
@@ -36,7 +36,10 @@ class InfoViewController: UITableViewController {
         }
         
         if segue.identifier == "showDirections" {
-            let routeDesc = "Route to " + landmarkName
+            
+            let landmark = searchForLandmark()
+            
+            let routeDesc = "Route to " + landmark.getName()
             let routeLand = Landmark(name: landmarkName, desc: landmarkDesc, lat: landmark.getLat(), long: landmark.getLong())
             let routeWaypoint = tourWaypoint(lat: landmark.getLat(), long: landmark.getLong())
             let routeTour = Tour(name: landmarkName, desc: routeDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
@@ -52,7 +55,6 @@ class InfoViewController: UITableViewController {
         self.navigationItem.title = self.landmarkName
         
         let chosenLandmark = searchForLandmark()
-        landmark = chosenLandmark
         
         self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
         
@@ -67,6 +69,10 @@ class InfoViewController: UITableViewController {
         options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
         
         imageSliderVC.options = options
+        
+        if !cameFromMap {
+            routeButtonCell.hidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {
