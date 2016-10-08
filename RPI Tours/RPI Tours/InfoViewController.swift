@@ -70,7 +70,7 @@ class InfoViewController: UITableViewController {
         
         imageSliderVC.options = options
         
-        if !cameFromMap {
+        if !cameFromMap || chosenLandmark.getName() == "No Info" {
             routeButtonCell.hidden = true
         }
     }
@@ -87,7 +87,7 @@ class InfoViewController: UITableViewController {
             }
         }
         
-        let blankLandmark = Landmark(name: "landmarkName", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
+        let blankLandmark = Landmark(name: "No Info", desc: "I'm sorry, there is no information yet for this landmark.", lat: 0.0, long: 0.0)
         blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
         
         return blankLandmark
