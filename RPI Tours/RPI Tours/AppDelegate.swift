@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
+    
+        let textAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
         
         MGLAccountManager.setAccessToken(mapBoxAPIKey)
         

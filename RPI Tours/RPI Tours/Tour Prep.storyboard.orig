@@ -257,7 +257,11 @@
                                         <rect key="frame" x="0.0" y="813" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LA0-if-10b" id="FoZ-aZ-Clp">
+<<<<<<< HEAD
+                                            <frame key="frameInset" width="375" height="43"/>
+=======
                                             <frame key="frameInset" width="375" height="44"/>
+>>>>>>> 220a3eadf194fe8e87e0525aefa5f6afff176472
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-0u-mlX">
@@ -308,7 +312,11 @@
                                         <rect key="frame" x="0.0" y="893" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="efC-Bv-yVP" id="Bgx-D5-Ia7">
+<<<<<<< HEAD
+                                            <frame key="frameInset" width="375" height="43"/>
+=======
                                             <frame key="frameInset" width="375" height="44"/>
+>>>>>>> 220a3eadf194fe8e87e0525aefa5f6afff176472
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-by-QSs">

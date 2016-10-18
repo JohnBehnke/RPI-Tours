@@ -37,15 +37,20 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
-    @IBAction func cancelTour(sender: AnyObject) {
-        let alert = UIAlertController(title: "Are you sure you want to cancel yout tour?", message: "Canceling Tour", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-            (_)in
-            self.performSegueWithIdentifier("cancelTour", sender: self)
-        })
-        
-        alert.addAction(OKAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+    @IBAction func pressedCancelTour(sender: AnyObject) {
+        let alert = UIAlertController(title: "Are you sure you want to cancel your tour?", message: "Canceling Tour", preferredStyle: .Alert)
+         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+         (_)in
+         self.performSegueWithIdentifier("cancelTour", sender: self)
+         })
+         
+         let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+         (action:UIAlertAction) in print("pressed no")
+         }
+         
+         alert.addAction(OKAction)
+         alert.addAction(CancelAction)
+         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
