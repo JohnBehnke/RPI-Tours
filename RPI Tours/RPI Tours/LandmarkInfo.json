@@ -1,28 +1,958 @@
-{
-  "landmarks":[
-    {
-      "name":"Barton Residence Hall",
-      "desc":"Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall.",
-      "photos":[
-         "https://c2.staticflickr.com/4/3113/2582931348_b1ccd2fe21.jpg",
-         "https://i.imgur.com/pdCVjDT.jpg"
-      ],
-      "coordinate":[
-         42.72898,
-         -73.67414
-      ]
-    },
-    {
-      "name":"Commons Dining Hall",
-      "desc":"Situated at the center of the first year residence halls, the Commons offers serveral dining stations. These include the popular Asian Pacifica, a savory grill program, pasta prepared to order, a deli, and Theme Cuisine.",
-      "photos":[
-         "https://i.imgur.com/pdCVjDT.jpg",
-         "https://i.imgur.com/pdCVjDT.jpg"
-      ],
-      "coordinate":[
-         42.72898,
-         -73.67731
-      ]
-    }
-  ]
-}
+{"landmarks":[{
+    "coordinate": [
+        42.727425, 
+        -73.678631
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Academy Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73064179, 
+        -73.67553949
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Admissions", 
+    "desc": "This is the admissions building."
+},{
+    "coordinate": [
+        42.73285234, 
+        -73.67817342
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Alumni House", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72841146, 
+        -73.67661238
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Alumni Sports Center", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.730165, 
+        -73.68254542
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Amos Eaton Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72912865, 
+        -73.67406964
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Barton Hall", 
+    "desc": "Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall."
+},{
+    "coordinate": [
+        42.73288387, 
+        -73.67737412
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Beman Firehouse", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73213126, 
+        -73.68087173
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Blaw-Knox 1 & 2", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73115405, 
+        -73.68588746
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Blitman Commons", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73123286, 
+        -73.68175685
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Boiler House, Sage\u201d", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73265139, 
+        -73.68024409
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Boiler House, 11th\u201d", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72871489, 
+        -73.67347956
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Bray Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73512192, 
+        -73.66381824
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Bryckwyck", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73209974, 
+        -73.67141962
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "2144 Burdett Ave", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73101261, 
+        -73.67124045
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Burdett Ave Residence Hall (BARH)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73045701, 
+        -73.68319398
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Carnegie Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72888829, 
+        -73.67484158
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Cary Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72824558, 
+        -73.67840463
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Biotech (CBIS)", 
+    "desc": "The Center for Biotechnology and Interdisciplinary Studies (CBIS) at Rensselaer Polytechnic Institute interweaves life sciences, physical sciences, and engineering into the fields of biotechnology and medicine, opening exciting new pathways to innovation and discovery."
+},{
+    "coordinate": [
+        42.729289, 
+        -73.678676
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Low Center (CII)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73175693, 
+        -73.67229939
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Chapel", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72816321, 
+        -73.68121505
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Cogswell Laboratory", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73704904, 
+        -73.66976202
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Colonie Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72825898, 
+        -73.67426062
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Commons Dining Hall", 
+    "desc": "Situated at the center of the first-year residence halls, the Commons offers several dining stations. These include the popular Asian Pacifica, a savory grill program, pasta prepared to order, a deli and Theme Cuisine."
+},{
+    "coordinate": [
+        42.72836844, 
+        -73.67320919
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Crockett Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72948208, 
+        -73.67905909
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Darrin Communications Center (DCC)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72743263, 
+        -73.67403799
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Davison Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.731344, 
+        -73.67919213
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "E-Complex", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73228102, 
+        -73.66744941
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "East Campus Athletic Village Arena (ECAV)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73314316, 
+        -73.66759801
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "East Campus Athletic Village Stadium", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72828813, 
+        -73.68179655
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Empire State Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72957948, 
+        -73.68034065
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Jonsson Engineering Center", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72886313, 
+        -73.68382645
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "EMPAC", 
+    "desc": "The Curtis R. Priem Experimental Media and Performing Arts Center at Rensselaer Polytechnic Institute is where the arts, sciences, and technology interact with and influence each other by using the same facilities and technologies, and by breathing the same air."
+},{
+    "coordinate": [
+        42.73208957, 
+        -73.66946912
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Houston Field House", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.7293383, 
+        -73.68253845
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Folsom Library", 
+    "desc": "The mission of the Rensselaer Libraries is to support Rensselaer’s educational and research endeavors."
+},{
+    "coordinate": [
+        42.73265356, 
+        -73.67587289
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Graduate Education", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.7300248, 
+        -73.68118501
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Greene Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72881618, 
+        -73.66798747
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Greenhouses and Grounds Barn", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.730373, 
+        -73.680005
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "\u201886 Field", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73078266, 
+        -73.67884934
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "\u201887 Gymnasium", 
+    "desc": "The ’87 Gymnasium (gift of the class of 1887) has a swimming pool, two small gymnasia, an indoor track, and racquetball and squash courts."
+},{
+    "coordinate": [
+        42.73258834, 
+        -73.67920339
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "H Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72855726, 
+        -73.67522836
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Hall Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.7331518, 
+        -73.67991686
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "J Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72693127, 
+        -73.67846654
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Java++ Cafe", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73008028, 
+        -73.68189633
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Lally Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73251742, 
+        -73.66183877
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "LINAC Facility (Gaerttner Laboratory)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73060239, 
+        -73.68428081
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Louis Rubin Memorial Approach", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72842328, 
+        -73.68269563
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Materials Research Center", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72876217, 
+        -73.67665529
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Mueller Center", 
+    "desc": "The Mueller Center is the hub of personal fitness and wellness on the Rensselaer Campus."
+},{
+    "coordinate": [
+        42.726789, 
+        -73.678469
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Moe's Southwest Grill", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72761152, 
+        -73.67349029
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Nason Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73246422, 
+        -73.68288875
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "41 Ninth Street", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73135895, 
+        -73.67983639
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "North Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72742237, 
+        -73.67506206
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Nugent Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72779673, 
+        -73.68164957
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Parking Garage (Faculty/Staff)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73682404, 
+        -73.66372168
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Patroon Manor", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73299003, 
+        -73.67691278
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "2021 Peoples Avenue", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73122104, 
+        -73.6832723
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Pittsburgh Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72919957, 
+        -73.67766462
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Playhouse", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72213379, 
+        -73.67940724
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Polytechnic Residence Commons", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72930203, 
+        -73.67700934
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Public Safety", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.730117, 
+        -73.67765
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Quadrangle", 
+    "desc": "The Quadrangle, or The Quad for short, was one of the first residence halls on campus and recently renovated in the 1980s."
+},{
+    "coordinate": [
+        42.73425115, 
+        -73.66319865
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Radio Club W2SZ", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73086878, 
+        -73.66814142
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "RAHP A Site", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.7347555, 
+        -73.66485089
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "RAHP B Site", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72995146, 
+        -73.6766113
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Rensselaer Union", 
+    "desc": "Rensselaer Union has been driving campus engagement and student activities at Rensselaer Polytechnic Institute (RPI) since 1890."
+},{
+    "coordinate": [
+        42.73090663, 
+        -73.67973983
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Ricketts Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.7279142, 
+        -73.67712736
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Robison Swimming Pool", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72721952, 
+        -73.68056461
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "RPI Ambulance", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72978673, 
+        -73.67822599
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Russell Sage Dining Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73084199, 
+        -73.68153101
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Russell Sage Laboratory", 
+    "desc": "Russell Sage Laboratory houses a writing center, multimedia computer labs, and video production and sound editing equipment."
+},{
+    "coordinate": [
+        42.72886741, 
+        -73.68036586
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Hirsch Observatory", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73126243, 
+        -73.6664452
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Seismograph Laboratory", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73280037, 
+        -73.68102193
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Service Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72702598, 
+        -73.67464042
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Sharp Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73436308, 
+        -73.66426456
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Rousseau Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73395329, 
+        -73.66452205
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Williams Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73355612, 
+        -73.6648525
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Stacwyck Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73315263, 
+        -73.66512716
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "McGiffert Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73361601, 
+        -73.66560352
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Thompson Apartments", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72909716, 
+        -73.6685164
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "133 Sunset Terrace", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73056381, 
+        -73.66693282
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "200 Sunset Terrace", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73101145, 
+        -73.68046725
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Troy Building", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72922799, 
+        -73.6817826
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Voorhees Computing Center (VCC)", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73084831, 
+        -73.68251216
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Walker Laboratory", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.72793311, 
+        -73.67546439
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Warren Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73169707, 
+        -73.68312478
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "West Hall", 
+    "desc": ""
+},{
+    "coordinate": [
+        42.73091057, 
+        -73.68427706
+    ], 
+    "photos": [
+        "https://i.imgur.com/pdCVjDT.jpg", 
+        "https://i.imgur.com/pdCVjDT.jpg"
+    ], 
+    "name": "Winslow Building", 
+    "desc": ""
+}]}

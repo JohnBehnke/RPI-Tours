@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//Inherit wrom Waypoint becuase OOP
+//Inherit from Waypoint becuase OOP
 class Landmark: tourWaypoint {
     
     //INITIALIZERS

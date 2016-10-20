@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		278779EDD1DB3E9C60F594B3 /* Pods_RPI_ToursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C83FDDB50498DD342920887 /* Pods_RPI_ToursUITests.framework */; };
 		520EE71C1D04E84F00520A9B /* DirectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */; };
-		5248E67C1D8F629700910037 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248E67B1D8F629700910037 /* mapBoxAPIKeys.swift */; };
 		524D7B221CFBC8C4009024CC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B211CFBC8C4009024CC /* Settings.storyboard */; };
 		524D7B251CFBC8DE009024CC /* Map of Campus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B231CFBC8DE009024CC /* Map of Campus.storyboard */; };
 		524D7B271CFBC906009024CC /* Tour Prep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B261CFBC906009024CC /* Tour Prep.storyboard */; };
@@ -36,6 +35,7 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
+		960AA6201DB8487B007F981D /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960AA61F1DB8487B007F981D /* mapBoxAPIKeys.swift */; };
 		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
 		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
 		96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */; };
@@ -65,7 +65,6 @@
 		1C83FDDB50498DD342920887 /* Pods_RPI_ToursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AF5804FF69404EBDA87957 /* Pods-RPI ToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.release.xcconfig"; sourceTree = "<group>"; };
 		520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
-		5248E67B1D8F629700910037 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		524D7B211CFBC8C4009024CC /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		524D7B241CFBC8DE009024CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Map of Campus.storyboard"; sourceTree = "<group>"; };
 		524D7B261CFBC906009024CC /* Tour Prep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tour Prep.storyboard"; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
+		960AA61F1DB8487B007F981D /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
-				5248E67B1D8F629700910037 /* mapBoxAPIKeys.swift */,
+				960AA61F1DB8487B007F981D /* mapBoxAPIKeys.swift */,
 				52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
@@ -292,12 +292,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2331C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI Tours" */;
 			buildPhases = (
+				FC0FD3BA02DF8B3A47CD386E /* 📦 Check Pods Manifest.lock */,
 				F394015D390A68EF20AD4C9F /* [CP] Check Pods Manifest.lock */,
 				5299A2021C66AF7E0072F8D3 /* Sources */,
 				5299A2031C66AF7E0072F8D3 /* Frameworks */,
 				5299A2041C66AF7E0072F8D3 /* Resources */,
 				D84ABCD31FB1077039610D82 /* [CP] Embed Pods Frameworks */,
 				E8F640DCE03939CE2A769281 /* [CP] Copy Pods Resources */,
+				E663657ED16E5E05B7B810D2 /* 📦 Embed Pods Frameworks */,
+				3F5150070E6699369678606B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,12 +315,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2361C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursTests" */;
 			buildPhases = (
+				C672F5ADD608A761C1E1D4A5 /* 📦 Check Pods Manifest.lock */,
 				3578C3A5E1E118961AA3B446 /* [CP] Check Pods Manifest.lock */,
 				5299A21B1C66AF7E0072F8D3 /* Sources */,
 				5299A21C1C66AF7E0072F8D3 /* Frameworks */,
 				5299A21D1C66AF7E0072F8D3 /* Resources */,
 				64E1C284B7B773769F92828D /* [CP] Embed Pods Frameworks */,
 				F08C147E1ABEA1510E61D65E /* [CP] Copy Pods Resources */,
+				05A4CEDCA6EBF71989D40BF6 /* 📦 Embed Pods Frameworks */,
+				99661858EE3B36CDF24CA22A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,11 +339,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5299A2391C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursUITests" */;
 			buildPhases = (
+				0E346E86F1A19673C58EE8D1 /* 📦 Check Pods Manifest.lock */,
 				D39E82EAB904F08E1D8AD976 /* [CP] Check Pods Manifest.lock */,
 				5299A2261C66AF7E0072F8D3 /* Sources */,
 				5299A2271C66AF7E0072F8D3 /* Frameworks */,
 				5299A2281C66AF7E0072F8D3 /* Resources */,
 				38E8F4DCF664F01AFB64925B /* [CP] Copy Pods Resources */,
+				276D4DB59211C8239EE0B0E9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -432,6 +440,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05A4CEDCA6EBF71989D40BF6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E346E86F1A19673C58EE8D1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		276D4DB59211C8239EE0B0E9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3578C3A5E1E118961AA3B446 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +515,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3F5150070E6699369678606B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		64E1C284B7B773769F92828D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,6 +543,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99661858EE3B36CDF24CA22A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C672F5ADD608A761C1E1D4A5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D39E82EAB904F08E1D8AD976 /* [CP] Check Pods Manifest.lock */ = {
@@ -500,6 +598,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E663657ED16E5E05B7B810D2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +665,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FC0FD3BA02DF8B3A47CD386E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -563,10 +691,10 @@
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */,
 				528AE37D1CAC5A1300D8C65E /* SettingsViewController.swift in Sources */,
-				5248E67C1D8F629700910037 /* mapBoxAPIKeys.swift in Sources */,
 				96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */,
 				5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */,
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
+				960AA6201DB8487B007F981D /* mapBoxAPIKeys.swift in Sources */,
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
 				52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
