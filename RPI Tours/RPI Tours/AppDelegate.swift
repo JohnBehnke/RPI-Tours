@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! TourCategoryViewController
+        
+        
+        
+        let appRedColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
         //controller.managedObjectContext = self.managedObjectContext
         
        

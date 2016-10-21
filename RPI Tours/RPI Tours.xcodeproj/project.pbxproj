@@ -1,2293 +1,1010 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>07D9BC13BFDE142776DE94DA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI ToursUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10EB459859362D14A6540E1A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1C83FDDB50498DD342920887</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_RPI_ToursUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>278779EDD1DB3E9C60F594B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1C83FDDB50498DD342920887</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>33E662ACD251BAEB03EDE7B5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>34AF5804FF69404EBDA87957</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI ToursTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3578C3A5E1E118961AA3B446</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>38E8F4DCF664F01AFB64925B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3E8BCBDC301B856CDDCAE770</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E6887A53AED919DDBC17D16F</string>
-				<string>D410BE85E01CECB8D5612C9B</string>
-				<string>1C83FDDB50498DD342920887</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3FD3B7E6F1C527373F04AAA4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>520EE71B1D04E84F00520A9B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DirectionTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>520EE71C1D04E84F00520A9B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>520EE71B1D04E84F00520A9B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>524D7B211CFBC8C4009024CC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Settings.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B221CFBC8C4009024CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>524D7B211CFBC8C4009024CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>524D7B231CFBC8DE009024CC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>524D7B241CFBC8DE009024CC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Map of Campus.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B241CFBC8DE009024CC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Map of Campus.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B251CFBC8DE009024CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>524D7B231CFBC8DE009024CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>524D7B261CFBC906009024CC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Tour Prep.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B271CFBC906009024CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>524D7B261CFBC906009024CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>524D7B281CFBC9DD009024CC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>524D7B291CFBC9DD009024CC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>SelectedTourCat.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B291CFBC9DD009024CC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/SelectedTourCat.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>524D7B2A1CFBC9DD009024CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>524D7B281CFBC9DD009024CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52615C4D1D0DC80F0040FDA9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>mapMatchingTest.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52615C4E1D0DC80F0040FDA9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52615C4D1D0DC80F0040FDA9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5264201A1CB2D54A00F7EEE2</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SelectedTourViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5264201B1CB2D54A00F7EEE2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5264201A1CB2D54A00F7EEE2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5264201C1CB2E16800F7EEE2</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DirectionsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5264201D1CB2E16800F7EEE2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5264201C1CB2E16800F7EEE2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52762D9E1CAF6DF70051F338</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>52762D9F1CAF6E040051F338</string>
-				<string>52762DA01CAF6E040051F338</string>
-				<string>52762DA11CAF6E040051F338</string>
-				<string>52762DA21CAF6E040051F338</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52762D9F1CAF6E040051F338</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TourCat.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52762DA01CAF6E040051F338</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Tour.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52762DA11CAF6E040051F338</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Landmarks.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52762DA21CAF6E040051F338</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Waypoints.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52762DA31CAF6E040051F338</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52762D9F1CAF6E040051F338</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52762DA41CAF6E040051F338</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52762DA01CAF6E040051F338</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52762DA51CAF6E040051F338</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52762DA11CAF6E040051F338</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52762DA61CAF6E040051F338</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52762DA21CAF6E040051F338</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>528704AF1CB5623E00650187</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AuxiliaryFunctions.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>528704B01CB5623E00650187</key>
-		<dict>
-			<key>fileRef</key>
-			<string>528704AF1CB5623E00650187</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>528704B11CB5665D00650187</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAA129781DA447BC00B94BEA</string>
-				<string>52615C4D1D0DC80F0040FDA9</string>
-				<string>5299A2091C66AF7E0072F8D3</string>
-				<string>5299A21A1C66AF7E0072F8D3</string>
-				<string>5299A20B1C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>System Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>528704B21CB5667600650187</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>52FAA2BC1CAF5FDB0038283B</string>
-				<string>52BDD9571CAF526600EEEE7A</string>
-				<string>96B70F1B1D54FB19001BE1B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Data Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>528AE37C1CAC5A1300D8C65E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>528AE37D1CAC5A1300D8C65E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>528AE37C1CAC5A1300D8C65E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A1FD1C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A2081C66AF7E0072F8D3</string>
-				<string>5299A2221C66AF7E0072F8D3</string>
-				<string>5299A22D1C66AF7E0072F8D3</string>
-				<string>5299A2071C66AF7E0072F8D3</string>
-				<string>C5253D046E901642F85C580E</string>
-				<string>3E8BCBDC301B856CDDCAE770</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A1FE1C66AF7E0072F8D3</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0720</string>
-				<key>LastUpgradeCheck</key>
-				<string>0720</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>RPI Web Tech</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>5299A2051C66AF7E0072F8D3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.2.1</string>
-						<key>DevelopmentTeam</key>
-						<string>JRS59Q3JZW</string>
-						<key>LastSwiftMigration</key>
-						<string>0800</string>
-					</dict>
-					<key>5299A21E1C66AF7E0072F8D3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.2.1</string>
-						<key>LastSwiftMigration</key>
-						<string>0800</string>
-						<key>TestTargetID</key>
-						<string>5299A2051C66AF7E0072F8D3</string>
-					</dict>
-					<key>5299A2291C66AF7E0072F8D3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.2.1</string>
-						<key>LastSwiftMigration</key>
-						<string>0800</string>
-						<key>TestTargetID</key>
-						<string>5299A2051C66AF7E0072F8D3</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>5299A2011C66AF7E0072F8D3</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5299A1FD1C66AF7E0072F8D3</string>
-			<key>productRefGroup</key>
-			<string>5299A2071C66AF7E0072F8D3</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5299A2051C66AF7E0072F8D3</string>
-				<string>5299A21E1C66AF7E0072F8D3</string>
-				<string>5299A2291C66AF7E0072F8D3</string>
-			</array>
-		</dict>
-		<key>5299A2011C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5299A2311C66AF7E0072F8D3</string>
-				<string>5299A2321C66AF7E0072F8D3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5299A2021C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5299A20A1C66AF7E0072F8D3</string>
-				<string>5299A20D1C66AF7E0072F8D3</string>
-				<string>5299A20F1C66AF7E0072F8D3</string>
-				<string>528AE37D1CAC5A1300D8C65E</string>
-				<string>CAA129791DA447BC00B94BEA</string>
-				<string>96B70F1D1D54FB19001BE1B3</string>
-				<string>5264201D1CB2E16800F7EEE2</string>
-				<string>52C3FFEE1C9A384A00562190</string>
-				<string>528704B01CB5623E00650187</string>
-				<string>52762DA61CAF6E040051F338</string>
-				<string>5299A2111C66AF7E0072F8D3</string>
-				<string>52615C4E1D0DC80F0040FDA9</string>
-				<string>52762DA31CAF6E040051F338</string>
-				<string>520EE71C1D04E84F00520A9B</string>
-				<string>5264201B1CB2D54A00F7EEE2</string>
-				<string>5299A64E1CE022A100F57D76</string>
-				<string>52762DA41CAF6E040051F338</string>
-				<string>52762DA51CAF6E040051F338</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2031C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E140552C522E5DE4BEDC0C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2041C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>524D7B2A1CFBC9DD009024CC</string>
-				<string>5299A2191C66AF7E0072F8D3</string>
-				<string>5299A2161C66AF7E0072F8D3</string>
-				<string>5299A2141C66AF7E0072F8D3</string>
-				<string>524D7B221CFBC8C4009024CC</string>
-				<string>524D7B271CFBC906009024CC</string>
-				<string>524D7B251CFBC8DE009024CC</string>
-				<string>52FAA2BD1CAF5FDB0038283B</string>
-				<string>96B70F1C1D54FB19001BE1B3</string>
-				<string>96B70F1E1D54FB19001BE1B3</string>
-				<string>52BDD9581CAF526600EEEE7A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2051C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5299A2331C66AF7E0072F8D3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5EF5135278835A65D679A281</string>
-				<string>F394015D390A68EF20AD4C9F</string>
-				<string>5299A2021C66AF7E0072F8D3</string>
-				<string>5299A2031C66AF7E0072F8D3</string>
-				<string>5299A2041C66AF7E0072F8D3</string>
-				<string>D84ABCD31FB1077039610D82</string>
-				<string>E8F640DCE03939CE2A769281</string>
-				<string>97C90872E6D976A0FF20519E</string>
-				<string>33E662ACD251BAEB03EDE7B5</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>RPI Tours</string>
-			<key>productName</key>
-			<string>RPI Tours</string>
-			<key>productReference</key>
-			<string>5299A2061C66AF7E0072F8D3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>5299A2061C66AF7E0072F8D3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>RPI Tours.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5299A2071C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A2061C66AF7E0072F8D3</string>
-				<string>5299A21F1C66AF7E0072F8D3</string>
-				<string>5299A22A1C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2081C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>52762D9E1CAF6DF70051F338</string>
-				<string>52B9BDEC1C9B321E007C551A</string>
-				<string>52B9BDEB1C9B31FF007C551A</string>
-				<string>52B9BDEA1C9B31E7007C551A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>RPI Tours</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2091C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A20A1C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2091C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A20B1C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A20C1C66AF7E0072F8D3</string>
-			</array>
-			<key>currentVersion</key>
-			<string>5299A20C1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>RPI_Tours.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>5299A20C1C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>RPI_Tours.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A20D1C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A20B1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A20E1C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TourCategoryViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A20F1C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A20E1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2101C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ToursByCategoryViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2111C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2101C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2121C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A2131C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2131C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2141C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2121C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2151C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2161C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2151C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2171C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A2181C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2181C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2191C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2171C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A21A1C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A21B1C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5299A2241C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A21C1C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D99F160028C48F2264F754D1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A21D1C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A21E1C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5299A2361C66AF7E0072F8D3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>10EB459859362D14A6540E1A</string>
-				<string>3578C3A5E1E118961AA3B446</string>
-				<string>5299A21B1C66AF7E0072F8D3</string>
-				<string>5299A21C1C66AF7E0072F8D3</string>
-				<string>5299A21D1C66AF7E0072F8D3</string>
-				<string>64E1C284B7B773769F92828D</string>
-				<string>F08C147E1ABEA1510E61D65E</string>
-				<string>D1080BB664114D6D9C0F6FAF</string>
-				<string>71CF5E6B6691A6B88E41E013</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5299A2211C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>RPI ToursTests</string>
-			<key>productName</key>
-			<string>RPI ToursTests</string>
-			<key>productReference</key>
-			<string>5299A21F1C66AF7E0072F8D3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>5299A21F1C66AF7E0072F8D3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>RPI ToursTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5299A2201C66AF7E0072F8D3</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5299A1FE1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5299A2051C66AF7E0072F8D3</string>
-			<key>remoteInfo</key>
-			<string>RPI Tours</string>
-		</dict>
-		<key>5299A2211C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5299A2051C66AF7E0072F8D3</string>
-			<key>targetProxy</key>
-			<string>5299A2201C66AF7E0072F8D3</string>
-		</dict>
-		<key>5299A2221C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A2231C66AF7E0072F8D3</string>
-				<string>5299A2251C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>RPI ToursTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2231C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RPI_ToursTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2241C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A2231C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2251C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2261C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5299A22F1C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2271C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>278779EDD1DB3E9C60F594B3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2281C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5299A2291C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5299A2391C66AF7E0072F8D3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>575B28193ADEA77151F04EEC</string>
-				<string>D39E82EAB904F08E1D8AD976</string>
-				<string>5299A2261C66AF7E0072F8D3</string>
-				<string>5299A2271C66AF7E0072F8D3</string>
-				<string>5299A2281C66AF7E0072F8D3</string>
-				<string>38E8F4DCF664F01AFB64925B</string>
-				<string>3FD3B7E6F1C527373F04AAA4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5299A22C1C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>RPI ToursUITests</string>
-			<key>productName</key>
-			<string>RPI ToursUITests</string>
-			<key>productReference</key>
-			<string>5299A22A1C66AF7E0072F8D3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>5299A22A1C66AF7E0072F8D3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>RPI ToursUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5299A22B1C66AF7E0072F8D3</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5299A1FE1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5299A2051C66AF7E0072F8D3</string>
-			<key>remoteInfo</key>
-			<string>RPI Tours</string>
-		</dict>
-		<key>5299A22C1C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5299A2051C66AF7E0072F8D3</string>
-			<key>targetProxy</key>
-			<string>5299A22B1C66AF7E0072F8D3</string>
-		</dict>
-		<key>5299A22D1C66AF7E0072F8D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5299A22E1C66AF7E0072F8D3</string>
-				<string>5299A2301C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>RPI ToursUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A22E1C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RPI_ToursUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A22F1C66AF7E0072F8D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A22E1C66AF7E0072F8D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5299A2301C66AF7E0072F8D3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A2311C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5299A2321C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5299A2331C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5299A2341C66AF7E0072F8D3</string>
-				<string>5299A2351C66AF7E0072F8D3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5299A2341C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B36C5654C1C56393217039B5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>JRS59Q3JZW</string>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI Tours/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-Tours</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5299A2351C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B9809E8A8BB69103D5101AFE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>JRS59Q3JZW</string>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI Tours/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-Tours</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5299A2361C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5299A2371C66AF7E0072F8D3</string>
-				<string>5299A2381C66AF7E0072F8D3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5299A2371C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F78B0709FC7D594F53FC9809</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI ToursTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-ToursTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5299A2381C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>34AF5804FF69404EBDA87957</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI ToursTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-ToursTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5299A2391C66AF7E0072F8D3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5299A23A1C66AF7E0072F8D3</string>
-				<string>5299A23B1C66AF7E0072F8D3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5299A23A1C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>07D9BC13BFDE142776DE94DA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI ToursUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-ToursUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>RPI Tours</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5299A23B1C66AF7E0072F8D3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E96383DBE1D6457A215E3B78</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>RPI ToursUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>edu.rpi.union.webtech.RPI-ToursUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>2.3</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>RPI Tours</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5299A64D1CE022A100F57D76</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LicensesViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5299A64E1CE022A100F57D76</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5299A64D1CE022A100F57D76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52B9BDEA1C9B31E7007C551A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>96B70F1A1D54FB19001BE1B3</string>
-				<string>520EE71B1D04E84F00520A9B</string>
-				<string>5299A20E1C66AF7E0072F8D3</string>
-				<string>5299A2101C66AF7E0072F8D3</string>
-				<string>528AE37C1CAC5A1300D8C65E</string>
-				<string>52C3FFED1C9A384A00562190</string>
-				<string>5264201A1CB2D54A00F7EEE2</string>
-				<string>5264201C1CB2E16800F7EEE2</string>
-				<string>5299A64D1CE022A100F57D76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>View Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52B9BDEB1C9B31FF007C551A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>528704B21CB5667600650187</string>
-				<string>528704B11CB5665D00650187</string>
-				<string>528704AF1CB5623E00650187</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52B9BDEC1C9B321E007C551A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>96B70F191D54FB19001BE1B3</string>
-				<string>5299A2121C66AF7E0072F8D3</string>
-				<string>524D7B281CFBC9DD009024CC</string>
-				<string>524D7B261CFBC906009024CC</string>
-				<string>524D7B231CFBC8DE009024CC</string>
-				<string>524D7B211CFBC8C4009024CC</string>
-				<string>5299A2171C66AF7E0072F8D3</string>
-				<string>5299A2151C66AF7E0072F8D3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Asset Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52BDD9571CAF526600EEEE7A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>Tours.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52BDD9581CAF526600EEEE7A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52BDD9571CAF526600EEEE7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52C3FFED1C9A384A00562190</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>GeneralMapViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52C3FFEE1C9A384A00562190</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52C3FFED1C9A384A00562190</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52FAA2BC1CAF5FDB0038283B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Waypoints.csv</string>
-			<key>path</key>
-			<string>RPI Tours/Waypoints.csv</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>52FAA2BD1CAF5FDB0038283B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52FAA2BC1CAF5FDB0038283B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>575B28193ADEA77151F04EEC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5EF5135278835A65D679A281</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>64E1C284B7B773769F92828D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>71CF5E6B6691A6B88E41E013</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>96B70F191D54FB19001BE1B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Info.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96B70F1A1D54FB19001BE1B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InfoViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96B70F1B1D54FB19001BE1B3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>LandmarkInfo.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>96B70F1C1D54FB19001BE1B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96B70F191D54FB19001BE1B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96B70F1D1D54FB19001BE1B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96B70F1A1D54FB19001BE1B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96B70F1E1D54FB19001BE1B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96B70F1B1D54FB19001BE1B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>97C90872E6D976A0FF20519E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B36C5654C1C56393217039B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI Tours.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B9809E8A8BB69103D5101AFE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI Tours.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5253D046E901642F85C580E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B36C5654C1C56393217039B5</string>
-				<string>B9809E8A8BB69103D5101AFE</string>
-				<string>F78B0709FC7D594F53FC9809</string>
-				<string>34AF5804FF69404EBDA87957</string>
-				<string>07D9BC13BFDE142776DE94DA</string>
-				<string>E96383DBE1D6457A215E3B78</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAA129781DA447BC00B94BEA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>mapBoxAPIKeys.swift</string>
-			<key>path</key>
-			<string>../../../Downloads/mapBoxAPIKeys.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAA129791DA447BC00B94BEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAA129781DA447BC00B94BEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D1080BB664114D6D9C0F6FAF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D39E82EAB904F08E1D8AD976</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D410BE85E01CECB8D5612C9B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_RPI_ToursTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D84ABCD31FB1077039610D82</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D99F160028C48F2264F754D1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D410BE85E01CECB8D5612C9B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E140552C522E5DE4BEDC0C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E6887A53AED919DDBC17D16F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E6887A53AED919DDBC17D16F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_RPI_Tours.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E8F640DCE03939CE2A769281</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E96383DBE1D6457A215E3B78</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI ToursUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F08C147E1ABEA1510E61D65E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F394015D390A68EF20AD4C9F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F78B0709FC7D594F53FC9809</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-RPI ToursTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5299A1FE1C66AF7E0072F8D3</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278779EDD1DB3E9C60F594B3 /* Pods_RPI_ToursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C83FDDB50498DD342920887 /* Pods_RPI_ToursUITests.framework */; };
+		520EE71C1D04E84F00520A9B /* DirectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */; };
+		523BC66B1DB6B92700591E58 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BC66A1DB6B92700591E58 /* mapBoxAPIKeys.swift */; };
+		524D7B221CFBC8C4009024CC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B211CFBC8C4009024CC /* Settings.storyboard */; };
+		524D7B251CFBC8DE009024CC /* Map of Campus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B231CFBC8DE009024CC /* Map of Campus.storyboard */; };
+		524D7B271CFBC906009024CC /* Tour Prep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B261CFBC906009024CC /* Tour Prep.storyboard */; };
+		524D7B2A1CFBC9DD009024CC /* SelectedTourCat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D7B281CFBC9DD009024CC /* SelectedTourCat.storyboard */; };
+		52615C4E1D0DC80F0040FDA9 /* mapMatchingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */; };
+		5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */; };
+		5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */; };
+		52762DA31CAF6E040051F338 /* TourCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762D9F1CAF6E040051F338 /* TourCat.swift */; };
+		52762DA41CAF6E040051F338 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA01CAF6E040051F338 /* Tour.swift */; };
+		52762DA51CAF6E040051F338 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA11CAF6E040051F338 /* Landmarks.swift */; };
+		52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762DA21CAF6E040051F338 /* Waypoints.swift */; };
+		528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */; };
+		528AE37D1CAC5A1300D8C65E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */; };
+		5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */; };
+		5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */; };
+		5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */; };
+		5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */; };
+		5299A2141C66AF7E0072F8D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5299A2121C66AF7E0072F8D3 /* Main.storyboard */; };
+		5299A2161C66AF7E0072F8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5299A2151C66AF7E0072F8D3 /* Assets.xcassets */; };
+		5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */; };
+		5299A2241C66AF7E0072F8D3 /* RPI_ToursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A2231C66AF7E0072F8D3 /* RPI_ToursTests.swift */; };
+		5299A22F1C66AF7E0072F8D3 /* RPI_ToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */; };
+		5299A64E1CE022A100F57D76 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299A64D1CE022A100F57D76 /* LicensesViewController.swift */; };
+		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
+		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
+		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
+		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
+		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
+		96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */; };
+		D99F160028C48F2264F754D1 /* Pods_RPI_ToursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */; };
+		E140552C522E5DE4BEDC0C03 /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6887A53AED919DDBC17D16F /* Pods_RPI_Tours.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5299A2201C66AF7E0072F8D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299A1FE1C66AF7E0072F8D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5299A2051C66AF7E0072F8D3;
+			remoteInfo = "RPI Tours";
+		};
+		5299A22B1C66AF7E0072F8D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299A1FE1C66AF7E0072F8D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5299A2051C66AF7E0072F8D3;
+			remoteInfo = "RPI Tours";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07D9BC13BFDE142776DE94DA /* Pods-RPI ToursUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C83FDDB50498DD342920887 /* Pods_RPI_ToursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AF5804FF69404EBDA87957 /* Pods-RPI ToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.release.xcconfig"; sourceTree = "<group>"; };
+		520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
+		523BC66A1DB6B92700591E58 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../../../Temporary/mapBoxAPIKeys.swift; sourceTree = "<group>"; };
+		524D7B211CFBC8C4009024CC /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		524D7B241CFBC8DE009024CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Map of Campus.storyboard"; sourceTree = "<group>"; };
+		524D7B261CFBC906009024CC /* Tour Prep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tour Prep.storyboard"; sourceTree = "<group>"; };
+		524D7B291CFBC9DD009024CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectedTourCat.storyboard; sourceTree = "<group>"; };
+		52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapMatchingTest.swift; sourceTree = "<group>"; };
+		5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTourViewController.swift; sourceTree = "<group>"; };
+		5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		52762D9F1CAF6E040051F338 /* TourCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourCat.swift; sourceTree = "<group>"; };
+		52762DA01CAF6E040051F338 /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		52762DA11CAF6E040051F338 /* Landmarks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
+		52762DA21CAF6E040051F338 /* Waypoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoints.swift; sourceTree = "<group>"; };
+		528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryFunctions.swift; sourceTree = "<group>"; };
+		528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5299A2061C66AF7E0072F8D3 /* RPI Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPI Tours.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5299A20C1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RPI_Tours.xcdatamodel; sourceTree = "<group>"; };
+		5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCategoryViewController.swift; sourceTree = "<group>"; };
+		5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursByCategoryViewController.swift; sourceTree = "<group>"; };
+		5299A2131C66AF7E0072F8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5299A2151C66AF7E0072F8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5299A2181C66AF7E0072F8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5299A21A1C66AF7E0072F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5299A21F1C66AF7E0072F8D3 /* RPI ToursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPI ToursTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5299A2231C66AF7E0072F8D3 /* RPI_ToursTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPI_ToursTests.swift; sourceTree = "<group>"; };
+		5299A2251C66AF7E0072F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5299A22A1C66AF7E0072F8D3 /* RPI ToursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPI ToursUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPI_ToursUITests.swift; sourceTree = "<group>"; };
+		5299A2301C66AF7E0072F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5299A64D1CE022A100F57D76 /* LicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
+		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
+		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
+		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
+		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
+		B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
+		B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
+		D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6887A53AED919DDBC17D16F /* Pods_RPI_Tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_Tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96383DBE1D6457A215E3B78 /* Pods-RPI ToursUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F78B0709FC7D594F53FC9809 /* Pods-RPI ToursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI ToursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5299A2031C66AF7E0072F8D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E140552C522E5DE4BEDC0C03 /* Pods_RPI_Tours.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A21C1C66AF7E0072F8D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99F160028C48F2264F754D1 /* Pods_RPI_ToursTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A2271C66AF7E0072F8D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278779EDD1DB3E9C60F594B3 /* Pods_RPI_ToursUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E8BCBDC301B856CDDCAE770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6887A53AED919DDBC17D16F /* Pods_RPI_Tours.framework */,
+				D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */,
+				1C83FDDB50498DD342920887 /* Pods_RPI_ToursUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52762D9E1CAF6DF70051F338 /* Supporting Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52762D9F1CAF6E040051F338 /* TourCat.swift */,
+				52762DA01CAF6E040051F338 /* Tour.swift */,
+				52762DA11CAF6E040051F338 /* Landmarks.swift */,
+				52762DA21CAF6E040051F338 /* Waypoints.swift */,
+			);
+			name = "Supporting Classes";
+			sourceTree = "<group>";
+		};
+		528704B11CB5665D00650187 /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				523BC66A1DB6B92700591E58 /* mapBoxAPIKeys.swift */,
+				52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */,
+				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
+				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
+				5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */,
+			);
+			name = "System Files";
+			sourceTree = "<group>";
+		};
+		528704B21CB5667600650187 /* Data Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */,
+				52BDD9571CAF526600EEEE7A /* Tours.json */,
+				96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */,
+			);
+			name = "Data Files";
+			sourceTree = "<group>";
+		};
+		5299A1FD1C66AF7E0072F8D3 = {
+			isa = PBXGroup;
+			children = (
+				5299A2081C66AF7E0072F8D3 /* RPI Tours */,
+				5299A2221C66AF7E0072F8D3 /* RPI ToursTests */,
+				5299A22D1C66AF7E0072F8D3 /* RPI ToursUITests */,
+				5299A2071C66AF7E0072F8D3 /* Products */,
+				C5253D046E901642F85C580E /* Pods */,
+				3E8BCBDC301B856CDDCAE770 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5299A2071C66AF7E0072F8D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5299A2061C66AF7E0072F8D3 /* RPI Tours.app */,
+				5299A21F1C66AF7E0072F8D3 /* RPI ToursTests.xctest */,
+				5299A22A1C66AF7E0072F8D3 /* RPI ToursUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5299A2081C66AF7E0072F8D3 /* RPI Tours */ = {
+			isa = PBXGroup;
+			children = (
+				52762D9E1CAF6DF70051F338 /* Supporting Classes */,
+				52B9BDEC1C9B321E007C551A /* Asset Files */,
+				52B9BDEB1C9B31FF007C551A /* Supporting Files */,
+				52B9BDEA1C9B31E7007C551A /* View Controllers */,
+			);
+			path = "RPI Tours";
+			sourceTree = "<group>";
+		};
+		5299A2221C66AF7E0072F8D3 /* RPI ToursTests */ = {
+			isa = PBXGroup;
+			children = (
+				5299A2231C66AF7E0072F8D3 /* RPI_ToursTests.swift */,
+				5299A2251C66AF7E0072F8D3 /* Info.plist */,
+			);
+			path = "RPI ToursTests";
+			sourceTree = "<group>";
+		};
+		5299A22D1C66AF7E0072F8D3 /* RPI ToursUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5299A22E1C66AF7E0072F8D3 /* RPI_ToursUITests.swift */,
+				5299A2301C66AF7E0072F8D3 /* Info.plist */,
+			);
+			path = "RPI ToursUITests";
+			sourceTree = "<group>";
+		};
+		52B9BDEA1C9B31E7007C551A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */,
+				520EE71B1D04E84F00520A9B /* DirectionTableViewCell.swift */,
+				5299A20E1C66AF7E0072F8D3 /* TourCategoryViewController.swift */,
+				5299A2101C66AF7E0072F8D3 /* ToursByCategoryViewController.swift */,
+				528AE37C1CAC5A1300D8C65E /* SettingsViewController.swift */,
+				52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */,
+				5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */,
+				5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */,
+				5299A64D1CE022A100F57D76 /* LicensesViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		52B9BDEB1C9B31FF007C551A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528704B21CB5667600650187 /* Data Files */,
+				528704B11CB5665D00650187 /* System Files */,
+				528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52B9BDEC1C9B321E007C551A /* Asset Files */ = {
+			isa = PBXGroup;
+			children = (
+				96B70F191D54FB19001BE1B3 /* Info.storyboard */,
+				5299A2121C66AF7E0072F8D3 /* Main.storyboard */,
+				524D7B281CFBC9DD009024CC /* SelectedTourCat.storyboard */,
+				524D7B261CFBC906009024CC /* Tour Prep.storyboard */,
+				524D7B231CFBC8DE009024CC /* Map of Campus.storyboard */,
+				524D7B211CFBC8C4009024CC /* Settings.storyboard */,
+				5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */,
+				5299A2151C66AF7E0072F8D3 /* Assets.xcassets */,
+			);
+			name = "Asset Files";
+			sourceTree = "<group>";
+		};
+		C5253D046E901642F85C580E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */,
+				B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */,
+				F78B0709FC7D594F53FC9809 /* Pods-RPI ToursTests.debug.xcconfig */,
+				34AF5804FF69404EBDA87957 /* Pods-RPI ToursTests.release.xcconfig */,
+				07D9BC13BFDE142776DE94DA /* Pods-RPI ToursUITests.debug.xcconfig */,
+				E96383DBE1D6457A215E3B78 /* Pods-RPI ToursUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5299A2051C66AF7E0072F8D3 /* RPI Tours */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5299A2331C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI Tours" */;
+			buildPhases = (
+				5EF5135278835A65D679A281 /* [CP] Check Pods Manifest.lock */,
+				F394015D390A68EF20AD4C9F /* [CP] Check Pods Manifest.lock */,
+				5299A2021C66AF7E0072F8D3 /* Sources */,
+				5299A2031C66AF7E0072F8D3 /* Frameworks */,
+				5299A2041C66AF7E0072F8D3 /* Resources */,
+				D84ABCD31FB1077039610D82 /* [CP] Embed Pods Frameworks */,
+				E8F640DCE03939CE2A769281 /* [CP] Copy Pods Resources */,
+				97C90872E6D976A0FF20519E /* 📦 Embed Pods Frameworks */,
+				33E662ACD251BAEB03EDE7B5 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RPI Tours";
+			productName = "RPI Tours";
+			productReference = 5299A2061C66AF7E0072F8D3 /* RPI Tours.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5299A21E1C66AF7E0072F8D3 /* RPI ToursTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5299A2361C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursTests" */;
+			buildPhases = (
+				10EB459859362D14A6540E1A /* [CP] Check Pods Manifest.lock */,
+				3578C3A5E1E118961AA3B446 /* [CP] Check Pods Manifest.lock */,
+				5299A21B1C66AF7E0072F8D3 /* Sources */,
+				5299A21C1C66AF7E0072F8D3 /* Frameworks */,
+				5299A21D1C66AF7E0072F8D3 /* Resources */,
+				64E1C284B7B773769F92828D /* [CP] Embed Pods Frameworks */,
+				F08C147E1ABEA1510E61D65E /* [CP] Copy Pods Resources */,
+				D1080BB664114D6D9C0F6FAF /* 📦 Embed Pods Frameworks */,
+				71CF5E6B6691A6B88E41E013 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5299A2211C66AF7E0072F8D3 /* PBXTargetDependency */,
+			);
+			name = "RPI ToursTests";
+			productName = "RPI ToursTests";
+			productReference = 5299A21F1C66AF7E0072F8D3 /* RPI ToursTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5299A2291C66AF7E0072F8D3 /* RPI ToursUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5299A2391C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursUITests" */;
+			buildPhases = (
+				575B28193ADEA77151F04EEC /* [CP] Check Pods Manifest.lock */,
+				D39E82EAB904F08E1D8AD976 /* [CP] Check Pods Manifest.lock */,
+				5299A2261C66AF7E0072F8D3 /* Sources */,
+				5299A2271C66AF7E0072F8D3 /* Frameworks */,
+				5299A2281C66AF7E0072F8D3 /* Resources */,
+				38E8F4DCF664F01AFB64925B /* [CP] Copy Pods Resources */,
+				3FD3B7E6F1C527373F04AAA4 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5299A22C1C66AF7E0072F8D3 /* PBXTargetDependency */,
+			);
+			name = "RPI ToursUITests";
+			productName = "RPI ToursUITests";
+			productReference = 5299A22A1C66AF7E0072F8D3 /* RPI ToursUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5299A1FE1C66AF7E0072F8D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "RPI Web Tech";
+				TargetAttributes = {
+					5299A2051C66AF7E0072F8D3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JRS59Q3JZW;
+						LastSwiftMigration = 0800;
+					};
+					5299A21E1C66AF7E0072F8D3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = 5299A2051C66AF7E0072F8D3;
+					};
+					5299A2291C66AF7E0072F8D3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = 5299A2051C66AF7E0072F8D3;
+					};
+				};
+			};
+			buildConfigurationList = 5299A2011C66AF7E0072F8D3 /* Build configuration list for PBXProject "RPI Tours" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5299A1FD1C66AF7E0072F8D3;
+			productRefGroup = 5299A2071C66AF7E0072F8D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5299A2051C66AF7E0072F8D3 /* RPI Tours */,
+				5299A21E1C66AF7E0072F8D3 /* RPI ToursTests */,
+				5299A2291C66AF7E0072F8D3 /* RPI ToursUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5299A2041C66AF7E0072F8D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524D7B2A1CFBC9DD009024CC /* SelectedTourCat.storyboard in Resources */,
+				5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */,
+				5299A2161C66AF7E0072F8D3 /* Assets.xcassets in Resources */,
+				5299A2141C66AF7E0072F8D3 /* Main.storyboard in Resources */,
+				524D7B221CFBC8C4009024CC /* Settings.storyboard in Resources */,
+				524D7B271CFBC906009024CC /* Tour Prep.storyboard in Resources */,
+				524D7B251CFBC8DE009024CC /* Map of Campus.storyboard in Resources */,
+				52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */,
+				96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */,
+				96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */,
+				52BDD9581CAF526600EEEE7A /* Tours.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A21D1C66AF7E0072F8D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A2281C66AF7E0072F8D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10EB459859362D14A6540E1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33E662ACD251BAEB03EDE7B5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3578C3A5E1E118961AA3B446 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		38E8F4DCF664F01AFB64925B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FD3B7E6F1C527373F04AAA4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursUITests/Pods-RPI ToursUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		575B28193ADEA77151F04EEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EF5135278835A65D679A281 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64E1C284B7B773769F92828D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71CF5E6B6691A6B88E41E013 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97C90872E6D976A0FF20519E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1080BB664114D6D9C0F6FAF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D39E82EAB904F08E1D8AD976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D84ABCD31FB1077039610D82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F640DCE03939CE2A769281 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F08C147E1ABEA1510E61D65E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPI ToursTests/Pods-RPI ToursTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F394015D390A68EF20AD4C9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5299A2021C66AF7E0072F8D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */,
+				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
+				5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */,
+				528AE37D1CAC5A1300D8C65E /* SettingsViewController.swift in Sources */,
+				96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */,
+				5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */,
+				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
+				523BC66B1DB6B92700591E58 /* mapBoxAPIKeys.swift in Sources */,
+				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
+				52762DA61CAF6E040051F338 /* Waypoints.swift in Sources */,
+				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
+				52615C4E1D0DC80F0040FDA9 /* mapMatchingTest.swift in Sources */,
+				52762DA31CAF6E040051F338 /* TourCat.swift in Sources */,
+				520EE71C1D04E84F00520A9B /* DirectionTableViewCell.swift in Sources */,
+				5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */,
+				5299A64E1CE022A100F57D76 /* LicensesViewController.swift in Sources */,
+				52762DA41CAF6E040051F338 /* Tour.swift in Sources */,
+				52762DA51CAF6E040051F338 /* Landmarks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A21B1C66AF7E0072F8D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5299A2241C66AF7E0072F8D3 /* RPI_ToursTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5299A2261C66AF7E0072F8D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5299A22F1C66AF7E0072F8D3 /* RPI_ToursUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5299A2211C66AF7E0072F8D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5299A2051C66AF7E0072F8D3 /* RPI Tours */;
+			targetProxy = 5299A2201C66AF7E0072F8D3 /* PBXContainerItemProxy */;
+		};
+		5299A22C1C66AF7E0072F8D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5299A2051C66AF7E0072F8D3 /* RPI Tours */;
+			targetProxy = 5299A22B1C66AF7E0072F8D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		524D7B231CFBC8DE009024CC /* Map of Campus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524D7B241CFBC8DE009024CC /* Base */,
+			);
+			name = "Map of Campus.storyboard";
+			sourceTree = "<group>";
+		};
+		524D7B281CFBC9DD009024CC /* SelectedTourCat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524D7B291CFBC9DD009024CC /* Base */,
+			);
+			name = SelectedTourCat.storyboard;
+			sourceTree = "<group>";
+		};
+		5299A2121C66AF7E0072F8D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5299A2131C66AF7E0072F8D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5299A2181C66AF7E0072F8D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5299A2311C66AF7E0072F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5299A2321C66AF7E0072F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5299A2341C66AF7E0072F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JRS59Q3JZW;
+				INFOPLIST_FILE = "RPI Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5299A2351C66AF7E0072F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JRS59Q3JZW;
+				INFOPLIST_FILE = "RPI Tours/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-Tours";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5299A2371C66AF7E0072F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F78B0709FC7D594F53FC9809 /* Pods-RPI ToursTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "RPI ToursTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours";
+			};
+			name = Debug;
+		};
+		5299A2381C66AF7E0072F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AF5804FF69404EBDA87957 /* Pods-RPI ToursTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "RPI ToursTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours";
+			};
+			name = Release;
+		};
+		5299A23A1C66AF7E0072F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07D9BC13BFDE142776DE94DA /* Pods-RPI ToursUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "RPI ToursUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = "RPI Tours";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5299A23B1C66AF7E0072F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96383DBE1D6457A215E3B78 /* Pods-RPI ToursUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "RPI ToursUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = "RPI Tours";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5299A2011C66AF7E0072F8D3 /* Build configuration list for PBXProject "RPI Tours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5299A2311C66AF7E0072F8D3 /* Debug */,
+				5299A2321C66AF7E0072F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5299A2331C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI Tours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5299A2341C66AF7E0072F8D3 /* Debug */,
+				5299A2351C66AF7E0072F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5299A2361C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5299A2371C66AF7E0072F8D3 /* Debug */,
+				5299A2381C66AF7E0072F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5299A2391C66AF7E0072F8D3 /* Build configuration list for PBXNativeTarget "RPI ToursUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5299A23A1C66AF7E0072F8D3 /* Debug */,
+				5299A23B1C66AF7E0072F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5299A20C1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodel */,
+			);
+			currentVersion = 5299A20C1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodel */;
+			path = RPI_Tours.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5299A1FE1C66AF7E0072F8D3 /* Project object */;
+}

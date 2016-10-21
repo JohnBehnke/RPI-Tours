@@ -39,18 +39,18 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     @IBOutlet var mapView: MGLMapView!
     @IBAction func pressedCancelTour(sender: AnyObject) {
         let alert = UIAlertController(title: "Are you sure you want to cancel your tour?", message: "Canceling Tour", preferredStyle: .Alert)
-         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-         (_)in
-         self.performSegueWithIdentifier("cancelTour", sender: self)
-         })
-         
-         let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
-         (action:UIAlertAction) in print("pressed no")
-         }
-         
-         alert.addAction(OKAction)
-         alert.addAction(CancelAction)
-         self.presentViewController(alert, animated: true, completion: nil)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            (_)in
+            self.performSegueWithIdentifier("cancelTour", sender: self)
+        })
+        
+        let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            (action:UIAlertAction) in print("pressed no")
+        }
+        
+        alert.addAction(OKAction)
+        alert.addAction(CancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
@@ -76,6 +76,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         self.mapView.showsUserLocation = true
         
+        self.mapView.compassView.hidden = true
+        
         self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
         
         self.mapView.rotateEnabled = false
@@ -83,6 +85,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         self.mapView.setCenterCoordinate((self.locationManager.location?.coordinate)!,zoomLevel: 17,  animated: false)
         
         self.mapView.setUserTrackingMode(MGLUserTrackingMode.FollowWithHeading, animated: true)
+        
         
         
         for landmark in self.tourLandmarks{
@@ -99,7 +102,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         self.mapView.addAnnotation(self.tourLine)
         
-       
+        
         
         let defaults = NSUserDefaults.standardUserDefaults()
         measurementSystem = defaults.objectForKey("system") as? String
@@ -127,7 +130,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
-            displayInstruction()
+//            displayInstruction()
+            generateNextDirection()
         }
     }
     
@@ -261,6 +265,16 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         
         directions.removeFirst()
+    }
+    
+    func generateNextDirection() {
+        let nextStep: RouteStep = directions[1]
+        
+        let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
+        //print(self.locationManager.location?.distanceFromLocation(stepLocation))
+        if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
+            displayInstruction()
+        }
     }
     
 }
