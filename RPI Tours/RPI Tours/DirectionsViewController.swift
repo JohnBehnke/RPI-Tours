@@ -53,6 +53,26 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    @IBAction func getInfo(sender: AnyObject) {
+        var shortestPoint: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.tourLandmarks[0].getLat(), longitude: self.tourLandmarks[0].getLong())
+        var name: String = ""
+        let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
+        
+        for point in self.tourLandmarks {
+            
+            let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            let p = CLLocation(latitude: point.getLat(), longitude: point.getLong())
+            let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
+            
+            if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+                shortestPoint = CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong())
+                name = point.getName()
+            }
+        }
+        
+        tappedLandmarkName = name
+        self.performSegueWithIdentifier("showInfo", sender: self)
+    }
     
     //MARK: System Functions
     override func viewDidLoad() {
@@ -100,6 +120,13 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         }
         
         
+        for item in self.directions {
+            
+            print("\(item.maneuverLocation.latitude),\(item.maneuverLocation.longitude)")
+            
+            
+        }
+        
         self.mapView.addAnnotation(self.tourLine)
         
         
@@ -130,7 +157,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
-//            displayInstruction()
+           //displayInstruction()
             generateNextDirection()
         }
     }
@@ -229,14 +256,28 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         var distanceMeasurment:Float
         if self.measurementSystem == "Imperial"{
             distanceMeasurment = metersToFeet(Float(directions[0].distance))
+            Amount_Label.text = "\(Int(distanceMeasurment)) feet"
         }
             
         else{
             distanceMeasurment = Float(directions[0].distance)
+            Amount_Label.text = "\(Int(distanceMeasurment)) meters"
         }
         
-        Amount_Label.text = "\(distanceMeasurment)"
+        //Amount_Label.text = "\(Int(distanceMeasurment)) "
         print(directions[0].maneuverDirection)
+        
+        if directions[0].maneuverType == ManeuverType.Arrive {
+            Image_Label.image = UIImage(named: "arrive")
+            self.Button_Label.hidden  = false
+        }
+        else{
+            self.Button_Label.hidden = true
+        }
+        
+        if directions[0].maneuverType == ManeuverType.Depart {
+            Image_Label.image = UIImage(named: "depart")
+        }
         
         if directions[0].maneuverDirection == ManeuverDirection.StraightAhead{
             Image_Label.image = UIImage(named: "straight")

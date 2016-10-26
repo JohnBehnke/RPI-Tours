@@ -97,6 +97,7 @@
 		5299A64D1CE022A100F57D76 /* LicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
 		52BDD9571CAF526600EEEE7A /* Tours.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tours.json; sourceTree = "<group>"; };
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
+		52F640A71DC05F0100A03E77 /* TestRun.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestRun.gpx; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
+				52F640A71DC05F0100A03E77 /* TestRun.gpx */,
 				523BC66A1DB6B92700591E58 /* mapBoxAPIKeys.swift */,
 				52615C4D1D0DC80F0040FDA9 /* mapMatchingTest.swift */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,

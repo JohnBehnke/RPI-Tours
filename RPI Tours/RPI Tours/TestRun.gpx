@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    
+    <!--
+     Provide one or more waypoints containing a latitude/longitude pair. If you provide one
+     waypoint, Xcode will simulate that specific location. If you provide multiple waypoints,
+     Xcode will simulate a route visiting each waypoint.
+     -->
+
+<wpt lat="42.730646" lon="-73.675618"></wpt>
+<wpt lat="42.730646" lon="-73.675618"></wpt>
+<wpt lat="42.730401" lon="-73.675924"></wpt>
+<wpt lat="42.730348" lon="-73.675806"></wpt>
+<wpt lat="42.729265" lon="-73.675761"></wpt>
+<wpt lat="42.728874" lon="-73.674128"></wpt>
+<wpt lat="42.728874" lon="-73.674128"></wpt>
+<wpt lat="42.728975" lon="-73.6741"></wpt>
+<wpt lat="42.729017" lon="-73.674089"></wpt>
+<wpt lat="42.728609" lon="-73.674216"></wpt>
+<wpt lat="42.728473" lon="-73.674406"></wpt>
+<wpt lat="42.728473" lon="-73.674406"></wpt>
+<wpt lat="42.7285" lon="-73.674552"></wpt>
+<wpt lat="42.728499" lon="-73.674637"></wpt>
+<wpt lat="42.729374" lon="-73.676869"></wpt>
+<wpt lat="42.729158" lon="-73.677075"></wpt>
+<wpt lat="42.729275" lon="-73.677311"></wpt>
+<wpt lat="42.729283" lon="-73.677319"></wpt>
+<wpt lat="42.729374" lon="-73.677905"></wpt>
+<wpt lat="42.729159" lon="-73.677923"></wpt>
+<wpt lat="42.728886" lon="-73.678165"></wpt>
+<wpt lat="42.729003" lon="-73.678521"></wpt>
+<wpt lat="42.728221" lon="-73.680267"></wpt>
+<wpt lat="42.728575" lon="-73.681894"></wpt>
+<wpt lat="42.728607" lon="-73.68188"></wpt>
+<wpt lat="42.728803" lon="-73.682884"></wpt>
+<wpt lat="42.728932" lon="-73.683058"></wpt>
+<wpt lat="42.729055" lon="-73.683029"></wpt>
+<wpt lat="42.729055" lon="-73.683029"></wpt>
+<wpt lat="42.729115" lon="-73.683337"></wpt>
+<wpt lat="42.729179" lon="-73.683652"></wpt>
+<wpt lat="42.729055" lon="-73.683029"></wpt>
+<wpt lat="42.728932" lon="-73.683058"></wpt>
+<wpt lat="42.728803" lon="-73.682884"></wpt>
+<wpt lat="42.728752" lon="-73.682632"></wpt>
+<wpt lat="42.728848" lon="-73.682528"></wpt>
+<wpt lat="42.729306" lon="-73.682425"></wpt>
+<wpt lat="42.729287" lon="-73.682259"></wpt>
+<wpt lat="42.72937" lon="-73.682108"></wpt>
+<wpt lat="42.729367" lon="-73.682074"></wpt>
+<wpt lat="42.729415" lon="-73.681808"></wpt>
+<wpt lat="42.729585" lon="-73.68202"></wpt>
+<wpt lat="42.729849" lon="-73.681595"></wpt>
+<wpt lat="42.730162" lon="-73.681592"></wpt>
+<wpt lat="42.730197" lon="-73.681645"></wpt>
+<wpt lat="42.730615" lon="-73.681701"></wpt>
+<wpt lat="42.730625" lon="-73.681686"></wpt>
+<wpt lat="42.730722" lon="-73.681687"></wpt>
+<wpt lat="42.730702" lon="-73.682318"></wpt>
+<wpt lat="42.730667" lon="-73.682309"></wpt>
+<wpt lat="42.730702" lon="-73.682318"></wpt>
+<wpt lat="42.730702" lon="-73.682318"></wpt>
+<wpt lat="42.730738" lon="-73.681836"></wpt>
+<wpt lat="42.730678" lon="-73.681037"></wpt>
+<wpt lat="42.730661" lon="-73.681016"></wpt>
+<wpt lat="42.730668" lon="-73.679351"></wpt>
+<wpt lat="42.730648" lon="-73.679284"></wpt>
+<wpt lat="42.730557" lon="-73.679137"></wpt>
+<wpt lat="42.730432" lon="-73.678265"></wpt>
+<wpt lat="42.730449" lon="-73.678252"></wpt>
+<wpt lat="42.730585" lon="-73.677791"></wpt>
+<wpt lat="42.730369" lon="-73.677725"></wpt>
+<wpt lat="42.730141" lon="-73.67779"></wpt>
+<wpt lat="42.730079" lon="-73.677411"></wpt>
+<wpt lat="42.729671" lon="-73.677108"></wpt>
+<wpt lat="42.729797" lon="-73.677047"></wpt>
+<wpt lat="42.729692" lon="-73.676389"></wpt>
+<wpt lat="42.730206" lon="-73.676656"></wpt>
+<wpt lat="42.730147" lon="-73.676906"></wpt>
+<wpt lat="42.730335" lon="-73.676649"></wpt>
+<wpt lat="42.730287" lon="-73.676455"></wpt>
+<wpt lat="42.730619" lon="-73.676317"></wpt>
+<wpt lat="42.730401" lon="-73.675924"></wpt>
+<wpt lat="42.730401" lon="-73.675924"></wpt>
+
+</gpx>
