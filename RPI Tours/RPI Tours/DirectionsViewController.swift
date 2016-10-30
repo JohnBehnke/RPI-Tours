@@ -92,7 +92,6 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         self.navigationItem.title = self.tourTitle
         
-        //self.navigationItem.rightBarButtonItem = UserTracking
         
         self.mapView.showsUserLocation = true
         
@@ -113,19 +112,9 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: landmark.getLat(), longitude: landmark.getLong())
             point.title = landmark.getName()
-            //point.subtitle = landmark.getDesc()
-            
             mapView.addAnnotation(point)
-            
         }
         
-        
-        for item in self.directions {
-            
-            print("\(item.maneuverLocation.latitude),\(item.maneuverLocation.longitude)")
-            
-            
-        }
         
         self.mapView.addAnnotation(self.tourLine)
         
@@ -142,7 +131,6 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     }
     
     func mapView(mapView: MGLMapView, didUpdateUserLocation userLocation: MGLUserLocation?) {
-        //self.mapView.setCenterCoordinate((userLocation?.coordinate)!,zoomLevel: 17,  animated: false)
         self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
         
         
@@ -157,54 +145,21 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
-           //displayInstruction()
             generateNextDirection()
         }
     }
     
     func mapView(mapView: MGLMapView, didChangeUserTrackingMode mode: MGLUserTrackingMode, animated: Bool) {
-        self.mapView.userTrackingMode  = mode
+        self.mapView.userTrackingMode = mode
     }
     
-    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
-        mapView.deselectAnnotation(annotation, animated: true)
-        tappedLandmarkName = annotation.title!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
-    }
-    
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if directions[indexPath.row].maneuverType == ManeuverType.Arrive {
-            
-            var shortestPoint: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.tourLandmarks[0].getLat(), longitude: self.tourLandmarks[0].getLong())
-            var name: String = ""
-            let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
-            
-            for point in self.tourLandmarks {
-                
-                let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-                let p = CLLocation(latitude: point.getLat(), longitude: point.getLong())
-                let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
-                
-                if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
-                    shortestPoint = CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong())
-                    name = point.getName()
-                }
-            }
-            
-            tappedLandmarkName = name
-            self.performSegueWithIdentifier("showInfo", sender: self)
-        }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
     
     
     func mapView(mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
@@ -223,7 +178,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     
     func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
-        return true
+        
+        return annotation.title!! != "You Are Here"
     }
     
     func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
@@ -235,6 +191,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!
+
         self.performSegueWithIdentifier("showInfo", sender: self)
     }
     
@@ -264,7 +221,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             Amount_Label.text = "\(Int(distanceMeasurment)) meters"
         }
         
-        //Amount_Label.text = "\(Int(distanceMeasurment)) "
+        
         print(directions[0].maneuverDirection)
         
         if directions[0].maneuverType == ManeuverType.Arrive {
@@ -312,10 +269,11 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         let nextStep: RouteStep = directions[1]
         
         let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
-        //print(self.locationManager.location?.distanceFromLocation(stepLocation))
+        
         if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
             displayInstruction()
         }
     }
+    
     
 }
