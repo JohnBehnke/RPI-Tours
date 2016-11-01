@@ -1,958 +1,1048 @@
-{"landmarks":[{
-    "coordinate": [
-        42.727425, 
-        -73.678631
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Academy Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73064179, 
-        -73.67553949
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Admissions", 
-    "desc": "This is the admissions building."
-},{
-    "coordinate": [
-        42.73285234, 
-        -73.67817342
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Alumni House", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72841146, 
-        -73.67661238
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Alumni Sports Center", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.730165, 
-        -73.68254542
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Amos Eaton Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72912865, 
-        -73.67406964
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Barton Hall", 
-    "desc": "Barton was first opened in Fall 2000 and in addition to being our newest residence hall, it also has the distinction of being the campus' only freshman only residence hall."
-},{
-    "coordinate": [
-        42.73288387, 
-        -73.67737412
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Beman Firehouse", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73213126, 
-        -73.68087173
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Blaw-Knox 1 & 2", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73115405, 
-        -73.68588746
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Blitman Commons", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73123286, 
-        -73.68175685
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Boiler House, Sage\u201d", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73265139, 
-        -73.68024409
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Boiler House, 11th\u201d", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72871489, 
-        -73.67347956
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Bray Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73512192, 
-        -73.66381824
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Bryckwyck", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73209974, 
-        -73.67141962
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "2144 Burdett Ave", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73101261, 
-        -73.67124045
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Burdett Ave Residence Hall (BARH)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73045701, 
-        -73.68319398
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Carnegie Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72888829, 
-        -73.67484158
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Cary Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72824558, 
-        -73.67840463
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Biotech (CBIS)", 
-    "desc": "The Center for Biotechnology and Interdisciplinary Studies (CBIS) at Rensselaer Polytechnic Institute interweaves life sciences, physical sciences, and engineering into the fields of biotechnology and medicine, opening exciting new pathways to innovation and discovery."
-},{
-    "coordinate": [
-        42.729289, 
-        -73.678676
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Low Center (CII)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73175693, 
-        -73.67229939
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Chapel", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72816321, 
-        -73.68121505
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Cogswell Laboratory", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73704904, 
-        -73.66976202
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Colonie Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72825898, 
-        -73.67426062
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Commons Dining Hall", 
-    "desc": "Situated at the center of the first-year residence halls, the Commons offers several dining stations. These include the popular Asian Pacifica, a savory grill program, pasta prepared to order, a deli and Theme Cuisine."
-},{
-    "coordinate": [
-        42.72836844, 
-        -73.67320919
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Crockett Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72948208, 
-        -73.67905909
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Darrin Communications Center (DCC)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72743263, 
-        -73.67403799
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Davison Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.731344, 
-        -73.67919213
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "E-Complex", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73228102, 
-        -73.66744941
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "East Campus Athletic Village Arena (ECAV)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73314316, 
-        -73.66759801
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "East Campus Athletic Village Stadium", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72828813, 
-        -73.68179655
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Empire State Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72957948, 
-        -73.68034065
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Jonsson Engineering Center", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72886313, 
-        -73.68382645
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "EMPAC", 
-    "desc": "The Curtis R. Priem Experimental Media and Performing Arts Center at Rensselaer Polytechnic Institute is where the arts, sciences, and technology interact with and influence each other by using the same facilities and technologies, and by breathing the same air."
-},{
-    "coordinate": [
-        42.73208957, 
-        -73.66946912
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Houston Field House", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.7293383, 
-        -73.68253845
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Folsom Library", 
-    "desc": "The mission of the Rensselaer Libraries is to support Rensselaer’s educational and research endeavors."
-},{
-    "coordinate": [
-        42.73265356, 
-        -73.67587289
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Graduate Education", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.7300248, 
-        -73.68118501
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Greene Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72881618, 
-        -73.66798747
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Greenhouses and Grounds Barn", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.730373, 
-        -73.680005
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "\u201886 Field", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73078266, 
-        -73.67884934
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "\u201887 Gymnasium", 
-    "desc": "The ’87 Gymnasium (gift of the class of 1887) has a swimming pool, two small gymnasia, an indoor track, and racquetball and squash courts."
-},{
-    "coordinate": [
-        42.73258834, 
-        -73.67920339
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "H Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72855726, 
-        -73.67522836
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Hall Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.7331518, 
-        -73.67991686
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "J Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72693127, 
-        -73.67846654
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Java++ Cafe", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73008028, 
-        -73.68189633
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Lally Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73251742, 
-        -73.66183877
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "LINAC Facility (Gaerttner Laboratory)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73060239, 
-        -73.68428081
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Louis Rubin Memorial Approach", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72842328, 
-        -73.68269563
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Materials Research Center", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72876217, 
-        -73.67665529
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Mueller Center", 
-    "desc": "The Mueller Center is the hub of personal fitness and wellness on the Rensselaer Campus."
-},{
-    "coordinate": [
-        42.726789, 
-        -73.678469
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Moe's Southwest Grill", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72761152, 
-        -73.67349029
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Nason Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73246422, 
-        -73.68288875
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "41 Ninth Street", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73135895, 
-        -73.67983639
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "North Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72742237, 
-        -73.67506206
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Nugent Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72779673, 
-        -73.68164957
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Parking Garage (Faculty/Staff)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73682404, 
-        -73.66372168
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Patroon Manor", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73299003, 
-        -73.67691278
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "2021 Peoples Avenue", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73122104, 
-        -73.6832723
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Pittsburgh Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72919957, 
-        -73.67766462
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Playhouse", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72213379, 
-        -73.67940724
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Polytechnic Residence Commons", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72930203, 
-        -73.67700934
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Public Safety", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.730117, 
-        -73.67765
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Quadrangle", 
-    "desc": "The Quadrangle, or The Quad for short, was one of the first residence halls on campus and recently renovated in the 1980s."
-},{
-    "coordinate": [
-        42.73425115, 
-        -73.66319865
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Radio Club W2SZ", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73086878, 
-        -73.66814142
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "RAHP A Site", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.7347555, 
-        -73.66485089
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "RAHP B Site", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72995146, 
-        -73.6766113
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Rensselaer Union", 
-    "desc": "Rensselaer Union has been driving campus engagement and student activities at Rensselaer Polytechnic Institute (RPI) since 1890."
-},{
-    "coordinate": [
-        42.73090663, 
-        -73.67973983
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Ricketts Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.7279142, 
-        -73.67712736
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Robison Swimming Pool", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72721952, 
-        -73.68056461
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "RPI Ambulance", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72978673, 
-        -73.67822599
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Russell Sage Dining Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73084199, 
-        -73.68153101
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Russell Sage Laboratory", 
-    "desc": "Russell Sage Laboratory houses a writing center, multimedia computer labs, and video production and sound editing equipment."
-},{
-    "coordinate": [
-        42.72886741, 
-        -73.68036586
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Hirsch Observatory", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73126243, 
-        -73.6664452
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Seismograph Laboratory", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73280037, 
-        -73.68102193
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Service Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72702598, 
-        -73.67464042
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Sharp Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73436308, 
-        -73.66426456
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Rousseau Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73395329, 
-        -73.66452205
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Williams Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73355612, 
-        -73.6648525
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Stacwyck Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73315263, 
-        -73.66512716
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "McGiffert Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73361601, 
-        -73.66560352
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Thompson Apartments", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72909716, 
-        -73.6685164
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "133 Sunset Terrace", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73056381, 
-        -73.66693282
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "200 Sunset Terrace", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73101145, 
-        -73.68046725
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Troy Building", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72922799, 
-        -73.6817826
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Voorhees Computing Center (VCC)", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73084831, 
-        -73.68251216
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Walker Laboratory", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.72793311, 
-        -73.67546439
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Warren Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73169707, 
-        -73.68312478
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "West Hall", 
-    "desc": ""
-},{
-    "coordinate": [
-        42.73091057, 
-        -73.68427706
-    ], 
-    "photos": [
-        "https://i.imgur.com/pdCVjDT.jpg", 
-        "https://i.imgur.com/pdCVjDT.jpg"
-    ], 
-    "name": "Winslow Building", 
-    "desc": ""
-}]}
+{
+    "landmarks":[
+    {
+        "coordinate": [
+            42.727425, 
+            -73.678631
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Academy Hall", 
+        "desc": "Located at the corners of 15th Street and College Avenues, Academy Hall offers health and wellness, student financial services, academic counseling, and the Dean of Students Office under one roof.\n It is home to the F.E. Gallagher Memorial Student Health Center, the Dean of Students Office, the Office of the First-Year Experience, the Archer Center for Student Leadership Development, and the offices of the Bursar, Financial Aid, and Registrar.\n The Student Health Center offers comprehensive, nationally accredited physician directed program providing outpatient ambulatory health care. Services include medical, gynecology, and allergy clinics, a counseling center, and health education and wellness programs.\n The Dean of Students Office encompasses Judicial Affairs, Greek Affairs, Minority Student Affairs, International Services for Students and Scholars, and Disability Services for Students."
+    },
+    {
+        "coordinate": [
+            42.73064179, 
+            -73.67553949
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Admissions", 
+        "desc": "The Admissions Office is conveniently located across the street from the Student Union. Here you can attend one of the regular admissions information sessions and take a student-led campus tour."
+    },
+    {
+        "coordinate": [
+            42.73285234, 
+            -73.67817342
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Alumni House", 
+        "desc": "This award-winning building opened its doors in 1989 and is named after Chairman of the Board of Trustees Samuel F. Heffner ’56.\n The Heffner Alumni House is a spacious and comfortable facility that houses meeting rooms, dining facilities, a library, and formal and informal gathering areas.\n It was conceived, designed, constructed, and financed by Rensselaer alumni."
+    },
+    {
+        "coordinate": [
+            42.72841146, 
+            -73.67661238
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Alumni Sports Center", 
+        "desc": "The Alumni Sports & Recreation Center (AS&RC) houses the Robison Gymnasium, which has an indoor track; a physiotherapy room; basketball, volleyball, and tennis courts on a resilient surface and locker facilities.\n This building also houses the offices of the Rensselaer Physical Education and Intercollegiate Athletics, and the Reserve Office Training Corps (ROTC)."
+    },
+    {
+        "coordinate": [
+            42.730165, 
+            -73.68254542
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Amos Eaton Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72912865, 
+            -73.67406964
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Barton Hall", 
+        "desc": "Barton Hall houses 200 freshmen and was built to meet the needs of the next generation of Rensselaer students.\n Designed as an extension of the Institute’s renowned collaborative studio learning environments, Barton Hall is fully loaded for laptop and data communication.\n The building offers 13 private conference rooms to support team project curricula. There is a large lounge on the fourth floor, which can also accommodate larger group meetings."
+    },
+    {
+        "coordinate": [
+            42.73288387, 
+            -73.67737412
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Beman Firehouse", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73213126, 
+            -73.68087173
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Blaw-Knox 1 & 2", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73115405, 
+            -73.68588746
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Blitman Commons", 
+        "desc": "The Howard N. Blitman, P.E. ’50 Residence Commons expanded housing options for Rensselaer undergraduates — specifically sophomores, juniors, and seniors — while bringing approximately 300 students downtown to engage in the vibrant community of Troy. The new residence commons is situated at the bottom of the Rensselaer Approach, the century-old granite staircase that symbolizes the connection between the City of Troy and the Institute.\n Blitman Commons has 148 double rooms and an apartment for live-in professional staff and four rooms for resident assistants. A select number of rooms also meet the American with Disabilities Act (ADA) standards for accessible design. All of the rooms will have private bathrooms.\n Other building amenities include a newly renovated dining hall that is open for breakfast and dinner service Monday through Friday and brunch and dinner on Saturday and Sunday, a small fitness center, access controlled entrances, limited on-site parking, and conference and classroom meeting spaces."
+    },
+    {
+        "coordinate": [
+            42.73123286, 
+            -73.68175685
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Boiler House, Sage\u201d", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73265139, 
+            -73.68024409
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Boiler House, 11th\u201d", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72871489, 
+            -73.67347956
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Bray Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73512192, 
+            -73.66381824
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Bryckwyck", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73209974, 
+            -73.67141962
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "2144 Burdett Ave", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73101261, 
+            -73.67124045
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Burdett Ave Residence Hall (BARH)", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73045701, 
+            -73.68319398
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Carnegie Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72888829, 
+            -73.67484158
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Cary Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72824558, 
+            -73.67840463
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Biotech (CBIS)", 
+        "desc": "Ranked among the world’s most advanced research facilities, Rensselaer’s 218,000-square-foot Center for Biotechnology and Interdisciplinary Studies provides the university with a state-of-the-art location to conduct interdisciplinary research and host world-class programs and symposia.\n The Center for Biotechnology and Interdisciplinary Studies exemplifies a new research paradigm, as no department offices reside in the building; rather, it is occupied by researchers and their laboratories.\n With its high-tech laboratories and expansive atrium, it provides a platform for collaboration among many diverse academic and research disciplines to enhance discovery and encourage innovation."
+    },
+    {
+        "coordinate": [
+            42.729289, 
+            -73.678676
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Low Center (CII)", 
+        "desc": "The Low Center for Industrial Innovation (CII), designed as an industrial-oriented research facility for both Rensselaer and New York state, houses three general computing labs available for student use, a manufacturing center, and clean rooms for designing computer chips.\n Former Rensselaer President George M. Low ’48 (director of the Apollo manned spacecraft program in 1967 and eventual deputy administrator of NASA) conceptualized the Center, which now bears his name.\n If you visit the CII, the George Low Lounge on the fourth floor contains a permanent exhibit of NASA memorabilia and other materials that honor the life of Rensselaer’s 14th President. You may also view the clean room from windows in rooms 4146 to 4166."
+    },
+    {
+        "coordinate": [
+            42.73175693, 
+            -73.67229939
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Chapel", 
+        "desc": "The C+CC is the home of the University Parish of Christ Sun of Justice, and provides a centrally-located focal point for cultural, spiritual and educational activities to the benefit of our home community and campus."
+    },
+    {
+        "coordinate": [
+            42.72816321, 
+            -73.68121505
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Cogswell Laboratory", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73704904, 
+            -73.66976202
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Colonie Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72825898, 
+            -73.67426062
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Commons Dining Hall", 
+        "desc": "lol"/*"Rensselaer’s Commons Dining Hall, located at the center of the first-year residence halls, offers several dining options.\n These include the popular Asian Pacifica, the Firehouse Grill, Pasta Allegro, Sage Deli, and Theme Cuisine. Other recent additions are a self-service Halal and Kosher station."*/
+    },
+    {
+        "coordinate": [
+            42.72836844, 
+            -73.67320919
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Crockett Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72948208, 
+            -73.67905909
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Darrin Communications Center (DCC)", 
+        "desc": "The Darrin Communications Center (DCC) contains a series of technologically sophisticated classrooms/lecture halls that are commonly used for visiting speakers, campus ceremonies, showing movies for students, and for some larger lecture classes.\n On the main floor is Jazzman’s Café, a lively and welcoming venue to enjoy a meal, a cup of coffee, and conversation.\n One level below the lecture halls is the Career Development Center which provides services including computerized job listings, a career resource room, and co-op opportunities.\n Below the Career Development Center level are the iEAR Studios (integrated electronic arts at Rensselaer), and WRPI, the university’s radio station."
+    },
+    {
+        "coordinate": [
+            42.72743263, 
+            -73.67403799
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Davison Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.731344, 
+            -73.67919213
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "E-Complex", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73228102, 
+            -73.66744941
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "East Campus Athletic Village Arena (ECAV)", 
+        "desc": "On October 3, 2009, the Institute officially unveiled the new East Campus Athletic Village — the most extensive athletic construction project in Rensselaer history, offering athletic and recreation facilities that will change the student experience dramatically.\n ECAV, as the new $92 million complex is known, is the latest in a decade-long physical transformation of Rensselaer. The project involves two phases. The grand opening signified the end of Phase 1, which includes a multipurpose lighted stadium with field turf and seating for 5,200 and a 1,200 seat basketball arena.\n Also, a fully equipped 4,800 square foot strength and conditioning center connects to a professional-caliber sports medicine suite, and within the arena are offices for athletics administrators and coaches, numerous meeting spaces, a new Athletics Hall of Fame, a pro shop and a café. Renovations to the Houston Field House were also made.\n The ECAV facility has achieved LEED gold status certification. Energy-efficient features include skylights and other design components that maximize the use of natural light. The innovative design for the stadium employs a solar shading screen to control glare and heat from the western sun exposure. The inspiration for the screen design is a DNA genetic bar code.\n Additional construction details to note include the arena roof, which is designed to support photovoltaic arrays totaling 14,000 square feet for future electric generation; and the stadium, which can support up to 20 micro wind turbines along its cornice.\n Also, natural ventilation reduces reliance on heating and cooling systems. Because planting and other landscaping elements were chosen for their water conservation properties, the facility does not include an irrigation system — a decision that is expected to reduce water consumption by 50 percent.\n Of special note, the project was constructed using 1,767 tons of structural steel, and all wood used for the project was specified as coming from sustainable sources (Forest Steward Council certified). Within ECAV, visitors rise 30 feet to the Concourse level from Georgian Terrace on a pedestrian ramp and stairs without the use of elevators. The pedestrian ramp rises at a 5 percent grade for 333 feet and is suspended from the building on 27 2-inch solid steel rods.\n Phase 2 will feature an indoor pool, outdoor tennis courts, and an indoor sports facility complete with a track and tennis courts. The time frame for Phase 2 is still being developed."
+    },
+    {
+        "coordinate": [
+            42.73314316, 
+            -73.66759801
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "East Campus Athletic Village Stadium", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72828813, 
+            -73.68179655
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Empire State Hall", 
+        "desc": "Empire State Hall houses the New York State Center for Polymer Synthesis at Rensselaer. It also connects the Materials Research Center and Cogswell Laboratory."
+    },
+    {
+        "coordinate": [
+            42.72957948, 
+            -73.68034065
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Jonsson Engineering Center", 
+        "desc": "The Jonsson Engineering Center (JEC), home to the School of Engineering, was named for J. Erik Jonsson ’22, co-founder of Texas Instruments. Each floor of the building is dedicated to a different discipline of engineering and contains many major research facilities and a large number of academic classrooms.\n The CORE Engineering Studio Lab (LITEC) is home to the nation’s third largest academic centrifuge. The third floor is also home to the Engineering Timeline, which chronicles the achievements of Rensselaer engineers within the broader context of technological history.\n The O.T. Swanson Multidisciplinary Design Laboratory (MDL) provides undergraduate students from multiple engineering disciplines, management, humanities, architecture, and science with a facility and the resources to work together on challenging “real-world” problems.\n Through the generosity of Haas Corporation, the largest machine tool builder in the United States, and Allendale Machinery Systems, the JEC Fabrication & Prototyping Area is an official Haas Technical Education Center (HTEC). The HTEC offers students opportunities to work with some of the latest equipment in the industry, which is updated every two years to ensure that the machines are state-of-the-art."
+    },
+    {
+        "coordinate": [
+            42.72886313, 
+            -73.68382645
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "EMPAC", 
+        "desc": "The new Curtis R. Priem Experimental Media and Performing Arts Center (EMPAC), which opened in October of 2008, provides students, artists, researchers, and audiences with opportunities to link the arts with leading-edge research and performance.\n The building offers impressive engineering innovations, including a 300-foot glass façade heated with water-glycol mixture circulating in its steel support structure. The 217,000-square-foot facility is designed for the highest quality in acoustics, visual presentation, production, and performance technology found nowhere else under one roof.\n Led by director Johannes Goebel, the venue inspires experimentation, cross-disciplinary inquiry, and advanced research. In fact, the construction of this extraordinary building has already inspired research that may impact the planning and design of performance venues around the world."
+    },
+    {
+        "coordinate": [
+            42.73208957, 
+            -73.66946912
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Houston Field House", 
+        "desc": "Located at the top of Peoples Avenue, the Houston Field House hosts the Rensselaer Hockey home games as well as figure skating, concerts, and other major events.\n The main feature of the Field House is its 185-by-85 foot ice hockey rink that can be transformed into a wooden floor for a multitude of events. The building has permanent seating for 5,300 spectators."
+    },
+    {
+        "coordinate": [
+            42.7293383, 
+            -73.68253845
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Folsom Library", 
+        "desc": "Folsom Library, the main campus library, was dedicated in 1976 by former Rensselaer President Richard G. Folsom. With state-of-the-art electronic retrieval services and study space for over 900 students, the Folsom Library serves as Rensselaer’s central library while the Architecture Library, located in the Greene Building, supports the School of Architecture programs.\n Access is provided to over 385,000 print books, over 45,000 electronic and print journals, over 23,000 electronic books, and several image databases. When researchers need material not held in Rensselaer’s collection, they can initiate online interlibrary loan requests or use the Connect NY service to borrow books directly, and receive rapid delivery, from a state-wide consortia providing over 5,000,000 titles.\n Library services include an electronic class reserves system, photocopy facilities, borrowing privileges at most academic libraries in the area, individual consulting on research projects, and group study rooms. The first floor of the library houses the Center for Communication Practices.\n Students may take a break in the Library Café or borrow the latest best-seller from the Class of 1996 Reading Room — or a feature film DVD from the collection in the North Lounge."
+    },
+    {
+        "coordinate": [
+            42.73265356, 
+            -73.67587289
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Graduate Education", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.7300248, 
+            -73.68118501
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Greene Building", 
+        "desc": "Home of the School of Architecture, this building has its own library and new computers for exclusive use by the architecture students. There is also a gallery for showing students’ work.\n In the third-floor Studio 305, students are employing powerful new technologies that may alter the future of architecture.\n Here, a milling machine follows computer-created designs to carve three-dimensional objects out of foam or wood. Working in the opposite direction, another device, called a three-dimensional scanner, is able to create a computer-based image of physical objects.\n In this very flexible studio, all furniture is on wheels, letting students arrange things in ways that best make sense for the job at hand.\n A motorized curtain can close off one end of the room to create a theater where students can present their projects, on video, to as many as 50 teachers and peers.\n A professional-quality video editing station allows students to create simulated tours of their proposed buildings, or even show their projects within a video image of an actual site."
+    },
+    {
+        "coordinate": [
+            42.72881618, 
+            -73.66798747
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Greenhouses and Grounds Barn", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.730373, 
+            -73.680005
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "\u201886 Field", 
+        "desc": "The ’86 Field (gift of the class of 1886) previously hosted Rensselaer’s Division III football games and other campus events."
+    },
+    {
+        "coordinate": [
+            42.73078266, 
+            -73.67884934
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "\u201887 Gymnasium", 
+        "desc": "The ’87 Gymnasium (gift of the class of 1887) has a swimming pool, two small gymnasia, an indoor track, and racquetball and squash courts.\n The gymnasium also previously housed RPI’s football team, baseball and softball team, men’s and women's tennis teams, and intramural sports."
+    },
+    {
+        "coordinate": [
+            42.73258834, 
+            -73.67920339
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "H Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72855726, 
+            -73.67522836
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Hall Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.7331518, 
+            -73.67991686
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "J Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72693127, 
+            -73.67846654
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Java++ Cafe", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73008028, 
+            -73.68189633
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Lally Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73251742, 
+            -73.66183877
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "LINAC Facility (Gaerttner Laboratory)", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73060239, 
+            -73.68428081
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Louis Rubin Memorial Approach", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72842328, 
+            -73.68269563
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Materials Research Center", 
+        "desc": "The Materials Research Center (MRC) was constructed under the first facilities grant awarded by NASA on September 25, 1962.\n According to James E. Webb, NASA administrator, the purpose of the grant program was “to house interdisciplinary activities in space related sciences and technology to universities which are making substantial contributions to the national space program.”\n Twenty-five laboratories, designed in part by faculty, provide facilities for powder metallurgy, polymer, ceramics, ultrasonics, cryogenics, corrosion and other materials research."
+    },
+    {
+        "coordinate": [
+            42.72876217, 
+            -73.67665529
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Mueller Center", 
+        "desc": "This 32,000-square-foot fitness center houses more than 40 pieces of aerobic exercise equipment, including eight treadmills, 11 elliptical cross-training machines as well as rowers, stationary bikes, steppers, and treadmills.\n The facility was named the Mueller Center in recognition of a multimillion-dollar gift to the university’s unrestricted endowment from Nancy Mueller, a Rensselaer trustee. She made the contribution in honor of her late husband, Glenn M. Mueller, a former Rensselaer trustee and a 1964 graduate.\n The elaborate, glass-enclosed Mueller Center features:\n - Three 40-foot-by-40-foot multipurpose rooms, which are filled to capacity with aerobics, kick boxing, yoga, and other classes.\n - A 5,500-square-foot weight-training room with separate areas for athletic teams and individual lifters.\n - Nine 32-inch hanging TV monitors, and stereo sound systems in each room.\n - A wellness classroom to hold classes in health-related subjects, such as smoking cessation and nutrition."
+    },
+    {
+        "coordinate": [
+            42.726789, 
+            -73.678469
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Moe's Southwest Grill", 
+        "desc": "Moe’s Southwest Grill will open in time for the start of the Fall 2011 semester. Students will be able to buy food at Moe’s using their campus meal plan card. The restaurant will also be open to the public.\n Located on the corner of 15th Street and College Avenue, Moe’s Southwest Grill is the home of the popular “Welcome to Moe’s!” greeting and pop-culture inspired menu and atmosphere. Moe’s Southwest Grill is a fun and engaging fast-casual concept serving a wide variety of fresh, made-to-order southwest fare."
+    },
+    {
+        "coordinate": [
+            42.72761152, 
+            -73.67349029
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Nason Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73246422, 
+            -73.68288875
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "41 Ninth Street", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73135895, 
+            -73.67983639
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "North Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72742237, 
+            -73.67506206
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Nugent Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72779673, 
+            -73.68164957
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Parking Garage (Faculty/Staff)", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73682404, 
+            -73.66372168
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Patroon Manor", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73299003, 
+            -73.67691278
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "2021 Peoples Avenue", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73122104, 
+            -73.6832723
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Pittsburgh Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72919957, 
+            -73.67766462
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Playhouse", 
+        "desc": "Theater at Rensselaer has a long history — the best record we have is dated November 25, 1929 and states: “The first regular meeting of the R.P.I. Dramatic Club was held Tuesday, Nov. 25, 1929 in the Proudfit Building.” And thus a club was born.\n The meeting minutes dated March 12, 1930 also contain a significant turning point in the club’s history: “The question of a name for the club was brought up and a motion was passed to call it hereafter The R.P.I. Players.” These records exists today, as excerpted from the handwritten meeting minutes of the club.\n The current Playhouse, a former U.S.O. building, was moved from Windsor Locks, Connecticut to Rensselaer in 1946. The building was acquired by the Institute to accommodate a library extension, study space and social activities. The structure was placed along 15th St. and thus dubbed the 15th Street Lounge or Lounge 15. In 1972, the lounge became the RPI Playhouse. The building underwent a major renovation in 1983.\n In November 1983, the newly renovated RPI Playhouse opened with a production of West Side Story. Some additional spaces, like the costume shop and set shop, were added to the building during the renovation."
+    },
+    {
+        "coordinate": [
+            42.72213379, 
+            -73.67940724
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Polytechnic Residence Commons", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72930203, 
+            -73.67700934
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Public Safety", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.730117, 
+            -73.67765
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Quadrangle", 
+        "desc": "The Quadrangle Residence Hall Complex (the Quad) is situated on the main campus and is Rensselaer’s largest and oldest residence area. Built in 1919, it was completely renovated and reopened in 1988.\n The Quad houses 450 of the university’s upperclassmen in single, double, and triple rooms. Divided into 19 units, each with its own entry, the Quad offers a comfortable and warm atmosphere for students.\n Each unit has a small kitchen on the first floor and a study-lounge on the second. Residents on the first and second floors share a bath with the adjacent room, while students on the third share a floor bath. All rooms are air cooled and carpeted."
+    },
+    {
+        "coordinate": [
+            42.73425115, 
+            -73.66319865
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Radio Club W2SZ", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73086878, 
+            -73.66814142
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "RAHP A Site", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.7347555, 
+            -73.66485089
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "RAHP B Site", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72995146, 
+            -73.6766113
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Rensselaer Union", 
+        "desc": "Rensselaer’s Union is one of the few student unions that is truly run by students. Student officials are elected each spring by the student body.\n The building, located on the corner of 15th Street and Sage Avenue, features a campus-wide technology and telecommunications infrastructure that rivals many schools in the country.\n Popular stops on the lower level include the campus bookstore, a U.S. post office, bowling alleys, and several dining options including a Ben & Jerry’s ice cream shop (Rensselaer is the first college to have a Ben & Jerry’s on campus!).\n The main level offers the RAA (Rensselaer Alumni Association) lounge, and the McNeil room (another dining location and evening study area).\n On the third floor, there are student government offices, the school newspaper, and other business offices."
+    },
+    {
+        "coordinate": [
+            42.73090663, 
+            -73.67973983
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Ricketts Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.7279142, 
+            -73.67712736
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Robison Swimming Pool", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72721952, 
+            -73.68056461
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "RPI Ambulance", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72978673, 
+            -73.67822599
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Russell Sage Dining Hall", 
+        "desc": "Russell Sage Dining Hall’s central campus location makes it the Quad’s unofficial dining hall. This small intimate dining hall brings back the feeling of home.\n With a seating capacity of 315, the dining hall features natural lighting, an open design, and booth, counter, and couch seating.\n The dining hall is home to a beverage station, salad bar, and exhibition-style cooking station. The serving area includes a pizza station with wood-fired oven and made-to-order pizzas, calzones, and strombolis. A deli station includes panini and other gourmet breads as well as specialty salads. Because each food station has its own queue, students spend less time waiting in line.\n Russell Sage Dining Hall is open Monday through Friday, with late-night dining Monday through Thursday.\n On the second floor, a full-service, sit-down restaurant is available."
+    },
+    {
+        "coordinate": [
+            42.73084199, 
+            -73.68153101
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Russell Sage Laboratory", 
+        "desc": "Russell Sage Laboratory houses a writing center, multimedia computer labs, and video production and sound editing equipment.\n The VAST (Visualization, Animation, Simulation Technology) Studio is an advanced digital imaging and animation lab, consisting of 26 high-end desktop computers running Soft Image, Maya, and the full compliment of digital imaging and VR software.\n The Human-Computer Interaction (HCI) Usability Lab is housed in the Communication Research Lab in Sage Laboratory."
+    },
+    {
+        "coordinate": [
+            42.72886741, 
+            -73.68036586
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Hirsch Observatory", 
+        "desc": "The Jonsson-Rowland Science Center & Hirsch Observatory is home to the School of Science, holding classes and laboratories for the Departments of Biology and Physics and related disciplines. The Hirsch Observatory, on top of the building, is open to all students.\n This building also has a biosimulation lab, a computer equipped classroom which is used to teach genetics, parts of introduction to biology, molecular modeling and design. This lab can be used to do homework, locate old test files, class notes, and assignments on line.\n A second computer lab is equipped with desktop workstations and is used for collaborative learning and studying. Interactive physics classrooms on the upper floor are used for Studio Physics classes, combining the features of lecture, lab, and recitation into each class meeting."
+    },
+    {
+        "coordinate": [
+            42.73126243, 
+            -73.6664452
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Seismograph Laboratory", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73280037, 
+            -73.68102193
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Service Building", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72702598, 
+            -73.67464042
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Sharp Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73436308, 
+            -73.66426456
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Rousseau Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73395329, 
+            -73.66452205
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Williams Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73355612, 
+            -73.6648525
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Stacwyck Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73315263, 
+            -73.66512716
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "McGiffert Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73361601, 
+            -73.66560352
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Thompson Apartments", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.72909716, 
+            -73.6685164
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "133 Sunset Terrace", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73056381, 
+            -73.66693282
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "200 Sunset Terrace", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73101145, 
+            -73.68046725
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Troy Building", 
+        "desc": "The Troy Building was constructed in 1924 for use by the Civil Engineering Department and was paid for by the city of Troy in honor of Rensselaer’s 100th anniversary.\n Over the years the building has housed several other functions including the Dean of Students office. Today, the President, Provost, Vice President for Institute Advancement, Vice President for Information Services and Technology and Chief Information Officer, Vice President for Student Life, Division of Finance, and Division of Strategic Communications & External Relations are located in the building.\n The Troy Building was one of the first buildings to be completed in Rensselaer’s plan to renovate its green-roofed campus.\n Reopened in August 1997, the second floor has three interactive classrooms, one of which is a classroom in the round. The tables are custom designed and have flat screen displays built into the tabletop. The space is known as the Collaborative Classroom."
+    },
+    {
+        "coordinate": [
+            42.72922799, 
+            -73.6817826
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Voorhees Computing Center (VCC)", 
+        "desc": "The Voorhees Computing Center (VCC) houses the staff offices of the Division of the Chief Information Officer (DotCIO), Help Desk, IBM-compatible PCs and UNIX workstations.\n Originally built as the St. Joseph’s Seminary chapel in 1933, the building was acquired by Rensselaer in 1958 and used as the campus library for the next 18 years. In the mid-1970s the Seminary’s main structure was razed and the Folsom Library replaced it on the same site.\n When the library was completed in 1976, a plan was initiated to build a new computing center to replace the chapel. Due to interest by the faculty and students in its unique architecture, the building was instead renovated in 1979.\n The VCC was named the Alan M. Voorhees Computing Center in honor of a 1947 alumnus who was a major donor to the renovation project."
+    },
+    {
+        "coordinate": [
+            42.73084831, 
+            -73.68251216
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Walker Laboratory", 
+        "desc": "Originally constructed in 1905, this building was renovated to incorporate 21st century innovations in the teaching of chemistry.\n Housing state-of-the-art wet labs along with the most advanced computer and people friendly studio classrooms, this building has been transformed into a facility for interactive learning in chemistry and related fields.\n The undergraduate chemistry program has occupied this building since its construction."
+    },
+    {
+        "coordinate": [
+            42.72793311, 
+            -73.67546439
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Warren Hall", 
+        "desc": ""
+    },
+    {
+        "coordinate": [
+            42.73169707, 
+            -73.68312478
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "West Hall", 
+        "desc": "West Hall is home to Rensselaer’s Arts Department, the Office of Research Administration and Finance, Real Estate Management, and the Rensselaer Credit Union.\n The Rensselaer Music Association (the governing body of all musical groups at Rensselaer) is housed in West Hall, utilizing the West Hall Auditorium for group rehearsals and performances.\n The RMA maintains the third-floor annex also known as the Music Suite, which offers four partially sound-proof practice rooms — each with an upright piano — in addition to other instrument and music storage and performance facilities."
+    },
+    {
+        "coordinate": [
+            42.73091057, 
+            -73.68427706
+        ], 
+        "photos": [
+            "https://i.imgur.com/pdCVjDT.jpg", 
+            "https://i.imgur.com/pdCVjDT.jpg"
+        ], 
+        "name": "Winslow Building", 
+        "desc": ""
+    }
+]
+}
