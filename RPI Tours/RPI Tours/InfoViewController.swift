@@ -59,7 +59,7 @@ class InfoViewController: UITableViewController {
     //MARK: Helper Functions
     func searchForLandmark() -> Landmark {
         for landmark in landmarkInformation {
-            if landmark.getName() == self.landmarkName {
+            if landmark.getName() == self.landmarkName && !landmark.getDesc().isEmpty{
                 return landmark
             }
         }
