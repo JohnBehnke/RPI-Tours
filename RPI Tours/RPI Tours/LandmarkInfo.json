@@ -70,19 +70,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Barton Hall", 
-        "desc": "Barton Hall houses 200 freshmen and was built to meet the needs of the next generation of Rensselaer students.\n\nDesigned as an extension of the Institute’s renowned collaborative studio learning environments, Barton Hall is fully loaded for laptop and data communication.\n\nThe building offers 13 private conference rooms to support team project curricula. There is a large lounge on the fourth floor, which can also accommodate larger group meetings."
-    },
-    {
-        "coordinate": [
-            42.73288387, 
-            -73.67737412
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Beman Firehouse", 
-        "desc": ""
+        "desc": "Barton was first opened in Fall 2000. It has three-person rooms with a mix of suite bathrooms and floor bathrooms.\n\nHalf of the rooms are arranged in pairs with a full bath between. The other rooms share a floor bath and are grouped to 7 to 8 rooms per floor. The building features floor lounges and several meeting rooms lowest floor's lounge spans three sections and is accessible by all students in the building. Laundry machines are also provided on that floor.\n\nStudents living in Barton are right at the center of campus activities, and have great access to a lot of opportunities to participate in student life. Commons, the Student Union, Ground Zero, and all the other dormitories on the hill are at most a few minute's walk away.Barton's main entrance is on the third floor and faces Commons Dining Hall. Parking is available on the corner of Sage and Burdett Avenues."
     },
     {
         "coordinate": [
@@ -110,30 +98,6 @@
     },
     {
         "coordinate": [
-            42.73123286, 
-            -73.68175685
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Boiler House, Sage\u201d", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
-            42.73265139, 
-            -73.68024409
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Boiler House, 11th\u201d", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
             42.72871489, 
             -73.67347956
         ], 
@@ -142,7 +106,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Bray Hall", 
-        "desc": ""
+        "desc": "The Commons Area consists of ten residence halls surrounding the Commons building, the largest campus dining hall. Five of these - Bray, Cary, Crockett, Hall, and Nason - are all 3 story, co-ed buildings and house Freshmen. Most students live in double (two-person) rooms, with a few triple (three-person) and single (one-person) rooms available.\n\nBray Hall and Cary Hall were renovated during the 2002 summer. Hall Hall, Crockett Hall and Nason Hall were renovated during the summer of 2003."
     },
     {
         "coordinate": [
@@ -154,19 +118,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Bryckwyck", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
-            42.73209974, 
-            -73.67141962
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "2144 Burdett Ave", 
-        "desc": ""
+        "desc": "Bryckwyck is a four-story complex made up of 53 units, offering one- and two-bedroom apartments and a few efficiency apartments. Large windows provide plenty of natural light and some apartments have balconies. Living areas and bedrooms are carpeted. Kitchens and bathrooms have either vinyl or tile flooring. Eat-in kitchens are furnished with a gas range, refrigerator, and in-sink garbage disposal."
     },
     {
         "coordinate": [
@@ -178,7 +130,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Burdett Ave Residence Hall (BARH)", 
-        "desc": ""
+        "desc": "BARH is first year residence hall, located near the athletic fields, the East Campus Athletic Village (ECAV), and the Field House. It houses one of the dining halls on campus, as well as the Burdett Avenue Convenience Store.\n\nEach pair of rooms has a shared bathroom, while each wing has its own laundry and kitchen. The BARH dining hall is open to all students, while the hall is under a five minute walk to freshman hill.\n\nEach lounge in BARH has its own set of student staff, and each half of the building has its own lounge with TV and entertainment. They meet in the center for the BARH dining hall, which is the closest campus dining available to this and the rest of ECAV.\n\nBARH is located just east of ECAV, above Burdette Avenue."
     },
     {
         "coordinate": [
@@ -202,7 +154,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Cary Hall", 
-        "desc": ""
+        "desc": "The Commons Area consists of ten residence halls surrounding the Commons building, the largest campus dining hall. Five of these - Bray, Cary, Crockett, Hall, and Nason - are all 3 story, co-ed buildings and house Freshmen. Most students live in double (two-person) rooms, with a few triple (three-person) and single (one-person) rooms available.\n\nBray Hall and Cary Hall were renovated during the 2002 summer. Hall Hall, Crockett Hall and Nason Hall were renovated during the summer of 2003."
     },
     {
         "coordinate": [
@@ -262,7 +214,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Colonie Apartments", 
-        "desc": ""
+        "desc": "The Colonie Apartments are located on Burdett Avenue, on the campus shuttle bus route. Three living arrangements are offered. Colonie comprises four buildings. Buildings A and B were designed as two person units but have been converted to large single units. Building A has single rooms and Building B has single suites as outlined below. Buildings C and D offer single occupancy suites. There are common kitchens available in both C and D. All rooms are furnished with beds, desks and chairs, and dressers.\n\nSingle rooms (A) house students in a room equipped with a private bath and shared hall kitchen facilities. Residents have an open sleeping/living space. Rooms are air-conditioned and approximately 360 square feet in size.\n\nSingle suite (B) residents live in suites made up of two adjoining rooms with a private bath. Square footage for both rooms totals approximately 330 square feet. Kitchen facilities are available down the hall. Single suites are not air-conditioned.\n\nSingle apartments (C and D) are air-conditioned and house one student in a small apartment equipped with a private bath. Square footage for each apartment is approximately 216 square feet."
     },
     {
         "coordinate": [
@@ -286,7 +238,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Crockett Hall", 
-        "desc": ""
+        "desc": "The Commons Area consists of ten residence halls surrounding the Commons building, the largest campus dining hall. Five of these - Bray, Cary, Crockett, Hall, and Nason - are all 3 story, co-ed buildings and house Freshmen. Most students live in double (two-person) rooms, with a few triple (three-person) and single (one-person) rooms available.\n\nBray Hall and Cary Hall were renovated during the 2002 summer. Hall Hall, Crockett Hall and Nason Hall were renovated during the summer of 2003."
     },
     {
         "coordinate": [
@@ -310,7 +262,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Davison Hall", 
-        "desc": ""
+        "desc": "Davison Hall is a First year residence Hall that borders a courtyard designed for frisbee, football, and outdoor relaxation. Rooms have either private or semi-private baths and are air cooled. Each of the four floors includes a lounge and a study space. First floors feature a kitchenette and large lounge. All double rooms have a privacy wall in the center of the room. This privacy wall is not shown in the floor plans."
     },
     {
         "coordinate": [
@@ -322,7 +274,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "E-Complex", 
-        "desc": ""
+        "desc": "E-Complex is located on Sage Avenue, across the street from the main campus. It has six units - Cassatt, Clement, Hearne, Hirai, Voorhees, and Waite - with approximately 20 students each.\n\nE-Complex has both double rooms and single rooms, sharing two floor bathrooms between approximately 22 people. There are two kitchenettes in the building for community use.\n\nDue to the large incoming first year class, E-Complex will be refurbished during the Summer of 2016 and available to incoming first year students. The refresh of the building will include new flooring, improved lighting, fresh paint, and new furniture.\n\nE-Complex is located on Sage Avenue across from the academic core of campus."
     },
     {
         "coordinate": [
@@ -335,18 +287,6 @@
         ], 
         "name": "East Campus Athletic Village Arena (ECAV)", 
         "desc": "On October 3, 2009, the Institute officially unveiled the new East Campus Athletic Village — the most extensive athletic construction project in Rensselaer history, offering athletic and recreation facilities that will change the student experience dramatically.\n\nECAV, as the new $92 million complex is known, is the latest in a decade-long physical transformation of Rensselaer. The project involves two phases. The grand opening signified the end of Phase 1, which includes a multipurpose lighted stadium with field turf and seating for 5,200 and a 1,200 seat basketball arena.\n\nAlso, a fully equipped 4,800 square foot strength and conditioning center connects to a professional-caliber sports medicine suite, and within the arena are offices for athletics administrators and coaches, numerous meeting spaces, a new Athletics Hall of Fame, a pro shop and a café. Renovations to the Houston Field House were also made.\n\nThe ECAV facility has achieved LEED gold status certification. Energy-efficient features include skylights and other design components that maximize the use of natural light. The innovative design for the stadium employs a solar shading screen to control glare and heat from the western sun exposure. The inspiration for the screen design is a DNA genetic bar code.\n\nAdditional construction details to note include the arena roof, which is designed to support photovoltaic arrays totaling 14,000 square feet for future electric generation; and the stadium, which can support up to 20 micro wind turbines along its cornice.\nAlso, natural ventilation reduces reliance on heating and cooling systems. Because planting and other landscaping elements were chosen for their water conservation properties, the facility does not include an irrigation system — a decision that is expected to reduce water consumption by 50 percent.\n\nOf special note, the project was constructed using 1,767 tons of structural steel, and all wood used for the project was specified as coming from sustainable sources (Forest Steward Council certified). Within ECAV, visitors rise 30 feet to the Concourse level from Georgian Terrace on a pedestrian ramp and stairs without the use of elevators. The pedestrian ramp rises at a 5 percent grade for 333 feet and is suspended from the building on 27 2-inch solid steel rods.\n\nPhase 2 will feature an indoor pool, outdoor tennis courts, and an indoor sports facility complete with a track and tennis courts. The time frame for Phase 2 is still being developed."
-    },
-    {
-        "coordinate": [
-            42.73314316, 
-            -73.66759801
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "East Campus Athletic Village Stadium", 
-        "desc": ""
     },
     {
         "coordinate": [
@@ -410,18 +350,6 @@
     },
     {
         "coordinate": [
-            42.73265356, 
-            -73.67587289
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Graduate Education", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
             42.7300248, 
             -73.68118501
         ], 
@@ -431,18 +359,6 @@
         ], 
         "name": "Greene Building", 
         "desc": "Home of the School of Architecture, this building has its own library and new computers for exclusive use by the architecture students. There is also a gallery for showing students’ work.\nIn the third-floor Studio 305, students are employing powerful new technologies that may alter the future of architecture.\n\nHere, a milling machine follows computer-created designs to carve three-dimensional objects out of foam or wood. Working in the opposite direction, another device, called a three-dimensional scanner, is able to create a computer-based image of physical objects.\n\nIn this very flexible studio, all furniture is on wheels, letting students arrange things in ways that best make sense for the job at hand.\n\nA motorized curtain can close off one end of the room to create a theater where students can present their projects, on video, to as many as 50 teachers and peers.\n\nA professional-quality video editing station allows students to create simulated tours of their proposed buildings, or even show their projects within a video image of an actual site."
-    },
-    {
-        "coordinate": [
-            42.72881618, 
-            -73.66798747
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Greenhouses and Grounds Barn", 
-        "desc": ""
     },
     {
         "coordinate": [
@@ -490,7 +406,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Hall Hall", 
-        "desc": ""
+        "desc": "The Commons Area consists of ten residence halls surrounding the Commons building, the largest campus dining hall. Five of these - Bray, Cary, Crockett, Hall, and Nason - are all 3 story, co-ed buildings and house Freshmen. Most students live in double (two-person) rooms, with a few triple (three-person) and single (one-person) rooms available.\n\nBray Hall and Cary Hall were renovated during the 2002 summer. Hall Hall, Crockett Hall and Nason Hall were renovated during the summer of 2003."
     },
     {
         "coordinate": [
@@ -502,18 +418,6 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "J Building", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
-            42.72693127, 
-            -73.67846654
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Java++ Cafe", 
         "desc": ""
     },
     {
@@ -598,7 +502,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Nason Hall", 
-        "desc": ""
+        "desc": "The Commons Area consists of ten residence halls surrounding the Commons building, the largest campus dining hall. Five of these - Bray, Cary, Crockett, Hall, and Nason - are all 3 story, co-ed buildings and house Freshmen. Most students live in double (two-person) rooms, with a few triple (three-person) and single (one-person) rooms available.\n\nBray Hall and Cary Hall were renovated during the 2002 summer. Hall Hall, Crockett Hall and Nason Hall were renovated during the summer of 2003.Bryckwyck is a four-story complex made up of 53 units, offering one- and two-bedroom apartments and a few efficiency apartments. Large windows provide plenty of natural light and some apartments have balconies. Living areas and bedrooms are carpeted. Kitchens and bathrooms have either vinyl or tile flooring. Eat-in kitchens are furnished with a gas range, refrigerator, and in-sink garbage disposal."
     },
     {
         "coordinate": [
@@ -610,7 +514,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "41 Ninth Street", 
-        "desc": ""
+        "desc": "In the school year of '71-'72, 41 9th Street Troy New York was allocated to the RPI Student Union, for an indefinite period of time, to be used as a Black Cultural Center or \"Black House\" as the minority students of RPI affectionately call it. This deal was outlined in several documnets-spefically the original agreements made around 1972-1973. The purpose of the Black Cultural Center is to provide an expression of the black identify and a sense of the black cultural experience both in living and through art and history. The center also functions as a place for both blacks and non-blacks to come together and learn more about African-American culture and the black experience. The center will provide a focal point and establish a common ground between black culture and other cultures on campus. The BCC will serve as a place of assembly, study, recreation. As such, the center will be an area in which black students can feel at home and with which they can identify. This shall provide an outlet from pressures of being black on a predominantly white campus."
     },
     {
         "coordinate": [
@@ -622,7 +526,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "North Hall", 
-        "desc": ""
+        "desc": "North Hall is conveniently located next to the main academic campus on Sage Avenue. The residential complex has both doubles and single units with common bathrooms, multiuse lounges, and kitchenettes.\n\nNorth Hall has both double rooms and single rooms, sharing two floor bathrooms between approximately 22 people. There are two kitchenettes in the building, as well as a multi-use lounge and laundry facilities on the first floor.\n\nDue to the large incoming first year class, North Hall will be refurbished during the Summer of 2016 and available to incoming first year students. The refresh of the building will include new flooring, improved lighting, fresh paint, and new furniture.\n\nNorth Hall is located on Sage Avenue across from the academic core of campus."
     },
     {
         "coordinate": [
@@ -634,7 +538,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Nugent Hall", 
-        "desc": ""
+        "desc": "Nugent is first year residence hall that borders a courtyard designed for frisbee, football, and outdoor relaxation. Rooms have either private or semi-private baths and are air cooled. Each of the four floors includes a lounge and a study space. First floors feature a kitchenette and large lounge.\n\nAll double rooms have a privacy wall in the center of the room. This privacy wall is not shown in the floor plans.\n\nOn the first floor of Nugent Hall is Ground Zero, a performance art thematic community for upperclass students. Ground Zero hosts events and concerts in the basement of Nugent Hall."
     },
     {
         "coordinate": [
@@ -646,31 +550,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Parking Garage (Faculty/Staff)", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
-            42.73682404, 
-            -73.66372168
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "Patroon Manor", 
-        "desc": ""
-    },
-    {
-        "coordinate": [
-            42.73299003, 
-            -73.67691278
-        ], 
-        "photos": [
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
-        ], 
-        "name": "2021 Peoples Avenue", 
-        "desc": ""
+        "desc": "Entrance to the parking garage is accessible from College Avenue.\n\nParking Garage permits are available to all faculty and staff regardless of work place location. The fee for a Parking Garage permit (PE, PS) is $375 including tax per year. A limited number of select parking spaces will be made available to students. The availability of garage spaces for students will be evaluated and determined annually."
     },
     {
         "coordinate": [
@@ -706,7 +586,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Polytechnic Residence Commons", 
-        "desc": ""
+        "desc": "Polytechnic Residence Commons is apartment housing option available to students since Fall 2009. Located on the corner of 15th and Congress Streets in Troy, the complex offers studio, as well as three or four bedroom apartment options.\n\nThe apartments are equipped with one or two bathrooms, depending on the size. The rooms are fully-furnished with full sized beds, and feature granite countertops, and brand new Whirlpool appliances. Each three- and four-person apartment also has a kitchen table with chairs, a small couch, a coffee table, and TV stand. Studio apartments have a kitchen table with chairs, two soft chairs, and TV stand.Each unit includes cable TV and high-speed internet access in the bedrooms and livingroom.\n\nPolytechnic Residential Commons is the ideal location between two amazing food locals in Troy: The Cookie Factory and Muza. Polytech offers juniors, seniors, and co-terminal students with the option of apartment-style living, where each resident has a private bedroom and has to share a bathroom with up to one other resident. If you want the chance merge living in an apartment with the resources that Residential Education offers, this is the location for you! Other amenities include a media room with 120\" projection HDTV, a fitness center stocked with LifeFitness machines and free weights, located on the main floor downstairs. There are also laundry facilities and a vending area.\n\nPolytech is easily available on the corner of 15th and Congress, with a great deal of parking space. In addition, CDTA route #86 (RPI Shuttle) stops on Congress Street."
     },
     {
         "coordinate": [
@@ -718,7 +598,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Public Safety", 
-        "desc": ""
+        "desc": "The RPI Department of Public Safety provides:\n\n24-hour campus patrols (by car, foot, and bicycle)\nEscort services for students walking alone at night\nEmergency call boxes throughout campus\nSafety education and training.\n\nThe department also provides 24-hour per day, 365-day response to life-safety incidents, coordinates internal and external resources to assist the management of critical incidents, and conducts awareness programs to proactively assist its community members in the maintenance of personal safety."
     },
     {
         "coordinate": [
@@ -742,7 +622,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Radio Club W2SZ", 
-        "desc": ""
+        "desc": "Since 1911, W2SZ has been a place where students enjoy the challenges and satisfaction of Amateur Radio. New FCC restructuring makes it easier than ever to become an amateur radio operator (ham), and new technology makes it increasingly fun and exciting. The club offers training for those with no radio experience, as well as leadership and learning opportunities for those already licensed.\n\nW2SZ has a repeater which members can access from as far as 50 miles away sometimes. Our repeater is connected to Echolink which allows connections to be made to thousands of users and repeaters around the world over the Internet."
     },
     {
         "coordinate": [
@@ -754,7 +634,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "RAHP A Site", 
-        "desc": ""
+        "desc": "Located near the Houston Field House, RAHP A consists of 60 town house apartments, electrically heated, each housing four students. A living room, kitchen, and dining room are downstairs. Kitchens include stove, refrigerator, and garbage disposal. Upstairs are a storage area, bathroom, and four bedrooms, each furnished with a bed, dresser, desk, and chair. Currently, living and dining areas are not furnished. Students may rent furniture or bring their own furniture for these areas. However, beginning in Fall 2010 the common spaces will be furnished. The furnishings will include a couch, two living room chairs, a coffee table, a round dining room table and four dining room chairs."
     },
     {
         "coordinate": [
@@ -766,7 +646,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "RAHP B Site", 
-        "desc": ""
+        "desc": "The Beman Lane RAHP Apartments are two-story apartments with front and rear private entrances. Each apartment totals 1,000 square feet. Living room, dining area, kitchen, and closet are on the first floor. Three bedrooms, a bath with a double sink, and a storage closet are on the second floor. The bedrooms are two smaller single rooms and one large double occupancy room. Living and bedroom areas are carpeted. All other rooms are tiled.\n\nKitchens are equipped with electric range, refrigerator, and in-sink garbage disposal. All rooms are heated electrically by individually controlled baseboard units."
     },
     {
         "coordinate": [
@@ -790,7 +670,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Ricketts Building", 
-        "desc": ""
+        "desc": "In 1933, Palmer Ricketts initiated the construction of a building for the newly established aeronautical and metallurgical engineering courses. It was tentatively named Van Rensselaer Hall.\n\nThe laboratory building, opened in 1935, was officially named the Ricketts Building in memory of Palmer C. Ricketts, who died December 10, 1934. This marked the end of thirty years of ambitious campus development commonly referred to as the \"Ricketts Campus.\""
     },
     {
         "coordinate": [
@@ -802,7 +682,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Robison Swimming Pool", 
-        "desc": ""
+        "desc": "Home to the Rensselaer men's and women's swimming & diving teams, the Robison Pool features eight lanes for competitive swimming.  Additionally, the complex has multiple three-meter and one-meter diving boards.\n\nIn addition to being used for varsity athletic events and practices, Robison Pool is home to the Swim Club and annual events and activities, like the event \"Will It Float?\" during GM Week. "
     },
     {
         "coordinate": [
@@ -814,7 +694,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "RPI Ambulance", 
-        "desc": ""
+        "desc": "RPI Ambulance is a student run and operated Basic Life Support (BLS) transporting ambulance agency that serves the RPI campus and surrounding communities. They respond to approximately 150 to 200 calls and provide first aid coverage to about 30 special events every academic year.\n\nRPI Ambulance was founded in 1977 as the first EMS agency in Troy and the surrounding area. Today, RPIA serves the RPI campus as well as some of the surrounding towns. They mainly respond to on-campus calls, but also receive mutual aid calls to Brunswick, North Greenbush (including Wynantskill and Defreestville), and Poestenkill."
     },
     {
         "coordinate": [
@@ -862,7 +742,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Seismograph Laboratory", 
-        "desc": ""
+        "desc": "The Seismograph Laboratory, located on the east side of Sunset Terrace near People's Avenue, was completed in 1960. The Lab consisted of an arched metal structure 14 x 20 feet with a foundation reaching to bedrock and a roof covered with earth. Sensitive instruments to measure earth tremors were installed and recording instruments were placed in a nearby structure."
     },
     {
         "coordinate": [
@@ -874,7 +754,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Service Building", 
-        "desc": ""
+        "desc": "The Service Building, located on the north edge of the campus off of Peoples Avenue, was built in 1948. The yellow brick, steel-frame structure contained 16,044 feet of space and cost $113,480. The building was doubled in size in 1959 with a two-story addition on the north side. The building has housed the facilities that service and support the Institute's physical plant."
     },
     {
         "coordinate": [
@@ -886,7 +766,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Sharp Hall", 
-        "desc": ""
+        "desc": "Sharp Hall is located next to the tennis courts and is air cooled. It houses 94 second year students in 16 suites. Sharp Hall is undergoing renovations during the summer of 2008.\n\n12 suites has six single bedrooms, a large bathroom, and a communal living room.\n\nTwo suites are ADA accessible and containg five single bedrooms, a large bathroom, a communal living room, laundry facilities, and a kitchenette.\n\nThe basement area of Sharp Hall has a kitchen area and laundry facilities."
     },
     {
         "coordinate": [
@@ -898,7 +778,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Rousseau Apartments", 
-        "desc": ""
+        "desc": "Part of the Stacwyck Apartments."
     },
     {
         "coordinate": [
@@ -910,7 +790,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Williams Apartments", 
-        "desc": ""
+        "desc": "Part of the Stacwyck Apartments."
     },
     {
         "coordinate": [
@@ -922,7 +802,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Stacwyck Apartments", 
-        "desc": ""
+        "desc": "Stacwyck is located near the athletic fields, the East Campus Athletic Village (ECAV), and the Field House. It’s comprised of five buildings - Williams, Thompson, Wiltsie and Rousseau - with 12 apartments each, and McGiffert which has been remodeled to accommodate a sorority. Many sophomore athletes choose to live in Stacwyck to be closer to the sporting facilities.\n\nEach building has its own laundry room, a mail boxes, and 12 apartments, 4 on each floor. Each apartment is comprised of 4 bedrooms, a roomy storage closet, a bathroom (with a bath tub), a kitchen, and a living room. There is a lounge on the first floor of Wiltsie with a TV, foosball table, a stationary bike, a step master, a bathroom, and plenty of tables, couches, and chairs.\n\nEach bedroom is a single. They have a bed, dresser, desk, chair, and a closet. Suites have air conditioning that can be operated from each living room, and large kitchens and bathrooms. It is a minute walk to the football field, 5 minutes from the closest dining hall in BARH, and a 10-15 minute walk to freshman hill. There are two shuttle stops for Stacwyck that have shuttles running no more than 15 minutes apart to get students down to academic campus.\n\nStacwyck is located just east of ECAV, just below Sunset Terrance, and right next to Bryckwyck"
     },
     {
         "coordinate": [
@@ -934,7 +814,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "McGiffert Apartments", 
-        "desc": ""
+        "desc": "Part of the Stacwyck Apartments."
     },
     {
         "coordinate": [
@@ -946,7 +826,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Thompson Apartments", 
-        "desc": ""
+        "desc": "Part of the Stacwyck Apartments."
     },
     {
         "coordinate": [
@@ -958,7 +838,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "133 Sunset Terrace", 
-        "desc": ""
+        "desc": "Home of the Rensselaer Chapter of Delta Tau Delta."
     },
     {
         "coordinate": [
@@ -970,7 +850,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "200 Sunset Terrace", 
-        "desc": ""
+        "desc": "Home of the Epsilon-Eta chapter of Lambda Chi Alpha."
     },
     {
         "coordinate": [
@@ -1018,7 +898,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Warren Hall", 
-        "desc": ""
+        "desc": "Warren houses approximately 100 upperclass students in double rooms. Each room has a private bath and is divided by a wardrobe into semi-private living areas. This privacy wall is not shown in the floor plans.\n\nThe first floor of Warren has a well-equipped kitchen and lounge.\n\nA printer is located on the first floor. The printer room has an outside entrance and is accessible to all campus residents."
     },
     {
         "coordinate": [
@@ -1042,7 +922,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "Winslow Building", 
-        "desc": ""
+        "desc": "The Winslow Chemical Laboratory was a laboratory of the Rensselaer Polytechnic Institute campus in Troy, New York, United States, which finished construction in 1866. It is named in honor of the 5th President of RPI, John F. Winslow, who donated half of the construction cost. The whole building was fitted for complete courses in general and analytical chemistry.\n\nThe laboratory was damaged by a fire in the upper story in 1884 and was rebuilt and enlarged in 1885. The building was again damaged by fire in 1904. It was used as a laboratory until 1907 and then converted into a shop. The building, falling into disrepair, was boarded up in the early 1970s and targeted for demolition. It was added to the National Register of Historic Places on November 4, 1990. As an effort to save the building, it was agreed with the city of Troy that the building would be leased to house a new children's science museum called the Junior Museum. The Junior Museum refurbished the Winslow building and opened its doors in 2000. Since then, the Junior Museum has moved to the Rensselaer Technology Park, and currently the Winslow Building is home to many research groups affiliated to Cognitive Science and Computer science departments of Rensselaer, namely, Rensselaer AI and Reasoning Lab, the Social and Behavioral Research Laboratory, the Tetherless World Constellation (since 2007) etc."
     }
   ]
 }
