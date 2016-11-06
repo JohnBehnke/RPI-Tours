@@ -354,12 +354,12 @@
                                                     <exclude reference="KVN-W5-wo9"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="WtL-Ai-nFL"/>
-                                                    <exclude reference="n70-AM-TcK"/>
-                                                    <exclude reference="KmT-Jn-GXo"/>
                                                     <exclude reference="O1c-0h-QfO"/>
                                                     <exclude reference="RYs-cc-Phh"/>
                                                     <exclude reference="v3b-v3-Ref"/>
+                                                    <exclude reference="KmT-Jn-GXo"/>
+                                                    <exclude reference="WtL-Ai-nFL"/>
+                                                    <exclude reference="n70-AM-TcK"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -369,12 +369,12 @@
                                                     <include reference="KVN-W5-wo9"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="WtL-Ai-nFL"/>
-                                                    <include reference="n70-AM-TcK"/>
-                                                    <include reference="KmT-Jn-GXo"/>
                                                     <include reference="O1c-0h-QfO"/>
                                                     <include reference="RYs-cc-Phh"/>
                                                     <include reference="v3b-v3-Ref"/>
+                                                    <include reference="KmT-Jn-GXo"/>
+                                                    <include reference="WtL-Ai-nFL"/>
+                                                    <include reference="n70-AM-TcK"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -387,7 +387,6 @@
                             <outlet property="delegate" destination="cW2-ce-wMm" id="jXq-Mg-muO"/>
                         </connections>
                     </tableView>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="OCg-JJ-kTy" id="SZD-bN-pcW"/>
                         <outlet property="ratingLabel" destination="KVN-W5-wo9" id="9e5-Qb-MUr"/>
@@ -562,6 +561,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ULE-2S-lwm"/>
+        <segue reference="T0M-T8-nNq"/>
     </inferredMetricsTieBreakers>
 </document>
