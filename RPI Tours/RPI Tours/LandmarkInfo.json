@@ -6,8 +6,10 @@
             -73.678631
         ], 
         "photos":[
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
+            "https://www.lib.rpi.edu/Archives/buildings/images/academy_hall.jpg", 
+            "https://www.rensselaer.edu/tour/academy/gallery/album1/large/academy1.jpg",
+            "https://www.rensselaer.edu/tour/academy/gallery/album1/large/academy2.jpg",
+            "https://www.rensselaer.edu/tour/academy/gallery/album1/large/academy-sign.jpg"
         ], 
         "name": "Academy Hall", 
         "desc": "Located at the corners of 15th Street and College Avenues, Academy Hall offers health and wellness, student financial services, academic counseling, and the Dean of Students Office under one roof.\n\nIt is home to the F.E. Gallagher Memorial Student Health Center, the Dean of Students Office, the Office of the First-Year Experience, the Archer Center for Student Leadership Development, and the offices of the Bursar, Financial Aid, and Registrar.\n\nThe Student Health Center offers comprehensive, nationally accredited physician directed program providing outpatient ambulatory health care. Services include medical, gynecology, and allergy clinics, a counseling center, and health education and wellness programs.\n\nThe Dean of Students Office encompasses Judicial Affairs, Greek Affairs, Minority Student Affairs, International Services for Students and Scholars, and Disability Services for Students."
@@ -18,8 +20,7 @@
             -73.67553949
         ], 
         "photos":[
-            "https://i.imgur.com/pdCVjDT.jpg", 
-            "https://i.imgur.com/pdCVjDT.jpg"
+            "https://www.rensselaer.edu/tour/admissions/gallery/album1/large/admissions.jpg"
         ], 
         "name": "Admissions", 
         "desc": "The Admissions Office is conveniently located across the street from the Student Union. Here you can attend one of the regular admissions information sessions and take a student-led campus tour."
@@ -394,7 +395,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "H Building", 
-        "desc": ""
+        "desc": "The H building had originally been planned to be renovated and turned into student housing during the late 1970s, along with the J building. This plan was abandoned and the H building was converted into office space and housed payroll and accounting functions."
     },
     {
         "coordinate": [
@@ -418,7 +419,7 @@
             "https://i.imgur.com/pdCVjDT.jpg"
         ], 
         "name": "J Building", 
-        "desc": ""
+        "desc": "The J building had originally been planned to be renovated and turned into student housing during the late 1970s, along with the H building. This plan was eventually abandoned and the J Building was renovated as a site for the Rensselaer Incubator in 1982. In addition to space for incubator companies, the J Building housed the Office of Communication Services, the print shop and the mail room."
     },
     {
         "coordinate": [

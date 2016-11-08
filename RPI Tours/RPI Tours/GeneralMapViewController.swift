@@ -52,7 +52,6 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         
         //Call the JSON parser for landmark info
         self.landmarkInformation = jsonParserLand()
-        print("FUCK IT ONLY HAS ", landmarkInformation.count, "ELEMENTS")
     }
     
     override func didReceiveMemoryWarning() {

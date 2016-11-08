@@ -35,8 +35,6 @@ func jsonParserLand() -> [Landmark] {
                 
                 for (_, landJSON) in json["landmarks"] {
                     
-                    print("FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK")
-                    
                     let land_lat = (landJSON["coordinate"].array)![0].double
                     let land_long = (landJSON["coordinate"].array)![1].double
                     let read_land_images = (landJSON["photos"].array)!
