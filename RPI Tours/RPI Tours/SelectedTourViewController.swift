@@ -34,7 +34,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     }
     @IBAction func pressedCenterMap(sender: AnyObject) {
         // Use mapView.setCenterCoordinate to recenter the map
-        mapView.setCenterCoordinate(mapCenterCoordinate!, zoomLevel: mapZoom, animated: true)
+        mapView.setCenterCoordinate((self.locationManager.location?.coordinate)!, zoomLevel: 15, animated: true)
     }
     
     //MARK: Global
@@ -190,7 +190,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                     // Add the polyline to the map and fit the viewport to the polyline.
                     self.mapView.addAnnotation(routeLine)
                     self.tourLine = routeLine
-                    self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
+//                    self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
                     
                 }
                 

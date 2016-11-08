@@ -52,6 +52,11 @@ class InfoViewController: UITableViewController {
     //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
+        
+        //sets status bar and navigation bar to the same color
+        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+        statusBar.backgroundColor = self.navigationController?.navigationBar.backgroundColor
         self.navigationItem.title = self.landmarkName
         
         let chosenLandmark = searchForLandmark()
@@ -79,6 +84,25 @@ class InfoViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func viewWillDisappear(animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (self.isMovingFromParentViewController()){
+            self.navigationController?.navigationBarHidden =  true
+            
+            //Status bar style and visibility
+            UIApplication.sharedApplication().statusBarHidden = false
+            UIApplication.sharedApplication().statusBarStyle = .LightContent
+            
+            //Change status bar color
+            let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+            if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
+                statusBar.backgroundColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
+                
+            }
+        }
+    }
     //MARK: Helper Functions
     func searchForLandmark() -> Landmark {
         for landmark in landmarkInformation {
