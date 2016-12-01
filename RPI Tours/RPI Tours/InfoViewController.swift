@@ -40,8 +40,8 @@ class InfoViewController: UITableViewController {
         self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
 
         //Does this async call work?
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
-          imageSliderVC.images = chosenLandmark.getImages()
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)) {
+          self.imageSliderVC.images = chosenLandmark.getImages()
         }
 
         //set the imageSlider options
