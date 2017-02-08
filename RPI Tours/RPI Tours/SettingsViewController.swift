@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
 
     
     //MARK: IBOutlets
@@ -20,32 +20,32 @@ class SettingsViewController: UITableViewController {
     
     //MARK: IBActions
     //Save any settings
-    @IBAction func triggeredSave(sender: AnyObject) {
+    @IBAction func triggeredSave(_ sender: AnyObject) {
         
         //Load the store
         
         //Set the setting
-        self.defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
-        self.defaults.setObject(measurementTypeSelector.selectedSegmentIndex, forKey: "savedIndex")
+        self.defaults.set(measurementTypeSelector.titleForSegment(at: measurementTypeSelector.selectedSegmentIndex), forKey: "system")
+        self.defaults.set(measurementTypeSelector.selectedSegmentIndex, forKey: "savedIndex")
         
         //Prompt the user with an alert
-        let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+        let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
             (_)in
             //self.performSegueWithIdentifier("cancelTour", sender: self)
         })
         //Present the alert
         alert.addAction(OKAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     
     //MARK: System Functions
     override func viewDidLoad() {
         
-        if self.defaults.objectForKey("savedIndex") != nil{
+        if self.defaults.object(forKey: "savedIndex") != nil{
             
-        self.measurementTypeSelector.selectedSegmentIndex = ((self.defaults.objectForKey("savedIndex")) as? Int)!
+        self.measurementTypeSelector.selectedSegmentIndex = ((self.defaults.object(forKey: "savedIndex")) as? Int)!
         }
 
         super.viewDidLoad()

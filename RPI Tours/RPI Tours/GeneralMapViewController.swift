@@ -61,40 +61,40 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
     
     //MARK: Mapbox Helper Functions
     
-    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         return true
     }
     
-    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+    func mapView(_ mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
         mapView.deselectAnnotation(annotation, animated: true)
         //tappedLandmarkDesc = annotation.subtitle!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
-    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
-        return UIButton(type: .DetailDisclosure)
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .detailDisclosure)
     }
     
-    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
     //MARK: Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showInfo" {
-            let controller = segue.destinationViewController as! InfoViewController
+            let controller = segue.destination as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
             controller.cameFromMap = true
             
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }

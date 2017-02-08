@@ -24,13 +24,13 @@ func jsonParserLand() -> [Landmark] {
     
     var land_list:[Landmark] = []
     
-    let land_file = NSBundle.mainBundle().pathForResource("LandmarkInfo", ofType: "json")
+    let land_file = Bundle.main.path(forResource: "LandmarkInfo", ofType: "json")
     
-    let jsonData = try? String(contentsOfFile: land_file!, encoding: NSUTF8StringEncoding)
+    let jsonData = try? String(contentsOfFile: land_file!, encoding: String.Encoding.utf8)
     
     if jsonData != nil {
         do {
-            if let data = jsonData?.dataUsingEncoding(NSUTF8StringEncoding) {
+            if let data = jsonData?.data(using: String.Encoding.utf8) {
                 let json = JSON(data: data)
                 
                 for (_, landJSON) in json["landmarks"] {
@@ -62,14 +62,14 @@ func jsonParserLand() -> [Landmark] {
 func jsonParserCat() -> [TourCat] {
 
     var cat_list:[TourCat] = []
-    let tours_file = NSBundle.mainBundle().pathForResource("Tours", ofType: "json")
-    let jsonData = try? String(contentsOfFile: tours_file!, encoding: NSUTF8StringEncoding)
+    let tours_file = Bundle.main.path(forResource: "Tours", ofType: "json")
+    let jsonData = try? String(contentsOfFile: tours_file!, encoding: String.Encoding.utf8)
     
     if jsonData != nil {
         
         do {
             
-            if let data = jsonData?.dataUsingEncoding(NSUTF8StringEncoding) {
+            if let data = jsonData?.data(using: String.Encoding.utf8) {
                 
                 let json = JSON(data: data)
                 
@@ -130,13 +130,13 @@ func jsonParserCat() -> [TourCat] {
 func buildCSV() -> [building] {
     
     //Get the wapoints csv file
-    let location = NSBundle.mainBundle().pathForResource("Waypoints", ofType: "csv")
+    let location = Bundle.main.path(forResource: "Waypoints", ofType: "csv")
     
     
-    let stringToParse = try? String(contentsOfFile:location!, encoding: NSUTF8StringEncoding)
+    let stringToParse = try? String(contentsOfFile:location!, encoding: String.Encoding.utf8)
     
     //Call CSwiftv to parse it
-    let csv = CSwiftV(string: stringToParse!)
+    let csv = CSwiftV(with: stringToParse!)
     
     var actualBuildings:[building] = []
     
@@ -151,12 +151,12 @@ func buildCSV() -> [building] {
 
 
 //Convert Meters to Feet
-func metersToFeet(input:Float) -> Float{
+func metersToFeet(_ input:Float) -> Float{
     
     return input * 3.28084
 }
 //Convert seoncds into seconds, hours, adn minutes
-func secondsToHoursMinutesSeconds (seconds : Double) -> (Double, Double, Double) {
+func secondsToHoursMinutesSeconds (_ seconds : Double) -> (Double, Double, Double) {
     let (hr,  minf) = modf (seconds / 3600)
     let (min, secf) = modf (60 * minf)
     return (hr, min, 60 * secf)

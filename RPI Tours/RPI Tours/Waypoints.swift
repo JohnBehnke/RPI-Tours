@@ -29,13 +29,13 @@ class tourWaypoint {
     }
     
     //SETTERS
-    func setLat(lat: Double) {
+    func setLat(_ lat: Double) {
         self.lat = lat
     }
-    func setLong(long: Double) {
+    func setLong(_ long: Double) {
         self.long = long
     }
     
-    private var lat: Double
-    private var long: Double
+    fileprivate var lat: Double
+    fileprivate var long: Double
 }

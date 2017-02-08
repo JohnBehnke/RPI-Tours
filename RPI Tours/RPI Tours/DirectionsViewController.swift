@@ -37,23 +37,23 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     
     //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
-    @IBAction func pressedCancelTour(sender: AnyObject) {
-        let alert = UIAlertController(title: "Are you sure you want to cancel your tour?", message: "Canceling Tour", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+    @IBAction func pressedCancelTour(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Are you sure you want to cancel your tour?", message: "Canceling Tour", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
             (_)in
-            self.performSegueWithIdentifier("cancelTour", sender: self)
+            self.performSegue(withIdentifier: "cancelTour", sender: self)
         })
         
-        let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+        let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
             (action:UIAlertAction) in print("pressed no")
         }
         
         alert.addAction(OKAction)
         alert.addAction(CancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func getInfo(sender: AnyObject) {
+    @IBAction func getInfo(_ sender: AnyObject) {
         var shortestPoint: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.tourLandmarks[0].getLat(), longitude: self.tourLandmarks[0].getLong())
         var name: String = ""
         let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
@@ -64,28 +64,28 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             let p = CLLocation(latitude: point.getLat(), longitude: point.getLong())
             let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
             
-            if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+            if(user.distance(from: p) < user.distance(from: sP)) {
                 shortestPoint = CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong())
                 name = point.getName()
             }
         }
         
         tappedLandmarkName = name
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
     //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden =  true
+        self.navigationController?.isNavigationBarHidden =  true
         
         //Status bar style and visibility
-        UIApplication.sharedApplication().statusBarHidden = false
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.statusBarStyle = .lightContent
         
         //Change status bar color
-        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
-        if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
             statusBar.backgroundColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
             
         }
@@ -95,15 +95,15 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         self.mapView.showsUserLocation = true
         
-        self.mapView.compassView.hidden = true
+        self.mapView.compassView.isHidden = true
         
-        self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
+        self.mapView.userTrackingMode  = MGLUserTrackingMode.followWithHeading
         
-        self.mapView.rotateEnabled = false
+        self.mapView.isRotateEnabled = false
         self.mapView.delegate = self
-        self.mapView.setCenterCoordinate((self.locationManager.location?.coordinate)!,zoomLevel: 17,  animated: false)
+        self.mapView.setCenter((self.locationManager.location?.coordinate)!,zoomLevel: 17,  animated: false)
         
-        self.mapView.setUserTrackingMode(MGLUserTrackingMode.FollowWithHeading, animated: true)
+        self.mapView.setUserTrackingMode(MGLUserTrackingMode.followWithHeading, animated: true)
         
         
         
@@ -120,8 +120,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        measurementSystem = defaults.objectForKey("system") as? String
+        let defaults = UserDefaults.standard
+        measurementSystem = defaults.object(forKey: "system") as? String
         if measurementSystem == nil {
             measurementSystem = "Imperial"
         }
@@ -130,26 +130,26 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
     }
     
-    func mapView(mapView: MGLMapView, didUpdateUserLocation userLocation: MGLUserLocation?) {
-        self.mapView.userTrackingMode  = MGLUserTrackingMode.FollowWithHeading
+    func mapView(_ mapView: MGLMapView, didUpdate userLocation: MGLUserLocation?) {
+        self.mapView.userTrackingMode  = MGLUserTrackingMode.followWithHeading
         
         
         if directions.count == 0 {
-            let alert = UIAlertController(title: "Tour Done!", message: "You finished the Tour! Congrats!", preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+            let alert = UIAlertController(title: "Tour Done!", message: "You finished the Tour! Congrats!", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                 (_)in
-                self.performSegueWithIdentifier("cancelTour", sender: self)
+                self.performSegue(withIdentifier: "cancelTour", sender: self)
             })
             
             alert.addAction(OKAction)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         else{
             generateNextDirection()
         }
     }
     
-    func mapView(mapView: MGLMapView, didChangeUserTrackingMode mode: MGLUserTrackingMode, animated: Bool) {
+    func mapView(_ mapView: MGLMapView, didChange mode: MGLUserTrackingMode, animated: Bool) {
         self.mapView.userTrackingMode = mode
     }
     
@@ -162,7 +162,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     
     
     
-    func mapView(mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
         // Give our polyline a unique color by checking for its `title` property
         if annotation is MGLPolyline {
             
@@ -172,39 +172,39 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         }
         else
         {
-            return UIColor.redColor()
+            return UIColor.red
         }
     }
     
-    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         
         return annotation.title!! != "You Are Here"
     }
     
-    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
-        return UIButton(type: .DetailDisclosure)
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .detailDisclosure)
     }
     
-    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!
 
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
     //MARK: Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showInfo" {
-            let controller = segue.destinationViewController as! InfoViewController
+            let controller = segue.destination as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
             controller.cameFromMap = false
             
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
@@ -223,42 +223,42 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         }
         
         
-        print(directions[0].maneuverDirection)
+        print(directions[0].maneuverDirection!)
         
-        if directions[0].maneuverType == ManeuverType.Arrive {
+        if directions[0].maneuverType == ManeuverType.arrive {
             Image_Label.image = UIImage(named: "arrive")
-            self.Button_Label.hidden  = false
+            self.Button_Label.isHidden  = false
         }
         else{
-            self.Button_Label.hidden = true
+            self.Button_Label.isHidden = true
         }
         
-        if directions[0].maneuverType == ManeuverType.Depart {
+        if directions[0].maneuverType == ManeuverType.depart {
             Image_Label.image = UIImage(named: "depart")
         }
         
-        if directions[0].maneuverDirection == ManeuverDirection.StraightAhead{
+        if directions[0].maneuverDirection == ManeuverDirection.straightAhead{
             Image_Label.image = UIImage(named: "straight")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.SharpLeft{
+        if directions[0].maneuverDirection == ManeuverDirection.sharpLeft{
             Image_Label.image = UIImage(named: "hLeft")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.SharpRight{
+        if directions[0].maneuverDirection == ManeuverDirection.sharpRight{
             Image_Label.image = UIImage(named: "hRight")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.SlightLeft{
+        if directions[0].maneuverDirection == ManeuverDirection.slightLeft{
             Image_Label.image = UIImage(named: "sLeft")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.SlightRight{
+        if directions[0].maneuverDirection == ManeuverDirection.slightRight{
             Image_Label.image = UIImage(named: "sRight")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.Left{
+        if directions[0].maneuverDirection == ManeuverDirection.left{
             Image_Label.image = UIImage(named: "Left")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.Right{
+        if directions[0].maneuverDirection == ManeuverDirection.right{
             Image_Label.image = UIImage(named: "Right")
         }
-        if directions[0].maneuverDirection == ManeuverDirection.UTurn{
+        if directions[0].maneuverDirection == ManeuverDirection.uTurn{
             Image_Label.image = UIImage(named: "uTurn")
         }
         
@@ -271,7 +271,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         let stepLocation = CLLocation(latitude: (nextStep.maneuverLocation.latitude), longitude: (nextStep.maneuverLocation.longitude))
         
-        if  ( (self.locationManager.location?.distanceFromLocation(stepLocation)) < 3) {
+        if  (self.locationManager.location?.distance(from: stepLocation).significandBitPattern)! < 3 {
             displayInstruction()
         }
     }

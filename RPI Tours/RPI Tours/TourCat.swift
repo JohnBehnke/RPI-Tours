@@ -37,18 +37,18 @@ class TourCat {
     }
     
     //SETTERS
-    func setName(name:String) {
+    func setName(_ name:String) {
         self.name = name
     }
-    func setDesc(desc:String) {
+    func setDesc(_ desc:String) {
         self.desc = desc
     }
-    func setTours(tours: [Tour]) {
+    func setTours(_ tours: [Tour]) {
         self.tours = tours
     }
     
     //Priavte VARIABLES
-    private var name: String
-    private var desc: String
-    private var tours: [Tour]
+    fileprivate var name: String
+    fileprivate var desc: String
+    fileprivate var tours: [Tour]
 }

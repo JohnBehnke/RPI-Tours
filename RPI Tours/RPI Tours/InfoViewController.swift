@@ -25,14 +25,14 @@ class InfoViewController: UITableViewController {
     var imageSliderVC: TNImageSliderViewController!
     var cameFromMap: Bool = false
     
-    @IBAction func pressedRouteTo(sender: AnyObject) {
-        self.performSegueWithIdentifier("showDirections", sender: self)
+    @IBAction func pressedRouteTo(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "showDirections", sender: self)
     }
     
     //MARK: Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "imageSlider" {
-            imageSliderVC = segue.destinationViewController as! TNImageSliderViewController
+            imageSliderVC = segue.destination as! TNImageSliderViewController
         }
         
         if segue.identifier == "showDirections" {
@@ -44,7 +44,7 @@ class InfoViewController: UITableViewController {
             let routeWaypoint = tourWaypoint(lat: landmark.getLat(), long: landmark.getLong())
             let routeTour = Tour(name: landmarkName, desc: routeDesc, distance: 0, duration: 0, waypoints: [routeWaypoint], landmarks: [routeLand])
             
-            let controller = (segue.destinationViewController as! SelectedTourViewController)
+            let controller = (segue.destination as! SelectedTourViewController)
             controller.selectedTour = routeTour
         }
     }
@@ -52,10 +52,10 @@ class InfoViewController: UITableViewController {
     //MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         
         //sets status bar and navigation bar to the same color
-        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         statusBar.backgroundColor = self.navigationController?.navigationBar.backgroundColor
         self.navigationItem.title = self.landmarkName
         
@@ -68,15 +68,15 @@ class InfoViewController: UITableViewController {
         //set the imageSlider options
         var options = TNImageSliderViewOptions()
         options.pageControlHidden = false
-        options.scrollDirection = .Horizontal
+        options.scrollDirection = .horizontal
         options.shouldStartFromBeginning = true
-        options.imageContentMode = .ScaleAspectFit
-        options.pageControlCurrentIndicatorTintColor = UIColor.redColor()
+        options.imageContentMode = .scaleAspectFit
+        options.pageControlCurrentIndicatorTintColor = UIColor.red
         
         imageSliderVC.options = options
         
         if !cameFromMap || chosenLandmark.getName() == "No Info" {
-            routeButtonCell.hidden = true
+            routeButtonCell.isHidden = true
         }
     }
     
@@ -85,19 +85,19 @@ class InfoViewController: UITableViewController {
     }
     
     
-    override func viewWillDisappear(animated : Bool) {
+    override func viewWillDisappear(_ animated : Bool) {
         super.viewWillDisappear(animated)
         
-        if (self.isMovingFromParentViewController()){
-            self.navigationController?.navigationBarHidden =  true
+        if (self.isMovingFromParentViewController){
+            self.navigationController?.isNavigationBarHidden =  true
             
             //Status bar style and visibility
-            UIApplication.sharedApplication().statusBarHidden = false
-            UIApplication.sharedApplication().statusBarStyle = .LightContent
+            UIApplication.shared.isStatusBarHidden = false
+            UIApplication.shared.statusBarStyle = .lightContent
             
             //Change status bar color
-            let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
-            if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
+            let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+            if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
                 statusBar.backgroundColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
                 
             }
@@ -118,7 +118,7 @@ class InfoViewController: UITableViewController {
     }
     
     //MARK: TableView Functions
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 1 {
             return UITableViewAutomaticDimension
@@ -127,7 +127,7 @@ class InfoViewController: UITableViewController {
         return 300
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 1 {
             return UITableViewAutomaticDimension

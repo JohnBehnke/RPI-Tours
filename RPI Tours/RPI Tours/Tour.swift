@@ -61,35 +61,35 @@ class Tour {
     }
     
     //SETTERS
-    func setName(name: String) {
+    func setName(_ name: String) {
         self.name = name
     }
-    func setDesc(desc: String) {
+    func setDesc(_ desc: String) {
         self.desc = desc
     }
-    func setDistance(distance: Int) {
+    func setDistance(_ distance: Int) {
         self.distance = distance
     }
-    func setDuration(duration: Int) {
+    func setDuration(_ duration: Int) {
         self.duration = duration
     }
-    func setWaypoints(waypoints: [tourWaypoint]) {
+    func setWaypoints(_ waypoints: [tourWaypoint]) {
         self.waypoints = waypoints
     }
-    func setLandmarks(landmarks: [Landmark]) {
+    func setLandmarks(_ landmarks: [Landmark]) {
         self.landmarks = landmarks
     }
     
-    func setHasTaken(input:Bool) {
+    func setHasTaken(_ input:Bool) {
         self.hasTaken = input
     }
     
     //VARIABLES
-    private var name: String
-    private var desc: String
-    private var distance: Int
-    private var duration: Int
-    private var waypoints: [tourWaypoint]
-    private var landmarks: [Landmark]
-    private var  hasTaken: Bool
+    fileprivate var name: String
+    fileprivate var desc: String
+    fileprivate var distance: Int
+    fileprivate var duration: Int
+    fileprivate var waypoints: [tourWaypoint]
+    fileprivate var landmarks: [Landmark]
+    fileprivate var  hasTaken: Bool
 }

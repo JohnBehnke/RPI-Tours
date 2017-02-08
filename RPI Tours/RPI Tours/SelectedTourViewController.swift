@@ -23,18 +23,18 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     @IBOutlet var tourTimeLabel: UILabel!
     
     //MARK: IBAction
-    @IBAction func pressedStartTour(sender: AnyObject) {
+    @IBAction func pressedStartTour(_ sender: AnyObject) {
         if(directionsDidLoad) {
-            self.performSegueWithIdentifier("showDirections", sender: self)
+            self.performSegue(withIdentifier: "showDirections", sender: self)
         }
         
     }
-    @IBAction func stepActivate(sender: AnyObject) {
+    @IBAction func stepActivate(_ sender: AnyObject) {
         ratingLabel.text = String(self.stepperControl.value)
     }
-    @IBAction func pressedCenterMap(sender: AnyObject) {
+    @IBAction func pressedCenterMap(_ sender: AnyObject) {
         // Use mapView.setCenterCoordinate to recenter the map
-        mapView.setCenterCoordinate((self.locationManager.location?.coordinate)!, zoomLevel: 15, animated: true)
+        mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15, animated: true)
     }
     
     //MARK: Global
@@ -70,8 +70,8 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
             mapView.addAnnotation(point)
         }
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        measurementSystem = defaults.objectForKey("system") as? String
+        let defaults = UserDefaults.standard
+        measurementSystem = defaults.object(forKey: "system") as? String
         if measurementSystem == nil {
             measurementSystem = "Imperial"
         }
@@ -115,7 +115,7 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                 let p = CLLocation(latitude: point.latitude, longitude: point.longitude)
                 let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
                 
-                if(user.distanceFromLocation(p) < user.distanceFromLocation(sP)) {
+                if(user.distance(from: p) < user.distance(from: sP)) {
                     shortestPoint = point
                 }
             }
@@ -144,11 +144,11 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
-        options.routeShapeResolution = .Full
+        options.routeShapeResolution = .full
         options.allowsUTurnAtWaypoint = false
 
         
-        _ = directions.calculateDirections(options: options) { (waypoints, routes, error) in
+        _ = directions.calculate(options) { (waypoints, routes, error) in
             guard error == nil else {
                 print("Error calculating directions: \(error!)")
                 return
@@ -165,20 +165,20 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
                     }
                 }
                 
-                let distanceFormatter = NSLengthFormatter()
+                let distanceFormatter = LengthFormatter()
                 var distance = ""
                 
                 if self.measurementSystem == "Imperial"{
-                    distance = distanceFormatter.stringFromMeters(route.distance)
+                    distance = distanceFormatter.string(fromMeters: route.distance)
                      self.tourLengthLabel.text = "Distance: \(distance) (\(numSteps) route steps)"
                 }
                 else{
                 self.tourLengthLabel.text = "Distance: \(route.distance) Meters (\(numSteps) route steps)"
                 }
                 
-                let travelTimeFormatter = NSDateComponentsFormatter()
-                travelTimeFormatter.unitsStyle = .Abbreviated
-                let formattedTravelTime = travelTimeFormatter.stringFromTimeInterval(route.expectedTravelTime)
+                let travelTimeFormatter = DateComponentsFormatter()
+                travelTimeFormatter.unitsStyle = .abbreviated
+                let formattedTravelTime = travelTimeFormatter.string(from: route.expectedTravelTime)
                 
                 self.tourTimeLabel.text = "Estimated time: \(formattedTravelTime!)"
                 
@@ -201,14 +201,14 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         directionsDidLoad = true
         self.mapCenterCoordinate = self.mapView.centerCoordinate
         self.mapZoom = self.mapView.zoomLevel - 0.5
-        self.mapView.rotateEnabled = false
+        self.mapView.isRotateEnabled = false
         
         
         
     }
     
     // MARK: Table View Functions
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 5
         //Number of sections in the UI
@@ -217,42 +217,42 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     
     //MARK: Mapbox Helper Functions
     
-    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         
         return true
     }
     
-    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
-        return UIButton(type: .DetailDisclosure)
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .detailDisclosure)
     }
     
-    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
-    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+    func mapView(_ mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
         mapView.deselectAnnotation(annotation, animated: true)
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     
     
-    func mapView(mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
+    func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
         // Set the alpha for all shape annotations to 1 (full opacity)
         return 1
     }
     
-    func mapView(mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
+    func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
         // Set the line width for polyline annotations
         return 4.0
     }
     
-    func mapView(mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
         // Give our polyline a unique color by checking for its `title` property
         if annotation is MGLPolyline {
             
@@ -262,16 +262,16 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
         else
         {
-            return UIColor.redColor()
+            return UIColor.red
         }
     }
     
     
     //MARK: Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDirections" {
             
-            let controller = segue.destinationViewController  as! DirectionsViewController //Create the detailVC
+            let controller = segue.destination  as! DirectionsViewController //Create the detailVC
             
             controller.directions = self.calculatedTour
             controller.tourLine = self.tourLine
@@ -282,13 +282,13 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         }
         
         if segue.identifier == "showInfo" {
-            let controller = segue.destinationViewController as! InfoViewController
+            let controller = segue.destination as! InfoViewController
             
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
             controller.cameFromMap = false
             
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }

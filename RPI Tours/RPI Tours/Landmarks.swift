@@ -38,8 +38,8 @@ class Landmark: tourWaypoint {
         var images: [UIImage] = []
         
         for i in urls {
-            let url = NSURL(string: i)
-            let data = NSData(contentsOfURL: url!)
+            let url = URL(string: i)
+            let data = try? Data(contentsOf: url!)
             images.append(UIImage(data: data!)!)
         }
         
@@ -49,22 +49,22 @@ class Landmark: tourWaypoint {
     
     
     //SETTERS
-    func setName(name:String) {
+    func setName(_ name:String) {
         self.name = name
     }
-    func setDesc(desc:String) {
+    func setDesc(_ desc:String) {
         self.desc = desc
     }
-    func setImages(urls:[String]) {
+    func setImages(_ urls:[String]) {
         self.urls = urls
     }
 
     
     
     //VARIABLES
-    private var name: String
-    private var desc: String
-    private var urls: [String]
+    fileprivate var name: String
+    fileprivate var desc: String
+    fileprivate var urls: [String]
 
     
 }
