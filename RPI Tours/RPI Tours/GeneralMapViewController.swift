@@ -66,12 +66,6 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
     
-    func mapView(_ mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
-        tappedLandmarkName = annotation.title!!
-        mapView.deselectAnnotation(annotation, animated: true)
-        //tappedLandmarkDesc = annotation.subtitle!!
-        self.performSegue(withIdentifier: "showInfo", sender: self)
-    }
     
     func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
         return UIButton(type: .detailDisclosure)

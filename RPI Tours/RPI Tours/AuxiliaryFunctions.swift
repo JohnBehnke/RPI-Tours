@@ -19,6 +19,7 @@ struct building {
     
 }
 
+
 // Our Landmark Information JSON Parser
 func jsonParserLand() -> [Landmark] {
     
@@ -61,7 +62,7 @@ func jsonParserLand() -> [Landmark] {
 
 // Our Tour Category JSON Parser
 func jsonParserCat() -> [TourCat] {
-
+    
     var cat_list:[TourCat] = []
     let tours_file = Bundle.main.path(forResource: "Tours", ofType: "json")
     let jsonData = try? String(contentsOfFile: tours_file!, encoding: String.Encoding.utf8)

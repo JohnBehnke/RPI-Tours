@@ -7,6 +7,8 @@
 //
 
 import UIKit
+
+
 //Inherit from Waypoint becuase OOP
 class Landmark: tourWaypoint {
     
@@ -34,18 +36,10 @@ class Landmark: tourWaypoint {
     func getDesc() -> String {
         return desc
     }
-    func getImages() -> [UIImage] {
-        var images: [UIImage] = []
-        
-        for i in urls {
-            let url = URL(string: i)
-            let data = try? Data(contentsOf: url!)
-            images.append(UIImage(data: data!)!)
-        }
-        
-        return images
+    func getImageURLs() -> [String] {
+        return urls
     }
-
+    
     
     
     //SETTERS
@@ -58,13 +52,14 @@ class Landmark: tourWaypoint {
     func setImages(_ urls:[String]) {
         self.urls = urls
     }
-
+    
+    
     
     
     //VARIABLES
     fileprivate var name: String
     fileprivate var desc: String
     fileprivate var urls: [String]
-
+    
     
 }
