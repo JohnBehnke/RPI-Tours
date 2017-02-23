@@ -10,9 +10,9 @@ import UIKit
 import CoreLocation
 
 class Tour {
-    
+
     //INITIALIZERS
-    init(name: String, desc: String, distance: Int, duration: Int, waypoints: [tourWaypoint], landmarks: [Landmark]) {
+    init(name: String, desc: String, distance: Int, duration: Int, waypoints: [TourWaypoint], landmarks: [Landmark]) {
         self.name = name
         self.desc = desc
         self.distance = distance
@@ -22,7 +22,7 @@ class Tour {
         self.hasTaken = false
 
     }
-    
+
      init() {
         self.name = ""
         self.desc = ""
@@ -32,12 +32,12 @@ class Tour {
         self.landmarks = []
         self.hasTaken = false
     }
-    
+
     //GETTERS
     func getName() -> String {
         return name
     }
-    func getDesc() -> String  {
+    func getDesc() -> String {
         return desc
     }
     func getDistance() -> Int {
@@ -47,19 +47,18 @@ class Tour {
         return duration
     }
     //Returns waypoints in the form of CLLocationCoordinate2D for easier working with MapBox
-    func getWaypoints() -> [CLLocationCoordinate2D]{
-        var retArray:[CLLocationCoordinate2D] = []
-        for point in waypoints{
+    func getWaypoints() -> [CLLocationCoordinate2D] {
+        var retArray: [CLLocationCoordinate2D] = []
+        for point in waypoints {
             retArray.append(CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong()))
         }
         return retArray
     }
-    
-    
-    func getLandmarks()  -> [Landmark]{
+
+    func getLandmarks() -> [Landmark] {
         return landmarks
     }
-    
+
     //SETTERS
     func setName(_ name: String) {
         self.name = name
@@ -73,23 +72,23 @@ class Tour {
     func setDuration(_ duration: Int) {
         self.duration = duration
     }
-    func setWaypoints(_ waypoints: [tourWaypoint]) {
+    func setWaypoints(_ waypoints: [TourWaypoint]) {
         self.waypoints = waypoints
     }
     func setLandmarks(_ landmarks: [Landmark]) {
         self.landmarks = landmarks
     }
-    
-    func setHasTaken(_ input:Bool) {
+
+    func setHasTaken(_ input: Bool) {
         self.hasTaken = input
     }
-    
+
     //VARIABLES
     fileprivate var name: String
     fileprivate var desc: String
     fileprivate var distance: Int
     fileprivate var duration: Int
-    fileprivate var waypoints: [tourWaypoint]
+    fileprivate var waypoints: [TourWaypoint]
     fileprivate var landmarks: [Landmark]
     fileprivate var  hasTaken: Bool
 }

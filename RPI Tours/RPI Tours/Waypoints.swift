@@ -8,26 +8,26 @@
 
 import UIKit
 
-class tourWaypoint {
+class TourWaypoint {
     //INITIALIZERS
     init(lat: Double, long: Double) {
         self.lat = lat
         self.long = long
     }
-    
+
      init() {
         self.lat = 0.0
         self.long = 0.0
     }
-    
+
     //GETTERS
     func getLat() -> Double {
         return lat
     }
-    func getLong()  -> Double {
+    func getLong() -> Double {
         return long
     }
-    
+
     //SETTERS
     func setLat(_ lat: Double) {
         self.lat = lat
@@ -35,7 +35,7 @@ class tourWaypoint {
     func setLong(_ long: Double) {
         self.long = long
     }
-    
+
     fileprivate var lat: Double
     fileprivate var long: Double
 }

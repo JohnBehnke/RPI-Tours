@@ -11,23 +11,22 @@ import Mapbox
 import CoreLocation
 import MapboxDirections
 
+class SelectedTourViewController: UITableViewController, CLLocationManagerDelegate {
 
-class SelectedTourViewController: UITableViewController , CLLocationManagerDelegate {
-    
-    //MARK: IBOUTLETS
+    // MARK: IBOUTLETS
     @IBOutlet var tourLengthLabel: UILabel!
     @IBOutlet var mapView: MGLMapView!
     @IBOutlet var tourDescriptionLabel: UILabel!
     @IBOutlet var stepperControl: UIStepper!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var tourTimeLabel: UILabel!
-    
-    //MARK: IBAction
+
+    // MARK: IBAction
     @IBAction func pressedStartTour(_ sender: AnyObject) {
-        if(directionsDidLoad) {
+        if directionsDidLoad {
             self.performSegue(withIdentifier: "showDirections", sender: self)
         }
-        
+
     }
     @IBAction func stepActivate(_ sender: AnyObject) {
         ratingLabel.text = String(self.stepperControl.value)
@@ -36,13 +35,13 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
         // Use mapView.setCenterCoordinate to recenter the map
         mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15, animated: true)
     }
-    
-    //MARK: Global
-    var selectedTour:Tour = Tour()
+
+    // MARK: Global
+    var selectedTour: Tour = Tour()
     //var directions: MBDirections?
-    var measurementSystem:String?
-    var calculatedTour:[RouteStep] = []
-    var calculatedTourPoints:[CLLocationCoordinate2D] = []
+    var measurementSystem: String?
+    var calculatedTour: [RouteStep] = []
+    var calculatedTourPoints: [CLLocationCoordinate2D] = []
     let locationManager: CLLocationManager! = CLLocationManager()
     var tourLine: MGLPolyline = MGLPolyline()
     var directionsDidLoad = false
@@ -50,250 +49,224 @@ class SelectedTourViewController: UITableViewController , CLLocationManagerDeleg
     var mapZoom = 0.0
     var tappedLandmarkName: String = ""
     var landmarkInformation: [Landmark] = []
-    
-    
-    //MARK: System Functions
+
+    // MARK: System Functions
     override func viewDidLoad() {
-        
-        
-        
+
         //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.getDesc()
-        
+
         //For
         for item in selectedTour.getLandmarks() {
             let point = MGLPointAnnotation()
             point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
             point.title = item.getName()
             //point.subtitle = item.getDesc()
-            
+
             mapView.addAnnotation(point)
         }
-        
+
         let defaults = UserDefaults.standard
         measurementSystem = defaults.object(forKey: "system") as? String
         if measurementSystem == nil {
             measurementSystem = "Imperial"
         }
-        
+
         //Call the JSON parser for Landmark Info
         self.landmarkInformation = jsonParserLand()
-        
+
         calculateDirections()
-        
+
         super.viewDidLoad()
-        
-        
-        
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    //MARK: Helper Functions
-    
+
+    // MARK: Helper Functions
+
     func calculateDirections() {
-        
+
         //Get the waypoints for the tour
-        let workingWaypoints:[CLLocationCoordinate2D] = selectedTour.getWaypoints()
-        
-        
+        let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.getWaypoints()
+
         let directions = Directions(accessToken: mapBoxAPIKey)
-        
-        var waypoints:[Waypoint] = []
-        
+
+        var waypoints: [Waypoint] = []
+
         var shortestPoint: CLLocationCoordinate2D = workingWaypoints[0]
-        
-        if(self.locationManager.location != nil) {
+
+        if self.locationManager.location != nil {
             let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
-            
+
             for point in workingWaypoints {
                 let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
                 let p = CLLocation(latitude: point.latitude, longitude: point.longitude)
                 let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
-                
-                if(user.distance(from: p) < user.distance(from: sP)) {
+
+                if user.distance(from: p) < user.distance(from: sP) {
                     shortestPoint = point
                 }
             }
-            
+
             waypoints.append(Waypoint(coordinate: userLocation))
         }
-        
+
         var shortestPointLocation = 0
         for point in workingWaypoints {
-            if(point.latitude == shortestPoint.latitude && point.longitude == shortestPoint.longitude){
-                break;
-            }
-            else {
+            if point.latitude == shortestPoint.latitude && point.longitude == shortestPoint.longitude {
+                break
+            } else {
                 shortestPointLocation += 1
             }
         }
-        
+
         for i in 0..<(workingWaypoints.count - shortestPointLocation) {
             waypoints.append(Waypoint(coordinate: workingWaypoints[i + shortestPointLocation]))
         }
-        
+
         for i in 0..<shortestPointLocation {
             waypoints.append(Waypoint(coordinate: workingWaypoints[i]))
         }
 
-        
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
         options.includesSteps = true
         options.routeShapeResolution = .full
         options.allowsUTurnAtWaypoint = false
 
-        
-        _ = directions.calculate(options) { (waypoints, routes, error) in
+        _ = directions.calculate(options) { (_, routes, error) in
             guard error == nil else {
                 print("Error calculating directions: \(error!)")
                 return
             }
-            
-            
+
             if let route = routes?.first, let _ = route.legs.first {
-                
+
                 var numSteps = 0
-                for legs in route.legs{
+                for legs in route.legs {
                     numSteps += legs.steps.count
-                    for step in legs.steps{
+                    for step in legs.steps {
                         self.calculatedTour.append(step)
                     }
                 }
-                
+
                 let distanceFormatter = LengthFormatter()
                 var distance = ""
-                
+
                 if self.measurementSystem == "Imperial"{
                     distance = distanceFormatter.string(fromMeters: route.distance)
                      self.tourLengthLabel.text = "Distance: \(distance) (\(numSteps) route steps)"
-                }
-                else{
+                } else {
                 self.tourLengthLabel.text = "Distance: \(route.distance) Meters (\(numSteps) route steps)"
                 }
-                
+
                 let travelTimeFormatter = DateComponentsFormatter()
                 travelTimeFormatter.unitsStyle = .abbreviated
                 let formattedTravelTime = travelTimeFormatter.string(from: route.expectedTravelTime)
-                
+
                 self.tourTimeLabel.text = "Estimated time: \(formattedTravelTime!)"
-                
+
                 if route.coordinateCount > 0 {
                     // Convert the route’s coordinates into a polyline.
                     var routeCoordinates = route.coordinates!
                     let routeLine = MGLPolyline(coordinates: &routeCoordinates, count: route.coordinateCount)
-                    
+
                     // Add the polyline to the map and fit the viewport to the polyline.
                     self.mapView.addAnnotation(routeLine)
                     self.tourLine = routeLine
-//                    self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsetsZero, animated: true)
-                    
                 }
-                
+
             }
         }
-        
-        
+
         directionsDidLoad = true
         self.mapCenterCoordinate = self.mapView.centerCoordinate
         self.mapZoom = self.mapView.zoomLevel - 0.5
         self.mapView.isRotateEnabled = false
-        
-        
-        
+
     }
-    
+
     // MARK: Table View Functions
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 5
         //Number of sections in the UI
     }
-    
-    
-    //MARK: Mapbox Helper Functions
-    
+
+    // MARK: Mapbox Helper Functions
+
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
-        
+
         return true
     }
-    
+
     func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
         return UIButton(type: .detailDisclosure)
     }
-    
+
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
-        
+
         tappedLandmarkName = annotation.title!!
         self.performSegue(withIdentifier: "showInfo", sender: self)
     }
-    
+
     func mapView(_ mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
         mapView.deselectAnnotation(annotation, animated: true)
         self.performSegue(withIdentifier: "showInfo", sender: self)
     }
-    
-    
+
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
         // Set the alpha for all shape annotations to 1 (full opacity)
         return 1
     }
-    
+
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
         // Set the line width for polyline annotations
         return 4.0
     }
-    
+
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
         // Give our polyline a unique color by checking for its `title` property
         if annotation is MGLPolyline {
-            
-            
+
             return UIColor(red: 59/255, green:178/255, blue:208/255, alpha:1)
-            
-        }
-        else
-        {
+
+        } else {
             return UIColor.red
         }
     }
-    
-    
-    //MARK: Segues
+
+    // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDirections" {
-            
+
             let controller = segue.destination  as! DirectionsViewController //Create the detailVC
-            
+
             controller.directions = self.calculatedTour
             controller.tourLine = self.tourLine
             controller.tourLandmarks = self.selectedTour.getLandmarks()
             controller.tourTitle = self.selectedTour.getName()
             controller.landmarkInformation = self.landmarkInformation
-            
+
         }
-        
+
         if segue.identifier == "showInfo" {
             let controller = segue.destination as! InfoViewController
-            
+
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
             controller.cameFromMap = false
-            
+
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }
-    
-    
-    
-    
+
 }
