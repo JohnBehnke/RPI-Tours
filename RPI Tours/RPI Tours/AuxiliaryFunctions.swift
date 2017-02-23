@@ -11,47 +11,46 @@ import SystemConfiguration
 import CSwiftV
 import SwiftyJSON
 
-//Strct to hold building info for the map view
-struct building {
-    var buildingLat:Double
-    var buildingLong:Double
-    var buildingName:String
-    
-}
+//Strct to hold Building info for the map view
+struct Building {
+    var buildingLat: Double
+    var buildingLong: Double
+    var buildingName: String
 
+}
 
 // Our Landmark Information JSON Parser
 func jsonParserLand() -> [Landmark] {
-    
-    var land_list:[Landmark] = []
-    
+
+    var land_list: [Landmark] = []
+
     let land_file = Bundle.main.path(forResource: "LandmarkInfo", ofType: "json")
-    
+
     let jsonData = try? String(contentsOfFile: land_file!, encoding: String.Encoding.utf8)
-    
+
     if jsonData != nil {
         do {
             if let data = jsonData?.data(using: String.Encoding.utf8) {
                 let json = JSON(data: data)
-                
+
                 for (_, landJSON) in json["landmarks"] {
-                    
+
                     let land_lat = (landJSON["coordinate"].array)![0].double
                     let land_long = (landJSON["coordinate"].array)![1].double
                     let read_land_images = (landJSON["photos"].array)!
                     let land_name = landJSON["name"].string
                     let land_desc = landJSON["desc"].string
-                    
+
                     var string_land_images: [String] = []
-                    
+
                     for i in read_land_images {
                         string_land_images.append(i.string!)
                     }
-                    
+
                     let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!)
-                    
+
                     newLandmark.setImages(string_land_images)
-                    
+
                     land_list.append(newLandmark)
                 }
             }
@@ -62,52 +61,53 @@ func jsonParserLand() -> [Landmark] {
 
 // Our Tour Category JSON Parser
 func jsonParserCat() -> [TourCat] {
-    
-    var cat_list:[TourCat] = []
+
+    var cat_list: [TourCat] = []
     let tours_file = Bundle.main.path(forResource: "Tours", ofType: "json")
     let jsonData = try? String(contentsOfFile: tours_file!, encoding: String.Encoding.utf8)
-    
+
     if jsonData != nil {
-        
+
         do {
-            
+
             if let data = jsonData?.data(using: String.Encoding.utf8) {
-                
+
                 let json = JSON(data: data)
-                
+
                 for (_, catJSON) in json["categories"] {
-                    
+
                     var cat_name: String = ""
                     var cat_desc: String = ""
-                    var tour_list:[Tour] = []
-                    
+                    var tour_list: [Tour] = []
+
                     if let sub_cat_name = catJSON["name"].string {
                         cat_name = sub_cat_name
                     }
-                    
+
                     if let sub_cat_desc = catJSON["desc"].string {
                         cat_desc = sub_cat_desc
                     }
-                    
+
                     for (_, tourJSON) in catJSON["tours"] {
-                        
-                        var land_list:[Landmark] = []
-                        var way_list:[tourWaypoint] = []
+
+                        var land_list: [Landmark] = []
+                        var way_list: [TourWaypoint] = []
                         var tour_name: String = ""
                         var tour_desc: String = ""
-                        
+
                         if let sub_tour_name = tourJSON["name"].string {
                             tour_name = sub_tour_name
                         }
-                        
+
                         if let sub_tour_desc = tourJSON["desc"].string {
                             tour_desc = sub_tour_desc
                         }
-                        
+
                         for (_, wayJSON) in tourJSON["waypoints"] {
-                            way_list.append(tourWaypoint(lat: Double(wayJSON[0].float!), long: Double(wayJSON[1].float!)))
+                            way_list.append(TourWaypoint(lat: Double(wayJSON[0].float!),
+                                                         long: Double(wayJSON[1].float!)))
                         }
-                        
+
                         for (_, landJSON) in tourJSON["landmarks"] {
                             let name = landJSON["name"].string
                             let desc = landJSON["description"].string
@@ -115,11 +115,18 @@ func jsonParserCat() -> [TourCat] {
                             let long = (landJSON["coordinate"].array)![1].double
                             land_list.append(Landmark(name: name!, desc: desc!, lat: lat!, long: long!))
                         }
-                        
-                        tour_list.append(Tour(name: tour_name, desc: tour_desc, distance: 0 /*distance*/, duration: 0 /*duration*/, waypoints: way_list, landmarks: land_list))
+
+                        tour_list.append(Tour(name: tour_name,
+                                              desc: tour_desc,
+                                              distance: 0,
+                                              duration: 0,
+                                              waypoints: way_list,
+                                             landmarks: land_list))
                     }
-                    
-                    cat_list.append(TourCat(name: cat_name, desc: cat_desc, tours: tour_list))
+
+                    cat_list.append(TourCat(name: cat_name,
+                                            desc: cat_desc,
+                                            tours: tour_list))
                 }
             }
         }
@@ -128,39 +135,38 @@ func jsonParserCat() -> [TourCat] {
 }
 
 //Build a CSV for our Map screen
-//Returns an array of building structs
-func buildCSV() -> [building] {
-    
+//Returns an array of Building structs
+func buildCSV() -> [Building] {
+
     //Get the wapoints csv file
     let location = Bundle.main.path(forResource: "Waypoints", ofType: "csv")
-    
-    
+
     let stringToParse = try? String(contentsOfFile:location!, encoding: String.Encoding.utf8)
-    
+
     //Call CSwiftv to parse it
     let csv = CSwiftV(with: stringToParse!)
-    
-    var actualBuildings:[building] = []
-    
-    //Add the building structs to the array
+
+    var actualBuildings: [Building] = []
+
+    //Add the Building structs to the array
     for line in csv.rows {
-        
-        actualBuildings.append(building(buildingLat: Double(line[0])! , buildingLong:  Double(line[1])!, buildingName: line[2]))
+
+        actualBuildings.append(Building(buildingLat: Double(line[0])!,
+                                        buildingLong:  Double(line[1])!,
+                                        buildingName: line[2]))
     }
     //return it
     return actualBuildings
 }
 
-
 //Convert Meters to Feet
-func metersToFeet(_ input:Float) -> Float{
-    
+func metersToFeet(_ input: Float) -> Float {
+
     return input * 3.28084
 }
 //Convert seoncds into seconds, hours, adn minutes
-func secondsToHoursMinutesSeconds (_ seconds : Double) -> (Double, Double, Double) {
-    let (hr,  minf) = modf (seconds / 3600)
+func secondsToHoursMinutesSeconds (_ seconds: Double) -> (Double, Double, Double) {
+    let (hr, minf) = modf (seconds / 3600)
     let (min, secf) = modf (60 * minf)
     return (hr, min, 60 * secf)
 }
-

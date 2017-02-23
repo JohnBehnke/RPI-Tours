@@ -8,27 +8,26 @@
 
 import UIKit
 
-
 //Inherit from Waypoint becuase OOP
-class Landmark: tourWaypoint {
-    
+class Landmark: TourWaypoint {
+
     //INITIALIZERS
     init(name: String, desc: String, lat: Double, long: Double) {
-        
+
         self.name = name
         self.desc = desc
         self.urls = []
-        super.init(lat: lat,long: long)
+        super.init(lat: lat, long: long)
     }
-    
+
     override init() {
-        
+
         self.name = ""
         self.desc = ""
         self.urls = []
         super.init()
     }
-    
+
     //GETTERS
     func getName() -> String {
         return name
@@ -39,27 +38,21 @@ class Landmark: tourWaypoint {
     func getImageURLs() -> [String] {
         return urls
     }
-    
-    
-    
+
     //SETTERS
-    func setName(_ name:String) {
+    func setName(_ name: String) {
         self.name = name
     }
-    func setDesc(_ desc:String) {
+    func setDesc(_ desc: String) {
         self.desc = desc
     }
-    func setImages(_ urls:[String]) {
+    func setImages(_ urls: [String]) {
         self.urls = urls
     }
-    
-    
-    
-    
+
     //VARIABLES
     fileprivate var name: String
     fileprivate var desc: String
     fileprivate var urls: [String]
-    
-    
+
 }
