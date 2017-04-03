@@ -10,6 +10,7 @@ import Foundation
 import SystemConfiguration
 import CSwiftV
 import SwiftyJSON
+import CoreLocation
 
 //Strct to hold Building info for the map view
 struct Building {
@@ -49,7 +50,7 @@ func jsonParserLand() -> [Landmark] {
 
                     let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!)
 
-                    newLandmark.setImages(string_land_images)
+                    newLandmark.urls = string_land_images
 
                     land_list.append(newLandmark)
                 }
@@ -91,7 +92,7 @@ func jsonParserCat() -> [TourCat] {
                     for (_, tourJSON) in catJSON["tours"] {
 
                         var land_list: [Landmark] = []
-                        var way_list: [TourWaypoint] = []
+                        var way_list: [CLLocationCoordinate2D] = []
                         var tour_name: String = ""
                         var tour_desc: String = ""
 
@@ -104,8 +105,8 @@ func jsonParserCat() -> [TourCat] {
                         }
 
                         for (_, wayJSON) in tourJSON["waypoints"] {
-                            way_list.append(TourWaypoint(lat: Double(wayJSON[0].float!),
-                                                         long: Double(wayJSON[1].float!)))
+                            way_list.append(CLLocationCoordinate2D(latitude: wayJSON[0].double!, longitude: wayJSON[1].double!))
+
                         }
 
                         for (_, landJSON) in tourJSON["landmarks"] {
@@ -118,10 +119,9 @@ func jsonParserCat() -> [TourCat] {
 
                         tour_list.append(Tour(name: tour_name,
                                               desc: tour_desc,
-                                              distance: 0,
-                                              duration: 0,
+
                                               waypoints: way_list,
-                                             landmarks: land_list))
+                                              landmarks: land_list))
                     }
 
                     cat_list.append(TourCat(name: cat_name,

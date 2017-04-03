@@ -55,20 +55,19 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     }
 
     @IBAction func getInfo(_ sender: AnyObject) {
-        var shortestPoint: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.tourLandmarks[0].getLat(),
-                                                                           longitude: self.tourLandmarks[0].getLong())
+        var shortestPoint: CLLocationCoordinate2D = (self.tourLandmarks.first?.point)!
         var name: String = ""
         let userLocation: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
 
         for point in self.tourLandmarks {
 
             let user = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            let p = CLLocation(latitude: point.getLat(), longitude: point.getLong())
+            let p = CLLocation(latitude: point.point.latitude, longitude: point.point.longitude)
             let sP = CLLocation(latitude: shortestPoint.latitude, longitude: shortestPoint.longitude)
 
             if user.distance(from: p) < user.distance(from: sP) {
-                shortestPoint = CLLocationCoordinate2D(latitude: point.getLat(), longitude: point.getLong())
-                name = point.getName()
+                shortestPoint = point.point
+                name = point.name
             }
         }
 
@@ -109,8 +108,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         for landmark in self.tourLandmarks {
 
             let point = MGLPointAnnotation()
-            point.coordinate = CLLocationCoordinate2D(latitude: landmark.getLat(), longitude: landmark.getLong())
-            point.title = landmark.getName()
+            point.coordinate = landmark.point
+            point.title = landmark.name
             mapView.addAnnotation(point)
         }
 

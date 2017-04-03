@@ -52,7 +52,7 @@ class ToursByCategoryViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tourCell", for: indexPath)
 
-        cell.textLabel?.text = tempTours[indexPath.row].getName()
+        cell.textLabel?.text = tempTours[indexPath.row].name
         return cell
     }
 
@@ -67,20 +67,21 @@ class ToursByCategoryViewController: UITableViewController {
     // MARK: Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let reachability = Reachability()!
 
+        let reachability = Reachability()!
         reachability.whenReachable = { reachability in
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
+            if  reachability.isReachable {
+                if segue.identifier == "tourDetail" {
+                    //Set the proper details for the next VC
+                    if let indexPath = self.tableView.indexPathForSelectedRow {
+                        print(self.tempTours[indexPath.row])
+                        print("111")
 
-            if segue.identifier == "tourDetail" {
-                //Set the proper details for the next VC
-                if let indexPath = self.tableView.indexPathForSelectedRow {
-                    print(self.tempTours[indexPath.row])
-                    print("111")
-
-                    let controller = (segue.destination as! SelectedTourViewController)
-                    controller.selectedTour = self.tempTours[indexPath.row]
+                        let controller = (segue.destination as! SelectedTourViewController)
+                        controller.selectedTour = self.tempTours[indexPath.row]
+                    }
                 }
             }
 
@@ -99,12 +100,6 @@ class ToursByCategoryViewController: UITableViewController {
             alert.addAction(OKAction)
             self.present(alert, animated: true, completion: nil)
 
-        }
-
-        do {
-            try reachability.startNotifier()
-        } catch {
-            print("Unable to start notifier")
         }
 
     }

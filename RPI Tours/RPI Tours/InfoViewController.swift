@@ -38,11 +38,11 @@ class InfoViewController: UITableViewController {
 
         let chosenLandmark = searchForLandmark()
 
-        self.landmarkDescriptionLabel.text = chosenLandmark.getDesc()
+        self.landmarkDescriptionLabel.text = chosenLandmark.desc
 
         //Does this async call work?
         self.imageSliderVC.images = []
-        for url in chosenLandmark.getImageURLs() {
+        for url in chosenLandmark.urls {
             URLSession
                 .shared
                 .dataTask(with: NSURL(string: url)! as URL, completionHandler: { (data, _, error) -> Void in
@@ -86,7 +86,7 @@ class InfoViewController: UITableViewController {
     // MARK: Helper Functions
     func searchForLandmark() -> Landmark {
         for landmark in landmarkInformation {
-            if landmark.getName() == self.landmarkName && !landmark.getDesc().isEmpty {
+            if landmark.name == self.landmarkName && !landmark.desc.isEmpty {
                 return landmark
             }
         }

@@ -19,9 +19,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     var tourCategories: [TourCat] = []
 
     @IBOutlet var descLabel: UILabel!
-
     @IBOutlet var testView: UIView!
-
     // MARK: System Functions
     override func viewDidLoad() {
 
@@ -59,8 +57,8 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         if segue.identifier == "showDetail" { //(John) If wr are about to go into the detail segue
             if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
                 let controller = (segue.destination as! UINavigationController).topViewController as! ToursByCategoryViewController //Create the detailVC
-                controller.tempTours = tourCategories[indexPath.row].getTours()//Set the detailVC detail item to the object
-                controller.tourCatName = tourCategories[indexPath.row].getName()
+                controller.tempTours = tourCategories[indexPath.row].tours//Set the detailVC detail item to the object
+                controller.tourCatName = tourCategories[indexPath.row].name
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
             }
@@ -79,7 +77,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         //Make a Detail VC
         let vc = UIViewController()
         //Load it
-        descLabel.text = tourCategories[indexPath.row].getDesc()
+        descLabel.text = tourCategories[indexPath.row].desc
 
         vc.view.addSubview(testView)
         vc.view.sizeThatFits(testView.bounds.size)
@@ -106,8 +104,8 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catCell", for: indexPath)
 
-        cell.textLabel?.text = tourCategories[indexPath.row].getName()
-        let numTours = tourCategories[indexPath.row].getTours().count
+        cell.textLabel?.text = tourCategories[indexPath.row].name
+        let numTours = tourCategories[indexPath.row].tours.count
 
         cell.detailTextLabel?.text = "\(numTours.description) available tours"
         return cell
@@ -116,13 +114,16 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     //Deals with a user tapping a cell. Either starts a segue to the next VC, or fails b/c no internet
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let reachability = Reachability()!
+          let reachability = Reachability()!
 
         reachability.whenReachable = { reachability in
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
-
-            self.performSegue(withIdentifier: "showDetail", sender: self)
+            DispatchQueue.main.async {
+                if reachability.isReachable {
+                self.performSegue(withIdentifier: "showDetail", sender: self)
+                }
+            }
 
         }
         reachability.whenUnreachable = { reachability in
@@ -144,9 +145,8 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         do {
             try reachability.startNotifier()
         } catch {
-            print("Unable to start notifier")
+            print("Errir)")
         }
-
     }
 
     // MARK: Popover Functions

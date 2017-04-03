@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cW2-ce-wMm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cW2-ce-wMm">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -23,10 +23,10 @@
                             <tableViewSection headerTitle="Tour Description" id="m7M-xs-BpP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="5gM-8K-z5O">
-                                        <rect key="frame" x="0.0" y="55" width="414" height="113"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5gM-8K-z5O" id="TQN-Re-umc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-nv-VzR">
@@ -71,10 +71,10 @@
                             <tableViewSection headerTitle="Proposed Tour Route" id="QrI-xf-J4K">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="AVe-1I-GwJ">
-                                        <rect key="frame" x="0.0" y="224" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="224.5" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AVe-1I-GwJ" id="4UT-KV-7fg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCg-JJ-kTy" customClass="MGLMapView">
@@ -130,10 +130,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hHx-CX-n5G">
-                                        <rect key="frame" x="0.0" y="524" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="524.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHx-CX-n5G" id="Bjg-t2-hhS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3d-sQ-DA4">
@@ -182,10 +182,10 @@
                             <tableViewSection headerTitle="Tour Statistics" id="ua1-Th-T3f">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="917-cs-zob">
-                                        <rect key="frame" x="0.0" y="624" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="624.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="917-cs-zob" id="iQf-S3-Fyf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Xe-2IT">
@@ -220,10 +220,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yH1-zD-bTY">
-                                        <rect key="frame" x="0.0" y="668" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="668.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yH1-zD-bTY" id="TB4-f9-jvg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Amp-93-fc7">
@@ -262,10 +262,10 @@
                             <tableViewSection id="Z9t-Vr-2fY" userLabel="Start Tour">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LA0-if-10b">
-                                        <rect key="frame" x="0.0" y="748" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="748.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LA0-if-10b" id="FoZ-aZ-Clp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-0u-mlX">
@@ -314,10 +314,10 @@
                             <tableViewSection id="m9R-Ae-oSr" userLabel="Rate Tour">
                                 <cells>
                                     <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="efC-Bv-yVP">
-                                        <rect key="frame" x="0.0" y="828" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="828.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="efC-Bv-yVP" id="Bgx-D5-Ia7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-by-QSs">
@@ -543,12 +543,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Amount_Label" destination="UzQ-Hp-hiQ" id="Vdy-u6-ZTA"/>
-                        <outlet property="Button_Label" destination="x33-he-NJI" id="UUC-0x-PGT"/>
-                        <outlet property="Directions_Label" destination="Fu0-gS-e8c" id="GQQ-og-eVY"/>
-                        <outlet property="End_View" destination="gif-SR-PLQ" id="W29-Zk-M18"/>
-                        <outlet property="Image_Label" destination="WK0-5W-56g" id="yLf-v8-LhW"/>
-                        <outlet property="directionsView" destination="DPm-Of-9YH" id="br8-fc-ndp"/>
+                        <outlet property="amountLabel" destination="UzQ-Hp-hiQ" id="c20-67-ZWf"/>
+                        <outlet property="buttonLabel" destination="x33-he-NJI" id="1Bh-FG-hfq"/>
+                        <outlet property="directionsLabel" destination="Fu0-gS-e8c" id="ib1-m3-XlP"/>
+                        <outlet property="directionsView" destination="DPm-Of-9YH" id="PoG-CK-ReZ"/>
+                        <outlet property="endView" destination="gif-SR-PLQ" id="ZhC-mi-bgd"/>
+                        <outlet property="imageLabel" destination="WK0-5W-56g" id="PEc-gP-TL9"/>
                         <outlet property="mapView" destination="iNz-NL-xZu" id="bCh-Qt-LCf"/>
                         <segue destination="jBc-8V-agE" kind="unwind" identifier="cancelTour" unwindAction="unwindToMenu:" id="Hoj-Cj-Abx"/>
                         <segue destination="rtP-0z-1s2" kind="show" identifier="showInfo" id="ULE-2S-lwm"/>
@@ -561,6 +561,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T0M-T8-nNq"/>
+        <segue reference="ULE-2S-lwm"/>
     </inferredMetricsTieBreakers>
 </document>

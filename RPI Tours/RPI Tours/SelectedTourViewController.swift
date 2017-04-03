@@ -54,15 +54,13 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     override func viewDidLoad() {
 
         //Set the description label for the tour
-        tourDescriptionLabel.text = selectedTour.getDesc()
+        tourDescriptionLabel.text = selectedTour.desc
 
         //For
-        for item in selectedTour.getLandmarks() {
+        for item in selectedTour.landmarks {
             let point = MGLPointAnnotation()
-            point.coordinate = CLLocationCoordinate2D(latitude: item.getLat(), longitude: item.getLong())
-            point.title = item.getName()
-            //point.subtitle = item.getDesc()
-
+            point.coordinate = item.point
+            point.title = item.name
             mapView.addAnnotation(point)
         }
 
@@ -91,7 +89,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     func calculateDirections() {
 
         //Get the waypoints for the tour
-        let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.getWaypoints()
+        let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.waypoints
 
         let directions = Directions(accessToken: mapBoxAPIKey)
 
@@ -251,8 +249,8 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
 
             controller.directions = self.calculatedTour
             controller.tourLine = self.tourLine
-            controller.tourLandmarks = self.selectedTour.getLandmarks()
-            controller.tourTitle = self.selectedTour.getName()
+            controller.tourLandmarks = self.selectedTour.landmarks
+            controller.tourTitle = self.selectedTour.name
             controller.landmarkInformation = self.landmarkInformation
 
         }
