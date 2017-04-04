@@ -57,9 +57,12 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         tourDescriptionLabel.text = selectedTour.desc
 
         //For
+        
         for item in selectedTour.landmarks {
+            print(item.point)
             let point = MGLPointAnnotation()
             point.coordinate = item.point
+            
             point.title = item.name
             mapView.addAnnotation(point)
         }
@@ -72,7 +75,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
 
         //Call the JSON parser for Landmark Info
         self.landmarkInformation = jsonParserLand()
-
+        
         calculateDirections()
 
         super.viewDidLoad()
@@ -90,6 +93,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
 
         //Get the waypoints for the tour
         let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.waypoints
+        
 
         let directions = Directions(accessToken: mapBoxAPIKey)
 

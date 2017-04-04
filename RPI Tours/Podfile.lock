@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - CSwiftV (0.0.5)
   - Mapbox-iOS-SDK (3.4.1)
   - MapboxDirections.swift (0.6.0):
@@ -9,6 +10,7 @@ PODS:
   - TNImageSliderViewController (1.0.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
   - Mapbox-iOS-SDK
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, branch `swift3`)
@@ -38,6 +40,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/JohnBehnke/TNImageSliderViewController.git
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
   Mapbox-iOS-SDK: 9c0d23e9a3784e6c9e45af4339898e4598b5b09b
   MapboxDirections.swift: 4acd753d0079bae4f2fae2b2cbda98922909de09
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TNImageSliderViewController: e1d6f71e2349119e2e743496e06860ee268b0c28
 
-PODFILE CHECKSUM: 7afe8ecabc004a08cf5450ea92fe670d9d502269
+PODFILE CHECKSUM: 6419f073e1a1fcfbc36924dd64cf4582fd7fbc0e
 
 COCOAPODS: 1.2.0

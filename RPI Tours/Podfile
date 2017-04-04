@@ -14,6 +14,7 @@ pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirection
 pod 'ReachabilitySwift', '~> 3'
 pod 'TNImageSliderViewController', :git=> 'https://github.com/JohnBehnke/TNImageSliderViewController.git'
 pod 'Polyline', '~> 4.0'
+pod 'Alamofire', '~> 4.4'
 end
 
 target 'RPI ToursTests' do
