@@ -207,7 +207,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
             amountLabel.text = "\(Int(distanceMeasurment)) meters"
         }
 
-        print(directions[0].maneuverDirection!)
+//        print(directions[0].maneuverDirection!)
 
         if directions[0].maneuverType == ManeuverType.arrive {
             imageLabel.image = UIImage(named: "arrive")

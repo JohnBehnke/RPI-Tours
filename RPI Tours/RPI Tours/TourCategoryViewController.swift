@@ -37,7 +37,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         
         
         
-        jsonParserCat(completion: {
+        getTourCategories(completion: {
             (result: [TourCat]) in
             
             self.tourCategories = result
