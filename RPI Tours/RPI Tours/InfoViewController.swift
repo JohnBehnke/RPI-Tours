@@ -9,7 +9,8 @@
 import UIKit
 import ReachabilitySwift
 import CoreLocation
-import TNImageSliderViewController
+import ImageSlideshow
+import AlamofireImage
 
 class InfoViewController: UITableViewController {
 
@@ -21,13 +22,14 @@ class InfoViewController: UITableViewController {
     var landmarkName: String = ""
     var landmarkDesc: String = ""
     var landmarkInformation: [Landmark] = []
-    var imageSliderVC: TNImageSliderViewController!
+
+    @IBOutlet weak var slideShow: ImageSlideshow!
     var cameFromMap: Bool = false
 
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "imageSlider" {
-            imageSliderVC = segue.destination as! TNImageSliderViewController
+//            imageSliderVC = segue.destination as! TNImageSliderViewController
         }
     }
 
@@ -41,42 +43,14 @@ class InfoViewController: UITableViewController {
         self.landmarkDescriptionLabel.text = chosenLandmark.desc
 
         //Does this async call work?
-        self.imageSliderVC.images = []
-        for url in chosenLandmark.urls {
-            URLSession
-                .shared
-                .dataTask(with: NSURL(string: url)! as URL, completionHandler: { (data, _, error) -> Void in
+//        self.imageSliderVC.images = []
+        var images: [InputSource] = []
 
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let image = UIImage(data: data!)
-                    if let tom = image {
-                        var temp = self.imageSliderVC.images
 
-//                        temp.append?(tom)
-                        temp?.append(tom)
-
-                        self.imageSliderVC.images = temp
-                        self.imageSliderVC.reloadInputViews()
-                    }
-
-                })
-
-            }).resume()
+        for imageURL in chosenLandmark.urls {
+            images.append(AlamofireSource(urlString: imageURL)!)
         }
-
-        //set the imageSlider options
-        var options = TNImageSliderViewOptions()
-        options.pageControlHidden = false
-        options.scrollDirection = .horizontal
-        options.shouldStartFromBeginning = true
-        options.imageContentMode = .scaleAspectFit
-        options.pageControlCurrentIndicatorTintColor = UIColor.red
-
-        imageSliderVC.options = options
+        slideShow.setImageInputs(images )
     }
 
     override func didReceiveMemoryWarning() {

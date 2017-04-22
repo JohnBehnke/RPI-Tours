@@ -23,7 +23,7 @@ class ToursByCategoryViewController: UITableViewController {
     }
     
     // MARK: Global Variables
-    var tempTours: [Tour] = []
+    var toursInCategory: [Tour] = []
     var tourCatName: String = ""
     
     // MARK: System Functions
@@ -31,8 +31,21 @@ class ToursByCategoryViewController: UITableViewController {
         
         //Set the title of the window to the tour category name
         self.navigationItem.title = self.tourCatName
+
+//        getAllTourForCat(url: <#T##String#>, numberOfTours: <#T##Int#>, completion: <#T##([Tour]) -> Void#>)
+
+//        getTourCategories(completion: {
+//            (result: [TourCat]) in
+//
+//            self.toursInCategory = result
+////            print(self.tourCategories)
+//            DispatchQueue.main.async{
+//                self.tableView.reloadData()
+//            }
+//
+//        })
+
         
-        print(self.tempTours[0].waypoints.count)
         
         super.viewDidLoad()
         
@@ -48,13 +61,13 @@ class ToursByCategoryViewController: UITableViewController {
     //Return the number of cells in a table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tempTours.count
+        return toursInCategory.count
     }
     //Configure the cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tourCell", for: indexPath)
         
-        cell.textLabel?.text = tempTours[indexPath.row].name
+        cell.textLabel?.text = toursInCategory[indexPath.row].name
         return cell
     }
     
@@ -103,8 +116,8 @@ class ToursByCategoryViewController: UITableViewController {
                 
                 let controller = (segue.destination as! SelectedTourViewController)
                 print("wjlfjkldsfjklsdjfksfkjs")
-                print(self.tempTours[indexPath.row].waypoints)
-                controller.selectedTour = self.tempTours[indexPath.row]
+                print(self.toursInCategory[indexPath.row].waypoints)
+                controller.selectedTour = self.toursInCategory[indexPath.row]
             }
 
         }

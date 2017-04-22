@@ -18,8 +18,9 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     //Array to hold tour categories objects
     var tourCategories: [TourCat] = []
     
+    @IBOutlet weak var testView: UILabel!
     @IBOutlet var descLabel: UILabel!
-    @IBOutlet var testView: UIView!
+
     // MARK: System Functions
     override func viewDidLoad() {
         
@@ -27,12 +28,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         
         UIApplication.shared.statusBarStyle = .lightContent
         //This is for split views for iPads. We aren't going to need this!
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as!
-                UINavigationController).topViewController as? ToursByCategoryViewController
-        }
-        
+
         //Call the JSON parser and append the parsed tour categories to the tourCategories Array
         
         
@@ -52,7 +48,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed //Just for the iPad swag
+        
         super.viewWillAppear(animated)
     }
     
@@ -69,8 +65,10 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         
         if segue.identifier == "showDetail" { //(John) If wr are about to go into the detail segue
             if let indexPath = self.tableView.indexPathForSelectedRow { //get the indexpath for the selected row
-                let controller = (segue.destination as! UINavigationController).topViewController as! ToursByCategoryViewController //Create the detailVC
-                controller.tempTours = tourCategories[indexPath.row].tours//Set the detailVC detail item to the object
+//                let controller = (segue.destination as! UINavigationController).topViewController as! ToursByCategoryViewController //Create the detailVC
+
+                let controller = segue.destination as! ToursByCategoryViewController
+                controller.toursInCategory = tourCategories[indexPath.row].tours//Set the detailVC detail item to the object
                 controller.tourCatName = tourCategories[indexPath.row].name
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
