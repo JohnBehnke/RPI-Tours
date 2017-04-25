@@ -38,7 +38,6 @@ class ToursByCategoryViewController: UITableViewController {
 //            (result: [TourCat]) in
 //
 //            self.toursInCategory = result
-////            print(self.tourCategories)
 //            DispatchQueue.main.async{
 //                self.tableView.reloadData()
 //            }
@@ -107,7 +106,6 @@ class ToursByCategoryViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tourDetail" {
-            print("wjlfjkldsfjklsdjfksfkjs")
             
             //Set the proper details for the next VC
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -115,8 +113,6 @@ class ToursByCategoryViewController: UITableViewController {
                 
                 
                 let controller = (segue.destination as! SelectedTourViewController)
-                print("wjlfjkldsfjklsdjfksfkjs")
-                print(self.toursInCategory[indexPath.row].waypoints)
                 controller.selectedTour = self.toursInCategory[indexPath.row]
             }
 

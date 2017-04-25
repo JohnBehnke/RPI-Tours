@@ -37,7 +37,7 @@ class InfoViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.landmarkName
-
+        print(self.landmarkInformation)
         let chosenLandmark = searchForLandmark()
 
         self.landmarkDescriptionLabel.text = chosenLandmark.desc
@@ -46,11 +46,13 @@ class InfoViewController: UITableViewController {
 //        self.imageSliderVC.images = []
         var images: [InputSource] = []
 
-
+        print(chosenLandmark.urls)
         for imageURL in chosenLandmark.urls {
             images.append(AlamofireSource(urlString: imageURL)!)
         }
+
         slideShow.setImageInputs(images )
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,8 +61,13 @@ class InfoViewController: UITableViewController {
 
     // MARK: Helper Functions
     func searchForLandmark() -> Landmark {
-        for landmark in landmarkInformation {
+        print(landmarkInformation[0].urls)
+        for landmark in self.landmarkInformation {
+            print(landmark.name)
+            print("ffffffff")
+            print(self.landmarkName)
             if landmark.name == self.landmarkName && !landmark.desc.isEmpty {
+                print(landmark.urls)
                 return landmark
             }
         }
@@ -68,7 +75,7 @@ class InfoViewController: UITableViewController {
         let blankLandmark = Landmark(name: "Unknown Landmark",
                                      desc: "I'm sorry, there is no information yet for this landmark.",
                                      lat: 0.0,
-                                     long: 0.0)
+                                     long: 0.0, urls:[])
 //        blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
 
         return blankLandmark

@@ -49,9 +49,9 @@ func jsonParserLand() -> [Landmark] {
                         string_land_images.append(i.string!)
                     }
 
-                    let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!)
+                    let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!, urls: [])
 
-                    newLandmark.urls = string_land_images
+//                    newLandmark.urls = string_land_images
 
                     land_list.append(newLandmark)
                 }
@@ -79,9 +79,10 @@ func parseTourCategoryJSON(tourCategoryJSON: JSON, completion: @escaping ( _ res
             cat_desc = sub_cat_desc
         }
 
-
+        print("all Tour part)")
         getAllTourForCat(url: "http://default-environment.pvwkn4dv9r.us-east-1.elasticbeanstalk.com/api/v1/categories/\(categoryJSON["id"])/tours", numberOfTours: categoryJSON["numAvailableTours"].int!, completion: { (newList) in
             cat_list.append(TourCat(name: cat_name, desc: cat_desc, tours: newList))
+
             if cat_list.count == tourCategoryJSON["content"].array?.count{
 
                 completion(cat_list)
@@ -146,6 +147,7 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
 
                     defaults.set("Hello", forKey: "lastUpdated")
                     parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
+                        print("Yolo")
                         completion(tourCategoryList)
                     })
                 }
@@ -160,6 +162,7 @@ func parseTourJSON(tourJSON: JSON, numberOfTours: Int, completion: @escaping (_ 
 
 
     for (_, tour) in tourJSON["content"]{
+
 
         var land_list: [Landmark] = []
         var way_list: [CLLocationCoordinate2D] = []
@@ -185,9 +188,15 @@ func parseTourJSON(tourJSON: JSON, numberOfTours: Int, completion: @escaping (_ 
             let desc = landJSON["description"].string
             let lat = landJSON["lat"].double
             let long = landJSON["long"].double
-            land_list.append(Landmark(name: name!, desc: desc!, lat: lat!, long: long!))
-        }
+            var urls: [String] = []
 
+            for (_,part) in (landJSON["photos"]){
+                urls.append(part["url"].string!)
+            }
+            
+            land_list.append(Landmark(name: name!, desc: desc!, lat: lat!, long: long!, urls: urls))
+        }
+//        print(tourJSON)
         tour_list.append(Tour(name: tour_name,
                               desc: tour_desc,
                               waypoints: way_list,

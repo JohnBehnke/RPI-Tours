@@ -59,7 +59,6 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         //For
         
         for item in selectedTour.landmarks {
-            print(item.point)
             let point = MGLPointAnnotation()
             point.coordinate = item.point
             
@@ -74,7 +73,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         }
 
         //Call the JSON parser for Landmark Info
-        self.landmarkInformation = jsonParserLand()
+        self.landmarkInformation = selectedTour.landmarks
         
         calculateDirections()
 
@@ -141,7 +140,6 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
 
         _ = directions.calculate(options) { (_, routes, error) in
             guard error == nil else {
-                print("Error calculating directions: \(error!)")
                 return
             }
 

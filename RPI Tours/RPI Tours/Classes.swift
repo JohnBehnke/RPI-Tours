@@ -34,11 +34,11 @@ class TourCat {
 class Landmark {
 
     //INITIALIZERS
-    init(name: String, desc: String, lat: Double, long: Double) {
+    init(name: String, desc: String, lat: Double, long: Double, urls: [String]) {
 
         self.name = name
         self.desc = desc
-        self.urls = []
+        self.urls = urls
         self.point = CLLocationCoordinate2D(latitude: lat, longitude: long)
 
     }

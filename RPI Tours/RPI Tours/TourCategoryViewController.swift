@@ -35,11 +35,12 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         
         getTourCategories(completion: {
             (result: [TourCat]) in
-            
+
             self.tourCategories = result
-            print(self.tourCategories)
+            
             DispatchQueue.main.async{
                 self.tableView.reloadData()
+
             }
             
         })
@@ -156,7 +157,6 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         do {
             try reachability.startNotifier()
         } catch {
-            print("Errir)")
         }
     }
     
