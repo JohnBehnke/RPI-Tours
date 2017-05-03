@@ -14,7 +14,7 @@ class SettingsViewController: UITableViewController {
     // MARK: IBOutlets
 
     @IBOutlet var measurementSelector: UISegmentedControl!
-    @IBOutlet var accuracySlider: UISlider!
+    
 
     // MARK: IBActions
     //Save any settings

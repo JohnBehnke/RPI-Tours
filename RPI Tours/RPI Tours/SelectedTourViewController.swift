@@ -56,7 +56,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.desc
 
-        //For
+        
         
         for item in selectedTour.landmarks {
             let point = MGLPointAnnotation()

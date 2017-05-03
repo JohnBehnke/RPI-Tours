@@ -27,31 +27,27 @@ class InfoViewController: UITableViewController {
     var cameFromMap: Bool = false
 
     // MARK: Segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "imageSlider" {
-//            imageSliderVC = segue.destination as! TNImageSliderViewController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "imageSlider" {
+//        }
+//    }
 
     // MARK: System Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.landmarkName
-        print(self.landmarkInformation)
         let chosenLandmark = searchForLandmark()
 
         self.landmarkDescriptionLabel.text = chosenLandmark.desc
 
-        //Does this async call work?
-//        self.imageSliderVC.images = []
         var images: [InputSource] = []
 
-        print(chosenLandmark.urls)
+
         for imageURL in chosenLandmark.urls {
             images.append(AlamofireSource(urlString: imageURL)!)
         }
 
-        slideShow.setImageInputs(images )
+        slideShow.setImageInputs(images)
 
     }
 
@@ -61,13 +57,9 @@ class InfoViewController: UITableViewController {
 
     // MARK: Helper Functions
     func searchForLandmark() -> Landmark {
-        print(landmarkInformation[0].urls)
+
         for landmark in self.landmarkInformation {
-            print(landmark.name)
-            print("ffffffff")
-            print(self.landmarkName)
             if landmark.name == self.landmarkName && !landmark.desc.isEmpty {
-                print(landmark.urls)
                 return landmark
             }
         }
@@ -76,7 +68,6 @@ class InfoViewController: UITableViewController {
                                      desc: "I'm sorry, there is no information yet for this landmark.",
                                      lat: 0.0,
                                      long: 0.0, urls:[])
-//        blankLandmark.setImages(["https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg"])
 
         return blankLandmark
     }

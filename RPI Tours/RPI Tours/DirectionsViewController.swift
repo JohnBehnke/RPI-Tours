@@ -25,13 +25,9 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     var landmarkInformation: [Landmark] = []
 
     @IBOutlet weak var directionsView: UIView!
-
     @IBOutlet weak var directionsLabel: UILabel!
-
     @IBOutlet weak var amountLabel: UILabel!
-
     @IBOutlet weak var imageLabel: UIImageView!
-
     @IBOutlet weak var buttonLabel: UIButton!
     @IBOutlet weak var endView: UIView!
 

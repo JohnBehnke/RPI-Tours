@@ -147,7 +147,7 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
 
                     defaults.set("Hello", forKey: "lastUpdated")
                     parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
-                        print("Yolo")
+                        
                         completion(tourCategoryList)
                     })
                 }

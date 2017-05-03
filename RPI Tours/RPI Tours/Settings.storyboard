@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oDo-ip-Gwc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oDo-ip-Gwc">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Settings-->
@@ -11,22 +15,22 @@
             <objects>
                 <tableViewController id="oDo-ip-Gwc" customClass="SettingsViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kMD-i1-OeA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.88295459750000005" green="0.13480618599999999" blue="0.10545415430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.84313726425170898" green="0.027450587600469589" blue="0.086274489760398865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Measurement" id="7BB-yH-lgr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fIM-F9-V9h">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fIM-F9-V9h" id="Gax-T7-ugN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tBk-Mm-X2m">
-                                                    <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                                    <rect key="frame" x="72" y="8" width="270" height="29"/>
                                                     <segments>
                                                         <segment title="Imperial"/>
                                                         <segment title="Metric"/>
@@ -62,59 +66,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Accuracy" id="cBn-aK-EqZ">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ugd-p2-Gbz">
-                                        <rect key="frame" x="0.0" y="209" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ugd-p2-Gbz" id="mb7-nz-eOy">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lY7-HC-MT8">
-                                                    <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                                </slider>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="lY7-HC-MT8" firstAttribute="centerX" secondItem="mb7-nz-eOy" secondAttribute="centerX" id="0a9-e0-2rz"/>
-                                                <constraint firstItem="lY7-HC-MT8" firstAttribute="centerY" secondItem="mb7-nz-eOy" secondAttribute="centerY" id="Xyx-jV-LTP"/>
-                                                <constraint firstItem="lY7-HC-MT8" firstAttribute="leading" secondItem="mb7-nz-eOy" secondAttribute="leadingMargin" constant="65" id="nvh-I1-hy2"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="lY7-HC-MT8"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="0a9-e0-2rz"/>
-                                                    <exclude reference="Xyx-jV-LTP"/>
-                                                    <exclude reference="nvh-I1-hy2"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="lY7-HC-MT8"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="0a9-e0-2rz"/>
-                                                    <include reference="Xyx-jV-LTP"/>
-                                                    <include reference="nvh-I1-hy2"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Information" id="EGw-8L-j9i">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="18Q-VX-J5s">
-                                        <rect key="frame" x="0.0" y="304" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="18Q-VX-J5s" id="Vlp-09-0Wq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDu-0v-Bnp">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <rect key="frame" x="69.666666666666686" y="7" width="275" height="30"/>
                                                     <state key="normal" title="View Licenses &amp; Application Information"/>
                                                     <connections>
                                                         <segue destination="i6j-it-zB5" kind="show" id="Com-2h-Jzc"/>
@@ -161,13 +123,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO">
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.84705882352941175" green="0.035294117647058823" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.84705882352941175" green="0.035294117647058823" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </simulatedNavigationBarMetrics>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="accuracySlider" destination="lY7-HC-MT8" id="OjJ-ng-Bqv"/>
-                        <outlet property="measurementTypeSelector" destination="tBk-Mm-X2m" id="rnY-KP-LYw"/>
+                        <outlet property="measurementSelector" destination="tBk-Mm-X2m" id="MZW-V8-5Yi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPj-QC-xKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,21 +140,21 @@
             <objects>
                 <tableViewController id="i6j-it-zB5" customClass="LicensesViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="jzS-YT-f76">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="RPI Tours License" id="dEr-5K-6Rz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lic" textLabel="wfp-UN-4Ir" rowHeight="470" style="IBUITableViewCellStyleDefault" id="vQj-lJ-VSn">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="470"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="470"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vQj-lJ-VSn" id="nKD-Ts-sGG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="469"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="32" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wfp-UN-4Ir">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="469"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="469.66666666666669"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">The MIT License (MIT)
 
@@ -217,7 +178,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -231,14 +192,14 @@ SOFTWARE.</string>
                             <tableViewSection headerTitle="CocoaPods License" id="Mf6-c4-0l5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lic" textLabel="Adp-7y-svN" rowHeight="437" style="IBUITableViewCellStyleDefault" id="jnl-Qk-JoM">
-                                        <rect key="frame" x="0.0" y="635" width="600" height="437"/>
+                                        <rect key="frame" x="0.0" y="581.5" width="414" height="437"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jnl-Qk-JoM" id="XbA-OZ-fyh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="437"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="35" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Adp-7y-svN">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="436"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="436.66666666666669"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">This project is licensed under the MIT license.
 
@@ -269,7 +230,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -283,14 +244,14 @@ THE SOFTWARE.</string>
                             <tableViewSection headerTitle="Mapbox License" id="QFW-Pw-t59">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lic" textLabel="EUW-4e-BXy" rowHeight="475" style="IBUITableViewCellStyleDefault" id="2UG-nj-wgL">
-                                        <rect key="frame" x="0.0" y="1123" width="600" height="475"/>
+                                        <rect key="frame" x="0.0" y="1074.5" width="414" height="475"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2UG-nj-wgL" id="CLM-lg-D2O">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="474"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EUW-4e-BXy">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="474"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="474.66666666666669"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">mapbox-gl-native copyright (c) 2014-2016 Mapbox.
 
@@ -319,7 +280,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ===========================================================================</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
