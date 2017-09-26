@@ -1,60 +1,58 @@
 PODS:
+  - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - CSwiftV (0.0.5)
-  - Mapbox-iOS-SDK (3.2.3)
+  - ImageSlideshow (1.2.0):
+    - ImageSlideshow/Core (= 1.2.0)
+  - ImageSlideshow/Alamofire (1.2.0):
+    - AlamofireImage (~> 3.0)
+    - ImageSlideshow/Core
+  - ImageSlideshow/Core (1.2.0)
+  - Mapbox-iOS-SDK (3.4.1)
   - MapboxDirections.swift (0.6.0):
-    - Polyline (~> 3.2)
-  - Polyline (3.2.1)
-  - ReachabilitySwift (2.3.3)
-  - SwiftyJSON (2.3.2)
-  - TNImageSliderViewController (1.0.4)
+    - Polyline (~> 4.0.0)
+  - Polyline (4.0.0)
+  - ReachabilitySwift (3)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
+  - ImageSlideshow (~> 1.2)
+  - ImageSlideshow/Alamofire
   - Mapbox-iOS-SDK
-  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.6.0`)
-  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift.git`)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-  - TNImageSliderViewController (from `https://github.com/frederik-jacques/TNImageSliderViewController.git`)
+  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, branch `swift3`)
+  - Polyline (~> 4.0)
+  - ReachabilitySwift (~> 3)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   CSwiftV:
     :git: https://github.com/Daniel1of1/CSwiftV.git
   MapboxDirections.swift:
+    :branch: swift3
     :git: https://github.com/mapbox/MapboxDirections.swift.git
-    :tag: v0.6.0
-  ReachabilitySwift:
-    :git: https://github.com/ashleymills/Reachability.swift.git
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-  TNImageSliderViewController:
-    :git: https://github.com/frederik-jacques/TNImageSliderViewController.git
 
 CHECKOUT OPTIONS:
   CSwiftV:
-    :commit: c0d75cea119d63c706973adc1412cd20298a83b5
+    :commit: a1a04d3915028c03884df4ed53757c7480233b68
     :git: https://github.com/Daniel1of1/CSwiftV.git
   MapboxDirections.swift:
+    :commit: 581f246ae4f821a62af6bbe8c4ea1aac67b0cf9b
     :git: https://github.com/mapbox/MapboxDirections.swift.git
-    :tag: v0.6.0
-  ReachabilitySwift:
-    :commit: cbbfc0907e8a67107289be9d1180538c3fbccd93
-    :git: https://github.com/ashleymills/Reachability.swift.git
-  SwiftyJSON:
-    :commit: 73670b94292b8d8496c398a973f56ac67789ba9f
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-  TNImageSliderViewController:
-    :commit: 466f8153d810ab9985f21a99a9d4d4445c8ff1e9
-    :git: https://github.com/frederik-jacques/TNImageSliderViewController.git
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
-  Mapbox-iOS-SDK: 120e8a140e9cd4adae8227340dd89f5cc3850259
-  MapboxDirections.swift: 144cefb4386d419f916ce27928834c28bbaafb4f
-  Polyline: 4579e57a62a5e876944c41884194e24ab7021d89
-  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  TNImageSliderViewController: 2517ca7b658e2cfd35f12e02c3cacac7056e0010
+  ImageSlideshow: c1395dcf33f7dba407fd21df0e8c315e8941e209
+  Mapbox-iOS-SDK: 9c0d23e9a3784e6c9e45af4339898e4598b5b09b
+  MapboxDirections.swift: 4acd753d0079bae4f2fae2b2cbda98922909de09
+  Polyline: c6de7430bf6ff0bfff1f087343597b83b38fdb69
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 34b31b4b28dc9849c6c97a7599045a497b0a25ce
+PODFILE CHECKSUM: e50a700d7d4e66ba6840be7534670f076643dd7e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

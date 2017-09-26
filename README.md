@@ -4,6 +4,8 @@ RPI Tours makes taking tours of RPI's campus as simple as downloading an app.
 
 *This application is still under development and is currently in a stable beta state.*
 
+The back end for the application is currently under development [here](https://github.com/kelleyb/RPI-Tours-Backend)
+
 Want to read a more in depth discussion about the why and how behind RPI Tours? Check out [our wiki]()!
 	
 #Building RPI Tours

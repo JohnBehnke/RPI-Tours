@@ -12,91 +12,80 @@ import CoreLocation
 import MapboxDirections
 
 class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
-    
-    
-    //MARK: IBOutlets
+
+    // MARK: IBOutlets
     @IBOutlet var mapView: MGLMapView!
-    
-    //MARK: Global Variables
-    var tappedLandmarkName:String = ""
+
+    // MARK: Global Variables
+    var tappedLandmarkName: String = ""
     var landmarkInformation: [Landmark] = []
-    
-    //MARK: System Function
+    let locationManager: CLLocationManager! = CLLocationManager()
+
+    // MARK: System Function
     override func viewDidLoad() {
-        
-        let locationManager = CLLocationManager()
+
         // Ask for Authorisation from the User.
         locationManager.requestAlwaysAuthorization()
-        
+
         // For use in foreground
         locationManager.requestWhenInUseAuthorization()
-        
-        
+
         if CLLocationManager.locationServicesEnabled() {
 
             let campusBuildings = buildCSV()
 
-            
             super.viewDidLoad()
-            
-            
+
             //Put points on the map for the buildings on campus
             for item in campusBuildings {
                 let point = MGLPointAnnotation()
                 point.coordinate = CLLocationCoordinate2D(latitude: item.buildingLat, longitude: item.buildingLong)
                 point.title = item.buildingName
-                
+
                 mapView.addAnnotation(point)
             }
         }
-        
+
         //Call the JSON parser for landmark info
         self.landmarkInformation = jsonParserLand()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //MARK: Mapbox Helper Functions
-    
-    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+
+    // MARK: Mapbox Helper Functions
+
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
         return true
     }
-    
-    func mapView(mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
-        tappedLandmarkName = annotation.title!!
-        mapView.deselectAnnotation(annotation, animated: true)
-        //tappedLandmarkDesc = annotation.subtitle!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
+
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .detailDisclosure)
     }
-    
-    func mapView(mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
-        return UIButton(type: .DetailDisclosure)
-    }
-    
-    func mapView(mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
         // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
-        
+
         tappedLandmarkName = annotation.title!!
-        self.performSegueWithIdentifier("showInfo", sender: self)
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
-    
-    //MARK: Segues
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    // MARK: Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showInfo" {
-            let controller = segue.destinationViewController as! InfoViewController
-            
+            let controller = segue.destination as! InfoViewController
+
             controller.landmarkName = self.tappedLandmarkName
             controller.landmarkInformation = self.landmarkInformation
-            
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem ()
+            controller.cameFromMap = true
+
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
         }
     }
-    
-    
+
 }

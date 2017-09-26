@@ -9,54 +9,49 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
 
+    // MARK: IBOutlets
+
+    @IBOutlet var measurementSelector: UISegmentedControl!
     
-    //MARK: IBOutlets
-    
-    @IBOutlet var measurementTypeSelector: UISegmentedControl!
-    @IBOutlet var accuracySlider: UISlider!
-    
-    
-    //MARK: IBActions
+
+    // MARK: IBActions
     //Save any settings
-    @IBAction func triggeredSave(sender: AnyObject) {
-        
+    @IBAction func triggeredSave(_ sender: AnyObject) {
+
         //Load the store
-        
+
         //Set the setting
-        self.defaults.setObject(measurementTypeSelector.titleForSegmentAtIndex(measurementTypeSelector.selectedSegmentIndex), forKey: "system")
-        self.defaults.setObject(measurementTypeSelector.selectedSegmentIndex, forKey: "savedIndex")
-        
+        self.defaults.set(measurementSelector.titleForSegment(at: measurementSelector.selectedSegmentIndex),
+                                                                                          forKey: "system")
+        self.defaults.set(measurementSelector.selectedSegmentIndex, forKey: "savedIndex")
+
         //Prompt the user with an alert
-        let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
-            (_)in
-            //self.performSegueWithIdentifier("cancelTour", sender: self)
+        let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(_)in
+            self.performSegue(withIdentifier: "cancelTour", sender: self)
         })
         //Present the alert
         alert.addAction(OKAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
-    
-    
-    //MARK: System Functions
+
+    // MARK: System Functions
     override func viewDidLoad() {
-        
-        if self.defaults.objectForKey("savedIndex") != nil{
-            
-        self.measurementTypeSelector.selectedSegmentIndex = ((self.defaults.objectForKey("savedIndex")) as? Int)!
+
+        if self.defaults.object(forKey: "savedIndex") != nil {
+
+        self.measurementSelector.selectedSegmentIndex = ((self.defaults.object(forKey: "savedIndex")) as? Int)!
         }
 
         super.viewDidLoad()
-        
-        
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }
