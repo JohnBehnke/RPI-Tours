@@ -1,4 +1,4 @@
-#RPI Tours Coding Style Guide
+# RPI Tours Coding Style Guide
 ---
 [Adapted from Ray Wenderlich's Style Guide](https://github.com/raywenderlich/swift-style-guide)
 
