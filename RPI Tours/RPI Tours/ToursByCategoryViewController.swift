@@ -31,6 +31,9 @@ class ToursByCategoryViewController: UITableViewController {
         
         //Set the title of the window to the tour category name
         self.navigationItem.title = self.tourCatName
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
 
 //        getAllTourForCat(url: <#T##String#>, numberOfTours: <#T##Int#>, completion: <#T##([Tour]) -> Void#>)
 

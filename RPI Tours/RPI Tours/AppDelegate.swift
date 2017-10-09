@@ -20,10 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-               UINavigationBar.appearance().barTintColor = Constants.Colors.UI.background
+      
+        UINavigationBar.appearance().barTintColor = Constants.Colors.UI.background
 
         let textAttributes = [NSForegroundColorAttributeName: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
+        if #available(iOS 11.0, *) {
+            UINavigationBar.appearance().largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        }
 
         MGLAccountManager.setAccessToken(mapBoxAPIKey)
 
