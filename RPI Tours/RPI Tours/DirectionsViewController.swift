@@ -83,7 +83,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         //Change status bar color
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
+            statusBar.backgroundColor = Constants.Colors.UI.background
 
         }
 
@@ -152,7 +152,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         // Give our polyline a unique color by checking for its `title` property
         if annotation is MGLPolyline {
 
-            return UIColor(red: 59/255, green:178/255, blue:208/255, alpha:1)
+            return Constants.Colors.Mapbox.pathColor
 
         } else {
             return UIColor.red

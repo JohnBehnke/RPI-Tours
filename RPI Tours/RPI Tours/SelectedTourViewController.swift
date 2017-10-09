@@ -236,7 +236,8 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         // Give our polyline a unique color by checking for its `title` property
         if annotation is MGLPolyline {
 
-            return UIColor(red: 59/255, green:178/255, blue:208/255, alpha:1)
+            return Constants.Colors.Mapbox.pathColor
+            
 
         } else {
             return UIColor.red
