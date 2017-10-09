@@ -1,0 +1,2 @@
+language: swift
+xcode_workspace: RPI\ Tours/ RPI Tours.xcworkspace
