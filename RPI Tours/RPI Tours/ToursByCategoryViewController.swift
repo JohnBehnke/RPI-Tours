@@ -83,7 +83,7 @@ class ToursByCategoryViewController: UITableViewController {
                 // this is called on a background thread, but UI updates must
                 // be on the main thread, like this:
                 if  reachability.isReachable {
-                    self.performSegue(withIdentifier: "tourDetai;", sender: self)
+                    self.performSegue(withIdentifier: "tourDetail", sender: self)
                 }
                 
             }
