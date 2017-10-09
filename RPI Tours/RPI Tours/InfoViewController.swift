@@ -77,18 +77,18 @@ class InfoViewController: UITableViewController {
     override func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         if indexPath.section == 0 {
-            return 500
+            return CGFloat(Constants.CellHeights.InfoHeights.tall)
         }
 
-        return 300
+        return CGFloat(Constants.CellHeights.InfoHeights.short)
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 
         if indexPath.section == 0 {
-            return 500
+            return CGFloat(Constants.CellHeights.InfoHeights.tall)
         }
 
-        return 300
+        return CGFloat(Constants.CellHeights.InfoHeights.short)
     }
 }

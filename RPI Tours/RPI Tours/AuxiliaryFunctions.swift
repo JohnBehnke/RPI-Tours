@@ -80,7 +80,8 @@ func parseTourCategoryJSON(tourCategoryJSON: JSON, completion: @escaping ( _ res
         }
 
         print("all Tour part)")
-        getAllTourForCat(url: "http://default-environment.pvwkn4dv9r.us-east-1.elasticbeanstalk.com/api/v1/categories/\(categoryJSON["id"])/tours", numberOfTours: categoryJSON["numAvailableTours"].int!, completion: { (newList) in
+        
+        getAllTourForCat(url: Constants.URLS.toursFor(categoryId: categoryJSON["id"].int!), numberOfTours: categoryJSON["numAvailableTours"].int!, completion: { (newList) in
             cat_list.append(TourCat(name: cat_name, desc: cat_desc, tours: newList))
 
             if cat_list.count == tourCategoryJSON["content"].array?.count{
@@ -134,7 +135,7 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
         }
 
 
-        Alamofire.download("http://default-environment.pvwkn4dv9r.us-east-1.elasticbeanstalk.com/api/v1/categories", to: destination).response { response in
+        Alamofire.download(Constants.URLS.allCategoriesPath, to: destination).response { response in
 
 
             if response.error == nil, let filePath = response.destinationURL?.path {
