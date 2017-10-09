@@ -27,6 +27,10 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
         super.viewDidLoad()
 
         UIApplication.shared.statusBarStyle = .lightContent
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
+
 
         getTourCategories(completion: {
             (result: [TourCat]) in
