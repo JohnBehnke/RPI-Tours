@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       
         UINavigationBar.appearance().barTintColor = Constants.Colors.UI.background
 
-        let textAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         if #available(iOS 11.0, *) {
-            UINavigationBar.appearance().largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+            UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
 
         MGLAccountManager.setAccessToken(mapBoxAPIKey)

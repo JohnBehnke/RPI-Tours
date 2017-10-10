@@ -133,7 +133,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
             waypoints.append(Waypoint(coordinate: workingWaypoints[i]))
         }
 
-        let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierWalking)
+        let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifier.walking)
         options.includesSteps = true
         options.routeShapeResolution = .full
         options.allowsUTurnAtWaypoint = false
