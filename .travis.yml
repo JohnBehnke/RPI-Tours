@@ -1,0 +1,8 @@
+before_install:
+  openssl aes-256-cbc -K $encrypted_68bc2979726e_key -iv $encrypted_68bc2979726e_iv -in mapBoxAPIKeys.swift.enc -out mapBoxAPIKeys.swift -d
+
+language: swift
+podfile: RPI Tours/Podfile
+script:
+  - xcodebuild -scheme RPI\ Tours -workspace RPI\ Tours/RPI\ Tours.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' clean build -quiet
+osx_image: xcode9
