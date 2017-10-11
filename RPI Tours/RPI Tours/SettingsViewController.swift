@@ -23,8 +23,7 @@ class SettingsViewController: UITableViewController {
         //Load the store
 
         //Set the setting
-        self.defaults.set(;
-            measurementSelector.titleForSegment(at: measurementSelector.selectedSegmentIndex),
+        self.defaults.set(measurementSelector.titleForSegment(at: measurementSelector.selectedSegmentIndex),
                                                                                           forKey: "system")
         self.defaults.set(measurementSelector.selectedSegmentIndex, forKey: "savedIndex")
 
