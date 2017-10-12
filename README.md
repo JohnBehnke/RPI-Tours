@@ -1,5 +1,7 @@
 # RPI Tours iOS
 
+[![Build Status](https://travis-ci.org/JohnBehnke/RPI_Tours_iOS.svg?branch=Travis)](https://travis-ci.org/JohnBehnke/RPI_Tours_iOS)
+
 RPI Tours makes taking tours of RPI's campus as simple as downloading an app.
 
 *This application is still under development and is currently in a stable beta state.*
