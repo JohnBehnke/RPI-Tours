@@ -18,7 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
+  - CSwiftV (from `https://github.com/UberJason/CSwiftV.git`)
   - ImageSlideshow (~> 1.2)
   - ImageSlideshow/Alamofire
   - Mapbox-iOS-SDK
@@ -29,15 +29,15 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CSwiftV:
-    :git: https://github.com/Daniel1of1/CSwiftV.git
+    :git: https://github.com/UberJason/CSwiftV.git
   MapboxDirections.swift:
     :branch: swift-4
     :git: https://github.com/mapbox/MapboxDirections.swift.git
 
 CHECKOUT OPTIONS:
   CSwiftV:
-    :commit: bfb50a4e50b7e929d1bf185b257b663d4cf33ed7
-    :git: https://github.com/Daniel1of1/CSwiftV.git
+    :commit: 8a702f858a3c8407b730b5df36b7df9f7dc86e1d
+    :git: https://github.com/UberJason/CSwiftV.git
   MapboxDirections.swift:
     :commit: 2f3f7e4c334bbfc965152d4de7246e7289c47c67
     :git: https://github.com/mapbox/MapboxDirections.swift.git
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8a3b8856f6cf40f2c5754fcc0a3d343e2e5a3862
+PODFILE CHECKSUM: 4857aeee609cd95c635b729a75c9bfef94a18cdb
 
 COCOAPODS: 1.3.1

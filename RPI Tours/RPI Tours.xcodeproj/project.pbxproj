@@ -30,7 +30,7 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
-		96A185C31F8D474A0039C174 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A185C21F8D474A0039C174 /* mapBoxAPIKeys.swift */; };
+		52FDC5A91F8D9D76001111B4 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */; };
 		96A185C51F8D47570039C174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A185C41F8D47570039C174 /* Constants.swift */; };
 		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
 		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
@@ -89,7 +89,7 @@
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52F640A71DC05F0100A03E77 /* TestRun.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestRun.gpx; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
-		96A185C21F8D474A0039C174 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
+		52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = "RPI Tours/mapBoxAPIKeys.swift"; sourceTree = SOURCE_ROOT; };
 		96A185C41F8D47570039C174 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -151,9 +151,9 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
+				52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */,
 				96A185C41F8D47570039C174 /* Constants.swift */,
 				52F640A71DC05F0100A03E77 /* TestRun.gpx */,
-				96A185C21F8D474A0039C174 /* mapBoxAPIKeys.swift */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
 				5299A21A1C66AF7E0072F8D3 /* Info.plist */,
 				5299A20B1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld */,
@@ -357,12 +357,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "RPI Web Tech";
 				TargetAttributes = {
 					5299A2051C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = TLM72HJ9PE;
+						DevelopmentTeam = JRS59Q3JZW;
 						LastSwiftMigration = 0900;
 					};
 					5299A21E1C66AF7E0072F8D3 = {
@@ -760,13 +760,13 @@
 				96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */,
 				5264201D1CB2E16800F7EEE2 /* DirectionsViewController.swift in Sources */,
 				520E92EE1E91DD90004064E0 /* Classes.swift in Sources */,
-				96A185C31F8D474A0039C174 /* mapBoxAPIKeys.swift in Sources */,
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
 				96A185C51F8D47570039C174 /* Constants.swift in Sources */,
 				5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */,
 				5299A64E1CE022A100F57D76 /* LicensesViewController.swift in Sources */,
+				52FDC5A91F8D9D76001111B4 /* mapBoxAPIKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,14 +845,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -892,14 +898,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -932,7 +944,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TLM72HJ9PE;
+				DEVELOPMENT_TEAM = JRS59Q3JZW;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -952,7 +964,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TLM72HJ9PE;
+				DEVELOPMENT_TEAM = JRS59Q3JZW;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
