@@ -23,41 +23,40 @@ struct Building {
 
 // Our Landmark Information JSON Parser
 func jsonParserLand() -> [Landmark] {
-
-    var land_list: [Landmark] = []
-
-    let land_file = Bundle.main.path(forResource: "LandmarkInfo", ofType: "json")
-    //
-    let jsonData = try? String(contentsOfFile: land_file!, encoding: String.Encoding.utf8)
-
-    if jsonData != nil {
-        do {
-            if let data = jsonData?.data(using: String.Encoding.utf8) {
-                let json = JSON(data: data)
-
-                for (_, landJSON) in json["landmarks"] {
-
-                    let land_lat = (landJSON["coordinate"].array)![0].double
-                    let land_long = (landJSON["coordinate"].array)![1].double
-                    let read_land_images = (landJSON["photos"].array)!
-                    let land_name = landJSON["name"].string
-                    let land_desc = landJSON["desc"].string
-
-                    var string_land_images: [String] = []
-
-                    for i in read_land_images {
-                        string_land_images.append(i.string!)
-                    }
-
-                    let newLandmark = Landmark(name: land_name!, desc: land_desc!, lat: land_lat!, long: land_long!, urls: [])
-
-//                    newLandmark.urls = string_land_images
-
-                    land_list.append(newLandmark)
-                }
-            }
-        }
+    
+    struct LandmarkContainer: Codable {
+        let landmarks: [LandmarkInfo]
     }
+    struct LandmarkInfo: Codable {
+        let coordinate: [Double]
+        let photos: [String]
+        let name: String
+        let desc: String
+    }
+    
+    var land_list: [Landmark] = []
+    
+    let land_file = Bundle.main.path(forResource: "LandmarkInfo", ofType: "json")
+    
+    let data = try? Data(contentsOf: URL(fileURLWithPath: land_file!), options: .uncached)
+    
+    if data != nil {
+        let marks = try? JSONDecoder().decode(LandmarkContainer.self, from: data!)
+        
+        if marks != nil {
+            for l_mark in marks!.landmarks {
+                print(l_mark)
+                let new_landmark = Landmark(name: l_mark.name, desc: l_mark.desc, lat: l_mark.coordinate[0], long: l_mark.coordinate[1], urls: l_mark.photos)
+                
+                land_list.append(new_landmark)
+            }
+            
+            return land_list
+        }
+        
+        print("JSON did not contain any information")
+    }
+    print("JSON file could not be read or does not exist")
     return land_list
 }
 
