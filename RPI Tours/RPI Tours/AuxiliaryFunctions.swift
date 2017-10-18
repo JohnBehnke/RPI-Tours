@@ -9,7 +9,6 @@
 import Foundation
 import SystemConfiguration
 import CSwiftV
-import SwiftyJSON
 import CoreLocation
 import Alamofire
 
@@ -19,6 +18,45 @@ struct Building {
     var buildingLong: Double
     var buildingName: String
 
+}
+
+struct Tours: Codable {
+    var content: [TourContent]
+}
+
+struct TourContent: Codable {
+    var name: String?
+    var description: String?
+    var waypoints: [TourWaypoint]
+    var landmarks: [TourLandmark]
+}
+
+struct TourWaypoint: Codable {
+    var lat: Double
+    var long: Double
+}
+
+struct TourLandmark: Codable {
+    var name: String
+    var description: String
+    var lat: Double
+    var long: Double
+    var photos: [TourLandmarkPhotos]
+}
+
+struct TourLandmarkPhotos: Codable {
+    var url: String?
+}
+
+struct TourCategories: Codable {
+    var content: [TourCategoryContent]
+}
+
+struct TourCategoryContent: Codable {
+    var name: String?
+    var description: String?
+    var id: Int?
+    var numAvailableTours: Int?
 }
 
 // Our Landmark Information JSON Parser
@@ -45,7 +83,6 @@ func jsonParserLand() -> [Landmark] {
         
         if marks != nil {
             for l_mark in marks!.landmarks {
-                print(l_mark)
                 let new_landmark = Landmark(name: l_mark.name, desc: l_mark.desc, lat: l_mark.coordinate[0], long: l_mark.coordinate[1], urls: l_mark.photos)
                 
                 land_list.append(new_landmark)
@@ -61,29 +98,29 @@ func jsonParserLand() -> [Landmark] {
 }
 
 
-func parseTourCategoryJSON(tourCategoryJSON: JSON, completion: @escaping ( _ result: [TourCat]) -> Void ) {
+func parseTourCategoryJSON(tourCategoryJSON: TourCategories, completion: @escaping ( _ result: [TourCat]) -> Void ) {
 
     var cat_list: [TourCat] = []
 
-    for (_, categoryJSON) in tourCategoryJSON["content"] {
+    for categoryJSON in tourCategoryJSON.content {
 
         var cat_name: String = ""
         var cat_desc: String = ""
-
-        if let sub_cat_name = categoryJSON["name"].string {
+        
+        if let sub_cat_name = categoryJSON.name {
             cat_name = sub_cat_name
         }
 
-        if let sub_cat_desc = categoryJSON["description"].string {
+        if let sub_cat_desc = categoryJSON.description {
             cat_desc = sub_cat_desc
         }
 
         print("all Tour part)")
         
-        getAllTourForCat(url: Constants.URLS.toursFor(categoryId: categoryJSON["id"].int!), numberOfTours: categoryJSON["numAvailableTours"].int!, completion: { (newList) in
+        getAllTourForCat(url: Constants.URLS.toursFor(categoryId: categoryJSON.id!), numberOfTours: categoryJSON.numAvailableTours!, completion: { (newList) in
             cat_list.append(TourCat(name: cat_name, desc: cat_desc, tours: newList))
 
-            if cat_list.count == tourCategoryJSON["content"].array?.count{
+            if cat_list.count == tourCategoryJSON.content.count{
 
                 completion(cat_list)
             }
@@ -102,9 +139,7 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
 
     let defaults = UserDefaults.standard
 
-    var tourCategoryJSON:JSON?
-
-
+    var tourCategoryJSON: TourCategories?
 
     if defaults.object(forKey: "lastUpdated") != nil{
 
@@ -113,12 +148,19 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
         let fileURL = documentsURL.appendingPathComponent("tourCategory.json")
 
         let rawData = try? String(contentsOf: fileURL)
+        
+        let finalData = rawData?.data( using: String.Encoding.utf8 )
+        
+        print( finalData )
 
-        tourCategoryJSON = JSON(data: (rawData?.data(using: String.Encoding.utf8))!)
-        parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
-            completion(tourCategoryList)
-        })
-
+        tourCategoryJSON = try? JSONDecoder().decode(TourCategories.self, from: (rawData?.data(using: String.Encoding.utf8))!)
+        
+        print( tourCategoryJSON )
+        if tourCategoryJSON != nil {
+            parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
+                completion(tourCategoryList)
+            })
+        }
 
 
     }
@@ -143,25 +185,30 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
                 let jsonData = try? String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
 
                 if let data = jsonData?.data(using: String.Encoding.utf8) {
-                    tourCategoryJSON = JSON(data: data)
+                    tourCategoryJSON = try? JSONDecoder().decode(TourCategories.self, from: data)
+                    
+                    print( tourCategoryJSON )
 
                     defaults.set("Hello", forKey: "lastUpdated")
-                    parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
-                        
-                        completion(tourCategoryList)
-                    })
+                    
+                    if tourCategoryJSON != nil {
+                        parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
+                            
+                            completion(tourCategoryList)
+                        })
+                    }
                 }
             }
         }
     }
 }
 
-func parseTourJSON(tourJSON: JSON, numberOfTours: Int, completion: @escaping (_ result : [Tour]) ->Void) {
+func parseTourJSON(tourJSON: Tours, numberOfTours: Int, completion: @escaping (_ result : [Tour]) ->Void) {
     var tour_list: [Tour] = []
 
 
 
-    for (_, tour) in tourJSON["content"]{
+    for (tour) in tourJSON.content{
 
 
         var land_list: [Landmark] = []
@@ -169,32 +216,32 @@ func parseTourJSON(tourJSON: JSON, numberOfTours: Int, completion: @escaping (_ 
         var tour_name: String = ""
         var tour_desc: String = ""
 
-        if let sub_tour_name = tour["name"].string {
+        if let sub_tour_name = tour.name {
             tour_name = sub_tour_name
         }
 
-        if let sub_tour_desc = tour["description"].string {
+        if let sub_tour_desc = tour.description {
             tour_desc = sub_tour_desc
         }
 
-        for (_, wayJSON) in tour["waypoints"] {
+        for (wayJSON) in tour.waypoints {
 
-            way_list.append(CLLocationCoordinate2D(latitude: wayJSON["lat"].double!, longitude: wayJSON["long"].double!))
+            way_list.append(CLLocationCoordinate2D(latitude: wayJSON.lat, longitude: wayJSON.long))
 
         }
 
-        for (_, landJSON) in tour["landmarks"] {
-            let name = landJSON["name"].string
-            let desc = landJSON["description"].string
-            let lat = landJSON["lat"].double
-            let long = landJSON["long"].double
+        for (landJSON) in tour.landmarks {
+            let name = landJSON.name
+            let desc = landJSON.description
+            let lat = landJSON.lat
+            let long = landJSON.long
             var urls: [String] = []
 
-            for (_,part) in (landJSON["photos"]){
-                urls.append(part["url"].string!)
+            for (part) in (landJSON.photos){
+                urls.append(part.url!)
             }
             
-            land_list.append(Landmark(name: name!, desc: desc!, lat: lat!, long: long!, urls: urls))
+            land_list.append(Landmark(name: name, desc: desc, lat: lat, long: long, urls: urls))
         }
 //        print(tourJSON)
         tour_list.append(Tour(name: tour_name,
@@ -214,7 +261,7 @@ func getAllTourForCat(url:String, numberOfTours: Int,completion: @escaping (_ re
 
 
     let defaults = UserDefaults.standard
-    var tourJSON:JSON?
+    var tourJSON: Tours?
 
     if defaults.object(forKey: url) != nil{
 
@@ -224,10 +271,15 @@ func getAllTourForCat(url:String, numberOfTours: Int,completion: @escaping (_ re
 
         let rawData = try? String(contentsOf: fileURL)
 
-        tourJSON = JSON(data: (rawData?.data(using: String.Encoding.utf8))!)
-        parseTourJSON(tourJSON: tourJSON!, numberOfTours: numberOfTours, completion: { (newList) in
-            completion(newList)
-        })
+        tourJSON = try? JSONDecoder().decode(Tours.self, from: (rawData?.data(using: String.Encoding.utf8))!)
+        if tourJSON != nil {
+            parseTourJSON(tourJSON: tourJSON!, numberOfTours: numberOfTours, completion: { (newList) in
+                completion(newList)
+            })
+        }
+        else {
+            print( "Hey the JSON decoding didn't work" )
+        }
 
     }
     else{
@@ -243,12 +295,18 @@ func getAllTourForCat(url:String, numberOfTours: Int,completion: @escaping (_ re
             if response.error == nil, let filePath = response.destinationURL?.path{
                 let jsonData = try? String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
                 if let data = jsonData?.data(using: String.Encoding.utf8){
-                    tourJSON = JSON(data: data)
-                    defaults.set("Hello", forKey: "\(url)")
-
-                    parseTourJSON(tourJSON: tourJSON!, numberOfTours: numberOfTours, completion: { (newList) in
-                        completion(newList)
-                    })
+                    tourJSON = try? JSONDecoder().decode(Tours.self, from: data)
+                    
+                    if tourJSON != nil {
+                        defaults.set("Hello", forKey: "\(url)")
+                        
+                        parseTourJSON(tourJSON: tourJSON!, numberOfTours: numberOfTours, completion: { (newList) in
+                            completion(newList)
+                        })
+                    }
+                    else {
+                        print( "Hey the JSON decoding didn't work" )
+                    }
 
                 }
 

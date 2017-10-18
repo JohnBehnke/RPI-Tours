@@ -30,11 +30,11 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
-		52FDC5A91F8D9D76001111B4 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */; };
 		96A185C51F8D47570039C174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A185C41F8D47570039C174 /* Constants.swift */; };
 		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
 		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
 		96B70F1E1D54FB19001BE1B3 /* LandmarkInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */; };
+		96B895441F969E9500F7B235 /* mapBoxAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */; };
 		D99F160028C48F2264F754D1 /* Pods_RPI_ToursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */; };
 		E140552C522E5DE4BEDC0C03 /* Pods_RPI_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6887A53AED919DDBC17D16F /* Pods_RPI_Tours.framework */; };
 /* End PBXBuildFile section */
@@ -89,11 +89,11 @@
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52F640A71DC05F0100A03E77 /* TestRun.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestRun.gpx; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
-		52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = "RPI Tours/mapBoxAPIKeys.swift"; sourceTree = SOURCE_ROOT; };
 		96A185C41F8D47570039C174 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
+		96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
 		D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +151,7 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
-				52FDC5A81F8D9D76001111B4 /* mapBoxAPIKeys.swift */,
+				96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */,
 				96A185C41F8D47570039C174 /* Constants.swift */,
 				52F640A71DC05F0100A03E77 /* TestRun.gpx */,
 				5299A2091C66AF7E0072F8D3 /* AppDelegate.swift */,
@@ -681,7 +681,6 @@
 				"${BUILT_PRODUCTS_DIR}/MapboxDirections.swift/MapboxDirections.framework",
 				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -694,7 +693,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxDirections.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -766,7 +764,7 @@
 				96A185C51F8D47570039C174 /* Constants.swift in Sources */,
 				5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */,
 				5299A64E1CE022A100F57D76 /* LicensesViewController.swift in Sources */,
-				52FDC5A91F8D9D76001111B4 /* mapBoxAPIKeys.swift in Sources */,
+				96B895441F969E9500F7B235 /* mapBoxAPIKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
