@@ -150,12 +150,8 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
         let rawData = try? String(contentsOf: fileURL)
         
         let finalData = rawData?.data( using: String.Encoding.utf8 )
-        
-        print( finalData )
 
-        tourCategoryJSON = try? JSONDecoder().decode(TourCategories.self, from: (rawData?.data(using: String.Encoding.utf8))!)
-        
-        print( tourCategoryJSON )
+        tourCategoryJSON = try? JSONDecoder().decode(TourCategories.self, from: finalData!)
         if tourCategoryJSON != nil {
             parseTourCategoryJSON(tourCategoryJSON: tourCategoryJSON!, completion: {(tourCategoryList) in
                 completion(tourCategoryList)
@@ -186,8 +182,6 @@ func getTourCategories(completion: @escaping ( _ result: [TourCat]) -> Void)  {
 
                 if let data = jsonData?.data(using: String.Encoding.utf8) {
                     tourCategoryJSON = try? JSONDecoder().decode(TourCategories.self, from: data)
-                    
-                    print( tourCategoryJSON )
 
                     defaults.set("Hello", forKey: "lastUpdated")
                     

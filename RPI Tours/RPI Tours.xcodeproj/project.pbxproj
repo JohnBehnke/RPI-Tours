@@ -94,6 +94,7 @@
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
 		96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
+		96EF9CA31F9A6B65002CB873 /* mapBoxAPIKeys.swift.enc */ = {isa = PBXFileReference; lastKnownFileType = file; name = mapBoxAPIKeys.swift.enc; path = ../../../../../Downloads/mapBoxAPIKeys.swift.enc; sourceTree = "<group>"; };
 		B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
 		D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +152,7 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
+				96EF9CA31F9A6B65002CB873 /* mapBoxAPIKeys.swift.enc */,
 				96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */,
 				96A185C41F8D47570039C174 /* Constants.swift */,
 				52F640A71DC05F0100A03E77 /* TestRun.gpx */,

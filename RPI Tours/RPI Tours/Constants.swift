@@ -12,7 +12,7 @@ import UIKit
 struct Constants{
     struct URLS {
         private struct Domains {
-            static let prod = "http://home.behnke.xyz:9000/"
+            static let prod = "http://home.behnke.xyz:9000"
             static let local =  "http://localhost:9000"
         }
         private struct Routes {
