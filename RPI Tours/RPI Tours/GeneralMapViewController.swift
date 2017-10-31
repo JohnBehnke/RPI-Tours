@@ -11,7 +11,7 @@ import Mapbox
 import CoreLocation
 import MapboxDirections
 
-class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
+class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
 
     // MARK: IBOutlets
     @IBOutlet var mapView: MGLMapView!
@@ -35,6 +35,8 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
             let campusBuildings = buildCSV()
 
             super.viewDidLoad()
+            
+            mapView.delegate = self
 
             //Put points on the map for the buildings on campus
             for item in campusBuildings {
@@ -62,7 +64,7 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
 
-    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         return UIButton(type: .detailDisclosure)
     }
 

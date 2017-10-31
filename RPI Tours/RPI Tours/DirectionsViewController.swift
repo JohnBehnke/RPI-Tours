@@ -75,6 +75,8 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden =  true
+        
+        mapView.delegate = self
 
         //Status bar style and visibility
         UIApplication.shared.isStatusBarHidden = false

@@ -20,23 +20,23 @@ struct Building {
 
 }
 
-struct Tours: Codable {
+struct Tours: Decodable {
     var content: [TourContent]
 }
 
-struct TourContent: Codable {
+struct TourContent: Decodable {
     var name: String?
     var description: String?
     var waypoints: [TourWaypoint]
     var landmarks: [TourLandmark]
 }
 
-struct TourWaypoint: Codable {
+struct TourWaypoint: Decodable {
     var lat: Double
     var long: Double
 }
 
-struct TourLandmark: Codable {
+struct TourLandmark: Decodable {
     var name: String
     var description: String
     var lat: Double
@@ -44,15 +44,15 @@ struct TourLandmark: Codable {
     var photos: [TourLandmarkPhotos]
 }
 
-struct TourLandmarkPhotos: Codable {
+struct TourLandmarkPhotos: Decodable {
     var url: String?
 }
 
-struct TourCategories: Codable {
+struct TourCategories: Decodable {
     var content: [TourCategoryContent]
 }
 
-struct TourCategoryContent: Codable {
+struct TourCategoryContent: Decodable {
     var name: String?
     var description: String?
     var id: Int?
@@ -62,10 +62,10 @@ struct TourCategoryContent: Codable {
 // Our Landmark Information JSON Parser
 func jsonParserLand() -> [Landmark] {
     
-    struct LandmarkContainer: Codable {
+    struct LandmarkContainer: Decodable {
         let landmarks: [LandmarkInfo]
     }
-    struct LandmarkInfo: Codable {
+    struct LandmarkInfo: Decodable {
         let coordinate: [Double]
         let photos: [String]
         let name: String

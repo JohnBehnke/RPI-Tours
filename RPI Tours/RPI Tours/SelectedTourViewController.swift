@@ -11,7 +11,7 @@ import Mapbox
 import CoreLocation
 import MapboxDirections
 
-class SelectedTourViewController: UITableViewController, CLLocationManagerDelegate {
+class SelectedTourViewController: UITableViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
 
     // MARK: IBOUTLETS
     @IBOutlet var tourLengthLabel: UILabel!
@@ -55,6 +55,8 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
 
         //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.desc
+        
+        mapView.delegate = self
 
         
         
@@ -204,7 +206,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         return true
     }
 
-    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewForAnnotation annotation: MGLAnnotation) -> UIView? {
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
         return UIButton(type: .detailDisclosure)
     }
 
@@ -216,7 +218,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         self.performSegue(withIdentifier: "showInfo", sender: self)
     }
 
-    func mapView(_ mapView: MGLMapView, tapOnCalloutForAnnotation annotation: MGLAnnotation) {
+    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
         tappedLandmarkName = annotation.title!!
         mapView.deselectAnnotation(annotation, animated: true)
         self.performSegue(withIdentifier: "showInfo", sender: self)
