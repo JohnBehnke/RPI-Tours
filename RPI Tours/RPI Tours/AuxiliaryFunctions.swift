@@ -84,6 +84,7 @@ func jsonParserLand() -> [Landmark] {
         if marks != nil {
             for l_mark in marks!.landmarks {
                 let new_landmark = Landmark(name: l_mark.name, desc: l_mark.desc, lat: l_mark.coordinate[0], long: l_mark.coordinate[1], urls: l_mark.photos)
+                print(l_mark.photos[0])
                 
                 land_list.append(new_landmark)
             }

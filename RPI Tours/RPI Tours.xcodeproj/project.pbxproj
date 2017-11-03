@@ -364,7 +364,7 @@
 				TargetAttributes = {
 					5299A2051C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = JRS59Q3JZW;
+						DevelopmentTeam = TLM72HJ9PE;
 						LastSwiftMigration = 0900;
 					};
 					5299A21E1C66AF7E0072F8D3 = {
@@ -944,7 +944,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JRS59Q3JZW;
+				DEVELOPMENT_TEAM = TLM72HJ9PE;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -964,7 +964,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JRS59Q3JZW;
+				DEVELOPMENT_TEAM = TLM72HJ9PE;
 				INFOPLIST_FILE = "RPI Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
