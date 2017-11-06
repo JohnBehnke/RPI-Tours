@@ -14,7 +14,6 @@ PODS:
     - Polyline (~> 4.1)
   - Polyline (4.2.0)
   - ReachabilitySwift (3)
-  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -25,7 +24,6 @@ DEPENDENCIES:
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, branch `swift-4`)
   - Polyline (~> 4.0)
   - ReachabilitySwift (~> 3)
-  - SwiftyJSON
 
 EXTERNAL SOURCES:
   CSwiftV:
@@ -51,8 +49,7 @@ SPEC CHECKSUMS:
   MapboxDirections.swift: 5f902908b30a8e744fa1a240f8f6707d7142147e
   Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 4857aeee609cd95c635b729a75c9bfef94a18cdb
+PODFILE CHECKSUM: f37f33e573b1ac11be6ecc8144853ee4f629630c
 
 COCOAPODS: 1.3.1

@@ -12,7 +12,7 @@ import UIKit
 struct Constants{
     struct URLS {
         private struct Domains {
-            static let prod = "http://default-environment.pvwkn4dv9r.us-east-1.elasticbeanstalk.com"
+            static let prod = "http://ru-webtech01.union.rpi.edu:9000"
             static let local =  "http://localhost:9000"
         }
         private struct Routes {
@@ -21,7 +21,7 @@ struct Constants{
             static let tours = "/tours"
         }
         
-        private static let Domain = Domains.local
+        private static let Domain = Domains.prod
         
         static var allCategoriesPath : String {
             return Domain + Routes.basePath + Routes.categories
