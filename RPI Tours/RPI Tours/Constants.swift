@@ -21,7 +21,7 @@ struct Constants{
             static let tours = "/tours"
         }
         
-        private static let Domain = Domains.prod
+        private static let Domain = Domains.local
         
         static var allCategoriesPath : String {
             return Domain + Routes.basePath + Routes.categories

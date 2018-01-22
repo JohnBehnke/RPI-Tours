@@ -10,6 +10,7 @@ import UIKit
 import Mapbox
 import CoreLocation
 import MapboxDirections
+import MapboxNavigation
 //View Controller for the Directions Table View
 
 class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
@@ -206,7 +207,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         }
 
 //        print(directions[0].maneuverDirection!)
-
+        NavigationController
         if directions[0].maneuverType == ManeuverType.arrive {
             imageLabel.image = UIImage(named: "arrive")
             self.buttonLabel.isHidden  = false

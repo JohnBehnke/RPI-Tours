@@ -9,6 +9,7 @@
 import UIKit
 import ReachabilitySwift
 import CoreLocation
+import Alamofire
 
 class ToursByCategoryViewController: UITableViewController {
     
@@ -29,26 +30,12 @@ class ToursByCategoryViewController: UITableViewController {
     // MARK: System Functions
     override func viewDidLoad() {
         
-        //Set the title of the window to the tour category name
-        self.navigationItem.title = self.tourCatName
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
         }
-
-//        getAllTourForCat(url: <#T##String#>, numberOfTours: <#T##Int#>, completion: <#T##([Tour]) -> Void#>)
-
-//        getTourCategories(completion: {
-//            (result: [TourCat]) in
-//
-//            self.toursInCategory = result
-//            DispatchQueue.main.async{
-//                self.tableView.reloadData()
-//            }
-//
-//        })
-
         
-        
+        self.navigationItem.title = self.tourCatName
+       
         super.viewDidLoad()
         
     }
@@ -59,13 +46,11 @@ class ToursByCategoryViewController: UITableViewController {
     }
     
     // MARK: Table View Functions
-    
-    //Return the number of cells in a table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return toursInCategory.count
     }
-    //Configure the cells
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tourCell", for: indexPath)
         
@@ -73,40 +58,18 @@ class ToursByCategoryViewController: UITableViewController {
         return cell
     }
     
-    //Perform segue if user taps on a cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let reachability = Reachability()!
-        
-        reachability.whenReachable = { reachability in
-            DispatchQueue.main.async {
-                // this is called on a background thread, but UI updates must
-                // be on the main thread, like this:
-                if  reachability.isReachable {
-                    self.performSegue(withIdentifier: "tourDetail", sender: self)
-                }
-                
-            }
-            
-        }
-        reachability.whenUnreachable = { reachability in
-            // this is called on a background thread, but UI updates must
-            // be on the main thread, like this:
-            
-            let alert = UIAlertController(title: "Warning!",
-                                          message: "Check your internet Connection",
-                                          preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(_)in
-                self.performSegue(withIdentifier: "cancelTour", sender: self)
-            })
-            
-            alert.addAction(OKAction)
-            self.present(alert, animated: true, completion: nil)
-            
+        if NetworkReachabilityManager()!.isReachable{
+            self.performSegue(withIdentifier: "tourDetail", sender: self)
+        } else{
+            let alert = UIAlertController(title: "Warning!", message: "Check your internet Connection", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
         
     }
-    
+    // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tourDetail" {
             
@@ -121,12 +84,4 @@ class ToursByCategoryViewController: UITableViewController {
 
         }
     }
-    
-    
-    
 }
-
-// MARK: Segues
-
-
-

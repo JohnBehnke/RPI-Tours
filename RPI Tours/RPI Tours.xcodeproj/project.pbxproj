@@ -93,8 +93,7 @@
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		96B70F1B1D54FB19001BE1B3 /* LandmarkInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LandmarkInfo.json; sourceTree = "<group>"; };
-		96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../mapBoxAPIKeys.swift; sourceTree = "<group>"; };
-		96EF9CA31F9A6B65002CB873 /* mapBoxAPIKeys.swift.enc */ = {isa = PBXFileReference; lastKnownFileType = file; name = mapBoxAPIKeys.swift.enc; path = ../../../../../Downloads/mapBoxAPIKeys.swift.enc; sourceTree = "<group>"; };
+		96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapBoxAPIKeys.swift; path = ../../../../../Temporary/mapBoxAPIKeys.swift; sourceTree = "<group>"; };
 		B36C5654C1C56393217039B5 /* Pods-RPI Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		B9809E8A8BB69103D5101AFE /* Pods-RPI Tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPI Tours.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPI Tours/Pods-RPI Tours.release.xcconfig"; sourceTree = "<group>"; };
 		D410BE85E01CECB8D5612C9B /* Pods_RPI_ToursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPI_ToursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +151,6 @@
 		528704B11CB5665D00650187 /* System Files */ = {
 			isa = PBXGroup;
 			children = (
-				96EF9CA31F9A6B65002CB873 /* mapBoxAPIKeys.swift.enc */,
 				96B895431F969E9500F7B235 /* mapBoxAPIKeys.swift */,
 				96A185C41F8D47570039C174 /* Constants.swift */,
 				52F640A71DC05F0100A03E77 /* TestRun.gpx */,
@@ -369,12 +367,12 @@
 					};
 					5299A21E1C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						TestTargetID = 5299A2051C66AF7E0072F8D3;
 					};
 					5299A2291C66AF7E0072F8D3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						TestTargetID = 5299A2051C66AF7E0072F8D3;
 					};
 				};
@@ -986,7 +984,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours";
 			};
 			name = Debug;
@@ -1000,7 +999,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPI Tours.app/RPI Tours";
 			};
 			name = Release;
@@ -1013,7 +1013,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "RPI Tours";
 				USES_XCTRUNNER = YES;
 			};
@@ -1027,7 +1028,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rpi.union.webtech.RPI-ToursUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "RPI Tours";
 				USES_XCTRUNNER = YES;
 			};

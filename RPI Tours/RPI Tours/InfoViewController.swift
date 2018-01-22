@@ -26,11 +26,6 @@ class InfoViewController: UITableViewController {
     @IBOutlet weak var slideShow: ImageSlideshow!
     var cameFromMap: Bool = false
 
-    // MARK: Segues
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "imageSlider" {
-//        }
-//    }
 
     // MARK: System Functions
     override func viewDidLoad() {
