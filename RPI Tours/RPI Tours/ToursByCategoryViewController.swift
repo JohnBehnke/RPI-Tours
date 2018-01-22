@@ -35,7 +35,7 @@ class ToursByCategoryViewController: UITableViewController {
         }
         
         self.navigationItem.title = self.tourCatName
-       
+        
         super.viewDidLoad()
         
     }
@@ -71,17 +71,17 @@ class ToursByCategoryViewController: UITableViewController {
     }
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "tourDetail" {
-            
-            //Set the proper details for the next VC
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                
-                
-                
-                let controller = (segue.destination as! SelectedTourViewController)
-                controller.selectedTour = self.toursInCategory[indexPath.row]
+        
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "tourDetail" :
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let controller = (segue.destination as! SelectedTourViewController)
+                    controller.selectedTour = self.toursInCategory[indexPath.row]
+                }
+            default: return
             }
-
         }
     }
 }

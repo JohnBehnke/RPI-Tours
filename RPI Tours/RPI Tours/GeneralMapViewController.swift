@@ -78,16 +78,21 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGL
 
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showInfo" {
-            let controller = segue.destination as! InfoViewController
-
-            controller.landmarkName = self.tappedLandmarkName
-            controller.landmarkInformation = self.landmarkInformation
-            controller.cameFromMap = true
-
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-            controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
+        
+        
+        if let identifier = segue.identifier{
+            switch identifier {
+            case "showInfo":
+                let controller = segue.destination as! InfoViewController
+                
+                controller.landmarkName = self.tappedLandmarkName
+                controller.landmarkInformation = self.landmarkInformation
+                controller.cameFromMap = true
+                
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true //Make a back button
+            default: return 
+            }
         }
     }
-
 }
