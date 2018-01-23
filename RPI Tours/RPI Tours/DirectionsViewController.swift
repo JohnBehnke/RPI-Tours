@@ -15,7 +15,7 @@ import MapboxDirections
 
 class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
     
-    // MARK: Global Variables
+    // MARK: Class Variables
     var measurementSystem: String?
     var tourLine: MGLPolyline = MGLPolyline()
     let locationManager: CLLocationManager! = CLLocationManager()
@@ -25,25 +25,23 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     var tappedLandmarkName: String = ""
     var landmarkInformation: [Landmark] = []
     
+    // MARK: IBOutlets
     @IBOutlet weak var directionsView: UIView!
     @IBOutlet weak var directionsLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var buttonLabel: UIButton!
     @IBOutlet weak var endView: UIView!
-    
-    //@IBOutlet var tableView: UITableView!
     @IBOutlet var mapView: MGLMapView!
+    
+    // MARK: IBActions
     @IBAction func pressedCancelTour(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Are you sure you want to cancel your tour?",
-                                      message: "Canceling Tour",
-                                      preferredStyle: .alert)
+        let alert = UIAlertController(title: "Are you sure you want to cancel your tour?", message: "Canceling Tour", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(_)in
             self.performSegue(withIdentifier: "cancelTour", sender: self)
         })
         
         let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {(_) in
-            print("pressed no")
         }
         
         alert.addAction(OKAction)
@@ -79,11 +77,9 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
         
         mapView.delegate = self
         
-        //Status bar style and visibility
         UIApplication.shared.isStatusBarHidden = false
         UIApplication.shared.statusBarStyle = .lightContent
         
-        //Change status bar color
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
             statusBar.backgroundColor = Constants.Colors.UI.background
@@ -162,7 +158,6 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        // Always try to show a callout when an annotation is tapped.
         
         return annotation.title!! != "You Are Here"
     }
@@ -172,7 +167,7 @@ class DirectionsViewController: UIViewController, CLLocationManagerDelegate, MGL
     }
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
-        // Hide callout view
+
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!

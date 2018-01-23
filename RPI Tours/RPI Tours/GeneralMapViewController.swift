@@ -6,39 +6,35 @@
 //  Copyright © 2016 RPI Web Tech. All rights reserved.
 //
 
-import UIKit
-import Mapbox
 import CoreLocation
 import MapboxDirections
+import Mapbox
+import UIKit
 
 class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
 
     // MARK: IBOutlets
     @IBOutlet var mapView: MGLMapView!
 
-    // MARK: Global Variables
+    // MARK: Class Variables
     var tappedLandmarkName: String = ""
     var landmarkInformation: [Landmark] = []
     let locationManager: CLLocationManager! = CLLocationManager()
 
     // MARK: System Function
     override func viewDidLoad() {
-
-        // Ask for Authorisation from the User.
+        super.viewDidLoad()
+        
         locationManager.requestAlwaysAuthorization()
 
-        // For use in foreground
         locationManager.requestWhenInUseAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
 
             let campusBuildings = buildCSV()
 
-            super.viewDidLoad()
-            
             mapView.delegate = self
-
-            //Put points on the map for the buildings on campus
+            
             for item in campusBuildings {
                 let point = MGLPointAnnotation()
                 point.coordinate = CLLocationCoordinate2D(latitude: item.buildingLat, longitude: item.buildingLong)
@@ -48,7 +44,6 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGL
             }
         }
 
-        //Call the JSON parser for landmark info
         self.landmarkInformation = jsonParserLand()
     }
 
@@ -60,7 +55,6 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGL
     // MARK: Mapbox Helper Functions
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        // Always try to show a callout when an annotation is tapped.
         return true
     }
 
@@ -69,16 +63,13 @@ class GeneralMapViewController: UIViewController, CLLocationManagerDelegate, MGL
     }
 
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
-        // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
-
         tappedLandmarkName = annotation.title!!
         self.performSegue(withIdentifier: "showInfo", sender: self)
     }
 
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         
         if let identifier = segue.identifier{
             switch identifier {

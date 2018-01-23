@@ -6,24 +6,21 @@
 //  Copyright © 2016 RPI Web Tech. All rights reserved.
 //
 
-import UIKit
-import ReachabilitySwift
-import CoreLocation
 import Alamofire
+import CoreLocation
+import ReachabilitySwift
+import UIKit
 
 class ToursByCategoryViewController: UITableViewController {
     
     // MARK: IBAction
-    //Rewind point for going back to this VC
     @IBAction func unwindToMenu(_ segue: UIStoryboardSegue) {
         self.navigationController?.isNavigationBarHidden = false
-        
-        //sets status bar and navigation bar to the same color
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         statusBar.backgroundColor = self.navigationController?.navigationBar.backgroundColor
     }
     
-    // MARK: Global Variables
+    // MARK: Class Variables
     var toursInCategory: [Tour] = []
     var tourCatName: String = ""
     

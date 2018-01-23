@@ -6,10 +6,10 @@
 //  Copyright © 2016 RPI Web Tech. All rights reserved.
 //
 
-import UIKit
-import Mapbox
 import CoreLocation
 import MapboxDirections
+import Mapbox
+import UIKit
 
 class SelectedTourViewController: UITableViewController, CLLocationManagerDelegate, MGLMapViewDelegate {
     
@@ -21,7 +21,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var tourTimeLabel: UILabel!
     
-    // MARK: IBAction
+    // MARK: IBActions
     @IBAction func pressedStartTour(_ sender: AnyObject) {
         if directionsDidLoad {
             self.performSegue(withIdentifier: "showDirections", sender: self)
@@ -36,9 +36,8 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15, animated: true)
     }
     
-    // MARK: Global
+    // MARK: Class Variables
     var selectedTour: Tour = Tour()
-    //var directions: MBDirections?
     var measurementSystem: String?
     var calculatedTour: [RouteStep] = []
     var calculatedTourPoints: [CLLocationCoordinate2D] = []
@@ -52,18 +51,15 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     
     // MARK: System Functions
     override func viewDidLoad() {
+        super.viewDidLoad()
         
-        //Set the description label for the tour
         tourDescriptionLabel.text = selectedTour.desc
         
-        mapView.delegate = self
-        
-        
+        self.mapView.delegate = self
         
         for item in selectedTour.landmarks {
             let point = MGLPointAnnotation()
             point.coordinate = item.point
-            
             point.title = item.name
             mapView.addAnnotation(point)
         }
@@ -74,12 +70,10 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
             measurementSystem = "Imperial"
         }
         
-        //Call the JSON parser for Landmark Info
         self.landmarkInformation = selectedTour.landmarks
         
         calculateDirections()
         
-        super.viewDidLoad()
         
     }
     
@@ -92,9 +86,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     
     func calculateDirections() {
         
-        //Get the waypoints for the tour
         let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.waypoints
-        
         
         let directions = Directions(accessToken: mapBoxAPIKey)
         
@@ -172,11 +164,9 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
                 self.tourTimeLabel.text = "Estimated time: \(formattedTravelTime!)"
                 
                 if route.coordinateCount > 0 {
-                    // Convert the route’s coordinates into a polyline.
                     var routeCoordinates = route.coordinates!
                     let routeLine = MGLPolyline(coordinates: &routeCoordinates, count: route.coordinateCount)
                     
-                    // Add the polyline to the map and fit the viewport to the polyline.
                     self.mapView.addAnnotation(routeLine)
                     self.tourLine = routeLine
                 }
@@ -211,7 +201,6 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     }
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
-        // Hide callout view
         mapView.deselectAnnotation(annotation, animated: true)
         
         tappedLandmarkName = annotation.title!!
@@ -236,14 +225,8 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
         // Give our polyline a unique color by checking for its `title` property
-        if annotation is MGLPolyline {
-            
-            return Constants.Colors.Mapbox.pathColor
-            
-            
-        } else {
-            return UIColor.red
-        }
+        
+        return annotation is MGLPolyline  ? Constants.Colors.Mapbox.pathColor : UIColor.red
     }
     
     // MARK: Segues

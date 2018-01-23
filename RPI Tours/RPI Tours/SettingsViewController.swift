@@ -9,14 +9,16 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
+    
+    // MARK: Class Variables
     let defaults = UserDefaults.standard
 
     // MARK: IBOutlets
 
     @IBOutlet var measurementSelector: UISegmentedControl!
     
+    // MARK: IBActions
     @IBAction func measurementToggle(_ sender: Any) {
-        
         self.defaults.set(measurementSelector.titleForSegment(at: measurementSelector.selectedSegmentIndex), forKey: "system")
         self.defaults.set(measurementSelector.selectedSegmentIndex, forKey: "savedIndex")
     }
@@ -25,8 +27,7 @@ class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
 
         if self.defaults.object(forKey: "savedIndex") != nil {
-
-        self.measurementSelector.selectedSegmentIndex = ((self.defaults.object(forKey: "savedIndex")) as? Int)!
+            self.measurementSelector.selectedSegmentIndex = ((self.defaults.object(forKey: "savedIndex")) as? Int)!
         }
 
         super.viewDidLoad()

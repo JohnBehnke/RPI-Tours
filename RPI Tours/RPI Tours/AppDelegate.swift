@@ -31,11 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
         MGLAccountManager.setAccessToken(mapBoxAPIKey)
 
-
-      
-        _ = UIColor(red:0.87, green:0.28, blue:0.32, alpha:1.0)
-        //controller.managedObjectContext = self.managedObjectContext
-
         return true
     }
 

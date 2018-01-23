@@ -6,14 +6,14 @@
 //  Copyright © 2016 RPI Web Tech. All rights reserved.
 //
 
-import UIKit
-import CoreData
 import Alamofire
+import CoreData
+import UIKit
 
 class TourCategoryViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
 
-    // MARK: Globals
-    var detailViewController: ToursByCategoryViewController? //used for send information to the DetailVC
+    // MARK: Class Variables
+    var detailViewController: ToursByCategoryViewController?
 
     //Array to hold tour categories objects
     var tourCategories: [TourCat] = []
@@ -59,9 +59,9 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
 
     // MARK: - Segues
 
-    //this is gonna have to be used soon (John)
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //swiftlint:disable line_length
+    
         if let identifier = segue.identifier {
             switch identifier {
             case "showDetail":
@@ -72,12 +72,9 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
                     controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
                 }
-
-            default:
-                return
+            default: return
 
             }
-
         }
     }
 
@@ -85,23 +82,21 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
 
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return self.tourCategories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catCell", for: indexPath)
-
-        cell.textLabel?.text = tourCategories[indexPath.row].name
         let numTours = tourCategories[indexPath.row].tours.count
 
+        cell.textLabel?.text = tourCategories[indexPath.row].name
         cell.detailTextLabel?.text = "\(numTours.description) available tours"
+
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        
         if NetworkReachabilityManager()!.isReachable{
             self.performSegue(withIdentifier: "showDetail", sender: self)
         } else{
