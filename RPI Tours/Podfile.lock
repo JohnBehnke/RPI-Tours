@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - AWSCore (2.6.11)
+  - AWSPolly (2.6.11):
+    - AWSCore (= 2.6.11)
   - CSwiftV (0.0.5)
   - ImageSlideshow (1.4.1):
     - ImageSlideshow/Core (= 1.4.1)
@@ -10,10 +13,27 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.4.1)
   - Mapbox-iOS-SDK (3.6.4)
+  - MapboxCoreNavigation (0.13.0):
+    - MapboxDirections.swift (~> 0.16.0)
+    - MapboxMobileEvents (~> 0.2)
+    - Turf (~> 0.0.4)
   - MapboxDirections.swift (0.16.0):
     - Polyline (~> 4.2)
+  - MapboxMobileEvents (0.2.10)
+  - MapboxNavigation (0.13.0):
+    - AWSPolly (~> 2.6)
+    - Mapbox-iOS-SDK (~> 3.6)
+    - MapboxCoreNavigation (= 0.13.0)
+    - SDWebImage (~> 4.1)
+    - Solar (~> 2.1)
+    - Turf (~> 0.0.4)
   - Polyline (4.2.0)
   - ReachabilitySwift (3)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
+  - Solar (2.1.0)
+  - Turf (0.0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -22,6 +42,7 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - Mapbox-iOS-SDK
   - MapboxDirections.swift (~> 0.16)
+  - MapboxNavigation (~> 0.13)
   - Polyline (~> 4.0)
   - ReachabilitySwift (~> 3)
 
@@ -37,13 +58,21 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  AWSCore: a461695bf302a32a366768bf36056be3a2c87d8d
+  AWSPolly: fa1600710f3eb20624caeb1d0566d77a44ae4902
   CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
   ImageSlideshow: 1bb0e610e28a71e8936d57265d882f61714a470b
   Mapbox-iOS-SDK: 47847dd44285477e0dfffd0130f65c8a52823ada
+  MapboxCoreNavigation: 3c964ad1854179dc619b4cceb5f85f428b68fe14
   MapboxDirections.swift: 168cc83745b188d792c5482bfb0653c233d1455c
+  MapboxMobileEvents: 9e48b59d0eed04508595dcb04a77b7632e1c3054
+  MapboxNavigation: 81502953735c3860cefa8fa645c5870825bed158
   Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  Turf: 6c169618fa671e3f8a7b764b5b3332053ad6110e
 
-PODFILE CHECKSUM: 88cb7b065b93663c5f29faf8bfc3bd8e2a0f44ee
+PODFILE CHECKSUM: 619640255d7033fb8c6656fc5667b4b808e743d0
 
 COCOAPODS: 1.4.0

@@ -15,6 +15,7 @@ pod 'Polyline', '~> 4.0'
 pod 'Alamofire', '~> 4.4'
 pod 'ImageSlideshow', '~> 1.2'
 pod "ImageSlideshow/Alamofire"
+pod 'MapboxNavigation', '~> 0.13'
 end
 
 target 'RPI ToursTests' do

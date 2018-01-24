@@ -8,6 +8,8 @@
 
 import CoreLocation
 import MapboxDirections
+import MapboxCoreNavigation
+import MapboxNavigation
 import Mapbox
 import UIKit
 
@@ -23,9 +25,33 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     
     // MARK: IBActions
     @IBAction func pressedStartTour(_ sender: AnyObject) {
-        if directionsDidLoad {
-            self.performSegue(withIdentifier: "showDirections", sender: self)
+//        if directionsDidLoad {
+        let workingWaypoints: [CLLocationCoordinate2D] = selectedTour.waypoints
+        
+        
+        
+        var waypoints2: [Waypoint] = []
+        
+        var shortestPoint: CLLocationCoordinate2D = workingWaypoints[0]
+        
+        
+        
+        for i in 0..<(workingWaypoints.count ) {
+            waypoints2.append(Waypoint(coordinate: workingWaypoints[i]))
         }
+        
+       
+            
+            let options = NavigationRouteOptions(waypoints: waypoints2,  profileIdentifier: MBDirectionsProfileIdentifier.walking)
+            let directions = Directions(accessToken:MGLAccountManager.accessToken(), host: nil)
+            
+            directions.calculate(options) { (waypoints, routes, error) in
+                guard let route = routes?.first else { return }
+                print("Hello!")
+                let viewController = NavigationViewController(for: route)
+                self.present(viewController, animated: true, completion: nil)
+            }
+//        }
         
     }
     @IBAction func stepActivate(_ sender: AnyObject) {
@@ -72,7 +98,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
         
         self.landmarkInformation = selectedTour.landmarks
         
-        calculateDirections()
+//        calculateDirections()
         
         
     }
@@ -233,14 +259,7 @@ class SelectedTourViewController: UITableViewController, CLLocationManagerDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier{
             switch identifier{
-            case "showDirections":
-                let controller = segue.destination  as! DirectionsViewController //Create the detailVC
-                
-                controller.directions = self.calculatedTour
-                controller.tourLine = self.tourLine
-                controller.tourLandmarks = self.selectedTour.landmarks
-                controller.tourTitle = self.selectedTour.name
-                controller.landmarkInformation = self.landmarkInformation
+
             case "showInfo":
                 let controller = segue.destination as! InfoViewController
                 
