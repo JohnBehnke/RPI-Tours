@@ -9,7 +9,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'Mapbox-iOS-SDK'
 pod 'CSwiftV', :git => 'https://github.com/UberJason/CSwiftV.git'
 
-pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git', :branch => 'swift-4'
+pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git'
 pod 'ReachabilitySwift', '~> 3'
 pod 'Polyline', '~> 4.0'
 pod 'Alamofire', '~> 4.4'

@@ -30,6 +30,9 @@
 		52BDD9581CAF526600EEEE7A /* Tours.json in Resources */ = {isa = PBXBuildFile; fileRef = 52BDD9571CAF526600EEEE7A /* Tours.json */; };
 		52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */; };
 		52FAA2BD1CAF5FDB0038283B /* Waypoints.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */; };
+		964B81D72045B57800D87DEE /* MainRefresh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964B81D62045B57800D87DEE /* MainRefresh.storyboard */; };
+		964B81DB2045D7EC00D87DEE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B81DA2045D7EC00D87DEE /* MainViewController.swift */; };
+		964B81DD2045E36800D87DEE /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B81DC2045E36800D87DEE /* SelectCollectionViewCell.swift */; };
 		96A185C51F8D47570039C174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A185C41F8D47570039C174 /* Constants.swift */; };
 		96B70F1C1D54FB19001BE1B3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B70F191D54FB19001BE1B3 /* Info.storyboard */; };
 		96B70F1D1D54FB19001BE1B3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */; };
@@ -89,6 +92,9 @@
 		52C3FFED1C9A384A00562190 /* GeneralMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMapViewController.swift; sourceTree = "<group>"; };
 		52F640A71DC05F0100A03E77 /* TestRun.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestRun.gpx; sourceTree = "<group>"; };
 		52FAA2BC1CAF5FDB0038283B /* Waypoints.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Waypoints.csv; path = "RPI Tours/Waypoints.csv"; sourceTree = SOURCE_ROOT; };
+		964B81D62045B57800D87DEE /* MainRefresh.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainRefresh.storyboard; sourceTree = "<group>"; };
+		964B81DA2045D7EC00D87DEE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		964B81DC2045E36800D87DEE /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		96A185C41F8D47570039C174 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96B70F191D54FB19001BE1B3 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		96B70F1A1D54FB19001BE1B3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				5264201A1CB2D54A00F7EEE2 /* SelectedTourViewController.swift */,
 				5264201C1CB2E16800F7EEE2 /* DirectionsViewController.swift */,
 				5299A64D1CE022A100F57D76 /* LicensesViewController.swift */,
+				964B81DA2045D7EC00D87DEE /* MainViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 				528704B21CB5667600650187 /* Data Files */,
 				528704B11CB5665D00650187 /* System Files */,
 				528704AF1CB5623E00650187 /* AuxiliaryFunctions.swift */,
+				964B81DC2045E36800D87DEE /* SelectCollectionViewCell.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 				524D7B211CFBC8C4009024CC /* Settings.storyboard */,
 				5299A2171C66AF7E0072F8D3 /* LaunchScreen.storyboard */,
 				5299A2151C66AF7E0072F8D3 /* Assets.xcassets */,
+				964B81D62045B57800D87DEE /* MainRefresh.storyboard */,
 			);
 			name = "Asset Files";
 			sourceTree = "<group>";
@@ -405,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				524D7B2A1CFBC9DD009024CC /* SelectedTourCat.storyboard in Resources */,
+				964B81D72045B57800D87DEE /* MainRefresh.storyboard in Resources */,
 				5299A2191C66AF7E0072F8D3 /* LaunchScreen.storyboard in Resources */,
 				5299A2161C66AF7E0072F8D3 /* Assets.xcassets in Resources */,
 				5299A2141C66AF7E0072F8D3 /* Main.storyboard in Resources */,
@@ -753,6 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964B81DD2045E36800D87DEE /* SelectCollectionViewCell.swift in Sources */,
 				5299A20A1C66AF7E0072F8D3 /* AppDelegate.swift in Sources */,
 				5299A20D1C66AF7E0072F8D3 /* RPI_Tours.xcdatamodeld in Sources */,
 				5299A20F1C66AF7E0072F8D3 /* TourCategoryViewController.swift in Sources */,
@@ -762,6 +773,7 @@
 				520E92EE1E91DD90004064E0 /* Classes.swift in Sources */,
 				52C3FFEE1C9A384A00562190 /* GeneralMapViewController.swift in Sources */,
 				528704B01CB5623E00650187 /* AuxiliaryFunctions.swift in Sources */,
+				964B81DB2045D7EC00D87DEE /* MainViewController.swift in Sources */,
 				5299A2111C66AF7E0072F8D3 /* ToursByCategoryViewController.swift in Sources */,
 				96A185C51F8D47570039C174 /* Constants.swift in Sources */,
 				5264201B1CB2D54A00F7EEE2 /* SelectedTourViewController.swift in Sources */,

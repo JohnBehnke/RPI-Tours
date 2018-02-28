@@ -118,7 +118,7 @@ class TourCategoryViewController: UITableViewController, UIPopoverPresentationCo
     //Configures a cell to be displayed
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catCell", for: indexPath)
-
+        
         cell.textLabel?.text = tourCategories[indexPath.row].name
         let numTours = tourCategories[indexPath.row].tours.count
 

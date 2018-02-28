@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yvH-Hj-ugt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Refresh-->
+        <scene sceneID="gMe-FF-vEc">
+            <objects>
+                <navigationController title="Main Refresh" id="yvH-Hj-ugt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MAf-EE-jke">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PCb-6i-b1r" kind="relationship" relationship="rootViewController" id="6eR-D3-uPk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMa-c3-mGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422" y="130"/>
+        </scene>
+        <!--Map of Campus-->
+        <scene sceneID="8HL-EG-sau">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map of Campus" id="37O-nT-qPx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAK-9h-DNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="92"/>
+        </scene>
+        <!--RPI Tours-->
+        <scene sceneID="Dke-eK-XAc">
+            <objects>
+                <collectionViewController id="PCb-6i-b1r" customClass="MainViewController" customModule="RPI_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KEe-iW-ylh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.83657187223434448" green="0.32844215631484985" blue="0.36324337124824524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="nvt-dR-unp">
+                            <size key="itemSize" width="375" height="290"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="XJi-aT-yWr" customClass="SelectCollectionViewCell" customModule="RPI_Tours" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-dC-85m">
+                                            <rect key="frame" x="166" y="135" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="cellText" destination="KJo-dC-85m" id="1oH-fl-i7k"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="PCb-6i-b1r" id="fhV-yR-niE"/>
+                            <outlet property="delegate" destination="PCb-6i-b1r" id="I9L-6i-Yz1"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="RPI Tours" id="rZ5-q5-5Zx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="tNX-tE-Fid"/>
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="4Km-2R-TTx">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="37O-nT-qPx" kind="show" id="YJT-qg-fwE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="i5Y-u6-ywt">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="iZm-H1-xkV" kind="show" id="XJK-Vj-DAF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iV-do-oWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="129.98500749625188"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="8Eu-pZ-T3Z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="iZm-H1-xkV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0Q-2f-yDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="130"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="DP2-7g-1cH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="sXE-KW-tte" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="528-lS-Foi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="212"/>
+        </scene>
+    </scenes>
+</document>

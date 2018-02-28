@@ -10,8 +10,8 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.4.1)
   - Mapbox-iOS-SDK (3.6.4)
-  - MapboxDirections.swift (0.10.1):
-    - Polyline (~> 4.1)
+  - MapboxDirections.swift (0.17.0):
+    - Polyline (~> 4.2)
   - Polyline (4.2.0)
   - ReachabilitySwift (3)
 
@@ -21,7 +21,7 @@ DEPENDENCIES:
   - ImageSlideshow (~> 1.2)
   - ImageSlideshow/Alamofire
   - Mapbox-iOS-SDK
-  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, branch `swift-4`)
+  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`)
   - Polyline (~> 4.0)
   - ReachabilitySwift (~> 3)
 
@@ -29,7 +29,6 @@ EXTERNAL SOURCES:
   CSwiftV:
     :git: https://github.com/UberJason/CSwiftV.git
   MapboxDirections.swift:
-    :branch: swift-4
     :git: https://github.com/mapbox/MapboxDirections.swift.git
 
 CHECKOUT OPTIONS:
@@ -37,7 +36,7 @@ CHECKOUT OPTIONS:
     :commit: 8a702f858a3c8407b730b5df36b7df9f7dc86e1d
     :git: https://github.com/UberJason/CSwiftV.git
   MapboxDirections.swift:
-    :commit: 2f3f7e4c334bbfc965152d4de7246e7289c47c67
+    :commit: 6019b443a0d2a09f1560b65401447b6caa849947
     :git: https://github.com/mapbox/MapboxDirections.swift.git
 
 SPEC CHECKSUMS:
@@ -46,10 +45,10 @@ SPEC CHECKSUMS:
   CSwiftV: 2560532e2e5b04d95c36b0f49a8dc745071fa525
   ImageSlideshow: 1bb0e610e28a71e8936d57265d882f61714a470b
   Mapbox-iOS-SDK: 47847dd44285477e0dfffd0130f65c8a52823ada
-  MapboxDirections.swift: 5f902908b30a8e744fa1a240f8f6707d7142147e
+  MapboxDirections.swift: 931f99b69278e4fac693023b51de6e4b55b6355c
   Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
 
-PODFILE CHECKSUM: f37f33e573b1ac11be6ecc8144853ee4f629630c
+PODFILE CHECKSUM: aa75e76eca392d19035ab805561ad269e2ae93d5
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
