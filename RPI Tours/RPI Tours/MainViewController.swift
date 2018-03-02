@@ -8,6 +8,7 @@
 
 import UIKit
 import ReachabilitySwift
+import Alamofire
 
 private let reuseIdentifier = "Cell"
 
@@ -15,6 +16,8 @@ private let reuseIdentifier = "Cell"
 class MainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout  {
 
     var choices = ["Tours", "Points of Interest"]
+    var choice_images = ["https://i.imgur.com/nPlXrsX.jpg", "https://i.imgur.com/C3EaTx8.jpg"]
+    //var choice_images = ["https://farm5.static.flickr.com/4044/4188687632_c3e7a6222b_b.jpg", "https://upload.wikimedia.org/wikipedia/commons/3/30/Rice_Building_Troy.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +57,17 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectCollectionViewCell
     
         // Configure the cell
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = Constants.Colors.UI.background.cgColor
-        cell.layer.borderWidth = 1
+        //cell.backgroundColor = Constants.Colors.UI.background
         
         cell.cellText.text = self.choices[indexPath.item]
         cell.cellText.sizeToFit()
-        cell.cellText.textAlignment = .center
-        cell.cellText.center = cell.contentView.center
+        //cell.cellText.textAlignment = .center
+        //cell.cellText.center = cell.contentView.center
+        
+        cell.cellImage.af_setImage(withURL: NSURL(string: self.choice_images[indexPath.item])! as URL)
+        cell.cellImage.contentMode = .scaleAspectFill
+        cell.cellImage.alpha = 0.8
+        
     
         return cell
     }
@@ -92,10 +98,12 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
             DispatchQueue.main.async {
                 if reachability.isReachable {
                     if indexPath.item == 0 {
-                        self.performSegue(withIdentifier: "showTours", sender: self)
+                        let vc = SettingsViewController()
+                        self.present(vc, animated: true, completion: nil)
                     }
                     else{
-                        self.performSegue(withIdentifier: "showPois", sender: self)
+                        let vc = SettingsViewController()
+                        self.present(vc, animated: true, completion: nil)
                     }
                 }
             }

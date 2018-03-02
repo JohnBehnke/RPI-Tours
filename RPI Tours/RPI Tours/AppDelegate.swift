@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
+        UINavigationBar.appearance().tintColor = UIColor.white
         if #available(iOS 11.0, *) {
             UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,29 +45,43 @@
                         <color key="backgroundColor" red="0.83657187223434448" green="0.32844215631484985" blue="0.36324337124824524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="nvt-dR-unp">
-                            <size key="itemSize" width="375" height="290"/>
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="XJi-aT-yWr" customClass="SelectCollectionViewCell" customModule="RPI_Tours" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-dC-85m">
-                                            <rect key="frame" x="166" y="135" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-iL-dNs">
+                                            <rect key="frame" x="8" y="8" width="184" height="184"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-dC-85m">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KJo-dC-85m" firstAttribute="leading" secondItem="XJi-aT-yWr" secondAttribute="leading" id="6I1-l8-yI3"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="EQH-iL-dNs" secondAttribute="trailing" id="T55-VC-c8U"/>
+                                    <constraint firstItem="KJo-dC-85m" firstAttribute="top" secondItem="XJi-aT-yWr" secondAttribute="top" id="YhR-pP-XTz"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="EQH-iL-dNs" secondAttribute="bottom" id="Ypc-5B-E6i"/>
+                                    <constraint firstItem="EQH-iL-dNs" firstAttribute="leading" secondItem="XJi-aT-yWr" secondAttribute="leadingMargin" id="iw5-jE-GY4"/>
+                                    <constraint firstAttribute="trailing" secondItem="KJo-dC-85m" secondAttribute="trailing" id="kKs-bx-Asf"/>
+                                    <constraint firstAttribute="bottom" secondItem="KJo-dC-85m" secondAttribute="bottom" id="kx3-6H-9ca"/>
+                                    <constraint firstItem="EQH-iL-dNs" firstAttribute="top" secondItem="XJi-aT-yWr" secondAttribute="topMargin" id="xuf-GK-d7J"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="cellImage" destination="EQH-iL-dNs" id="AoV-jT-Ma5"/>
                                     <outlet property="cellText" destination="KJo-dC-85m" id="1oH-fl-i7k"/>
                                 </connections>
                             </collectionViewCell>

@@ -30,7 +30,7 @@ class SettingsViewController: UITableViewController {
         //Prompt the user with an alert
         let alert = UIAlertController(title: "System", message: "Settings Saved!", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(_)in
-            self.performSegue(withIdentifier: "cancelTour", sender: self)
+            //do nothing and no one gets hurt
         })
         //Present the alert
         alert.addAction(OKAction)

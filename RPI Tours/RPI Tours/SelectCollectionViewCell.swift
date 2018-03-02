@@ -9,5 +9,6 @@
 import UIKit
 
 class SelectCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var cellImage: UIImageView!
     @IBOutlet var cellText: UILabel!
 }
